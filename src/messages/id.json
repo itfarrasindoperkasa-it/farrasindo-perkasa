@@ -1,0 +1,111 @@
+{
+  "footer": {
+    "about": {
+      "title": "Tentang Farrasindo CP",
+      "description": "Farrasindo CP adalah penyedia solusi kemasan terkemuka yang berkomitmen untuk memberikan produk dan layanan berkualitas tinggi kepada pelanggan kami."
+    },
+    "product services": [
+      {
+        "label": "Produk & Layanan",
+        "value": "https://farrasindo-cp.com/products-and-services"
+      },
+      {
+        "label": "Sewa Mesin",
+        "value": "https://farrasindo-cp.com/rent-machine"
+      },
+      {
+        "label": "Jual Mesin",
+        "value": "https://farrasindo-cp.com/sell-machine"
+      },
+      {
+        "label": "Suku Cadang",
+        "value": "https://farrasindo-cp.com/sparepart"
+      }
+    ],
+    "information": {
+      "title": "Hubungi Kami",
+      "emails": [
+        {
+          "label": "Info",
+          "value": "info@farrasindo-cp.com"
+        }
+      ],
+      "phones": [
+        {
+          "label": "Telepon",
+          "value": "+62 21 595 3410"
+        },
+        {
+          "label": "WhatsApp",
+          "value": "+62 811 900 5555"
+        }
+      ],
+      "address": "Jl. Industri Raya Blok III No. 10, Kawasan Industri Jatake, Tangerang, Banten 15136, Indonesia"
+    }
+  },
+  "home": {
+    "banner": [
+      {
+        "title": "Pemompaan Beton Jadi Lebih Mudah",
+        "description": ""
+      },
+      {
+        "title": "Menyediakan Pompa Mini Hingga Panjang",
+        "description": ""
+      },
+      {
+        "title": "Mendukung Proyek Strategis Ritel Dan Pemerintah",
+        "description": ""
+      },
+      {
+        "title": "Layanan Pelanggan 24/7",
+        "description": ""
+      }
+    ],
+    "about": {
+      "title": "Tentang Farrasindo",
+      "description": "Kami memahami peran penting peralatan yang andal dalam kesuksesan proyek Anda. Oleh karena itu, kami menawarkan armada mesin canggih yang lengkap, termasuk pompa beton, mesin batching plant bergerak, dan mixer, yang semuanya dirawat dengan standar tertinggi untuk memastikan kinerja optimal di lokasi proyek Anda. PT. Farrasindo Perkasa bangga melayani pelanggan dan memberikan kualitas terbaik melalui kerja sama dengan mitra-mitra terkemuka seperti PT. Fresh Beton Indonesia, PT Inti Jaya Industri, PT Citi Pump Indonesia, PT Citi Crane Perkasa, PT Gunung Bumi Perkasa, dan PT Farracon Precast Industry.",
+      "buttonText": "Pelajari Lebih Lanjut"
+    },
+    "our_service": {
+      "title": "Layanan Kami",
+      "rent": {
+        "title": "Sewa Mesin",
+        "description": "Kami menawarkan layanan sewa mesin kemasan berkualitas tinggi untuk memenuhi kebutuhan produksi Anda tanpa harus berinvestasi besar."
+      },
+      "sell": {
+        "title": "Jual Mesin",
+        "description": "Dapatkan mesin kemasan terbaru dengan teknologi canggih dari kami. Kami menyediakan berbagai jenis mesin untuk berbagai kebutuhan bisnis."
+      },
+      "sparepart": {
+        "title": "Suku Cadang",
+        "description": "Kami menyediakan suku cadang asli untuk berbagai jenis mesin kemasan, memastikan kinerja optimal dan umur panjang mesin Anda."
+      }
+    },
+    "product_range": {
+      "title": "Ragam Produk Kami",
+      "filters": [
+        {
+          "label": "Semua",
+          "value": "all"
+        },
+        {
+          "label": "Mesin Vertikal",
+          "value": "vertical-machine"
+        },
+        {
+          "label": "Mesin Horizontal",
+          "value": "horizontal-machine"
+        },
+        {
+          "label": "Mesin Pelengkap",
+          "value": "complementary-machine"
+        },
+        {
+          "label": "Suku Cadang",
+          "value": "sparepart"
+        }
+      ]
+    }
+  }
+}

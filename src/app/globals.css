@@ -14,13 +14,69 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #0a0a0a;
+    --background: #ededed;
   }
 }
 
+html,
+body {
+  overflow-x: hidden;
+  width: 100vw;
+}
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+#navigationWeb ul li a {
+  font-size: 0.9em;
+}
+
+.slick-prev,
+.slick-next {
+  cursor: pointer;
+  color: #0000;
+  background: none;
+  border: none;
+  outline: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  position: absolute;
+  top: 80% !important;
+  transform: translate(0, -50%) !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  opacity: 0.5 !important;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: slick;
+  font-size: 100px !important;
+  line-height: 1;
+}
+
+.slick-prev {
+  left: 5% !important;
+}
+
+.slick-next {
+  left: 14% !important;
+}
+
+.slick-prev:before {
+  transform: rotate(45deg);
+  display: inline-block;
+}
+
+.slick-next:before {
+  transform: rotate(-45deg);
+  display: inline-block;
 }
