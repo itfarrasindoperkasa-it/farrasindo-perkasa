@@ -25,13 +25,9 @@ export default function RootLayout({
 }>) {
   console.log("mesage");
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Navigation />
-        {children}
-      </body>
-    </html>
+    <>
+      <Navigation />
+      {children}
+    </>
   );
 }

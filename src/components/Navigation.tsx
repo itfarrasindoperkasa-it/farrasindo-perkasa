@@ -152,7 +152,7 @@ export default function Navigation() {
           </li>
           <li>
             <Link
-              href="#services"
+              href={`product-service`}
               className="hover:text-foreground/80 font-bold"
             >
               Products and Service
