@@ -116,13 +116,14 @@
           "title": "RM Pagi Sore",
           "location": "Jawa Barat, Indonesia"
         },
-        {
-          "title": "Menara Sentraya",
-          "location": "Blok M, Jakarta Selatan"
-        },
+
         {
           "title": "PT Lianhua",
           "location": "Cianjur Jawa Barat, Indonesia"
+        },
+        {
+          "title": "Menara Sentraya",
+          "location": "Blok M, Jakarta Selatan"
         },
         {
           "title": "Sekolah",
@@ -132,13 +133,14 @@
           "title": "Lapangan Tenis",
           "location": "Pesanggrahan, Jakarta Barat"
         },
-        {
-          "title": "RS Hermina",
-          "location": "Depok Jawa Barat, Indonesia"
-        },
+
         {
           "title": "Kodam Jaya",
           "location": "Jakarta Timur, Indonesia"
+        },
+        {
+          "title": "RS Hermina",
+          "location": "Depok Jawa Barat, Indonesia"
         }
       ]
     }
