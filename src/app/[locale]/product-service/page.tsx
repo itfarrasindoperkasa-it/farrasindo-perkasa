@@ -89,7 +89,7 @@ export default function ProductService() {
   );
   return (
     <>
-      <div id="productRange" className="w-full">
+      <div id="productRange" className="w-screen max-w-[120rem]">
         <div className="h-[40vh] md:h-[60vh] bg-black mb-20 relative">
           <Image
             src={HomeBannerData[0]}
@@ -99,7 +99,7 @@ export default function ProductService() {
           />
         </div>
         <h1 className="text-center text-4xl font-bold">Product Range</h1>
-        <div className="flex gap-5 py-20 px-10 flex-col md:flex-row">
+        <div className="flex gap-5 py-20 px-10 flex-col md:flex-row mx-auto">
           <section id="quickFindProduct">
             <div className="flex w-full justify-between min-w-[230px]">
               <h2 className="text-3xl text-orange-400 mb-3">Quick Find</h2>
@@ -146,7 +146,10 @@ export default function ProductService() {
                 })}
             </ul>
           </section>
-          <section id="productCard" className="grid md:grid-cols-3 gap-4">
+          <section
+            id="productCard"
+            className="grid md:grid-cols-3 gap-4 w-full"
+          >
             {vehicles.length > 0 &&
               vehicles.map((vehicle: any, idx: any) => (
                 <div
