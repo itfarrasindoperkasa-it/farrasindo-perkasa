@@ -8,6 +8,10 @@ import OurServiceRentImage from "@/asset/images/homes/our-service-rent.png";
 import OurServicePartAfterSaleImage from "@/asset/images/homes/our-service-part-after-sales.png";
 import ProductRange from "@/components/home/ProductRange";
 import { Portfolio } from "@/components/home/Portofolio";
+import { BestSellingProduct } from "@/components/home/BestSellingProduct";
+import { TestimonialSection } from "@/components/home/Testimonial";
+import { LatestNews } from "@/components/home/LatestNews";
+import { OurGroup } from "@/components/home/OurGroup";
 
 export const metadata: Metadata = {
   title: "Farrasindo - Solusi Terbaik untuk Kebutuhan Anda",
@@ -165,6 +169,18 @@ export default async function Home({
       </section>
       <section id="portfolio">
         <Portfolio />
+      </section>
+      <section id="bestSellingProduct">
+        <BestSellingProduct />
+      </section>
+      <section id="testimonial">
+        <TestimonialSection />
+      </section>
+      <section id="lastestNews">
+        <LatestNews />
+      </section>
+      <section id="ourGroup">
+        <OurGroup />
       </section>
     </main>
   );

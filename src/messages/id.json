@@ -106,6 +106,41 @@
           "value": "sparepart"
         }
       ]
+    },
+    "portfolio": {
+      "title": "Portofolio Kami",
+      "buttonText": "Lebih Detil",
+
+      "projects": [
+        {
+          "title": "RM Pagi Sore",
+          "location": "Jawa Barat, Indonesia"
+        },
+        {
+          "title": "Menara Sentraya",
+          "location": "Blok M, Jakarta Selatan"
+        },
+        {
+          "title": "PT Lianhua",
+          "location": "Cianjur Jawa Barat, Indonesia"
+        },
+        {
+          "title": "Sekolah",
+          "location": "Cianjur Jawa Barat, Indonesia"
+        },
+        {
+          "title": "Lapangan Tenis",
+          "location": "Pesanggrahan, Jakarta Barat"
+        },
+        {
+          "title": "RS Hermina",
+          "location": "Depok Jawa Barat, Indonesia"
+        },
+        {
+          "title": "Kodam Jaya",
+          "location": "Jakarta Timur, Indonesia"
+        }
+      ]
     }
   }
 }
