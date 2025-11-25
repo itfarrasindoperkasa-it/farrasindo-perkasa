@@ -7,6 +7,7 @@ import OurServiceSellImage from "@/asset/images/homes/our-service-sell.png";
 import OurServiceRentImage from "@/asset/images/homes/our-service-rent.png";
 import OurServicePartAfterSaleImage from "@/asset/images/homes/our-service-part-after-sales.png";
 import ProductRange from "@/components/home/ProductRange";
+import { Portfolio } from "@/components/home/Portofolio";
 
 export const metadata: Metadata = {
   title: "Farrasindo - Solusi Terbaik untuk Kebutuhan Anda",
@@ -161,6 +162,9 @@ export default async function Home({
       </section>
       <section id="productRange" className="p-20">
         <ProductRange message={message.home.product_range} />
+      </section>
+      <section id="portfolio">
+        <Portfolio />
       </section>
     </main>
   );
