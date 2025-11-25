@@ -143,6 +143,20 @@
           "location": "Depok Jawa Barat, Indonesia"
         }
       ]
+    },
+    "best_selling_products": {
+      "title": "Produk Terlaris",
+      "buttonLabel": "Baca Selengkapnya",
+      "items": [
+        {
+          "title": "Satu Paket Konstruksi Pompa Beton & Readymix",
+          "link": "#"
+        },
+        {
+          "title": "Pabrik Batching Bergerak 3 in 1",
+          "link": "#"
+        }
+      ]
     }
   }
 }
