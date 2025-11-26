@@ -20,7 +20,7 @@ export function OurGroup() {
     infinite: true,
     autoplay: true,
     autoplaySpeed: 0, // 0 + cssEase linear = jalan terus
-    speed: 8000, // makin besar makin pelan
+    speed: 10000, // makin besar makin pelan
     cssEase: "linear" as const,
     slidesToShow: 5,
     slidesToScroll: 1,

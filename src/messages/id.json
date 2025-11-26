@@ -22,25 +22,39 @@
         "value": "https://farrasindo-cp.com/sparepart"
       }
     ],
+    "product_list_footer": [
+      "Pompa Beton",
+      "Pabrik Batching Bergerak",
+      "Pompa Beton Alat Tulis",
+      "Pabrik Batching",
+      "Farracon Pracetak",
+      "Suku Cadang & Layanan",
+      "Pemuatan Mandiri",
+      "Wheel Loader"
+    ],
+
     "information": {
       "title": "Hubungi Kami",
       "emails": [
         {
           "label": "Info",
-          "value": "info@farrasindo-cp.com"
+          "value": "marketing@farrasindo-cp.co.id"
         }
       ],
-      "phones": [
-        {
-          "label": "Telepon",
-          "value": "+62 21 595 3410"
-        },
-        {
-          "label": "WhatsApp",
-          "value": "+62 811 900 5555"
-        }
-      ],
-      "address": "Jl. Industri Raya Blok III No. 10, Kawasan Industri Jatake, Tangerang, Banten 15136, Indonesia"
+      "phones": {
+        "title": "Kontak Kantor",
+        "items": [
+          {
+            "label": "WhatsApp",
+            "value": "0815 7474 7474 <br> 0815 7545 3564"
+          },
+          {
+            "label": "Telepon",
+            "value": "021 – 587 0525"
+          }
+        ]
+      },
+      "address": "Jl. Srengseng Raya No.41 AB, RT.3/RW.8, Srengseng, Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11630"
     }
   },
   "home": {
@@ -182,6 +196,46 @@
           "role": "Kontraktor Proyek, Jakarta"
         }
       ]
+    },
+    "latest_news": {
+      "eyebrow": "Berita Terbaru",
+      "title": "Artikel & Berita",
+      "buttonText": "Baca Selengkapnya ...",
+      "list": [
+        {
+          "id": 1,
+          "title": "One Package Concrete Pump and Ready Mix Concrete",
+          "date": "August 25, 2025",
+          "excerpt": "Dalam dunia konstruksi, waktu adalah aset berharga. Namun, banyak proyek pengecoran sering menghadapi tantangan.",
+          "link": "/news/one-package-concrete-pump-ready-mix",
+          "author": "Admin Farrasindo"
+        },
+        {
+          "id": 2,
+          "title": "Farrasindo Perkasa Gelar Aksi Donor Darah Bersama PMI Tangerang, Wujud Nyata Kepedulian Sosial",
+          "date": "July 15, 2025",
+          "excerpt": "Dalam semangat kebersamaan dan kepedulian terhadap <p>sesama, Farrasindo Perkasa menggelar kegiatan aksi donor darah.",
+          "link": "/news/aksi-donor-darah-bersama-pmi",
+          "author": "Admin Farrasindo"
+        },
+        {
+          "id": 3,
+          "title": "Kenalan Sama Wheel Loader",
+          "date": "June 13, 2025",
+          "excerpt": "Wheel loader merupakan salah satu alat berat yang sangat populer dan banyak digunakan di berbagai sektor.",
+          "link": "/news/kenalan-sama-wheel-loader",
+          "author": "Tim Redaksi"
+        }
+      ],
+      "featured": {
+        "id": 99,
+        "title": "Pengecoran Hotel & Resort 500 Kamar",
+        "label": "Project Highlight",
+        "excerpt": "Proyek pengecoran lantai untuk pembangunan Hotel & Resort di Bogor membutuhkan beton dengan total volume 229 m³. Proses pengecoran berlangsung cepat dan lebih efisien karena menggunakan pompa beton tipe long boom dari Farrasindo Perkasa yang dapat memastikan kualitas dan ketepatan waktu dalam pembangunan proyek ini.",
+        "extra": "Selain jumlah kamar yang banyak, pemandangan yang ditawarkan hotel ini juga sangat bagus karena akan terlihat view kota yang indah. Jadi cocok banget kan buat kamu yang mau healing.",
+        "link": "/news/proyek-hotel-resort-500-kamar",
+        "author": "Tim Redaksi"
+      }
     }
   }
 }

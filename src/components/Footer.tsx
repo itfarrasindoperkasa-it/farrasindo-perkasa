@@ -13,62 +13,60 @@ import {
   MapPin,
 } from "lucide-react";
 
+import messages from "@/messages/id.json";
+
 export function Footer() {
+  const footer = messages.footer;
+  const services = footer["product services"];
+  const productListFooter = footer.product_list_footer ?? [];
+  const info = footer.information;
+
   return (
     <footer className="bg-[#111111] text-white">
       <div className="mx-auto max-w-7xl px-4 py-12 lg:py-16">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1.1fr_1.4fr]">
-          {/* Left: Logo + description + social */}
+          {/* LEFT – Logo + about + socials */}
           <div className="space-y-5">
             <div className="relative h-14 w-56 md:h-20 md:w-72">
               <Image
-                src={`/assets/images/farrasindo-group-logo-white.png`}
+                src="/assets/images/farrasindo-group-logo-white.png"
                 alt="Farrasindo Group"
                 fill
                 className="object-cover"
               />
             </div>
 
-            <p className="text-sm leading-relaxed text-white/80 max-w-md">
-              PT. Farrasindo Perkasa is a core part of the Farrasindo group and
-              is the market leader in heavy concrete construction equipment
-              rental. Founded in Jakarta in October 2001, more than 20 years as
-              an experienced company.
-            </p>
+            <div>
+              <h3 className="text-sm font-semibold">{footer.about.title}</h3>
+              <p className="text-sm text-white/80 leading-relaxed max-w-md">
+                {footer.about.description}
+              </p>
+            </div>
 
             <div className="flex items-center gap-3">
-              <SocialIcon href="https://facebook.com">
+              <SocialIcon href="#">
                 <Facebook className="h-4 w-4" />
               </SocialIcon>
-              <SocialIcon href="https://tiktok.com">
+              <SocialIcon href="#">
                 <Music2 className="h-4 w-4" />
               </SocialIcon>
-              <SocialIcon href="https://instagram.com">
+              <SocialIcon href="#">
                 <Instagram className="h-4 w-4" />
               </SocialIcon>
-              <SocialIcon href="https://youtube.com">
+              <SocialIcon href="#">
                 <Youtube className="h-4 w-4" />
               </SocialIcon>
             </div>
           </div>
 
-          {/* Middle: Product & Services + Career */}
+          {/* MIDDLE – Product & Services */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-lg font-semibold">Product &amp; Services</h3>
+              <h3 className="text-lg font-semibold">Product & Services</h3>
               <ul className="mt-3 space-y-2 text-sm text-white/80">
-                {[
-                  "Concrete Pump",
-                  "Mobile Batching Plant",
-                  "Stationery Concrete Pump",
-                  "Batching Plant",
-                  "Farracon Precast",
-                  "Sparepart & Service",
-                  "Self Loading",
-                  "Wheel Loader",
-                ].map((item) => (
+                {productListFooter.map((item) => (
                   <li key={item} className="flex items-start gap-2">
-                    <span className="mt-[2px] text-orange-400">&raquo;</span>
+                    <span className="mt-0.5 text-orange-400">&raquo;</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -77,74 +75,88 @@ export function Footer() {
 
             <div>
               <h3 className="text-lg font-semibold">Career</h3>
-              <button className="mt-3 inline-flex items-center gap-2 text-sm text-white/80 hover:text-orange-400">
-                <span className="text-orange-400">&raquo;</span>
-                <span>Join Us Now</span>
+              <button className="mt-3 flex items-center gap-2 text-sm text-white/80 hover:text-orange-400">
+                <span className="text-orange-400">&raquo;</span> Join Us Now
               </button>
             </div>
           </div>
 
-          {/* Right: Information */}
+          {/* RIGHT – Information */}
           <div className="space-y-6">
-            <h3 className="text-lg font-semibold">Information</h3>
+            <h3 className="text-lg font-semibold">{info.title}</h3>
 
             <div className="space-y-4 text-sm text-white/80">
+              {/* Emails */}
               <div>
                 <p className="font-semibold text-white">Email Address</p>
-                <div className="mt-1 flex items-center gap-2">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-orange-500/10 text-orange-400">
-                    <Mail className="h-4 w-4" />
-                  </span>
-                  <a
-                    href="mailto:marketing@farrasindo-cp.co.id"
-                    className="hover:text-orange-400"
+                {info.emails.map((email) => (
+                  <div
+                    key={email.value}
+                    className="mt-1 flex items-center gap-2"
                   >
-                    marketing@farrasindo-cp.co.id
-                  </a>
-                </div>
-              </div>
-
-              <div>
-                <p className="font-semibold text-white">Office Contact</p>
-                <div className="mt-1 flex gap-2">
-                  <span className="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-orange-500/10 text-orange-400">
-                    <Phone className="h-4 w-4" />
-                  </span>
-                  <div className="space-y-0.5">
-                    <p>021 – 587 0525</p>
-                    <p>0815 7474 7474</p>
-                    <p>0815 7545 3564</p>
+                    <span className="h-8 w-8 flex items-center justify-center rounded-full bg-orange-500/10 text-orange-400">
+                      <Mail className="h-4 w-4" />
+                    </span>
+                    <a
+                      href={`mailto:${email.value}`}
+                      className="hover:text-orange-400"
+                    >
+                      {email.value}
+                    </a>
                   </div>
-                </div>
+                ))}
               </div>
 
+              {/* Phones */}
               <div>
-                <p className="font-semibold text-white">Office Address</p>
+                <p className="font-semibold text-white">{info.phones.title}</p>
+
+                {info.phones.items.map((phone, i) => {
+                  const lines = phone.value.split(/<br\s*\/?>/i);
+
+                  return (
+                    <div key={i} className="mt-1 flex gap-2">
+                      <span className="mt-1 h-8 w-8 flex items-center justify-center rounded-full bg-orange-500/10 text-orange-400">
+                        <Phone className="h-4 w-4" />
+                      </span>
+
+                      <div className="space-y-0.5 text-sm text-white/80 leading-relaxed">
+                        {/* label: WhatsApp, Telepon, dll */}
+                        <p className="font-semibold">{phone.label}</p>
+
+                        {/* multi line dari <br> */}
+                        {lines.map((line, idx) => (
+                          <p key={idx}>{line.trim()}</p>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Address */}
+              <div>
                 <div className="mt-1 flex gap-2">
-                  <span className="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-orange-500/10 text-orange-400">
+                  <span className="mt-1 h-8 w-8 flex items-center justify-center rounded-full bg-orange-500/10 text-orange-400">
                     <MapPin className="h-4 w-4" />
                   </span>
-                  <p className="leading-relaxed">
-                    Jl. Srengseng Raya No.41 A-B, RT.3/RW.8, Srengseng, Kec.
-                    Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta
-                    11630
-                  </p>
+                  <p className="leading-relaxed">{info.address}</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Google Maps iframe */}
-          <div className="h-52 w-full overflow-hidden rounded-lg">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.315234833635!2d106.73947807505854!3d-6.219882293772388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7ea4dfd74eb%3A0x9f53dca556f001b2!2sJl.%20Srengseng%20Raya%20No.41%2C%20RT.3%2FRW.8%2C%20Srengseng%2C%20Kec.%20Kembangan%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2011630!5e0!3m2!1sen!2sid!4v1708928200000!5m2!1sen!2sid"
-              width="100%"
-              height="100%"
-              loading="lazy"
-              className="border-0"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+          {/* MAPS */}
+          <div className="w-full flex justify-center">
+            <div className="relative h-72 md:h-96  w-full">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31731.96517620447!2d106.71794387431642!3d-6.198149100000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f77305c654ff%3A0x5c50db3133a6daae!2sPT.%20FARRASINDO%20PERKASA%20-%20HEAD%20OFFICE!5e0!3m2!1sid!2sid!4v1764125369653!5m2!1sid!2sid"
+                className="absolute inset-0 h-full w-full border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -166,7 +178,7 @@ function SocialIcon({
   return (
     <Link
       href={href}
-      className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-white/80 shadow-sm transition hover:bg-orange-500 hover:text-white"
+      className="h-9 w-9 flex items-center justify-center rounded-full bg-white/5 text-white/80 shadow-sm transition hover:bg-orange-500 hover:text-white"
       target="_blank"
     >
       {children}
