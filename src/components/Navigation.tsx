@@ -331,22 +331,6 @@ export default function Navigation() {
               </Link>
             </li>
           </ul>
-
-          {/* OPTIONAL: social icons on mobile */}
-          <div className="flex justify-center gap-4 pb-4">
-            <Link href="#">
-              <FacebookIcon size={20} />
-            </Link>
-            <Link href="#">
-              <InstagramIcon size={20} />
-            </Link>
-            <Link href="#">
-              <Linkedin size={20} />
-            </Link>
-            <Link href="#">
-              <YoutubeIcon size={20} />
-            </Link>
-          </div>
         </div>
       )}
     </nav>

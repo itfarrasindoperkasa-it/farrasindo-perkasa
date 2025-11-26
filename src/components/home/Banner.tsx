@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import HomeBannerData from "@/lib/datas/home_banner";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 function SampleNextArrow(props: any) {
   const { className, style, onClick } = props;
@@ -55,7 +54,7 @@ function Banner({
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
-    arrows: false,
+    arrows: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
@@ -106,13 +105,18 @@ function Banner({
               <div className="absolute inset-0 bg-black/40" />
 
               {/* Text */}
-              <div className="absolute inset-x-4 bottom-10 sm:inset-x-8 sm:bottom-14 lg:bottom-20 z-20">
+              {/* Text */}
+              <div
+                className="
+    absolute inset-0 
+    flex items-center 
+    z-20 px-4 sm:px-8
+  "
+              >
                 <h2
-                  className="
-                    text-white font-bold leading-tight
-                    text-2xl sm:text-3xl md:text-4xl lg:text-5xl
-                    max-w-[90vw] sm:max-w-[70vw] md:max-w-[60vw]
-                  "
+                  className="text-white font-bold leading-tight
+      text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+      max-w-[90vw] sm:max-w-[70vw] md:max-w-[60vw]"
                 >
                   {messages[idx]?.title}
                 </h2>
