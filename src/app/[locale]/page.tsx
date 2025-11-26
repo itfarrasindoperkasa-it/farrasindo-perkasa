@@ -73,7 +73,7 @@ export default async function Home({
   const message = (await import("../../messages/id.json")).default;
 
   return (
-    <main id="home" className="w-full overflow-x-hidden">
+    <main id="home" className="w-full overflow-x-hidden ">
       <Banner
         className={`banner bg-black w-screen p-0`}
         height="h-[260px] sm:h-[360px] md:h-[800px]"
@@ -81,7 +81,7 @@ export default async function Home({
       />
       <section
         id="about"
-        className="w-full px-4 sm:px-6 md:px-10 lg:px-0 py-12 md:py-20"
+        className="w-full px-4 sm:px-6 md:px-10  py-12 md:py-20"
       >
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 md:gap-20 items-center">
           {/* IMAGE — MOBILE DI ATAS */}
