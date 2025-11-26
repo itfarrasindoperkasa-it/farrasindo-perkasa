@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import HomeBannerData from "@/lib/datas/home_banner";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 function SampleNextArrow(props: any) {
   const { className, style, onClick } = props;
@@ -54,7 +55,7 @@ function Banner({
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
-    arrows: true,
+    arrows: false,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
@@ -73,7 +74,7 @@ function Banner({
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 0,
-          arrows: true,
+          arrows: false,
         },
       },
       {
@@ -81,32 +82,46 @@ function Banner({
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: true,
+          arrows: false,
         },
       },
     ],
   };
   return (
-    <Slider {...settings} className={`${className} bg-white`}>
-      {banners.map((banner: any, idx: any) => (
-        <div key={idx} className={`${height} relative`}>
-          <span
-            className="z-20 absolute text-white font-bold left-5 top-60 text-5xl max-w-[60vw] animate-bannerText"
-            style={{
-              animation: "bannerTextFadeUp 1s cubic-bezier(0.4,0,0.2,1) both",
-            }}
-          >
-            {messages[idx].title}
-          </span>
-          <Image
-            src={banner}
-            fill={true}
-            alt={`Home Banner ${idx}`}
-            className="object-cover"
-          />
-        </div>
-      ))}
-    </Slider>
+    <div className={`w-full ${className ?? ""}`} {...props}>
+      <Slider {...settings} className="bg-white">
+        {banners.map((banner: any, idx: number) => (
+          <div key={idx}>
+            <div className={`relative w-full ${height}`}>
+              {/* Background image */}
+              <Image
+                src={banner}
+                fill
+                alt={`Home Banner ${idx}`}
+                className="object-cover"
+                priority={idx === 0}
+              />
+
+              {/* Overlay gelap biar text kebaca */}
+              <div className="absolute inset-0 bg-black/40" />
+
+              {/* Text */}
+              <div className="absolute inset-x-4 bottom-10 sm:inset-x-8 sm:bottom-14 lg:bottom-20 z-20">
+                <h2
+                  className="
+                    text-white font-bold leading-tight
+                    text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+                    max-w-[90vw] sm:max-w-[70vw] md:max-w-[60vw]
+                  "
+                >
+                  {messages[idx]?.title}
+                </h2>
+              </div>
+            </div>
+          </div>
+        ))}
+      </Slider>
+    </div>
   );
 }
 

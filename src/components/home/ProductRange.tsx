@@ -50,7 +50,7 @@ export default function ProductRange({ message }: { message: any }) {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          arrows: true,
+          arrows: false,
         },
       },
       {
@@ -59,7 +59,7 @@ export default function ProductRange({ message }: { message: any }) {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 0,
-          arrows: true,
+          arrows: false,
         },
       },
       {
@@ -67,7 +67,7 @@ export default function ProductRange({ message }: { message: any }) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: true,
+          arrows: false,
         },
       },
     ],
@@ -90,7 +90,7 @@ export default function ProductRange({ message }: { message: any }) {
         <Slider {...settings} className={``}>
           {ProductRanges.map((product: any, idx: any) => (
             <div key={idx} className={`py-10`}>
-              <div className="w-[80%] shadow-lg/20 relative h-[300px] rounded-xl flex flex-col p-4 items-center hover:bg-orange-400 hover:text-white transition-all">
+              <div className="w-[80%] shadow-lg/20 relative h-[300px] rounded-xl flex flex-col p-4 items-center hover:bg-orange-400 hover:text-white transition-all mx-auto">
                 <span className="font-bold text-3xl text-center mb-20 z-20">
                   {product.category}
                 </span>

@@ -29,7 +29,7 @@ export default function Navigation() {
 
   return (
     <nav
-      className="flex w-screen shadow-lg flex-col max-w-[100vw]"
+      className="fixed top-0 left-0 right-0 z-50 flex flex-col max-w-[100vw] bg-white shadow-lg"
       id="navigationWeb"
     >
       <div className="hidden md:flex items-center gap-20 w-full h-full p-2 justify-between bg-black lg:px-15">
@@ -83,7 +83,7 @@ export default function Navigation() {
           </li>
         </ul>
       </div>
-      <div className="flex items-center gap-20 w-full h-full">
+      <div className="flex items-center gap-20 w-full h-full px-8">
         <Image
           src={`/assets/images/farrasindo-group-logo.png`}
           width={220}
