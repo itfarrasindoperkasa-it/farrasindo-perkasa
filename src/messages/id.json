@@ -157,6 +157,31 @@
           "link": "#"
         }
       ]
+    },
+    "testimonials": {
+      "title": "Testimoni",
+      "items": [
+        {
+          "text": "Alhamdulillah oke, permintaan kita pun berjalan dengan baik.",
+          "name": "Bapak Ahmad",
+          "role": "Project Contractor, Perumahan Serpong Garden 2 - Tangerang."
+        },
+        {
+          "text": "Karena memang sudah langganan pakai Pompa Beton Farrasindo… mantap!",
+          "name": "Bapak Alfian",
+          "role": "Supervisor Project, Jakarta Barat"
+        },
+        {
+          "text": "Dari segi pelayanan bagus, dari mutu pun keliatannya bagus…",
+          "name": "Bapak Kamsir",
+          "role": "Project Contractor, Bogor"
+        },
+        {
+          "text": "Pelayanan di lapangan responsif dan komunikatif, sangat membantu progres proyek.",
+          "name": "Bapak Asep",
+          "role": "Kontraktor Proyek, Jakarta"
+        }
+      ]
     }
   }
 }

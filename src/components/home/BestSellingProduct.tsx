@@ -41,7 +41,7 @@ export function BestSellingProduct() {
           {sectionTitle}
         </h2>
 
-        <div className="grid gap-7 md:gap-0 md:grid-cols-2">
+        <div className="grid gap-6 md:gap-0  md:grid-cols-2">
           {products.map((product, idx) => (
             <article
               key={`${product.title}-${idx}`}
