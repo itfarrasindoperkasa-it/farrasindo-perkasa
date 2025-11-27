@@ -93,8 +93,8 @@ export default function Navigation() {
       <div className="flex items-center w-full h-full px-4 md:px-8">
         <Image
           src={`/assets/images/farrasindo-group-logo.png`}
-          width={220}
-          height={220}
+          width={120}
+          height={30}
           alt="Farrasindo Logo"
           className="h-auto w-[180px] md:w-[220px]"
         />

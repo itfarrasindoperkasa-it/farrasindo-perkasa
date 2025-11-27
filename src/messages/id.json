@@ -130,7 +130,6 @@
           "title": "RM Pagi Sore",
           "location": "Jawa Barat, Indonesia"
         },
-
         {
           "title": "PT Lianhua",
           "location": "Cianjur Jawa Barat, Indonesia"
@@ -147,7 +146,6 @@
           "title": "Lapangan Tenis",
           "location": "Pesanggrahan, Jakarta Barat"
         },
-
         {
           "title": "Kodam Jaya",
           "location": "Jakarta Timur, Indonesia"
@@ -155,6 +153,34 @@
         {
           "title": "RS Hermina",
           "location": "Depok Jawa Barat, Indonesia"
+        },
+        {
+          "title": "Saint Jhon’s Catholic School",
+          "location": "Cipondoh, Tangerang"
+        },
+        {
+          "title": "PT Cheetham Garam Indonesia",
+          "location": "Bogor, Jawa Barat"
+        },
+        {
+          "title": "Hotel Wellness",
+          "location": "Bogor, Jawa Barat"
+        },
+        {
+          "title": "PT. Yoosan, Proyek Perkantoran",
+          "location": "Kembang Kerep, Jakarta Barat"
+        },
+        {
+          "title": "Chitaland Tower",
+          "location": "Kuningan Setiabudi, Jakarta Selatan"
+        },
+        {
+          "title": "Pondok Indah Residance",
+          "location": "Jakarta Selatan"
+        },
+        {
+          "title": "RS Hermina",
+          "location": "Bogor, Jawa Barat"
         }
       ]
     },

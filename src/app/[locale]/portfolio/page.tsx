@@ -1,12 +1,19 @@
-"use client";
-
 import { PartnerCustomer } from "@/components/portfolio/PartnerCustomer";
 import HomeBannerData from "@/lib/datas/home_banner";
 import PortfolioData from "@/lib/datas/portofolio";
+import idMessages from "@/messages/id.json";
 import Image from "next/image";
 
 export default function PortfolioPage() {
   const banner = HomeBannerData[4];
+  // Gabungkan data image, title, dan location
+  const portfolioProjects = (idMessages.home?.portfolio?.projects || [])
+    .map((project, i) => ({
+      image: PortfolioData[i] || "",
+      title: project.title,
+      location: project.location,
+    }))
+    .slice(5, 15);
 
   return (
     <div className="w-full overflow-x-hidden">
@@ -39,17 +46,34 @@ export default function PortfolioPage() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 max-w-360 mx-auto">
-          {PortfolioData.map((item, i) => (
+          {portfolioProjects.map((item, i) => (
             <div
               key={i}
-              className="relative w-full h-[260px] group overflow-hidden rounded-lg"
+              className="relative w-full md:h-[350px] h-[250px] group rounded-lg overflow-hidden cursor-pointer"
             >
               <Image
-                src={item}
-                alt={`Portfolio ${i + 1}`}
+                src={item.image}
+                alt={item.title}
                 fill
                 className="object-cover rounded-lg group-hover:scale-105 transition-all duration-300"
               />
+              {/* Overlay for hover effect with orange bg only at bottom, always visible on mobile */}
+              <div
+                className="absolute left-0 right-0 bottom-0 h-20 transition-all duration-300 flex flex-col justify-center items-center
+                group-hover:bg-orange-400 group-hover:bg-opacity-90
+                bg-opacity-0
+                sm:bg-opacity-0 sm:group-hover:bg-opacity-90
+                bg-orange-400 sm:bg-transparent
+              "
+              >
+                <div
+                  className="text-white text-center w-full
+                  opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300"
+                >
+                  <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <p className="text-sm">{item.location}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>

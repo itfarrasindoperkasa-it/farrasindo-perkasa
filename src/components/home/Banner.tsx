@@ -54,7 +54,7 @@ function Banner({
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
-    arrows: true,
+    arrows: false,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
@@ -64,7 +64,7 @@ function Banner({
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          arrows: true,
+          arrows: false,
         },
       },
       {
