@@ -45,7 +45,7 @@ export function OurGroup() {
     <section className="w-full bg-[#cfcfcf] py-6">
       <div className="mx-auto container px-4">
         <Slider {...settings}>
-          {groups.map((group) => (
+          {groups.slice(0, 6).map((group) => (
             <div key={group.id}>
               <div className="flex items-center justify-center">
                 <div className="relative h-16 w-56 md:h-40 md:w-64">

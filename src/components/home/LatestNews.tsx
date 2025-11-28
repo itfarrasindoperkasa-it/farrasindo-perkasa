@@ -49,8 +49,8 @@ export function LatestNews() {
 
   const { eyebrow, title, buttonText, list, featured } = latestNewsConfig;
 
-  // gabungkan JSON + image utk list
-  const listNews: NewsItem[] = list.map((item, idx) => ({
+  // gabungkan JSON + image utk list, hanya ambil 3 item pertama
+  const listNews: NewsItem[] = list.slice(0, 3).map((item, idx) => ({
     ...item,
     image: LatestNewsData[idx]?.src ?? LatestNewsData[0]?.src ?? "",
     slug: item.slug, // tambahkan slug agar Link fallback tidak error

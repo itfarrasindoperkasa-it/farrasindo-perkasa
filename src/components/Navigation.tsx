@@ -102,7 +102,7 @@ export default function Navigation() {
         {/* DESKTOP MENU */}
         <ul className="hidden md:flex gap-x-6 mr-10 text-lg font-medium items-center md:flex-wrap ml-40">
           <li className="flex gap-2 items-center">
-            <Link href="#home" className="hover:text-foreground/80 font-bold">
+            <Link href={`/id`} className="hover:text-foreground/80 font-bold">
               Home
             </Link>
           </li>
@@ -111,7 +111,10 @@ export default function Navigation() {
               className="flex gap-2 items-center cursor-pointer"
               onClick={() => handleOpenNavbar("aboutus")}
             >
-              <Link href="#" className="hover:text-foreground/80 font-bold">
+              <Link
+                href={`/id/about-us`}
+                className="hover:text-foreground/80 font-bold"
+              >
                 About Us
               </Link>
               <ChevronDown
@@ -162,7 +165,7 @@ export default function Navigation() {
           </li>
           <li>
             <Link
-              href={`product-service`}
+              href={`/id/product-service`}
               className="hover:text-foreground/80 font-bold"
             >
               Products and Service
@@ -170,7 +173,7 @@ export default function Navigation() {
           </li>
           <li>
             <Link
-              href={"/portofolio"}
+              href={`/id/portfolio`}
               className="hover:text-foreground/80 font-bold"
             >
               Portofolio
@@ -178,7 +181,7 @@ export default function Navigation() {
           </li>
           <li>
             <Link
-              href="#contact"
+              href={`/id/news-and-event`}
               className="hover:text-foreground/80 font-bold"
             >
               News and Event
