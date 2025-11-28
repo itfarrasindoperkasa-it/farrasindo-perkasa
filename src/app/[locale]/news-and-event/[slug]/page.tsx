@@ -77,23 +77,25 @@ export default async function NewsDetail({ params }: NewsDetailParams) {
             <div className="bg-white rounded-xl shadow p-6">
               <h3 className="font-bold text-lg mb-4">Recent Post</h3>
               <ul className="text-sm text-gray-700 space-y-4">
-                {idMessages.home.latest_news.list.slice(0, 3).map((item, idx) => (
-                  <li key={item.id} className="flex items-center gap-3">
-                    <Image
-                      src={LatestNewsData[idx]}
-                      alt={item.title}
-                      width={56}
-                      height={40}
-                      className="rounded object-cover w-14 h-10"
-                    />
-                    <div>
-                      <span className="block text-xs text-gray-400 mb-1">
-                        {item.date}
-                      </span>
-                      <span className="font-semibold">{item.title}</span>
-                    </div>
-                  </li>
-                ))}
+                {idMessages.home.latest_news.list
+                  .slice(0, 3)
+                  .map((item, idx) => (
+                    <li key={item.id} className="flex items-center gap-3">
+                      <Image
+                        src={LatestNewsData[idx]}
+                        alt={item.title}
+                        width={56}
+                        height={40}
+                        className="rounded object-cover w-14 h-10"
+                      />
+                      <div>
+                        <span className="block text-xs text-gray-400 mb-1">
+                          {item.date}
+                        </span>
+                        <span className="font-semibold">{item.title}</span>
+                      </div>
+                    </li>
+                  ))}
               </ul>
             </div>
             <div className="bg-orange-500 text-white rounded-xl shadow p-6 text-center font-bold text-lg mt-2">
