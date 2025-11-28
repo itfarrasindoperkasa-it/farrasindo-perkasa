@@ -21,7 +21,7 @@ export default function NewsandEvent() {
       </section>
 
       {/* News & Event Content */}
-      <section className="max-w-7xl mx-auto px-4 py-12">
+      <section className="max-w-360 mx-auto px-4 py-12">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
           News and Event
         </h2>
@@ -70,7 +70,7 @@ export default function NewsandEvent() {
                         alt={news.title}
                         width={56}
                         height={40}
-                        className="rounded object-cover w-[56px] h-[40px]"
+                        className="rounded object-cover w-14 h-10"
                       />
                       <div>
                         <span className="block text-xs text-gray-400 mb-1">
@@ -83,9 +83,18 @@ export default function NewsandEvent() {
               </ul>
             </div>
             <div className="bg-orange-500 text-white rounded-xl shadow p-6 text-center font-bold text-lg mt-2">
-              Any Question About Industry
-              <br />
-              <span className="text-2xl">021 – 587 0525</span>
+              <div className="flex flex-col items-center justify-center">
+                <Image
+                  src={LatestNewsData[13]}
+                  alt="Any Question"
+                  width={550}
+                  height={120}
+                  className="mb-4 rounded-lg object-cover"
+                />
+                <span>Any Question About Industry</span>
+                <br />
+                <span className="text-2xl">021 – 587 0525</span>
+              </div>
             </div>
           </aside>
           {/* Main Content */}
