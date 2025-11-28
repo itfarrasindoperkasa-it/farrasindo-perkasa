@@ -1,4 +1,3 @@
-// components/latest-news.tsx
 "use client";
 
 import Image from "next/image";
@@ -12,8 +11,9 @@ type LatestNewsItemFromJson = {
   title: string;
   date: string;
   excerpt: string;
-  link: string;
+  link?: string;
   author: string;
+  slug: string;
 };
 
 type FeaturedNewsFromJson = {
@@ -36,6 +36,7 @@ type LatestNewsConfig = {
 
 type NewsItem = LatestNewsItemFromJson & {
   image: string;
+  slug: string; // tambahkan slug pada tipe NewsItem
 };
 
 type FeaturedNews = FeaturedNewsFromJson & {
@@ -43,7 +44,8 @@ type FeaturedNews = FeaturedNewsFromJson & {
 };
 
 export function LatestNews() {
-  const latestNewsConfig = messages.home.latest_news as LatestNewsConfig;
+  const latestNewsConfig = messages.home
+    .latest_news as unknown as LatestNewsConfig;
 
   const { eyebrow, title, buttonText, list, featured } = latestNewsConfig;
 
@@ -51,6 +53,7 @@ export function LatestNews() {
   const listNews: NewsItem[] = list.map((item, idx) => ({
     ...item,
     image: LatestNewsData[idx]?.src ?? LatestNewsData[0]?.src ?? "",
+    slug: item.slug, // tambahkan slug agar Link fallback tidak error
   }));
 
   // image untuk featured → ambil index setelah list
@@ -89,11 +92,7 @@ export function LatestNews() {
             {listNews.map((item) => (
               <article
                 key={item.id}
-                className="
-        group flex flex-col-reverse md:flex-row md:items-center 
-        gap-4 rounded-3xl bg-white/60 p-4 shadow-sm ring-1 
-        ring-neutral-100 transition hover:shadow-lg
-      "
+                className="group flex flex-col-reverse md:flex-row md:items-center gap-4 rounded-3xl bg-white/60 p-4 shadow-sm ring-1  ring-neutral-100 transition hover:shadow-lg"
               >
                 {/* Mobile: text di bawah, Desktop: text di kiri */}
                 <div className="flex-1 space-y-2">
@@ -110,7 +109,9 @@ export function LatestNews() {
                   </p>
 
                   <Link
-                    href={item.link}
+                    href={
+                      item.link ? item.link : `/news-and-event/${item.slug}`
+                    }
                     className="mt-2 inline-flex rounded-full bg-orange-400 px-5 py-2 text-xs font-semibold text-white shadow-sm transition group-hover:bg-orange-500"
                   >
                     {buttonText}

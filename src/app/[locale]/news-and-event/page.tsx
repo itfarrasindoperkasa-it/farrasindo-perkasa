@@ -5,7 +5,8 @@ import idMessages from "@/messages/id.json";
 import LatestNewsData from "@/lib/datas/latest_news";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import { Calendar } from "lucide-react";
 
 export default function NewsandEvent() {
   const banner = HomeBannerData[5];
@@ -18,9 +19,107 @@ export default function NewsandEvent() {
   const startIdx = (page - 1) * itemsPerPage;
   const endIdx = startIdx + itemsPerPage;
   // Slice news data for current page
-  const paginatedNews = newsList.slice(startIdx, endIdx);
+  const [keyword, setKeyword] = useState("");
+  const [filteredNews, setFilteredNews] = useState(newsList);
+  const paginatedNews = filteredNews.slice(startIdx, endIdx);
   // Slice image data for main content (max 13 images)
   const slicedImages = LatestNewsData;
+
+  // Ambil title dari idMessages.home.latest_news.title
+  const newsTitle = idMessages.home.latest_news.title;
+  // Ambil kategori unik dari newsList
+  const categories = Array.from(new Set(newsList.map((news) => news.author)));
+  const [selectedCategory, setSelectedCategory] = useState("");
+
+  // Ambil title dan label kategori dari id.json
+  const sidebarTitle = idMessages.home.latest_news.sidebarTitle || "Kategori";
+  const allCategoryLabel =
+    idMessages.home.latest_news.allCategoryLabel || "Semua";
+
+  const searchTitle =
+    idMessages.home.latest_news.searchTitle || "Kata Kunci Pencarian";
+  const searchPlaceholder =
+    idMessages.home.latest_news.searchPlaceholder || "Search ...";
+  const searchButton = idMessages.home.latest_news.searchButton || "🔍";
+  const recentPostTitle =
+    idMessages.home.latest_news.recentPostTitle || "Terbaru Posting";
+  const anyQuestionTitle =
+    idMessages.home.latest_news.anyQuestionTitle || "Ada Pertanyaan";
+  const anyQuestionSubtitle =
+    idMessages.home.latest_news.anyQuestionSubtitle || "Tentang Industri";
+  const anyQuestionPhone =
+    idMessages.home.latest_news.anyQuestionPhone || "Telepon: 021 – 587 0525";
+  const paginationNext = idMessages.home.latest_news.paginationNext || "Next";
+  const paginationPrevious =
+    idMessages.home.latest_news.paginationPrevious || "Previous";
+
+  const handleSearch = () => {
+    setPage(1);
+    if (keyword.trim() === "") {
+      setFilteredNews(newsList);
+    } else {
+      setFilteredNews(
+        newsList.filter(
+          (news) =>
+            news.title.toLowerCase().includes(keyword.toLowerCase()) ||
+            news.excerpt.toLowerCase().includes(keyword.toLowerCase())
+        )
+      );
+    }
+  };
+
+  // Filter kategori
+  const handleCategory = (cat: React.SetStateAction<string>) => {
+    setSelectedCategory(cat);
+    setPage(1);
+    if (cat === "") {
+      setFilteredNews(newsList);
+    } else {
+      setFilteredNews(newsList.filter((news) => news.author === cat));
+    }
+  };
+
+  // Fungsi untuk mendapatkan gambar sesuai id/slug
+  const getImageByNews = (
+    news:
+      | {
+          id: number;
+          title: string;
+          date: string;
+          excerpt: string;
+          link: string;
+          slug: string;
+          author: string;
+          description: string;
+          image?: undefined;
+        }
+      | {
+          id: number;
+          title: string;
+          date: string;
+          excerpt: string;
+          link: string;
+          slug: string;
+          author: string;
+          image: string;
+          description: string;
+        }
+      | {
+          id: number;
+          title: string;
+          date: string;
+          excerpt: string;
+          slug: string;
+          author: string;
+          description: string;
+          link?: undefined;
+          image?: undefined;
+        }
+  ) => {
+    // Cari index di newsList asli
+    const idx = newsList.findIndex((item) => item.id === news.id);
+    return LatestNewsData[idx] || LatestNewsData[0];
+  };
 
   return (
     <div className="w-full overflow-x-hidden">
@@ -38,43 +137,60 @@ export default function NewsandEvent() {
       {/* News & Event Content */}
       <section className="max-w-360 mx-auto px-4 py-12">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
-          News and Event
+          {newsTitle}
         </h2>
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar */}
           <aside className="lg:w-1/4 w-full flex flex-col gap-6">
             <div className="bg-white rounded-xl shadow p-6">
-              <h3 className="font-bold text-lg mb-4">Search Keyword</h3>
+              <h3 className="font-bold text-lg mb-4">{searchTitle}</h3>
               <div className="flex">
                 <input
                   type="text"
-                  placeholder="Search ..."
+                  placeholder={searchPlaceholder}
                   className="border rounded-l px-3 py-2 w-full"
+                  value={keyword}
+                  onChange={(e) => setKeyword(e.target.value)}
                 />
-                <button className="bg-orange-500 text-white px-4 py-2 rounded-r">
-                  🔍
+                <button
+                  className="bg-orange-500 text-white px-4 py-2 rounded-r"
+                  onClick={handleSearch}
+                >
+                  {searchButton}
                 </button>
               </div>
             </div>
             <div className="bg-white rounded-xl shadow p-6">
-              <h3 className="font-bold text-lg mb-4">Our Category</h3>
+              <h3 className="font-bold text-lg mb-4">{sidebarTitle}</h3>
               <ul className="text-sm text-gray-700 space-y-2">
-                <li className="flex justify-between items-center">
-                  Ready Mix <span className="text-xs">(1)</span>
+                <li>
+                  <button
+                    className={`hover:text-orange-400 transition-colors border-b border-gray-200 pb-2 w-full text-left ${
+                      selectedCategory === "" ? "font-bold text-orange-400" : ""
+                    }`}
+                    onClick={() => handleCategory("")}
+                  >
+                    {allCategoryLabel}
+                  </button>
                 </li>
-                <li className="flex justify-between items-center">
-                  Fresh Beton Indonesia <span className="text-xs">(1)</span>
-                </li>
-                <li className="flex justify-between items-center">
-                  Farrasindo Group <span className="text-xs">(10)</span>
-                </li>
-                <li className="flex justify-between items-center">
-                  Construction <span className="text-xs">(1)</span>
-                </li>
+                {categories.map((cat) => (
+                  <li key={cat}>
+                    <button
+                      className={`hover:text-orange-400 transition-colors border-b border-gray-200 pb-2 w-full text-left ${
+                        selectedCategory === cat
+                          ? "font-bold text-orange-400"
+                          : ""
+                      }`}
+                      onClick={() => handleCategory(cat)}
+                    >
+                      {cat}
+                    </button>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="bg-white rounded-xl shadow p-6">
-              <h3 className="font-bold text-lg mb-4">Recent Post</h3>
+              <h3 className="font-bold text-lg mb-4">{recentPostTitle}</h3>
               <ul className="text-sm text-gray-700 space-y-4">
                 {idMessages.home.latest_news.list
                   .slice(0, 3)
@@ -83,32 +199,47 @@ export default function NewsandEvent() {
                       <Image
                         src={LatestNewsData[idx].src}
                         alt={news.title}
-                        width={56}
+                        width={70}
                         height={40}
-                        className="rounded object-cover w-14 h-10"
+                        className="rounded object-cover"
                       />
                       <div>
                         <span className="block text-xs text-gray-400 mb-1">
                           {news.date}
                         </span>
-                        <span className="font-semibold">{news.title}</span>
+                        <Link href={`/id/news-and-event/${news.slug}`} passHref>
+                          <span className="font-semibold hover:text-orange-400 transition-colors cursor-pointer">
+                            {news.title}
+                          </span>
+                        </Link>
                       </div>
                     </li>
                   ))}
               </ul>
             </div>
-            <div className="bg-orange-500 text-white rounded-xl shadow p-6 text-center font-bold text-lg mt-2">
-              <div className="flex flex-col items-center justify-center">
-                <Image
-                  src={LatestNewsData[13]}
-                  alt="Any Question"
-                  width={550}
-                  height={120}
-                  className="mb-4 rounded-lg object-cover"
-                />
-                <span>Any Question About Industry</span>
-                <br />
-                <span className="text-2xl">021 – 587 0525</span>
+            <div className="relative flex flex-col items-center justify-center mt-2">
+              <Image
+                src={LatestNewsData[13]}
+                alt="Any Question"
+                width={400}
+                height={180}
+                className="rounded-xl object-cover z-0"
+                style={{ boxShadow: "0 8px 32px rgba(0,0,0,0.12)" }}
+              />
+              <div
+                className="bg-orange-500 text-white rounded-xl shadow-lg px-8 py-6 text-center font-bold text-lg z-10 relative"
+                style={{ marginTop: "-40px", minWidth: "320px" }}
+              >
+                <div className="flex flex-col items-center justify-center">
+                  <span className="mb-2">
+                    {anyQuestionTitle}
+                    <br />
+                    {anyQuestionSubtitle}
+                  </span>
+                  <span className="text-2xl font-semibold">
+                    {anyQuestionPhone}
+                  </span>
+                </div>
               </div>
             </div>
           </aside>
@@ -116,24 +247,27 @@ export default function NewsandEvent() {
           <main className="lg:w-3/4 w-full flex flex-col gap-8">
             {/* News List with Pagination */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {paginatedNews.map((news, idx) => {
+              {paginatedNews.map((news) => {
                 return (
                   <div
                     key={news.id}
-                    className="bg-white rounded-xl shadow p-6 flex flex-col items-center"
+                    className="bg-white rounded-xl shadow p-6 flex flex-col "
                   >
                     <Image
-                      src={LatestNewsData[startIdx + idx]}
+                      src={getImageByNews(news)}
                       alt={news.title}
-                      width={320}
-                      height={180}
-                      className="rounded-lg object-cover mb-4 w-full h-[180px]"
+                      width={360}
+                      height={250}
+                      className="rounded-lg object-cover mb-4 w-full h-[250px]"
                     />
                     <div className="flex justify-between items-center w-full mb-2">
                       <span className="bg-orange-400 text-white font-bold text-xs px-3 py-1 rounded">
                         {news.author}
                       </span>
-                      <span className="text-xs text-gray-500">{news.date}</span>
+                      <span className="text-xs text-orange-500 flex items-center gap-1">
+                        <Calendar size={16} className="inline-block" />
+                        {news.date}
+                      </span>
                     </div>
                     <Link href={`/id/news-and-event/${news.slug}`} passHref>
                       <div className="text-lg font-bold mb-2 hover:text-orange-400 transition-colors duration-200">
@@ -152,7 +286,7 @@ export default function NewsandEvent() {
                   disabled={page === 1}
                   onClick={() => setPage(page - 1)}
                 >
-                  Previous
+                  {paginationPrevious}
                 </button>
                 <div className="flex gap-2">
                   {Array.from({ length: totalPages }).map((_, i) => (
@@ -174,7 +308,7 @@ export default function NewsandEvent() {
                   disabled={page === totalPages}
                   onClick={() => setPage(page + 1)}
                 >
-                  Next
+                  {paginationNext}
                 </button>
               </div>
             )}
