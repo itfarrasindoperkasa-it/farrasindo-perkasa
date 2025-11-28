@@ -1,11 +1,26 @@
+"use client";
+
 import HomeBannerData from "@/lib/datas/home_banner";
 import idMessages from "@/messages/id.json";
 import LatestNewsData from "@/lib/datas/latest_news";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 
 export default function NewsandEvent() {
   const banner = HomeBannerData[5];
+  // Pagination setup
+  const newsList = idMessages.home.latest_news.list;
+  const totalNews = newsList.length;
+  const itemsPerPage = 12;
+  const [page, setPage] = React.useState(1);
+  const totalPages = Math.ceil(totalNews / itemsPerPage);
+  const startIdx = (page - 1) * itemsPerPage;
+  const endIdx = startIdx + itemsPerPage;
+  // Slice news data for current page
+  const paginatedNews = newsList.slice(startIdx, endIdx);
+  // Slice image data for main content (max 13 images)
+  const slicedImages = LatestNewsData;
 
   return (
     <div className="w-full overflow-x-hidden">
@@ -99,64 +114,70 @@ export default function NewsandEvent() {
           </aside>
           {/* Main Content */}
           <main className="lg:w-3/4 w-full flex flex-col gap-8">
-            {/* Featured News */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-              {idMessages.home.latest_news.list.slice(0, 2).map((news, idx) => (
-                <div
-                  key={news.id}
-                  className="bg-white rounded-xl shadow p-6 flex flex-col items-center"
-                >
-                  <Image
-                    src={LatestNewsData[idx].src}
-                    alt={news.title}
-                    width={320}
-                    height={180}
-                    className="rounded-lg object-cover mb-4 w-full h-[180px]"
-                  />
-                  <div className="flex justify-between items-center w-full mb-2">
-                    <span className="bg-orange-400 text-white font-bold text-xs px-3 py-1 rounded">
-                      {news.author}
-                    </span>
-                    <span className="text-xs text-gray-500">{news.date}</span>
-                  </div>
-                  <Link href={`/id/news-and-event/${news.slug}`} passHref>
-                    <div className="text-lg font-bold mb-2 hover:text-orange-400 transition-colors duration-200">
-                      {news.title}
-                    </div>
-                  </Link>
-                  {/* <span className="text-xs text-gray-500">{news.author}</span> */}
-                </div>
-              ))}
-            </div>
-            {/* News List */}
+            {/* News List with Pagination */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {idMessages.home.latest_news.list.slice(2).map((news, idx) => (
-                <div
-                  key={news.id}
-                  className="bg-white rounded-xl shadow p-6 flex flex-col items-center"
-                >
-                  <Image
-                    src={LatestNewsData[idx + 2].src}
-                    alt={news.title}
-                    width={320}
-                    height={180}
-                    className="rounded-lg object-cover mb-4 w-full h-[180px]"
-                  />
-                  <div className="flex justify-between items-center w-full mb-2">
-                    <span className="bg-orange-400 text-white font-bold text-xs px-3 py-1 rounded">
-                      {news.author}
-                    </span>
-                    <span className="text-xs text-gray-500">{news.date}</span>
-                  </div>
-                  <Link href={`/id/news-and-event/${news.slug}`} passHref>
-                    <div className="text-lg font-bold mb-2 hover:text-orange-400 transition-colors duration-200">
-                      {news.title}
+              {paginatedNews.map((news, idx) => {
+                return (
+                  <div
+                    key={news.id}
+                    className="bg-white rounded-xl shadow p-6 flex flex-col items-center"
+                  >
+                    <Image
+                      src={LatestNewsData[startIdx + idx]}
+                      alt={news.title}
+                      width={320}
+                      height={180}
+                      className="rounded-lg object-cover mb-4 w-full h-[180px]"
+                    />
+                    <div className="flex justify-between items-center w-full mb-2">
+                      <span className="bg-orange-400 text-white font-bold text-xs px-3 py-1 rounded">
+                        {news.author}
+                      </span>
+                      <span className="text-xs text-gray-500">{news.date}</span>
                     </div>
-                  </Link>
-                  {/* <span className="text-xs text-gray-500">{news.author}</span> */}
-                </div>
-              ))}
+                    <Link href={`/id/news-and-event/${news.slug}`} passHref>
+                      <div className="text-lg font-bold mb-2 hover:text-orange-400 transition-colors duration-200">
+                        {news.title}
+                      </div>
+                    </Link>
+                  </div>
+                );
+              })}
             </div>
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="flex justify-center items-center gap-2 mt-8">
+                <button
+                  className="px-3 py-1 rounded bg-gray-200 hover:bg-orange-400 hover:text-white"
+                  disabled={page === 1}
+                  onClick={() => setPage(page - 1)}
+                >
+                  Previous
+                </button>
+                <div className="flex gap-2">
+                  {Array.from({ length: totalPages }).map((_, i) => (
+                    <button
+                      key={i}
+                      className={`px-3 py-1 rounded-lg ${
+                        page === i + 1
+                          ? "bg-orange-400 text-white"
+                          : "bg-gray-200 hover:bg-orange-400 hover:text-white"
+                      }`}
+                      onClick={() => setPage(i + 1)}
+                    >
+                      {i + 1}
+                    </button>
+                  ))}
+                </div>
+                <button
+                  className="px-3 py-1 rounded-lg bg-gray-200 hover:bg-orange-400 hover:text-white"
+                  disabled={page === totalPages}
+                  onClick={() => setPage(page + 1)}
+                >
+                  Next
+                </button>
+              </div>
+            )}
           </main>
         </div>
       </section>
