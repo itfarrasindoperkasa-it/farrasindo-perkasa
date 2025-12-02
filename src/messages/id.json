@@ -370,5 +370,177 @@
         "author": "Tim Redaksi"
       }
     }
+  },
+  "aboutPage": {
+    "tabs": [
+      { "id": "group", "label": "Kelompok" },
+      { "id": "why_us", "label": "Mengapa Memilih Kami" },
+      { "id": "vision_mission", "label": "Visi & Misi" },
+      { "id": "history", "label": "Sejarah" }
+    ],
+
+    "overview": {
+      "title": "Gambaran Umum Perusahaan",
+      "company": "PT Farrasindo Perkasa",
+      "description": "PT Farrasindo Perkasa didirikan dan dibangun untuk menjawab tantangan dan tuntutan kota-kota besar di Indonesia yang memiliki keterbatasan lahan untuk membangun dan menyediakan fasilitas dan infrastruktur perkantoran, serta perdagangan di satu sisi, dan perumahan bagi penduduk di sisi lain. Penerapan otonomi daerah dipandang sebagai pintu untuk melihat perkembangan kota modern, dengan gedung pencakar langit yang semakin tinggi dan pembangunan rumah berbasis beton siap pakai."
+    },
+
+    "groupOverview": {
+      "title": "Farrasindo Group",
+      "description": "Lebih dari 2 dekade Farrasindo Group lahir untuk turut serta membangun Indonesia. Kami membangun lini bisnis mulai dari sektor Pertambangan, Mesin Beton, Crane, Sparepart, dan Jasa. Seluruh unit usaha berkolaborasi dari hulu hingga hilir untuk memenuhi kebutuhan konstruksi masyarakat Indonesia."
+    },
+
+    "cards": {
+      "title": "Highlight Farrasindo Group",
+      "items": [
+        { "id": 1, "title": "Kartu 1" },
+        { "id": 2, "title": "Kartu 2" },
+        { "id": 3, "title": "Kartu 3" },
+        { "id": 4, "title": "Kartu 4" },
+        { "id": 5, "title": "Kartu 5" },
+        { "id": 6, "title": "Kartu 6" },
+        { "id": 7, "title": "Kartu 7" },
+        { "id": 8, "title": "Kartu 8" }
+      ]
+    },
+
+    "whyChooseUs": {
+      "title": "Mengapa Memilih Kami?",
+      "items": [
+        {
+          "id": 1,
+          "title": "Para Ahli",
+          "description": "Dengan dukungan sumber daya yang profesional dan teknologi terkini, Farrasindo Group terus berkontribusi bagi masyarakat, bangsa, dan negara untuk menjadi perusahaan yang unggul dan terpercaya."
+        },
+        {
+          "id": 2,
+          "title": "Teknologi",
+          "description": "Farrasindo Group bergerak di bidang industri konstruksi yang mengutamakan teknologi modern untuk mendukung percepatan pembangunan Indonesia."
+        },
+        {
+          "id": 3,
+          "title": "Ahli Mesin Beton",
+          "description": "Kami memiliki armada mesin beton lebih dari 200 unit berbagai ukuran dan jenis, siap mendukung proyek konstruksi skala kecil hingga besar."
+        },
+        {
+          "id": 4,
+          "title": "Portofolio",
+          "description": "Farrasindo telah mengerjakan berbagai proyek strategis dan ritel, membuktikan pengalaman dan konsistensi kami dalam mendukung pembangunan nasional."
+        }
+      ]
+    },
+
+    "visionMission": {
+      "title": "Visi & Misi",
+      "vision": {
+        "title": "Visi Farrasindo",
+        "description": "Menjadi perusahaan jasa penyewaan peralatan pompa beton dan penyedia suku cadang yang berpengaruh dan terkemuka di Asia Tenggara."
+      },
+      "mission": {
+        "title": "Misi Farrasindo",
+        "description": "Mengembangkan dan menyebarluaskan layanan penyewaan peralatan pompa beton serta menyediakan suku cadang, serta membantu pelanggan dalam penggunaannya untuk mencapai tingkat kualitas dan produktivitas yang lebih tinggi sesuai harapan pelanggan."
+      }
+    },
+
+    "historyDetail": {
+      "title": "History Of Farrasindo Perkasa",
+      "paragraphs": [
+        "PT Farrasindo Perkasa didirikan dan dibangun untuk menjawab tantangan kota besar dengan keterbatasan lahan dalam penyediaan sarana dan prasarana perkantoran, perdagangan, serta perumahan.",
+        "Penerapan otonomi daerah dianggap sebagai jendela untuk melihat perkembangan kota-kota besar dunia yang identik dengan gedung pencakar langit dan pusat perbelanjaan modern. Hal ini menginspirasi pembangunan rumah dan infrastruktur berbasis beton siap pakai.",
+        "Pompa Beton menjadi solusi utama untuk menjaga beton tetap segar, mempertahankan kualitasnya, dan mempercepat proses konstruksi.",
+        "Untuk membantu pemilik bangunan dan kontraktor mencapai tujuan pembangunan yang cepat dan berkualitas, Farrasindo memfokuskan diri pada penyewaan Pompa Beton dan penyediaan suku cadang.",
+        "Farrasindo Perkasa (FP) adalah perusahaan penyewaan alat berat konstruksi beton yang didirikan pada 3 Oktober 2001 oleh praktisi berpengalaman di bidang beton siap pakai. Kami selalu mengutamakan kualitas, kecepatan, dan ketepatan waktu demi kepuasan pelanggan."
+      ]
+    },
+
+    "history": {
+      "title": "Sejarah Farrasindo Group",
+      "timeline": [
+        {
+          "id": 1,
+          "year": 2001,
+          "title": "PT. Farrasindo Perkasa",
+          "description": "Didirikan oleh Bapak H. Encep Suherman."
+        },
+        {
+          "id": 2,
+          "year": 2002,
+          "title": "Unit Pompa Beton Pertama",
+          "description": "F01 menandai debut pompa beton pertama yang diproduksi Farrasindo."
+        },
+        {
+          "id": 3,
+          "year": 2003,
+          "title": "Kantor Pusat Pertama",
+          "description": "Kantor pusat pertama beroperasi dari tahun 2001–2008, kini menjadi Pool 2."
+        },
+        {
+          "id": 4,
+          "year": 2004,
+          "title": "Kepemimpinan",
+          "description": "Briefing langsung dari Bapak Encep Suherman kepada para crew proyek."
+        },
+        {
+          "id": 5,
+          "year": 2007,
+          "title": "Silaturahmi Farrasindo",
+          "description": "Foto bersama menjelang Idul Fitri di lahan kantor pusat yang baru."
+        },
+        {
+          "id": 6,
+          "year": 2008,
+          "title": "Kantor Pusat Baru",
+          "description": "Kantor pusat baru di Srengseng, Jakarta selesai dibangun."
+        },
+        {
+          "id": 7,
+          "year": 2011,
+          "title": "Kelahiran Citi Pump",
+          "description": "PT Citi Pump Indonesia berdiri sebagai produsen mesin beton."
+        },
+        {
+          "id": 8,
+          "year": 2013,
+          "title": "Kelahiran Inti Jaya",
+          "description": "PT Inti Jaya Industri hadir sebagai penyedia suku cadang mesin beton."
+        },
+        {
+          "id": 9,
+          "year": 2014,
+          "title": "Pompa Batch",
+          "description": "Mesin beton kombinasi Truk Mixer, Pompa Beton Stasioner, dan Batching Plant pertama dirilis."
+        },
+        {
+          "id": 10,
+          "year": 2014,
+          "title": "Kelahiran Gunung Bumi",
+          "description": "PT Gunung Bumi Perkasa berdiri sebagai perusahaan pertambangan."
+        },
+        {
+          "id": 11,
+          "year": 2015,
+          "title": "Beton Segar",
+          "description": "Farrasindo mendirikan PT Fresh Beton Indonesia."
+        },
+        {
+          "id": 12,
+          "year": 2016,
+          "title": "Kelahiran Citi Crane",
+          "description": "PT Citi Crane Perkasa didirikan untuk memperkuat lini alat berat."
+        },
+        {
+          "id": 13,
+          "year": 2022,
+          "title": "Pompa Mini Citi MCP 8E - 22/4",
+          "description": "Farrasindo memperluas inovasi mesin beton melalui produk pompa mini."
+        },
+        {
+          "id": 14,
+          "year": 2022,
+          "title": "Kelahiran Farracon Precast",
+          "description": "PT Farracon Precast Industry didirikan untuk produksi beton pracetak."
+        }
+      ]
+    }
   }
 }

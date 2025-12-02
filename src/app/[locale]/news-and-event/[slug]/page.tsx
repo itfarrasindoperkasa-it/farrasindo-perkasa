@@ -162,7 +162,7 @@ export default async function NewsDetail({ params }: NewsDetailParams) {
                 {news.title}
               </h1>
               <p className="text-gray-700 mb-6">{news.excerpt}</p>
-              <div className="prose prose-lg max-w-none text-gray-800 whitespace-pre-line">
+              <div className="prose prose-lg max-w-none text-justify text-gray-800 whitespace-pre-line">
                 {news.description}
               </div>
             </div>
