@@ -1,234 +1,316 @@
 "use client";
+
+import React, { Fragment, JSX, useState } from "react";
 import Image from "next/image";
-import AboutData from "@/lib/datas/about";
-import OurPartnerData from "@/lib/datas/our_partner";
-import { useState } from "react";
 import type { StaticImageData } from "next/image";
 
-type Company = {
-  name: string;
-  logo: string | StaticImageData;
-  link: string;
-  description: string;
+import aboutJson from "@/messages/id.json";
+import AboutData from "@/lib/datas/about";
+import OurPartnerData from "@/lib/datas/our_partner";
+
+import {
+  UserCheck,
+  Cpu,
+  Factory,
+  FolderOpen,
+  Award,
+  Truck,
+  Building,
+  ClipboardCheck,
+  Star,
+  type LucideIcon,
+} from "lucide-react";
+
+/* ============================
+   Types (sesuaikan jika perlu)
+   ============================ */
+
+type Tab = {
+  id: string;
+  label: string;
 };
-type TimelineCardProps = {
-  year: string;
+
+type CompanyEntry = {
+  name: string;
+  logo?: string | StaticImageData;
+  link?: string;
+  description?: string;
+};
+
+type WhyItem = {
+  id: number;
   title: string;
   description: string;
-  image: string | StaticImageData;
+  icon?: string;
 };
 
-function CompanyCards({ companies }: { companies: Company[] }) {
-  const [openIdx, setOpenIdx] = useState<number | null>(null);
-  const handleToggle = (idx: number) => {
-    setOpenIdx(openIdx === idx ? null : idx);
+type Vision = {
+  title: string;
+  description: string;
+};
+
+type VisionMission = {
+  title: string;
+  vision: Vision;
+  mission: Vision;
+};
+
+type FounderMessage = {
+  title: string;
+  signature: {
+    name: string;
+    title: string;
   };
+  paragraphs: string[];
+};
+
+type TimelineEntry = {
+  id?: number;
+  year?: number | string;
+  title: string;
+  description: string;
+  image?: string | StaticImageData;
+};
+
+type History = {
+  title: string;
+  timeline: TimelineEntry[];
+};
+
+type AboutPage = {
+  tabs: Tab[];
+  overview?: {
+    title?: string;
+    company?: string;
+    description?: string;
+  };
+  groupOverview?: {
+    title?: string;
+    description?: string;
+  };
+  companies?: CompanyEntry[];
+  whyChooseUs?: {
+    title?: string;
+    items?: WhyItem[];
+  };
+  visionMission?: VisionMission;
+  founderMessage?: FounderMessage;
+  history?: History;
+};
+
+/* ============================
+   Icon map
+   ============================ */
+
+const ICON_MAP: Record<string, LucideIcon> = {
+  UserCheck,
+  Cpu,
+  Factory,
+  FolderOpen,
+  Award,
+  Truck,
+  Building,
+  ClipboardCheck,
+  Star,
+};
+
+/* ============================
+   Helpers
+   ============================ */
+
+/**
+ * resolveRef:
+ * - kalau JSON berisi string "OurPartnerData[2]" -> kembalikan OurPartnerData[2]
+ * - kalau JSON berisi string "AboutData[3]" -> kembalikan AboutData[3]
+ * - kalau sudah StaticImageData/objek -> kembalikan langsung
+ * - kalau string path -> kembalikan string (untuk <img/> fallback)
+ */
+function resolveRef(value?: unknown): StaticImageData | string | undefined {
+  if (!value) return undefined;
+
+  if (typeof value === "object") return value as StaticImageData;
+
+  if (typeof value === "string") {
+    const op = value.match(/^OurPartnerData\[(\d+)\]$/);
+    if (op) {
+      const idx = parseInt(op[1], 10);
+      return (OurPartnerData as any)[idx] ?? value;
+    }
+    const ad = value.match(/^AboutData\[(\d+)\]$/);
+    if (ad) {
+      const idx = parseInt(ad[1], 10);
+      return (AboutData as any)[idx] ?? value;
+    }
+    return value;
+  }
+
+  return undefined;
+}
+
+/** pilih icon berdasarkan judul sebagai fallback */
+function pickIconByTitle(title: string): LucideIcon {
+  const t = title.toLowerCase();
+  if (t.includes("ahli")) return UserCheck;
+  if (t.includes("teknologi")) return Cpu;
+  if (t.includes("mesin") || t.includes("beton") || t.includes("pompa"))
+    return Factory;
+  if (t.includes("portofolio") || t.includes("proyek")) return FolderOpen;
+  if (t.includes("tahun") || t.includes("pengalaman")) return Award;
+  if (t.includes("armada") || t.includes("truck")) return Truck;
+  return Star;
+}
+
+/* ============================
+   Small UI components
+   ============================ */
+
+function TabButton({
+  id,
+  label,
+  active,
+  onClick,
+}: {
+  id: string;
+  label: string;
+  active: boolean;
+  onClick: (id: string) => void;
+}) {
+  return (
+    <button
+      onClick={() => onClick(id)}
+      aria-pressed={active}
+      className={`px-4 py-3 border-b-2 text-xs sm:text-sm md:text-base ${
+        active
+          ? "border-orange-500 text-orange-500 font-semibold"
+          : "border-transparent hover:border-orange-300 hover:text-orange-500 transition-colors"
+      }`}
+    >
+      {label}
+    </button>
+  );
+}
+
+function CompanyCards({ companies }: { companies: CompanyEntry[] }) {
+  const [openIdx, setOpenIdx] = useState<number | null>(null);
+
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
-      {companies.map((company, idx) => (
-        <div
-          key={company.name}
-          className="flex flex-col items-center justify-center rounded-md p-2 bg-white shadow-sm hover:shadow-md transition-shadow relative"
-        >
-          <a
-            href={company.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative mb-3 block"
+      {companies.map((c, idx) => {
+        const logo = resolveRef(c.logo);
+        return (
+          <div
+            key={`${c.name}-${idx}`}
+            className="flex flex-col items-center justify-center rounded-md p-3 bg-white shadow-sm hover:shadow-md transition-shadow"
           >
-            <Image
-              src={company.logo}
-              alt={company.name}
-              width={200}
-              height={100}
-              className="object-cover"
-            />
-          </a>
+            <a
+              href={c.link ?? "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-3  w-full flex justify-center"
+            >
+              {logo && typeof logo !== "string" ? (
+                <Image
+                  src={logo}
+                  alt={c.name}
+                  width={200}
+                  height={100}
+                  className="object-contain"
+                />
+              ) : logo && typeof logo === "string" ? (
+                <img
+                  src={logo}
+                  alt={c.name}
+                  className="object-contain max-h-20"
+                />
+              ) : (
+                <div className="w-40 h-12 bg-gray-100 flex items-center justify-center text-xs text-gray-500">
+                  No Logo
+                </div>
+              )}
+            </a>
 
-          {/* <p className="text-[11px] sm:text-xs text-center text-gray-700 font-semibold mb-1">
-            {company.name}
-          </p> */}
+            {openIdx === idx && c.description && (
+              <p className="text-[11px] sm:text-xs text-justify text-gray-600 mb-2">
+                {c.description}
+              </p>
+            )}
 
-          {openIdx === idx && (
-            <p className="text-[10px] sm:text-xs text-justify text-gray-600 mb-2">
-              {company.description}
-            </p>
-          )}
-
-          <button
-            onClick={() => handleToggle(idx)}
-            className="mt-2 w-6 h-6 flex items-center justify-center rounded border border-gray-300 bg-white text-orange-400 hover:bg-orange-100 focus:outline-none"
-            aria-label={openIdx === idx ? "Tutup deskripsi" : "Lihat deskripsi"}
-          >
-            {openIdx === idx ? <span>▲</span> : <span>▼</span>}
-          </button>
-        </div>
-      ))}
+            <button
+              onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
+              className="mt-2 w-6 h-6 flex items-center justify-center rounded border border-gray-300 bg-white text-orange-400 hover:bg-orange-100"
+              aria-label={
+                openIdx === idx ? "Tutup deskripsi" : "Lihat deskripsi"
+              }
+            >
+              {openIdx === idx ? "▲" : "▼"}
+            </button>
+          </div>
+        );
+      })}
     </div>
   );
 }
 
-const groupCompanies: Company[] = [
-  {
-    name: "PT Farrasindo Perkasa (FP)",
-    logo: OurPartnerData[2],
-    link: "https://farrasindo.co.id",
-    description:
-      "PT Farrasindo Perkasa (FP) adalah perusahaan jasa sewa dan penjualan alat berat konstruksi, dengan spesialisasi di bidang Concrete Pump, Batching Plant, serta berbagai Mesin Beton lainnya.",
-  },
-  {
-    name: "PT Inti Jaya Industri",
-    logo: OurPartnerData[4],
-    link: "https://intijaya.co.id",
-    description:
-      "PT Inti Jaya Industri adalah perusahaan saudara dari Farrasindo Group. Kami fokus pada bidang Spare Parts dan After Sales Service untuk Mesin Beton, mendukung kelancaran operasional konstruksi industri Anda.",
-  },
-  {
-    name: "CITI PUMP",
-    logo: OurPartnerData[1],
-    link: "https://citipump.co.id",
-    description:
-      "CITI PUMP fokus menyediakan solusi alat berat perbetonan untuk daerah perkotaan, dimana kebutuhan pembangunan yang tinggi namun tidak diimbangi dengan luas akses jalan yang mampu untuk melewati alat berat.",
-  },
-  {
-    name: "PT Citi Crane Perkasa",
-    logo: OurPartnerData[0],
-    link: "https://citicrane.co.id",
-    description:
-      "PT Citi Crane Perkasa adalah perusahaan rental alat berat di Indonesia dengan pengalaman luas di bidang pengangkutan dan transportasi berat. Didukung armada yang terus berkembang, kami melayani berbagai industri dengan fokus pada efisiensi, keselamatan, dan efisiensi.",
-  },
-  {
-    name: "PT Fresh Beton Indonesia",
-    logo: OurPartnerData[5],
-    link: "https://freshbeton.co.id",
-    description:
-      "PT Fresh Beton Indonesia adalah perusahaan yang bergerak di bidang beton siap pakai (readymix) dan beton pracetak (precast), menyediakan produk beton berkualitas untuk berbagai kebutuhan proyek konstruksi.",
-  },
-  {
-    name: "PT Gunung Bumi Perkasa",
-    logo: OurPartnerData[3],
-    link: "https://gbp.co.id",
-    description:
-      "PT Gunung Bumi Perkasa merupakan perusahaan pertambangan yang berdiri sejak tahun 2016. Produk utama kami meliputi batu Andesit, Abu Batu, Split, Base Course, Screening, dan Macadam, yang digunakan sebagai bahan baku beton berkualitas tinggi dan aspal.",
-  },
-  {
-    name: "PT Farracon Precast Indonesia",
-    logo: OurPartnerData[6],
-    link: "https://farraconprecast.co.id",
-    description:
-      "PT. Farracon Precast Indonesia memproduksi beton pracetak berkualitas tinggi untuk memenuhi kebutuhan pelanggan seperti u-dict, road barrier, grc dll , didukung oleh pengalaman 15 tahun di bidang konstruksi dan alat berat.",
-  },
-  {
-    name: "Simi",
-    logo: OurPartnerData[7],
-    link: "https://simi.co.id",
-    description:
-      "Simi adalah sebuah tempat yang menyediakan layanan pijat refleksi dan spa. Dengan fokus pada relaksasi, Simi menawarkan berbagai teknik pijat tradisional yang disesuaikan dengan kebutuhan individu, bertujuan untuk memberikan pengalaman relaksasi yang mendalam dan menyegarkan bagi para pelanggan.",
-  },
-];
+function TimelineCard({ item }: { item: TimelineEntry }) {
+  const image = resolveRef(item.image);
+  return (
+    <div className="bg-white border border-gray-100 rounded-md shadow-sm hover:shadow-md transition-shadow overflow-hidden max-w-md">
+      <div className="relative w-full md:h-48 h-36">
+        {image && typeof image !== "string" ? (
+          <Image src={image} alt={item.title} fill className="object-cover" />
+        ) : image && typeof image === "string" ? (
+          <img
+            src={image}
+            alt={item.title}
+            className="w-full h-full object-cover"
+          />
+        ) : null}
+      </div>
 
-const timeline = [
-  {
-    year: "2001",
-    title: "PT Farrasindo Perkasa",
-    description:
-      "Bapak H. Encep Suherman mendirikan PT. Farrasindo Perkasa sebagai pendirinya.",
-    image: AboutData[3],
-  },
-  {
-    year: "2002",
-    title: "Unit Pompa Beton Pertama",
-    description:
-      "F01 menandai debut pompa beton yang dirancang dan diproduksi oleh Farrasindo Group.",
-    image: AboutData[4],
-  },
-  {
-    year: "2003",
-    title: "Kantor Pusat Pertama",
-    description:
-      "Kantor Pusat Farrasindo TAHUN 2001 - 2008 yang sekarang menjadi pool 2 di depan Kantor Pusat Saat Ini.",
-    image: AboutData[5],
-  },
-  {
-    year: "2004",
-    title: "Kepemimpinan",
-    description:
-      "Briefing dari Bapak Encep Suherman kepada crew sebelum melaksanakan tugas di proyek",
-    image: AboutData[6],
-  },
-  {
-    year: "2007",
-    title: "PT. Farrasindo Perkasa",
-    description:
-      "Foto bersama setelah silaturahmi menjelang Idul Fitri tahun 2007 di lahan yang akan menjadi kantor pusat saat ini",
-    image: AboutData[7],
-  },
-  {
-    year: "2008",
-    title: "Kantor Pusat Baru",
-    description:
-      "Pembangunan kantor pusat selesai pada tahun 2008, berlokasi di Srengseng, Jakarta.",
-    image: AboutData[8],
-  },
-  {
-    year: "2011",
-    title: "Kelahiran Citi Pump",
-    description:
-      "PT. CITI PUMP INDONESIA didirikan dan bergerak di bidang permesinan beton",
-    image: AboutData[9],
-  },
-  {
-    year: "2013",
-    title: "Kelahiran Inti Jaya",
-    description:
-      "Didirikan pada tahun 2013, PT. Inti Jaya Industri dari Farrasindo Group berfokus pada Suku Cadang Mesin Beton.",
-    image: AboutData[10],
-  },
-  {
-    year: "2014",
-    title: "Kelahiran Pompa Batch",
-    description:
-      "Mesin beton pertama dari Farrasindo Group menggabungkan Truk Mixer, Pompa Beton Stationery, dan Pabrik Batching.",
-    image: AboutData[11],
-  },
-  {
-    year: "2014",
-    title: "Kelahiran Gunung Bumi",
-    description:
-      "PT. Gunung Bumi Perkasa, sebuah perusahaan pertambangan, didirikan pada tanggal 4 November 2014 di Sukabumi.",
-    image: AboutData[12],
-  },
-  {
-    year: "2015",
-    title: "Kelahiran Beton Segar",
-    description:
-      "27 Juni 2016 Farrasindo Mendirikan PT. Fresh Beton Indonesia untuk bersinergi dalam konstruksi",
-    image: AboutData[13],
-  },
-  {
-    year: "2016",
-    title: "Kelahiran Citi Crane",
-    description:
-      "8 Desember 2015 PT. CITI CRANE PERKASA lahir untuk memperkuat Grup farrasindo",
-    image: AboutData[14],
-  },
-  {
-    year: "2022",
-    title: "Pompa Mini Citi MCP 8E - 22/4",
-    description:
-      "PT. FARRACON PRECAST INDUSTRI merupakan perusahaan yang bergerak di bidang produksi dan distribusi produk beton pracetak.",
-    image: AboutData[15],
-  },
-  {
-    year: "2023",
-    title: "Kelahiran Farracon Precast",
-    description:
-      "PT. FARRACON PRECAST INDUSTRI merupakan perusahaan yang bergerak di bidang produksi dan distribusi produk beton pracetak.",
-    image: AboutData[16],
-  },
-];
+      <div className="p-3 sm:p-4">
+        <p className="text-[11px] sm:text-xs font-semibold text-orange-500 mb-1 bg-white">
+          {item.year}
+        </p>
+        <h4 className="text-xs sm:text-sm font-semibold mb-1">{item.title}</h4>
+        <p className="text-[11px] sm:text-xs text-gray-600 leading-relaxed">
+          {item.description}
+        </p>
+      </div>
+    </div>
+  );
+}
 
-export default function AboutUsPage() {
+/* ============================
+   Main Page Component
+   ============================ */
+
+export default function AboutUsPage(): JSX.Element {
+  const about = (aboutJson as unknown as { aboutPage: AboutPage }).aboutPage;
+
+  const tabs: Tab[] = about.tabs ?? [
+    { id: "group", label: "Kelompok" },
+    { id: "why_us", label: "Mengapa Memilih Kami" },
+    { id: "vision_mission", label: "Visi & Misi" },
+  ];
+
+  const [activeTab, setActiveTab] = useState<string>(tabs[0]?.id ?? "group");
+
+  const companies: CompanyEntry[] = (about.companies ?? []).map((c) => ({
+    ...c,
+    logo: c.logo ? resolveRef(c.logo) : undefined,
+  }));
+
+  const whyItems: WhyItem[] = (about.whyChooseUs?.items ?? []).map((it) => ({
+    ...it,
+  }));
+
+  const timeline: TimelineEntry[] = (about.history?.timeline ?? []).map(
+    (t) => ({
+      ...t,
+      image: (t as any).image ? resolveRef((t as any).image) : undefined,
+    })
+  );
+
   return (
     <main className="w-full bg-white">
       {/* HERO */}
@@ -238,159 +320,181 @@ export default function AboutUsPage() {
           alt="Farrasindo Group"
           fill
           className="object-cover"
-          priority
         />
       </section>
+
+      {/* TITLE */}
       <div className="flex justify-center items-center my-10 gap-x-2">
         <h1 className="text-lg sm:text-xl md:text-4xl uppercase tracking-wide font-semibold">
-          Gambaran Umum Perusahaan
+          {about.overview?.title ?? "Gambaran Umum Perusahaan"}
         </h1>
       </div>
-      {/* IKHTISAR PERUSAHAAN */}
+
+      {/* OVERVIEW */}
       <section className="w-full py-10 sm:py-14 md:py-16">
         <div className="max-w-360 mx-auto px-4 sm:px-6 relative">
           <div className="flex flex-col md:flex-row gap-8 md:gap-10 items-start">
-            {/* Gambar */}
             <div className="relative w-full md:w-2/3 h-[220px] sm:h-[300px] md:h-[430px]">
               <Image
                 src={AboutData[1]}
-                alt="PT Farrasindo Perkasa"
+                alt={about.overview?.company ?? "PT Farrasindo Perkasa"}
                 fill
                 className="object-cover rounded-lg"
-                priority
               />
             </div>
 
-            {/* Card Text */}
-            <div
-              className="
-                w-full md:w-1/2 bg-slate-200 border border-slate-300 
-                p-5 sm:p-6 md:p-8 rounded-xl shadow-sm
-                text-sm sm:text-base leading-relaxed
-                md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2
-              "
-            >
+            <div className="w-full md:w-1/2 bg-slate-200 border border-slate-300 p-5 sm:p-6 md:p-8 rounded-xl shadow-sm text-sm sm:text-base leading-relaxed md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2">
               <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-orange-500 mb-3">
-                PT Farrasindo Perkasa
+                {about.overview?.company}
               </h2>
 
               <p className="mb-3">
                 <span className="text-white bg-orange-400 w-fit mr-2 px-1 rounded">
-                  PT Farrasindo Perkasa
+                  {about.overview?.company}
                 </span>
-                didirikan dan dibangun untuk menjawab tantangan dan tuntutan
-                kota-kota besar di Indonesia yang memiliki keterbatasan lahan
-                untuk membangun dan menyediakan fasilitas dan infrastruktur
-                perkantoran, serta perdagangan di satu sisi, dan perumahan bagi
-                penduduk di sisi lain.
-              </p>
-
-              <p>
-                Penerapan otonomi daerah dipandang sebagai jendela dan pintu
-                untuk melihat kota-kota besar di dunia dengan karakteristik umum
-                gedung pencakar langit yang semakin tinggi, pusat perbelanjaan
-                modern, dan pembangunan rumah berbasis beton siap pakai.
+                {about.overview?.description}
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* TAB HEADER (statik tampak seperti di desain) */}
+      {/* TAB HEADER */}
       <section className="border-t border-b border-gray-200">
         <div className="max-w-360 mx-auto px-4 sm:px-6">
-          <div className="flex justify-between text-xs sm:text-sm md:text-base">
-            <button className="px-4 py-3 border-b-2 border-orange-500 text-orange-500 font-semibold">
-              Kelompok
-            </button>
-
-            <button className="px-4 py-3 border-b-2 border-transparent hover:border-orange-300 hover:text-orange-500 transition-colors">
-              Mengapa Memilih Kami
-            </button>
-
-            <button className="px-4 py-3 border-b-2 border-transparent hover:border-orange-300 hover:text-orange-500 transition-colors">
-              Visi &amp; Misi
-            </button>
-
-            <button className="px-4 py-3 border-b-2 border-transparent hover:border-orange-300 hover:text-orange-500 transition-colors">
-              Sejarah
-            </button>
+          <div className="flex justify-between">
+            {tabs.map((t) => (
+              <TabButton
+                key={t.id}
+                id={t.id}
+                label={t.label}
+                active={activeTab === t.id}
+                onClick={setActiveTab}
+              />
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Kelompok COMPANIES */}
+      {/* TAB CONTENT (HANYA 3 BAGIAN) */}
       <section className="w-full py-8 sm:py-10">
         <div className="max-w-360 mx-auto px-4 sm:px-6">
-          <div className="flex items-center mb-5 gap-x-2">
-            <span className="text-lg sm:text-xl md:text-2xl uppercase tracking-wide font-semibold">
-              Farrasindo
-            </span>
-            <h3 className="mt-1 text-lg sm:text-xl md:text-2xl font-semibold text-white p-2 rounded text-center bg-orange-400 ">
-              Group
-            </h3>
-          </div>
-          <p className="text-xs sm:text-sm mb-6 text-gray-600">
-            Lebih dari 2 dekade Farrasindo Group lahir untuk turut serta
-            membangun Indonesia, wujud kami adalah membangun lini bisnis mulai
-            dari sektor Pertambangan, Mesin Beton dan Crane serta Sparepart dan
-            jasa, semuanya itu berkelindan dengan kebutuhan dunia konstruksi
-            berkolaborasi dari tiap area lini bisnis kami dari hulu sampai hilir
-            untuk dapat mempersiapkan kebutuhan konstruksi masyarakat Indonesia.
-          </p>
+          {/* GROUP */}
+          {activeTab === "group" && (
+            <Fragment>
+              <div className="flex items-center mb-5 gap-x-2">
+                <span className="text-lg sm:text-xl md:text-2xl uppercase tracking-wide font-semibold">
+                  {about.groupOverview?.title ?? "Farrasindo"}
+                </span>
+                <h3 className="mt-1 text-lg sm:text-xl md:text-2xl font-semibold text-white p-2 rounded text-center bg-orange-400">
+                  Group
+                </h3>
+              </div>
 
-          <CompanyCards companies={groupCompanies} />
+              <p className="text-xs sm:text-sm mb-6 text-gray-600">
+                {about.groupOverview?.description}
+              </p>
+
+              <CompanyCards companies={companies} />
+            </Fragment>
+          )}
+
+          {/* WHY US */}
+          {activeTab === "why_us" && (
+            <div>
+              <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-center">
+                {about.whyChooseUs?.title ?? "Mengapa Memilih Kami?"}
+              </h3>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                {whyItems.map((item) => {
+                  const IconComp = item.icon
+                    ? ICON_MAP[item.icon] ?? pickIconByTitle(item.title)
+                    : pickIconByTitle(item.title);
+
+                  return (
+                    <div
+                      key={item.id}
+                      className="
+            flex flex-col items-center text-center 
+            bg-white p-8 rounded-2xl
+            transition-all duration-300
+            hover:bg-gray-200 hover:shadow-md hover:-translate-y-1 shadow-md  
+          "
+                    >
+                      {/* icon */}
+                      <div className="mb-6 flex items-center justify-center w-24 h-24">
+                        <IconComp size={64} strokeWidth={1.6} />
+                      </div>
+
+                      {/* title */}
+                      <h4 className="font-semibold mb-2 text-orange-400 text-xl">
+                        {item.title}
+                      </h4>
+
+                      {/* description */}
+                      <p className="text-gray-600 text-sm leading-relaxed max-w-[460px]">
+                        {item.description}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* VISION & MISSION */}
+          {activeTab === "vision_mission" && (
+            <div>
+              <h3 className="text-xl sm:text-2xl font-semibold mb-4">
+                {about.visionMission?.title ?? "Visi & Misi"}
+              </h3>
+
+              <div className="grid sm:grid-cols-2 gap-6">
+                <div className="bg-white p-5 rounded shadow-sm">
+                  <h4 className="font-semibold text-orange-500 mb-2">
+                    {about.visionMission?.vision?.title}
+                  </h4>
+                  <p className="text-gray-700 text-sm">
+                    {about.visionMission?.vision?.description}
+                  </p>
+                </div>
+
+                <div className="bg-white p-5 rounded shadow-sm">
+                  <h4 className="font-semibold text-orange-500 mb-2">
+                    {about.visionMission?.mission?.title}
+                  </h4>
+                  <p className="text-gray-700 text-sm">
+                    {about.visionMission?.mission?.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
-      {/* DARI PENDIRI KAMI + FOTO CEO */}
+      {/* FOUNDER MESSAGE (SELALU TAMPIL) */}
       <section className="w-full bg-orange-400 py-10 sm:py-14">
         <div className="max-w-360 mx-auto px-4 sm:px-6">
           <div className="flex flex-col md:flex-row items-stretch gap-8 md:gap-10 bg-white p-6 sm:p-8 md:p-10 shadow-md">
-            {/* Text */}
             <div className="w-full md:w-3/5 text-sm sm:text-base leading-relaxed text-justify">
               <h3 className="text-lg sm:text-xl font-semibold mb-4 text-orange-600">
-                DARI PENDIRI KAMI
+                {about.founderMessage?.title}
               </h3>
-              <p className="mb-3">
-                Kami bangga dengan perjalanan yang telah membawa kami dari awal
-                yang sederhana hingga menjadi salah satu perusahaan terkemuka di
-                Indonesia dalam bidang peralatan dan jasa konstruksi. Semuanya
-                berawal dari satu unit pompa beton, komitmen untuk bekerja
-                keras, dan impian untuk meningkatkan efisiensi konstruksi di
-                seluruh negeri. Seiring waktu, melalui ketekunan dan dedikasi
-                terhadap keunggulan, kami mengembangkan Farrasindo Group menjadi
-                armada lebih dari 300 unit, melayani proyek-proyek di berbagai
-                industri.
-              </p>
-              <p className="mb-3">
-                Perusahaan kami telah memperluas layanannya, dan kini kami
-                terlibat dalam berbagai sektor, mulai dari penyewaan alat berat
-                hingga produksi material konstruksi seperti beton siap pakai dan
-                beton pracetak. Setiap langkah pertumbuhan kami didorong oleh
-                prinsip inti yang sama—integritas, keandalan, dan semangat untuk
-                membantu klien kami mencapai tujuan konstruksi mereka.
-              </p>
-              <p className="mb-3">
-                Impian kami adalah menyediakan peralatan dan layanan yang
-                dibutuhkan setiap pembangun, kontraktor, dan pengembang di
-                Indonesia untuk mewujudkan visi mereka—kapan pun dan di mana pun
-                mereka membutuhkannya. Di Farrasindo Group, kami berkomitmen
-                untuk mewujudkan visi ini, membantu membangun Indonesia yang
-                lebih kuat dan lebih terhubung melalui dedikasi dan layanan
-                kami.
-              </p>
+
+              {about.founderMessage?.paragraphs?.map((p, i) => (
+                <p key={i} className="mb-3 text-gray-700">
+                  {p}
+                </p>
+              ))}
 
               <div className="mt-4">
                 <p className="font-semibold">
-                  Terima kasih telah menjadi bagian dari perjalanan ini bersama
-                  kami.
+                  {about.founderMessage?.signature?.name}
                 </p>
                 <p className="font-semibold text-orange-700">
-                  Sungguh-sungguh,
-                  <br />
-                  <p>Encep Suherman</p>
-                  <p>Pendiri Farrasindo Group</p>
+                  {about.founderMessage?.signature?.title}
                 </p>
                 <p className="text-sm text-gray-700">
                   Direktur Utama Farrasindo Group
@@ -398,90 +502,65 @@ export default function AboutUsPage() {
               </div>
             </div>
 
-            {/* Foto CEO */}
-            <div className="w-full md:w-1/3 flex justify-center ">
-              <div className="relative overflow-hidden">
-                <Image
-                  src={AboutData[2]}
-                  alt="Pimpinan Farrasindo"
-                  width={500}
-                  height={500}
-                  className="object-cover"
-                />
-              </div>
+            <div className="w-full md:w-1/3 flex justify-center">
+              <Image
+                src={AboutData[2]}
+                alt="Pendiri"
+                width={400}
+                height={400}
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* SEJARAH / TIMELINE */}
+      {/* HISTORY (SELALU TAMPIL) */}
       <section className="w-full py-12">
         <div className="max-w-4xl mx-auto px-4">
           <div className="flex justify-center items-center mb-10 gap-x-2">
             <span className="text-lg sm:text-xl md:text-2xl uppercase tracking-wide font-semibold">
-              Sejarah
+              {about.history?.title?.split(" ")[0] ?? "Sejarah"}
             </span>
-            <h3 className="mt-1 text-lg sm:text-xl md:text-2xl font-semibold text-white p-2 rounded text-center bg-orange-400 ">
-              Farrasindo Group
+            <h3 className="mt-1 text-lg sm:text-xl md:text-2xl font-semibold text-white p-2 rounded text-center bg-orange-400">
+              {about.history?.title?.replace(/^\w+\s/, "") ??
+                "Farrasindo Group"}
             </h3>
           </div>
 
           <div className="relative">
-            {/* Garis vertikal di tengah */}
             <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200" />
 
-            <div className="space-y-8 sm:space-y-10">
+            <div className="space-y-2">
               {timeline.map((item, index) => {
                 const isLeft = index % 2 === 0;
                 return (
                   <div
-                    key={item.year}
+                    key={item.id ?? index}
                     className="flex flex-col md:flex-row md:items-center"
                   >
-                    {/* Konten kiri (untuk desktop) */}
                     <div
                       className={`hidden md:flex md:w-1/2 ${
                         isLeft ? "justify-end pr-6" : "justify-start pl-6"
                       }`}
                     >
-                      {isLeft && (
-                        <TimelineCard
-                          year={item.year}
-                          title={item.title}
-                          description={item.description}
-                          image={item.image}
-                        />
-                      )}
+                      {isLeft && <TimelineCard item={item} />}
                     </div>
 
-                    {/* Titik di tengah */}
                     <div className="hidden md:flex w-0 md:w-auto">
                       <div className="relative">
                         <div className="w-3 h-3 rounded-full bg-orange-500 border-4 border-white shadow" />
                       </div>
                     </div>
 
-                    {/* Konten kanan (atau semua konten di mobile) */}
                     <div className="md:w-1/2 md:flex md:justify-start md:pl-6">
-                      {/* Untuk mobile, selalu tampilkan card di sini */}
                       <div className="w-full md:hidden">
-                        <TimelineCard
-                          year={item.year}
-                          title={item.title}
-                          description={item.description}
-                          image={item.image}
-                        />
+                        <TimelineCard item={item} />
                       </div>
 
-                      {/* Desktop: jika card sisi kanan */}
                       {!isLeft && (
                         <div className="hidden md:block w-full">
-                          <TimelineCard
-                            year={item.year}
-                            title={item.title}
-                            description={item.description}
-                            image={item.image}
-                          />
+                          <TimelineCard item={item} />
                         </div>
                       )}
                     </div>
@@ -493,24 +572,5 @@ export default function AboutUsPage() {
         </div>
       </section>
     </main>
-  );
-}
-
-function TimelineCard({ year, title, description, image }: TimelineCardProps) {
-  return (
-    <div className="bg-white border border-gray-100 rounded-md shadow-sm hover:shadow-md transition-shadow overflow-hidden max-w-xs">
-      <div className="relative w-full h-32 sm:h-36">
-        <Image src={image} alt={title} fill className="object-cover" />
-      </div>
-      <div className="p-3 sm:p-4">
-        <p className="text-[11px] sm:text-xs font-semibold text-orange-500 mb-1">
-          {year}
-        </p>
-        <h4 className="text-xs sm:text-sm font-semibold mb-1">{title}</h4>
-        <p className="text-[11px] sm:text-xs text-gray-600 leading-relaxed">
-          {description}
-        </p>
-      </div>
-    </div>
   );
 }

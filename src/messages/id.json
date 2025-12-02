@@ -389,20 +389,56 @@
       "title": "Farrasindo Group",
       "description": "Lebih dari 2 dekade Farrasindo Group lahir untuk turut serta membangun Indonesia. Kami membangun lini bisnis mulai dari sektor Pertambangan, Mesin Beton, Crane, Sparepart, dan Jasa. Seluruh unit usaha berkolaborasi dari hulu hingga hilir untuk memenuhi kebutuhan konstruksi masyarakat Indonesia."
     },
-
-    "cards": {
-      "title": "Highlight Farrasindo Group",
-      "items": [
-        { "id": 1, "title": "Kartu 1" },
-        { "id": 2, "title": "Kartu 2" },
-        { "id": 3, "title": "Kartu 3" },
-        { "id": 4, "title": "Kartu 4" },
-        { "id": 5, "title": "Kartu 5" },
-        { "id": 6, "title": "Kartu 6" },
-        { "id": 7, "title": "Kartu 7" },
-        { "id": 8, "title": "Kartu 8" }
-      ]
-    },
+    "companies": [
+      {
+        "name": "PT Farrasindo Perkasa (FP)",
+        "logo": "OurPartnerData[2]",
+        "link": "https://farrasindo.co.id",
+        "description": "PT Farrasindo Perkasa (FP) adalah perusahaan jasa sewa dan penjualan alat berat konstruksi, dengan spesialisasi di bidang Concrete Pump, Batching Plant, serta berbagai Mesin Beton lainnya."
+      },
+      {
+        "name": "PT Inti Jaya Industri",
+        "logo": "OurPartnerData[4]",
+        "link": "https://intijaya.co.id",
+        "description": "PT Inti Jaya Industri adalah perusahaan saudara dari Farrasindo Group. Kami fokus pada bidang Spare Parts dan After Sales Service untuk Mesin Beton, mendukung kelancaran operasional konstruksi industri Anda."
+      },
+      {
+        "name": "CITI PUMP",
+        "logo": "OurPartnerData[1]",
+        "link": "https://citipump.co.id",
+        "description": "CITI PUMP fokus menyediakan solusi alat berat perbetonan untuk daerah perkotaan, dimana kebutuhan pembangunan yang tinggi namun tidak diimbangi dengan luas akses jalan yang mampu untuk melewati alat berat."
+      },
+      {
+        "name": "PT Citi Crane Perkasa",
+        "logo": "OurPartnerData[0]",
+        "link": "https://citicrane.co.id",
+        "description": "PT Citi Crane Perkasa adalah perusahaan rental alat berat di Indonesia dengan pengalaman luas di bidang pengangkutan dan transportasi berat. Didukung armada yang terus berkembang, kami melayani berbagai industri dengan fokus pada efisiensi, keselamatan, dan efisiensi."
+      },
+      {
+        "name": "PT Fresh Beton Indonesia",
+        "logo": "OurPartnerData[5]",
+        "link": "https://freshbeton.co.id",
+        "description": "PT Fresh Beton Indonesia adalah perusahaan yang bergerak di bidang beton siap pakai (readymix) dan beton pracetak (precast), menyediakan produk beton berkualitas untuk berbagai kebutuhan proyek konstruksi."
+      },
+      {
+        "name": "PT Gunung Bumi Perkasa",
+        "logo": "OurPartnerData[3]",
+        "link": "https://gbp.co.id",
+        "description": "PT Gunung Bumi Perkasa merupakan perusahaan pertambangan yang berdiri sejak tahun 2016. Produk utama kami meliputi batu Andesit, Abu Batu, Split, Base Course, Screening, dan Macadam, yang digunakan sebagai bahan baku beton berkualitas tinggi dan aspal."
+      },
+      {
+        "name": "PT Farracon Precast Indonesia",
+        "logo": "OurPartnerData[6]",
+        "link": "https://farraconprecast.co.id",
+        "description": "PT. Farracon Precast Indonesia memproduksi beton pracetak berkualitas tinggi untuk memenuhi kebutuhan pelanggan seperti u-dict, road barrier, grc dll , didukung oleh pengalaman 15 tahun di bidang konstruksi dan alat berat."
+      },
+      {
+        "name": "Simi",
+        "logo": "OurPartnerData[7]",
+        "link": "https://simi.co.id",
+        "description": "Simi adalah sebuah tempat yang menyediakan layanan pijat refleksi dan spa. Dengan fokus pada relaksasi, Simi menawarkan berbagai teknik pijat tradisional yang disesuaikan dengan kebutuhan individu, bertujuan untuk memberikan pengalaman relaksasi yang mendalam dan menyegarkan bagi para pelanggan."
+      }
+    ],
 
     "whyChooseUs": {
       "title": "Mengapa Memilih Kami?",
@@ -442,6 +478,20 @@
       }
     },
 
+    "founderMessage": {
+      "title": "Dari Pendiri Kami",
+      "signature": {
+        "name": "Encep Suherman",
+        "title": "Pendiri Farrasindo Group / Direktur Utama Farrasindo Group"
+      },
+      "paragraphs": [
+        "Kami bangga dengan perjalanan yang telah membawa kami dari awal yang sederhana hingga menjadi salah satu perusahaan terkemuka di Indonesia dalam bidang peralatan dan jasa konstruksi. Semuanya berawal dari satu unit pompa beton, komitmen untuk bekerja keras, dan impian untuk meningkatkan efisiensi konstruksi di seluruh negeri. Seiring waktu, melalui ketekunan dan dedikasi terhadap keunggulan, kami mengembangkan Farrasindo Group menjadi armada lebih dari 300 unit, melayani proyek-proyek di berbagai industri.",
+        "Perusahaan kami telah memperluas layanannya, dan kini kami terlibat dalam berbagai sektor, mulai dari penyewaan alat berat hingga produksi material konstruksi seperti beton siap pakai dan beton pracetak. Setiap langkah pertumbuhan kami didorong oleh prinsip inti yang sama—integritas, keandalan, dan semangat untuk membantu klien kami mencapai tujuan konstruksi mereka.",
+        "Impian kami adalah menyediakan peralatan dan layanan yang dibutuhkan setiap pembangun, kontraktor, dan pengembang di Indonesia untuk mewujudkan visi mereka—kapan pun dan di mana pun mereka membutuhkannya. Di Farrasindo Group, kami berkomitmen untuk mewujudkan visi ini, membantu membangun Indonesia yang lebih kuat dan lebih terhubung melalui dedikasi dan layanan kami.",
+        "Terima kasih telah menjadi bagian dari perjalanan ini bersama kami."
+      ]
+    },
+
     "historyDetail": {
       "title": "History Of Farrasindo Perkasa",
       "paragraphs": [
@@ -458,87 +508,101 @@
       "timeline": [
         {
           "id": 1,
-          "year": 2001,
+          "year": "Tahun 2001",
           "title": "PT. Farrasindo Perkasa",
-          "description": "Didirikan oleh Bapak H. Encep Suherman."
+          "description": "Bapak H. Encep Suherman mendirikan PT. Farrasindo Perkasa sebagai pendirinya.",
+          "image": "AboutData[3]"
         },
         {
           "id": 2,
-          "year": 2002,
+          "year": "Tahun 2002",
           "title": "Unit Pompa Beton Pertama",
-          "description": "F01 menandai debut pompa beton pertama yang diproduksi Farrasindo."
+          "description": "F01 menandai debut pompa beton yang dirancang dan diproduksi oleh Farrasindo Group.",
+          "image": "AboutData[4]"
         },
         {
           "id": 3,
-          "year": 2003,
+          "year": "Tahun 2003",
           "title": "Kantor Pusat Pertama",
-          "description": "Kantor pusat pertama beroperasi dari tahun 2001–2008, kini menjadi Pool 2."
+          "description": "Kantor Pusat Farrasindo TAHUN 2001 - 2008 yang sekarang menjadi pool 2 di depan Kantor Pusat Saat Ini.",
+          "image": "AboutData[5]"
         },
         {
           "id": 4,
-          "year": 2004,
+          "year": "Tahun 2004",
           "title": "Kepemimpinan",
-          "description": "Briefing langsung dari Bapak Encep Suherman kepada para crew proyek."
+          "description": "Briefing dari Bapak Encep Suherman kepada crew sebelum melaksanakan tugas di proyek.",
+          "image": "AboutData[6]"
         },
         {
           "id": 5,
-          "year": 2007,
-          "title": "Silaturahmi Farrasindo",
-          "description": "Foto bersama menjelang Idul Fitri di lahan kantor pusat yang baru."
+          "year": "Tahun 2007",
+          "title": "PT. Farrasindo Perkasa",
+          "description": "Foto bersama setelah silaturahmi menjelang Idul Fitri tahun 2007 di lahan yang akan menjadi kantor pusat saat ini",
+          "image": "AboutData[7]"
         },
         {
           "id": 6,
-          "year": 2008,
+          "year": "Tahun 2008",
           "title": "Kantor Pusat Baru",
-          "description": "Kantor pusat baru di Srengseng, Jakarta selesai dibangun."
+          "description": "Pembangunan kantor pusat selesai pada tahun 2008, berlokasi di Srengseng, Jakarta.",
+          "image": "AboutData[8]"
         },
         {
           "id": 7,
-          "year": 2011,
+          "year": "Tahun 2011",
           "title": "Kelahiran Citi Pump",
-          "description": "PT Citi Pump Indonesia berdiri sebagai produsen mesin beton."
+          "description": "PT. CITI PUMP INDONESIA didirikan dan bergerak di bidang permesinan beton.",
+          "image": "AboutData[9]"
         },
         {
           "id": 8,
-          "year": 2013,
+          "year": "Tahun 2013",
           "title": "Kelahiran Inti Jaya",
-          "description": "PT Inti Jaya Industri hadir sebagai penyedia suku cadang mesin beton."
+          "description": "Didirikan pada tahun 2013, PT. Inti Jaya Industri dari Farrasindo Group berfokus pada Suku Cadang Mesin Beton.",
+          "image": "AboutData[10]"
         },
         {
           "id": 9,
-          "year": 2014,
-          "title": "Pompa Batch",
-          "description": "Mesin beton kombinasi Truk Mixer, Pompa Beton Stasioner, dan Batching Plant pertama dirilis."
+          "year": "Tahun 2014",
+          "title": "Kelahiran Pompa Batch",
+          "description": "Mesin beton pertama dari Farrasindo Group menggabungkan Truk Mixer, Pompa Beton Stationery, dan Pabrik Batching.",
+          "image": "AboutData[11]"
         },
         {
           "id": 10,
-          "year": 2014,
+          "year": "Tahun 2014",
           "title": "Kelahiran Gunung Bumi",
-          "description": "PT Gunung Bumi Perkasa berdiri sebagai perusahaan pertambangan."
+          "description": "PT. Gunung Bumi Perkasa, sebuah perusahaan pertambangan, didirikan pada tanggal 4 November 2014 di Sukabumi.",
+          "image": "AboutData[12]"
         },
         {
           "id": 11,
-          "year": 2015,
-          "title": "Beton Segar",
-          "description": "Farrasindo mendirikan PT Fresh Beton Indonesia."
+          "year": "Tahun 2015",
+          "title": "Kelahiran Beton Segar",
+          "description": "27 Juni 2016 Farrasindo Mendirikan PT. Fresh Beton Indonesia untuk bersinergi dalam konstruksi",
+          "image": "AboutData[13]"
         },
         {
           "id": 12,
-          "year": 2016,
+          "year": "Tahun 2016",
           "title": "Kelahiran Citi Crane",
-          "description": "PT Citi Crane Perkasa didirikan untuk memperkuat lini alat berat."
+          "description": "8 Desember 2015 PT. CITI CRANE PERKASA lahir untuk memperkuat Grup farrasindo",
+          "image": "AboutData[14]"
         },
         {
           "id": 13,
-          "year": 2022,
+          "year": "Tahun 2022",
           "title": "Pompa Mini Citi MCP 8E - 22/4",
-          "description": "Farrasindo memperluas inovasi mesin beton melalui produk pompa mini."
+          "description": "PT. FARRACON PRECAST INDUSTRI merupakan perusahaan yang bergerak di bidang produksi dan distribusi produk beton pracetak.",
+          "image": "AboutData[15]"
         },
         {
           "id": 14,
-          "year": 2022,
+          "year": "Tahun 2023",
           "title": "Kelahiran Farracon Precast",
-          "description": "PT Farracon Precast Industry didirikan untuk produksi beton pracetak."
+          "description": "PT. FARRACON PRECAST INDUSTRI merupakan perusahaan yang bergerak di bidang produksi dan distribusi produk beton pracetak.",
+          "image": "AboutData[16]"
         }
       ]
     }
