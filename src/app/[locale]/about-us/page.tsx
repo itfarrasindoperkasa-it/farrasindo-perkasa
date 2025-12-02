@@ -77,6 +77,12 @@ type History = {
   timeline: TimelineEntry[];
 };
 
+type HistoryDetail = {
+  title: string;
+  paragraphs: string[];
+  text?: string;
+};
+
 type AboutPage = {
   tabs: Tab[];
   overview?: {
@@ -96,6 +102,7 @@ type AboutPage = {
   visionMission?: VisionMission;
   founderMessage?: FounderMessage;
   history?: History;
+  historyDetail?: HistoryDetail;
 };
 
 /* ============================
@@ -446,28 +453,59 @@ export default function AboutUsPage(): JSX.Element {
           {/* VISION & MISSION */}
           {activeTab === "vision_mission" && (
             <div>
-              <h3 className="text-xl sm:text-2xl font-semibold mb-4">
-                {about.visionMission?.title ?? "Visi & Misi"}
-              </h3>
-
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div className="bg-white p-5 rounded shadow-sm">
-                  <h4 className="font-semibold text-orange-500 mb-2">
+              {/* VISI */}
+              <div className="flex flex-col items-center text-center mb-12">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="bg-orange-500 text-white font-semibold px-4 py-1 rounded-md text-lg">
                     {about.visionMission?.vision?.title}
-                  </h4>
-                  <p className="text-gray-700 text-sm">
-                    {about.visionMission?.vision?.description}
-                  </p>
+                  </span>
                 </div>
 
-                <div className="bg-white p-5 rounded shadow-sm">
-                  <h4 className="font-semibold text-orange-500 mb-2">
+                <p className="text-gray-800 max-w-3xl leading-relaxed text-lg">
+                  {about.visionMission?.vision?.description}
+                </p>
+              </div>
+
+              {/* GARIS PEMISAH */}
+              <div className="w-full flex justify-center my-8">
+                <div className="w-2/3 h-px bg-gray-400" />
+              </div>
+
+              {/* MISI */}
+              <div className="flex flex-col items-center text-center">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="bg-orange-500 text-white font-semibold px-4 py-1 rounded-md text-lg">
                     {about.visionMission?.mission?.title}
-                  </h4>
-                  <p className="text-gray-700 text-sm">
-                    {about.visionMission?.mission?.description}
-                  </p>
+                  </span>
                 </div>
+
+                <p className="text-gray-800 max-w-3xl leading-relaxed text-lg">
+                  {about.visionMission?.mission?.description}
+                </p>
+              </div>
+            </div>
+          )}
+          {/* Sejarah */}
+          {activeTab === "history" && (
+            <div>
+              <div className="flex flex-col items-center text-justify mb-12">
+                <h2 className="bg-orange-500 text-white font-semibold p-3 rounded-md text-lg mb-4">
+                  {about.historyDetail?.title}
+                </h2>
+                {about.historyDetail?.paragraphs?.map(
+                  (p: string, i: number) => (
+                    <p
+                      key={i}
+                      className="text-black/60 max-w-5xl leading-relaxed text-lg mb-4"
+                    >
+                      {p}
+                    </p>
+                  )
+                )}
+                <div className="w-full h-px bg-gray-300 my-10"></div>
+                <p className="text-gray-800 max-w-5xl leading-relaxed text-lg mb-4 text-center">
+                  {about.historyDetail?.text}
+                </p>
               </div>
             </div>
           )}
