@@ -27,8 +27,18 @@ export default function Navigation() {
   const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false);
 
   const handleOpenNavbar = (menu: "aboutus" | "portfolio") => {
-    console.log("navbar", menu);
     setOpenNavbar((prev: any) => ({ ...prev, [menu]: !prev[menu] }));
+  };
+
+  // Smooth scroll to section by id
+  const handleScrollToSection = (id: string, e?: React.MouseEvent) => {
+    if (e) e.preventDefault();
+    // Remove hash if present
+    const cleanId = id.replace(/^#/, "");
+    const el = document.getElementById(cleanId);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -132,7 +142,9 @@ export default function Navigation() {
               <li>
                 <Link
                   href="#company-overview"
-                  className="text-orange-400 hover:text-orange-600"
+                  className="text-orange-400 hover:text-orange-600 w-full text-left block"
+                  scroll={false}
+                  onClick={(e) => handleScrollToSection("company-overview", e)}
                 >
                   Company Overview
                 </Link>
@@ -140,7 +152,9 @@ export default function Navigation() {
               <li>
                 <Link
                   href="#company-history"
-                  className="text-orange-400 hover:text-orange-600"
+                  className="text-orange-400 hover:text-orange-600 w-full text-left block"
+                  scroll={false}
+                  onClick={(e) => handleScrollToSection("company-history", e)}
                 >
                   History
                 </Link>
@@ -148,17 +162,11 @@ export default function Navigation() {
               <li>
                 <Link
                   href="#our-group"
-                  className="text-orange-400 hover:text-orange-600"
+                  className="text-orange-400 hover:text-orange-600 w-full text-left block"
+                  scroll={false}
+                  onClick={(e) => handleScrollToSection("our-group", e)}
                 >
-                  Our Group
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#our-group"
-                  className="text-orange-400 hover:text-orange-600"
-                >
-                  CSR
+                  Kelompok Kami
                 </Link>
               </li>
             </ul>

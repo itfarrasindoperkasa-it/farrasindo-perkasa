@@ -338,8 +338,8 @@ export default function AboutUsPage(): JSX.Element {
       </div>
 
       {/* OVERVIEW */}
-      <section className="w-full py-10 sm:py-14 md:py-16">
-        <div className="max-w-360 mx-auto px-4 sm:px-6 relative">
+      <section id="company-overview" className="w-full py-10 sm:py-14 md:py-16">
+        <section className="max-w-360 mx-auto px-4 sm:px-6 relative">
           <div className="flex flex-col md:flex-row gap-8 md:gap-10 items-start">
             <div className="relative w-full md:w-2/3 h-[220px] sm:h-[300px] md:h-[430px]">
               <Image
@@ -363,7 +363,7 @@ export default function AboutUsPage(): JSX.Element {
               </p>
             </div>
           </div>
-        </div>
+        </section>
       </section>
 
       {/* TAB HEADER */}
@@ -384,7 +384,7 @@ export default function AboutUsPage(): JSX.Element {
       </section>
 
       {/* TAB CONTENT (HANYA 3 BAGIAN) */}
-      <section className="w-full py-8 sm:py-10">
+      <section id="our-group" className="w-full py-8 sm:py-10">
         <div className="max-w-360 mx-auto px-4 sm:px-6">
           {/* GROUP */}
           {activeTab === "group" && (
@@ -554,7 +554,7 @@ export default function AboutUsPage(): JSX.Element {
       </section>
 
       {/* HISTORY (SELALU TAMPIL) */}
-      <section className="w-full py-12">
+      <section id="company-history" className="w-full py-12">
         <div className="max-w-4xl mx-auto px-4">
           <div className="flex justify-center items-center mb-10 gap-x-2">
             <span className="text-lg sm:text-xl md:text-2xl uppercase tracking-wide font-semibold">
