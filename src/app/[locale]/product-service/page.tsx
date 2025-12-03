@@ -27,7 +27,7 @@ export default function ProductService() {
     return true;
   });
 
-  const [activeCategory, setActiveCategory] = useState<string>("Concrete Pump");
+  const [activeCategory, setActiveCategory] = useState<string>("All");
   const [selectedProducts, setSelectedProducts] = useState<any[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeBrand, setActiveBrand] = useState<string>("Schwing");
@@ -59,7 +59,36 @@ export default function ProductService() {
     
     // Filter by brand (only for Concrete Pump)
     if (activeCategory === "Concrete Pump" && activeBrand !== "All") {
-      filtered = filtered.filter((p) => p.brand === activeBrand);
+      if (activeBrand === "Schwing") {
+        filtered = filtered.filter((p) => p.name.toLowerCase().includes("schwing"));
+      } else if (activeBrand === "IHI") {
+        filtered = filtered.filter((p) => {
+          const name = p.name.toLowerCase();
+          return name.includes("ihi") || name.includes("ipg") || name.startsWith("pg");
+        });
+      } else if (activeBrand === "Kyokuto") {
+        filtered = filtered.filter((p) => p.slug.includes("kyokuto"));
+      }
+    }
+
+    // Filter by brand (for Stationery Concrete)
+    if (activeCategory === "Stationery Concrete" && activeBrand !== "All") {
+        if (activeBrand === "Zoomlion") {
+            filtered = filtered.filter(p => p.name.includes("HBT"));
+        } else if (activeBrand === "Schwing") {
+            filtered = filtered.filter(p => p.name.includes("SP"));
+        } else if (activeBrand === "CITI PUMP") {
+            filtered = filtered.filter(p => p.name.includes("Citi") || p.name.includes("MCP"));
+        }
+    }
+
+    // Filter by brand (for Moli)
+    if (activeCategory === "Moli" && activeBrand !== "All") {
+        if (activeBrand === "Zoomlion MOLI") {
+             filtered = filtered.filter(p => p.name.toLowerCase().includes("zoomlion"));
+        } else if (activeBrand === "Truemax") {
+             filtered = filtered.filter(p => p.name.toLowerCase().includes("truemax"));
+        }
     }
     
     return filtered;
@@ -105,7 +134,7 @@ export default function ProductService() {
 
   return (
     <>
-      <div id="productRange" className="w-screen max-w-[120rem] mx-auto">
+      <div id="productRange" className="w-screen max-w-[120rem] mx-auto bg-white">
         <div className="h-[40vh] md:h-[60vh] bg-black mb-20 relative">
           <Image
             src={HomeBannerData[0]}
@@ -118,7 +147,7 @@ export default function ProductService() {
            <div className="flex items-center justify-center">
              <h1 className=" text-2xl md:text-4xl font-bold">Rangkaian Produk</h1>
           </div>
-        <div className="flex gap-8 py-10 px-4 md:px-10 flex-col md:flex-row mx-auto max-w-360">
+        <div className="flex gap-8 py-10 px-4 md:px-10 flex-col md:flex-row mx-auto max-w-360 ">
           {/* Sidebar */}
           <section id="quickFindProduct" className="md:w-1/6 shrink-0">
             <div className="bg-orange-50 p-6 rounded-xl sticky top-24">
@@ -179,6 +208,68 @@ export default function ProductService() {
                                         }`}
                                     >
                                         Kyokuto
+                                    </button>
+                                </div>
+                            )}
+
+                            {/* Brand filters for Stationery Concrete */}
+                            {activeCategory === "Stationery Concrete" && cat === "Stationery Concrete" && (
+                                <div className="ml-4 mt-2 space-y-1">
+                                    <button
+                                        onClick={() => setActiveBrand("Zoomlion")}
+                                        className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
+                                            activeBrand === "Zoomlion"
+                                            ? "bg-orange-400 text-white font-medium"
+                                            : "bg-white hover:bg-orange-50 text-gray-600"
+                                        }`}
+                                    >
+                                        Zoomlion
+                                    </button>
+                                    <button
+                                        onClick={() => setActiveBrand("Schwing")}
+                                        className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
+                                            activeBrand === "Schwing"
+                                            ? "bg-orange-400 text-white font-medium"
+                                            : "bg-white hover:bg-orange-50 text-gray-600"
+                                        }`}
+                                    >
+                                        Schwing
+                                    </button>
+                                    <button
+                                        onClick={() => setActiveBrand("CITI PUMP")}
+                                        className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
+                                            activeBrand === "CITI PUMP"
+                                            ? "bg-orange-400 text-white font-medium"
+                                            : "bg-white hover:bg-orange-50 text-gray-600"
+                                        }`}
+                                    >
+                                        CITI PUMP
+                                    </button>
+                                </div>
+                            )}
+
+                            {/* Brand filters for Moli */}
+                            {activeCategory === "Moli" && cat === "Moli" && (
+                                <div className="ml-4 mt-2 space-y-1">
+                                    <button
+                                        onClick={() => setActiveBrand("Zoomlion MOLI")}
+                                        className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
+                                            activeBrand === "Zoomlion MOLI"
+                                            ? "bg-orange-400 text-white font-medium"
+                                            : "bg-white hover:bg-orange-50 text-gray-600"
+                                        }`}
+                                    >
+                                        Zoomlion MOLI
+                                    </button>
+                                    <button
+                                        onClick={() => setActiveBrand("Truemax")}
+                                        className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
+                                            activeBrand === "Truemax"
+                                            ? "bg-orange-400 text-white font-medium"
+                                            : "bg-white hover:bg-orange-50 text-gray-600"
+                                        }`}
+                                    >
+                                        Truemax
                                     </button>
                                 </div>
                             )}

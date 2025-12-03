@@ -916,7 +916,253 @@
             }
           },
           "url": null
+        },
+        {
+          "id": "kyokuto-py115a-26c",
+          "name": "PY115A-26C",
+          "slug": "kyokuto-py115a-26c",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[19]",
+          "localImage": "kyokuto-py115a-26c.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "25.8m",
+              "Maximum horizontal reach": "21.8m",
+              "Maximum depth reach": "12.4m",
+              "Minimum unfolding height": "3.5 m",
+              "Section numbers": 4,
+              "Boom type": "M Type",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "115m3/h",
+              "Maximum theoretical pressure on concrete": "7.8Mpa",
+              "Concrete cylinders (diam. × stroke)": "220 mm x 1600 mm",
+              "Hydraulic circuit": "open"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
+        },
+        {
+          "id": "kyokuto-py115a-26b",
+          "name": "PY115A-26B",
+          "slug": "kyokuto-py115a-26b",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[19]",
+          "localImage": "kyokuto-py115a-26b.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "25.8m",
+              "Maximum horizontal reach": "21.8m",
+              "Maximum depth reach": "12.4m",
+              "Minimum unfolding height": "3.5 m",
+              "Section numbers": 4,
+              "Boom type": "M Type",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "115m3/h",
+              "Maximum theoretical pressure on concrete": "7.8Mpa",
+              "Concrete cylinders (diam. × stroke)": "225 mm x 1650 mm",
+              "Hydraulic circuit": "open"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
+        },
+          
+        {
+          "id": "ihi-pg115b-8e26-4",
+          "name": "PG115B-8E26/4",
+          "slug": "ihi-pg115b-8e26-4",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[27]",
+          "localImage": "ihi-pg115b-8e26-4.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "25.5m",
+              "Maximum horizontal reach": "21.5m",
+              "Maximum depth reach": "14.89m",
+              "Minimum unfolding height": "3.45 m",
+              "Section numbers": 3,
+              "Boom type": "3-stage Z-shape",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "10-115m3/h",
+              "Maximum theoretical pressure on concrete": "7.04MPa (71.8kgf/cm2)",
+              "Concrete cylinders (diam. × stroke)": "220mm x 1600mm",
+              "Hydraulic circuit": "open"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
+        },
+        {
+          "id": "ihi-ipg135b-6n33-4",
+          "name": "IPG 135B-6N33/4",
+          "slug": "ihi-ipg135b-6n33-4",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[28]",
+          "localImage": "ihi-ipg135b-6n33-4.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "32.6m",
+              "Maximum horizontal reach": "29.2m",
+              "Maximum depth reach": "20.3m",
+              "Minimum unfolding height": "3.4m",
+              "Section numbers": 4,
+              "Boom type": "M Type",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "135m3/h",
+              "Maximum theoretical pressure on concrete": "3.9MPaX320Lit/min",
+              "Concrete cylinders (diam. × stroke)": "220mm x 1800m",
+              "Hydraulic circuit": "open"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
+        },
+        {
+          "id": "ihi-pg135b-6n36-4",
+          "name": "PG135B-6N36/4",
+          "slug": "ihi-pg135b-6n36-4",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[29]",
+          "localImage": "ihi-pg135b-6n36-4.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "35m",
+              "Maximum horizontal reach": "32.15m",
+              "Maximum depth reach": "23m",
+              "Minimum unfolding height": "3.4 m",
+              "Section numbers": 4,
+              "Boom type": "M Type",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "135m3/h",
+              "Maximum theoretical pressure on concrete": "3.9MPax320Lit/min",
+              "Concrete cylinders (diam. × stroke)": "220mm x 2200mm",
+              "Hydraulic circuit": "open"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
+        },
+        {
+          "id": "ihi-ipg115b-8e26-4",
+          "name": "IPG115B-8E26/4",
+          "slug": "ihi-ipg115b-8e26-4",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[ProductData[18]",
+          "localImage": "ihi-ipg115b-8e26-4.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "30m",
+              "Maximum horizontal reach": "25.95m",
+              "Maximum depth reach": "14.89m",
+              "Minimum unfolding height": "18",
+              "Section numbers": 3,
+              "Boom type": "3-stage Z-shape",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "10-115m3/h",
+              "Maximum theoretical pressure on concrete": "40Kgf/cm2 x320 Lit/min",
+              "Concrete cylinders (diam. × stroke)": "220mm x 1600mm",
+              "Hydraulic circuit": "open"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
         }
+      ]
+    },
+       {
+      "category": "Moli",
+      "slug": "moli",
+      "products": [
+        {
+          "id": "4ca6cc365a50",
+          "name": "ZOOMLION 10020R",
+          "slug": "zoomlion-10020r",
+          "brand": "Moli",
+          "className": "product-item-moli",
+          "imageUrl": "ProductData[24]",
+          "localImage": "zoomlion-10020r-0f621270.png",
+          "details": {
+            "PUMPING_UNINT": {
+              "Maximum theorical output": "100/55m3/h",
+              "Maximum theorical pressure on concrete": "20/11Mpa",
+              "Distribution valve type": "S Valve",
+              "Concrete cylinder": "Φ200mm×1650mm",
+              "Hopper capacity×feeding height": "600L×1500mm",
+              "Recommended concrete slump": "12-23cm"
+            },
+            "POWER_SYSTEM": {
+              "Rated power": "199/2300kW/(r/min)",
+              "Engine moment": "1200/1200-1500N.m/(r/min)",
+              "Maximum displacement": "7470cc"
+            },
+            "OTHER": {
+              "Total weight": "13800kg",
+              "Length×width×height": "9100mm×2450mm×3140mm"
+            }
+          },
+          "url": null
+        },
+        {
+          "id": "47f067db989b",
+          "name": "TRUEMAX LP50.10.60DU",
+          "slug": "truemax-lp50-10-60du",
+          "brand": "Moli",
+          "className": "product-item-moli",
+          "imageUrl": "ProductData[23]",
+          "localImage": "truemax-lp50-10-60du-34a1ef5c.png",
+          "details": {
+            "PUMPING_UNINT": {
+              "Maximum theorical output": "49/26 m3/h",
+              "Maximum theorical pressure on concrete": "5/10 Mpa",
+              "Distribution valve type": "S Valve",
+              "Concrete cylinder": "Ф180×1200 mm",
+              "Hopper capacity×feeding height": "0.5×1370",
+              "Recommended concrete slump": "12-23cm"
+            },
+            "POWER_SYSTEM": {
+              "Rated power": "60 kW",
+              "Engine moment": "2000 r/min",
+              "Maximum displacement": "7470cc"
+            },
+            "OTHER": {
+              "Total weight": "500 Kg",
+              "Length×width×height": "5200X2100X02500"
+            }
+          },
+          "url": null
+        }
+      
       ]
     },
     {
@@ -1642,70 +1888,7 @@
           "url": null
         }
       ]
-    },
-    {
-      "category": "Moli",
-      "slug": "moli",
-      "products": [
-        {
-          "id": "4ca6cc365a50",
-          "name": "ZOOMLION 10020R",
-          "slug": "zoomlion-10020r",
-          "brand": "Moli",
-          "className": "product-item-moli",
-          "imageUrl": "ProductData[24]",
-          "localImage": "zoomlion-10020r-0f621270.png",
-          "details": {
-            "PUMPING_UNINT": {
-              "Maximum theorical output": "100/55m3/h",
-              "Maximum theorical pressure on concrete": "20/11Mpa",
-              "Distribution valve type": "S Valve",
-              "Concrete cylinder": "Φ200mm×1650mm",
-              "Hopper capacity×feeding height": "600L×1500mm",
-              "Recommended concrete slump": "12-23cm"
-            },
-            "POWER_SYSTEM": {
-              "Rated power": "199/2300kW/(r/min)",
-              "Engine moment": "1200/1200-1500N.m/(r/min)",
-              "Maximum displacement": "7470cc"
-            },
-            "OTHER": {
-              "Total weight": "13800kg",
-              "Length×width×height": "9100mm×2450mm×3140mm"
-            }
-          },
-          "url": null
-        },
-        {
-          "id": "47f067db989b",
-          "name": "TRUEMAX LP50.10.60DU",
-          "slug": "truemax-lp50-10-60du",
-          "brand": "Moli",
-          "className": "product-item-moli",
-          "imageUrl": "ProductData[23]",
-          "localImage": "truemax-lp50-10-60du-34a1ef5c.png",
-          "details": {
-            "PUMPING_UNINT": {
-              "Maximum theorical output": "49/26 m3/h",
-              "Maximum theorical pressure on concrete": "5/10 Mpa",
-              "Distribution valve type": "S Valve",
-              "Concrete cylinder": "Ф180×1200 mm",
-              "Hopper capacity×feeding height": "0.5×1370",
-              "Recommended concrete slump": "12-23cm"
-            },
-            "POWER_SYSTEM": {
-              "Rated power": "60 kW",
-              "Engine moment": "2000 r/min",
-              "Maximum displacement": "7470cc"
-            },
-            "OTHER": {
-              "Total weight": "500 Kg",
-              "Length×width×height": "5200X2100X02500"
-            }
-          },
-          "url": null
-        }
-      ]
     }
+ 
   ]
 }

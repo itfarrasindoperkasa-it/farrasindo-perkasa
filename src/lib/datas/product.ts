@@ -25,6 +25,9 @@ import product24 from "@/asset/images/products/truemax-lp50-10-60du-34a1ef5c.png
 import product25 from "@/asset/images/products/zoomlion-10020r-0f621270.png";
 import product26 from "@/asset/images/products/zoomlion-qy-25-a4f13453.png";
 import product27 from "@/asset/images/products/zoomlion-qy-55-d27c5c87.png";
+import product28 from "@/asset/images/products/IHI-IPG-115B-8E26_4-14A.png";
+import product29 from "@/asset/images/products/IHI-IPG-125B-6N33_4.png";
+import product30 from "@/asset/images/products/IHI-IPG-135B-6N36_4.png";
 
 const ProductData = [
   product1,
@@ -54,6 +57,9 @@ const ProductData = [
   product25,
   product26,
   product27,
+  product28,
+  product29,
+  product30,
 ];
 
 export default ProductData;
