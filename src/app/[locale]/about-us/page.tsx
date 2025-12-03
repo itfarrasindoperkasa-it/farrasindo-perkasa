@@ -121,17 +121,6 @@ const ICON_MAP: Record<string, LucideIcon> = {
   Star,
 };
 
-/* ============================
-   Helpers
-   ============================ */
-
-/**
- * resolveRef:
- * - kalau JSON berisi string "OurPartnerData[2]" -> kembalikan OurPartnerData[2]
- * - kalau JSON berisi string "AboutData[3]" -> kembalikan AboutData[3]
- * - kalau sudah StaticImageData/objek -> kembalikan langsung
- * - kalau string path -> kembalikan string (untuk <img/> fallback)
- */
 function resolveRef(value?: unknown): StaticImageData | string | undefined {
   if (!value) return undefined;
 
