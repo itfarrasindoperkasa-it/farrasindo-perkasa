@@ -78,7 +78,7 @@ export default function ProductService() {
         } else if (activeBrand === "Schwing") {
             filtered = filtered.filter(p => p.name.includes("SP"));
         } else if (activeBrand === "CITI PUMP") {
-            filtered = filtered.filter(p => p.name.includes("Citi") || p.name.includes("MCP"));
+            filtered = filtered.filter(p => p.brand === "Citi Pump");
         }
     }
 
@@ -150,7 +150,7 @@ export default function ProductService() {
         <div className="flex gap-8 py-10 px-4 md:px-10 flex-col md:flex-row mx-auto max-w-360 ">
           {/* Sidebar */}
           <section id="quickFindProduct" className="md:w-1/6 shrink-0">
-            <div className="bg-orange-50 p-6 rounded-xl sticky top-24">
+            <div className="bg-slate-100 p-6 rounded-xl sticky top-24">
                 <div className="flex w-full justify-between items-center mb-6">
                 <h2 className="text-lg font-bold text-orange-600">PENCARIAN CEPAT</h2>
                 <button

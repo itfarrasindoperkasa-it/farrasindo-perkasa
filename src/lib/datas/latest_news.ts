@@ -12,6 +12,11 @@ import imgArtikel11 from "@/asset/images/artikel/Screenshot-2025-01-17-152113.jp
 import imgArtikel12 from "@/asset/images/artikel/ARTIKEL-MOBILE-BATCHING-PLANT.jpg";
 import imgArtikel13 from "@/asset/images/artikel/ARTIKEL-PENANAMAN-POHON3.jpg";
 import imgArtikel14 from "@/asset/images/artikel/banner-contact-01.jpg";
+import imgArtikel15 from "@/asset/images/artikel/ARTIKELESPORTS.jpg";
+import imgArtikel16 from "@/asset/images/artikel/COVERARTIKELHUTFP24.jpg";
+import imgArtikel17 from "@/asset/images/artikel/COVERARTIKELHUTRI80.jpg";
+import imgArtikel18 from "@/asset/images/artikel/featured.jpg";
+
 const LatestNewsData = [
   imgArtikel1,
   imgArtikel2,
@@ -27,6 +32,10 @@ const LatestNewsData = [
   imgArtikel12,
   imgArtikel13,
   imgArtikel14,
+  imgArtikel15,
+  imgArtikel16,
+  imgArtikel17,
+  imgArtikel18,
 ];
 
 export default LatestNewsData;

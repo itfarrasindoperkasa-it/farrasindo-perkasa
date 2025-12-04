@@ -23,9 +23,20 @@ export default async function NewsDetail({ params }: NewsDetailParams) {
   const news = idMessages.home.latest_news.list.find(
     (item) => item.slug === slug
   );
-  const imgIdx = idMessages.home.latest_news.list.findIndex(
-    (item) => item.slug === slug
-  );
+
+  // Get image index from news.image field
+  let imgIdx = 0; // default
+  if (news?.image) {
+    const match = news.image.match(/LatestNewsData\[(\d+)\]/);
+    if (match) {
+      imgIdx = parseInt(match[1]);
+    }
+  } else {
+    // Fallback: find by slug
+    imgIdx = idMessages.home.latest_news.list.findIndex(
+      (item) => item.slug === slug
+    );
+  }
 
   if (!news) {
     notFound();
