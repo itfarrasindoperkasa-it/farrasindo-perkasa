@@ -1,16 +1,21 @@
 "use client"
 
 import { useState } from "react"
-import { Search, ChevronDown } from "lucide-react"
+import { Search } from "lucide-react"
 import Image from "next/image"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 import CareerData from "@/lib/datas/career"
 import CompaniesData, { type Company } from "@/lib/datas/companies"
 import HomeBannerData from "@/lib/datas/home_banner"
+import LatestNewsData from "@/lib/datas/latest_news"
 import CompanyCards, { type CompanyEntry } from "@/components/CompanyCards"
 
 export default function CareerPage() {
   const [searchTerm, setSearchTerm] = useState("")
   const [currentJobIndex, setCurrentJobIndex] = useState(0)
+  const [showAllCompanies, setShowAllCompanies] = useState(false)
 
   const jobs = [
     {
@@ -118,29 +123,46 @@ export default function CareerPage() {
         <div className="max-w-360 mx-auto">
           
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="flex flex-col lg:flex-row gap-12 items-start">
             {/* Left Side - Logo and Equipment Image */}
-            <div className="relative">
-              <div className="w-full aspect-[4/3] bg-gradient-to-b from-gray-100 to-gray-200 rounded-2xl overflow-hidden shadow-lg">
+            <div className="relative w-full lg:w-2/5">
+              <div className="w-full h-[500px] rounded-2xl overflow-hidden ">
                 <Image
                   src={HomeBannerData[6]}
                   alt="Farrasindo Group Equipment"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   priority
                 />
               </div>
             </div>
 
-            {/* Right Side - Company Grid with Scroll */}
-            <div>
-              {/* Scrollable container - max 2 rows (6 items), then scroll */}
-               <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">Bergabunglah dengan Grup Kami!</h2>
-              <div className="max-h-[600px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4 sm:gap-6">
-                  <CompanyCards companies={companies as CompanyEntry[]} />
-                </div>
+            {/* Right Side - Company Grid with Show More */}
+            <div className="w-full lg:w-3/5">
+              <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">Bergabunglah dengan Grup Kami!</h2>
+              
+              {/* Company Grid */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4 sm:gap-6">
+                <CompanyCards 
+                  companies={
+                    showAllCompanies 
+                      ? companies as CompanyEntry[] 
+                      : (companies as CompanyEntry[]).slice(0, 6)
+                  } 
+                />
               </div>
+
+              {/* Show More/Less Button */}
+              {companies.length > 6 && (
+                <div className="flex justify-center mt-8">
+                  <button
+                    onClick={() => setShowAllCompanies(!showAllCompanies)}
+                    className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors shadow-md hover:shadow-lg"
+                  >
+                    {showAllCompanies ? "Tampilkan Lebih Sedikit" : "Selengkapnya"}
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -218,29 +240,65 @@ export default function CareerPage() {
 
       {/* Farracare Section */}
       <section className="py-16 px-4 md:px-8 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-360 mx-auto">
           <h2 className="text-4xl font-bold mb-6">Farracare</h2>
-          <p className="text-lg text-gray-300 leading-relaxed mb-6">
-            At Farrasindo Group, we believe that business growth must go hand in hand with care and responsibility.
-            Through FARRACARE, we are committed to deliver excellence in our industries while also making a positive
-            impact on the environment, communities, and the society around us.
+          <p className="text-lg text-gray-300 leading-relaxed mb-6 md:w-1/2">
+            Di Farrasindo Group, kami percaya bahwa pertumbuhan bisnis harus berjalan seiring dengan kepedulian dan tanggung jawab. Melalui FARRACARE, kami berkomitmen untuk memberikan keunggulan di industri kami sekaligus memberikan dampak positif bagi lingkungan, komunitas, dan masyarakat di sekitar kami.
           </p>
           <button className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
-            Read more ...
+           Baca Lebih Lanjut ...
           </button>
 
-          {/* Team Images */}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-12">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <div
-                key={i}
-                className="aspect-square bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg overflow-hidden"
-              >
-                <div className="w-full h-full flex items-center justify-center text-white text-3xl font-bold">
-                  {i + 1}
+          {/* Image Slider */}
+          <div className="mt-12">
+            <Slider
+              dots={false}
+              arrows={false}
+              infinite={true}
+              speed={500}
+              slidesToShow={5}
+              slidesToScroll={1}
+              autoplay={true}
+              autoplaySpeed={3000}
+              pauseOnHover={true}
+              responsive={[
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                  }
+                }
+              ]}
+            >
+              {[8, 13, 5, 7, 6, 15, 16, 17, 2].map((imageIndex, index) => (
+                <div key={index} className="px-2">
+                  <div className="aspect-video bg-gray-700 rounded-lg overflow-hidden shadow-lg">
+                    <Image
+                      src={LatestNewsData[imageIndex - 1]}
+                      alt={`Farracare Activity ${index + 1}`}
+                      width={300}
+                      height={300}
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </Slider>
           </div>
         </div>
       </section>
