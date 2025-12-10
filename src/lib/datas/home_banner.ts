@@ -5,12 +5,5 @@ import banner4 from "@/asset/images/homes/banner-4.jpg";
 import bannerPort5 from "@/asset/images/homes/bannerPort.jpeg";
 import bannerNews from "@/asset/images/homes/portfolio-detil-banner.jpg";
 
-const HomeBannerData = [
-  banner1,
-  banner2,
-  banner3,
-  banner4,
-  bannerPort5,
-  bannerNews,
-];
+const HomeBannerData = [banner1, banner2, banner3, banner4];
 export default HomeBannerData;

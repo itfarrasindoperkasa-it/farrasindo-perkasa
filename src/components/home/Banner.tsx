@@ -43,7 +43,6 @@ function Banner({
   className?: string;
   messages: any[];
 }) {
-  console.log(messages[0]);
   const banners = HomeBannerData;
 
   var settings = {

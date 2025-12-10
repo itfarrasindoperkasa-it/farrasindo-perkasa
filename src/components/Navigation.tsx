@@ -90,7 +90,7 @@ export default function Navigation() {
       </div>
 
       {/* MAIN BAR (LOGO + MENU) */}
-      <div className="flex items-center w-full h-full px-4 md:px-8">
+      <div className="flex items-center w-full h-full px-4 md:px-8 gap-15">
         <Image
           src={`/assets/images/farrasindo-group-logo.png`}
           width={120}
@@ -100,7 +100,7 @@ export default function Navigation() {
         />
 
         {/* DESKTOP MENU */}
-        <ul className="hidden md:flex gap-x-6 mr-10 text-lg font-medium items-center md:flex-wrap ml-40">
+        <ul className="hidden md:flex gap-x-6 mr-10 text-lg font-medium items-center md:flex-wrap">
           <li className="flex gap-2 items-center">
             <Link href={`/id`} className="hover:text-foreground/80 font-bold">
               Home
