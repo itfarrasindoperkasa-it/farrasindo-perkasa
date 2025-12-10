@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  
+  // Output standalone untuk Docker deployment
+  output: 'standalone',
 
   // Rewrites untuk proxy ke API eksternal
   async rewrites() {

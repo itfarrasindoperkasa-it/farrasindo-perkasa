@@ -11,7 +11,37 @@ import { Calendar } from "lucide-react";
 export default function NewsandEvent() {
   const banner = HomeBannerData[5];
   // Pagination setup
-  const newsList = idMessages.home.latest_news.list;
+  const rawNewsList = idMessages.home.latest_news.list;
+  
+  // Helper function to parse Indonesian date format to Date object
+  const parseIndonesianDate = (dateStr: string): Date => {
+    if (!dateStr) return new Date(0); // Return epoch for empty dates
+    
+    const monthMap: { [key: string]: number } = {
+      'Januari': 0, 'Februari': 1, 'Maret': 2, 'April': 3,
+      'Mei': 4, 'Juni': 5, 'Juli': 6, 'Agustus': 7,
+      'September': 8, 'Oktober': 9, 'November': 10, 'Desember': 11,
+      'Jan': 0, 'Feb': 1, 'Mar': 2, 'Apr': 3,
+      'Jun': 5, 'Jul': 6, 'Agt': 7, 'Agu': 7, 'Okt': 9, 'Nov': 10, 'Des': 10, 'Dec': 11
+    };
+    
+    const parts = dateStr.trim().split(' ');
+    if (parts.length >= 3) {
+      const day = parseInt(parts[0]);
+      const month = monthMap[parts[1]] ?? 0;
+      const year = parseInt(parts[2]);
+      return new Date(year, month, day);
+    }
+    return new Date(0);
+  };
+  
+  // Sort news by date (newest first)
+  const newsList = [...rawNewsList].sort((a, b) => {
+    const dateA = parseIndonesianDate(a.date);
+    const dateB = parseIndonesianDate(b.date);
+    return dateB.getTime() - dateA.getTime(); // Descending order (newest first)
+  });
+  
   const totalNews = newsList.length;
   const itemsPerPage = 12;
   const [page, setPage] = React.useState(1);
@@ -79,44 +109,27 @@ export default function NewsandEvent() {
     }
   };
 
-  // Fungsi untuk mendapatkan gambar sesuai id/slug
-  const getImageByNews = (
-    news:
-      | {
-          id: number;
-          title: string;
-          date: string;
-          excerpt: string;
-          link: string;
-          slug: string;
-          author: string;
-          description: string;
-          image?: undefined;
-        }
-      | {
-          id: number;
-          title: string;
-          date: string;
-          excerpt: string;
-          link: string;
-          slug: string;
-          author: string;
-          image: string;
-          description: string;
-        }
-      | {
-          id: number;
-          title: string;
-          date: string;
-          excerpt: string;
-          slug: string;
-          author: string;
-          description: string;
-          link?: undefined;
-          image?: undefined;
-        }
-  ) => {
-    // Cari index di newsList asli
+  // Fungsi untuk mendapatkan gambar sesuai field image dari news
+  const getImageByNews = (news: {
+    id: number;
+    title: string;
+    date: string;
+    excerpt: string;
+    slug: string;
+    author: string;
+    description: string;
+    link?: string;
+    image?: string;
+  }) => {
+    // Jika ada field image, extract index dari string "LatestNewsData[X]"
+    if (news.image) {
+      const match = news.image.match(/LatestNewsData\[(\d+)\]/);
+      if (match) {
+        const imageIndex = parseInt(match[1]);
+        return LatestNewsData[imageIndex] || LatestNewsData[0];
+      }
+    }
+    // Fallback: cari index di newsList asli
     const idx = newsList.findIndex((item) => item.id === news.id);
     return LatestNewsData[idx] || LatestNewsData[0];
   };

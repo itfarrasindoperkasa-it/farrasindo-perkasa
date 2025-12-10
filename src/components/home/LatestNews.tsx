@@ -14,6 +14,7 @@ type LatestNewsItemFromJson = {
   link?: string;
   author: string;
   slug: string;
+  image?: string;
 };
 
 type FeaturedNewsFromJson = {
@@ -24,6 +25,7 @@ type FeaturedNewsFromJson = {
   extra: string;
   link: string;
   author: string;
+  image?: string;
 };
 
 type LatestNewsConfig = {
@@ -49,19 +51,29 @@ export function LatestNews() {
 
   const { eyebrow, title, buttonText, list, featured } = latestNewsConfig;
 
+  // Helper function to get image from LatestNewsData based on image field
+  const getImageFromField = (imageField?: string, fallbackIdx: number = 0): string => {
+    if (imageField) {
+      const match = imageField.match(/LatestNewsData\[(\d+)\]/);
+      if (match) {
+        const imageIndex = parseInt(match[1]);
+        return LatestNewsData[imageIndex]?.src ?? LatestNewsData[0]?.src ?? "";
+      }
+    }
+    return LatestNewsData[fallbackIdx]?.src ?? LatestNewsData[0]?.src ?? "";
+  };
+
   // gabungkan JSON + image utk list, hanya ambil 3 item pertama
   const listNews: NewsItem[] = list.slice(0, 3).map((item, idx) => ({
     ...item,
-    image: LatestNewsData[idx]?.src ?? LatestNewsData[0]?.src ?? "",
-    slug: item.slug, // tambahkan slug agar Link fallback tidak error
+    image: getImageFromField(item.image, idx),
+    slug: item.slug,
   }));
 
-  // image untuk featured → ambil index setelah list
-  const featuredImageIndex = list.length;
+  // image untuk featured
   const featuredNews: FeaturedNews = {
     ...featured,
-    image:
-      LatestNewsData[featuredImageIndex]?.src ?? LatestNewsData[0]?.src ?? "",
+    image: getImageFromField(featured.image, list.length),
   };
 
   return (

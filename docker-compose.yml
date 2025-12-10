@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  # Next.js Application
+  farrasindo-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: farrasindo-website
+    restart: unless-stopped
+    ports:
+      # Bind to localhost only - OpenLiteSpeed will proxy to this
+      # Format: "host_ip:host_port:container_port"
+      - "127.0.0.1:3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+      # Add your environment variables here
+      # - API_URL=https://api.example.com
+      # - NEXT_PUBLIC_API_URL=https://api.example.com
+    volumes:
+      # Mount public assets if you need to update them without rebuilding
+      - ./public:/app/public:ro
+    networks:
+      - farrasindo-network
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Nginx Reverse Proxy (Optional - not needed if using OpenLiteSpeed)
+  # nginx:
+  #   image: nginx:alpine
+  #   container_name: farrasindo-nginx
+  #   restart: unless-stopped
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #   volumes:
+  #     - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+  #     - ./nginx/ssl:/etc/nginx/ssl:ro
+  #   depends_on:
+  #     - farrasindo-web
+  #   networks:
+  #     - farrasindo-network
+
+networks:
+  farrasindo-network:
+    driver: bridge
