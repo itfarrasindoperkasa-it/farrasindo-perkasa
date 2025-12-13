@@ -10,7 +10,6 @@ import ProductRange from "@/components/home/ProductRange";
 import { Portfolio } from "@/components/home/Portofolio";
 import { BestSellingProduct } from "@/components/home/BestSellingProduct";
 import { TestimonialSection } from "@/components/home/Testimonial";
-import { LatestNews } from "@/components/home/LatestNews";
 import { OurGroup } from "@/components/home/OurGroup";
 import LatestNewsArticle from "@/components/home/LatestNewsArticle";
 import { Locale } from "@/lib/datas/global";
