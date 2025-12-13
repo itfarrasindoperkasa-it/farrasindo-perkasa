@@ -52,7 +52,10 @@ export function LatestNews() {
   const { eyebrow, title, buttonText, list, featured } = latestNewsConfig;
 
   // Helper function to get image from LatestNewsData based on image field
-  const getImageFromField = (imageField?: string, fallbackIdx: number = 0): string => {
+  const getImageFromField = (
+    imageField?: string,
+    fallbackIdx: number = 0
+  ): string => {
     if (imageField) {
       const match = imageField.match(/LatestNewsData\[(\d+)\]/);
       if (match) {
@@ -64,7 +67,7 @@ export function LatestNews() {
   };
 
   // gabungkan JSON + image utk list, hanya ambil 3 item pertama
-  const listNews: NewsItem[] = list.slice(0, 3).map((item, idx) => ({
+  const listNews: NewsItem[] = list.slice(0, 4).map((item, idx) => ({
     ...item,
     image: getImageFromField(item.image, idx),
     slug: item.slug,
@@ -82,10 +85,8 @@ export function LatestNews() {
         {/* Header */}
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <p className="text-sm font-semibold text-orange-400">{eyebrow}</p>
-            <h2 className="text-3xl font-bold text-neutral-900 sm:text-4xl">
-              {title}
-            </h2>
+            <p className="font-semibold text-orange-400">{eyebrow}</p>
+            <h2 className="text-4xl font-bold">{title}</h2>
           </div>
 
           <Link
@@ -101,47 +102,47 @@ export function LatestNews() {
           {/* Left - list */}
           {/* Left - list */}
           <div className="space-y-6">
-            {listNews.map((item) => (
-              <article
-                key={item.id}
-                className="group flex flex-col-reverse md:flex-row md:items-center gap-4 rounded-3xl bg-white/60 p-4 shadow-sm ring-1  ring-neutral-100 transition hover:shadow-lg"
-              >
-                {/* Mobile: text di bawah, Desktop: text di kiri */}
-                <div className="flex-1 space-y-2">
-                  <h3 className="text-lg font-semibold leading-snug text-neutral-900 group-hover:text-orange-500">
-                    {item.title}
-                  </h3>
+            {listNews
+              .filter((_, idx) => idx != 0)
+              .map((item) => (
+                <article
+                  key={item.id}
+                  className="group flex flex-col-reverse md:flex-row md:items-center gap-4 rounded-3xl bg-white/60 p-4 shadow-sm ring-1  ring-neutral-100 transition hover:shadow-lg"
+                >
+                  {/* Mobile: text di bawah, Desktop: text di kiri */}
+                  <div className="flex-1 space-y-2">
+                    <h3 className="text-lg font-semibold leading-snug text-neutral-900 group-hover:text-orange-500">
+                      {item.title}
+                    </h3>
 
-                  <p className="text-xs text-neutral-400 italic">
-                    {item.author}
-                  </p>
-                  <p className="text-xs text-neutral-400">{item.date}</p>
-                  <p className="text-sm text-neutral-500 line-clamp-3">
-                    {item.excerpt}
-                  </p>
+                    <p className="text-xs text-neutral-400 italic">
+                      {item.author}
+                    </p>
+                    <p className="text-xs text-neutral-400">{item.date}</p>
+                    <p className="text-sm text-neutral-500 line-clamp-3">
+                      {item.excerpt}
+                    </p>
 
-                  <Link
-                    href={
-                      item.link ? item.link : `/news-and-event/${item.slug}`
-                    }
-                    className="mt-2 inline-flex rounded-full bg-orange-400 px-5 py-2 text-xs font-semibold text-white shadow-sm transition group-hover:bg-orange-500"
-                  >
-                    {buttonText}
-                  </Link>
-                </div>
+                    <Link
+                      href={item.link ? item.link : `/news-event/${item.slug}`}
+                      className="mt-2 inline-flex rounded-full bg-orange-400 px-5 py-2 text-xs font-semibold text-white shadow-sm transition group-hover:bg-orange-500"
+                    >
+                      {buttonText}
+                    </Link>
+                  </div>
 
-                {/* Mobile: gambar di atas, Desktop: gambar di kanan */}
-                <div className="relative h-48 w-full overflow-hidden rounded-2xl md:h-32 md:w-40 lg:h-40 lg:w-52">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover transition duration-300 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 200px"
-                  />
-                </div>
-              </article>
-            ))}
+                  {/* Mobile: gambar di atas, Desktop: gambar di kanan */}
+                  <div className="relative h-48 w-full overflow-hidden rounded-2xl md:h-32 md:w-40 lg:h-40 lg:w-52">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover transition duration-300 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 200px"
+                    />
+                  </div>
+                </article>
+              ))}
           </div>
 
           {/* Right - featured */}

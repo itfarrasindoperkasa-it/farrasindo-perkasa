@@ -45,17 +45,19 @@ export default function ComparisonModal({
 
   // Helper to get value from nested keys like "BOOM.Maximum vertical reach"
   const getValue = (product: Product, key: string) => {
-    if (key.includes(".")) {
-      const [section, field] = key.split(".");
-      return product.details[section]?.[field] || "-";
+    const dotIndex = key.indexOf(".");
+    if (dotIndex !== -1) {
+      const section = key.substring(0, dotIndex);
+      const field = key.substring(dotIndex + 1);
+      return product.details[section]?.[field] ?? "-";
     }
-    return product.details[key] || "-";
+    return product.details[key] ?? "-";
   };
 
   // Helper to format key for display
   const formatKey = (key: string) => {
     if (key.includes(".")) {
-      return key.split(".")[1]; // Show only the field name
+      return key.substring(key.indexOf(".") + 1); // Show everything after the first dot
     }
     return key;
   };

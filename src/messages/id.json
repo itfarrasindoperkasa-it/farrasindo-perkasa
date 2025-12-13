@@ -103,26 +103,30 @@
           "value": "all"
         },
         {
-          "label": "Mesin Vertikal",
-          "value": "vertical-machine"
+          "label": "Crane",
+          "value": "crane"
         },
         {
-          "label": "Mesin Horizontal",
-          "value": "horizontal-machine"
+          "label": "Concrete Pump",
+          "value": "concrete-pumo"
         },
         {
-          "label": "Mesin Pelengkap",
-          "value": "complementary-machine"
+          "label": "Batch Pump",
+          "value": "batch-pump"
         },
         {
-          "label": "Suku Cadang",
-          "value": "sparepart"
+          "label": "Blend Plant",
+          "value": "blend-plant"
+        },
+        {
+          "label": "Self Loading Mixer",
+          "value": "self-loading-mixer"
         }
       ]
     },
     "portfolio": {
       "title": "Portofolio Kami",
-      "buttonText": "Lebih Detil",
+      "buttonText": "Lebih Detail",
       "projects": [
         {
           "title": "RM Pagi Sore",
@@ -188,11 +192,11 @@
       "items": [
         {
           "title": "Satu Paket Konstruksi Pompa Beton & Readymix",
-          "link": "#"
+          "link": "/id/news-event/one-package-concrete-pump-ready-mix"
         },
         {
           "title": "Pabrik Batching Bergerak 3 in 1",
-          "link": "#"
+          "link": "/id/news-event/keunggulan-batchpump-farrasindo"
         }
       ]
     },
@@ -220,199 +224,6 @@
           "role": "Kontraktor Proyek, Jakarta"
         }
       ]
-    },
-    "latest_news": {
-      "eyebrow": "Berita Terbaru",
-      "title": "Artikel & Berita",
-      "buttonText": "Baca Selengkapnya ...",
-      "sidebarTitle": "Kategori",
-      "allCategoryLabel": "Semua",
-      "searchTitle": "Kata Kunci Pencarian",
-      "searchPlaceholder": "Search ...",
-      "searchButton": "🔍",
-      "recentPostTitle": "Terbaru Posting",
-      "anyQuestionTitle": "Ada Pertanyaan",
-      "anyQuestionSubtitle": "Tentang Industri",
-      "anyQuestionPhone": "Telepon: 021 – 587 0525",
-      "paginationNext": "Next",
-      "paginationPrevious": "Previous",
-      "list": [
-        {
-          "id": 1,
-          "title": "Satu Paket Pompa Beton dan Beton Siap Pakai",
-          "date": "25 Agustus 2025",
-          "excerpt": "Dalam dunia konstruksi, waktu adalah aset berharga. Namun, banyak proyek pengecoran sering menghadapi tantangan.",
-          "link": "/news/one-package-concrete-pump-ready-mix",
-          "slug": "one-package-concrete-pump-ready-mix",
-          "image": "LatestNewsData[0]",
-          "author": "Kontruksi",
-          "description": "Satu Paket Pompa Beton dan Beton Siap Pakai\nDalam dunia konstruksi, waktu adalah aset berharga. Namun banyak proyek pengecoran sering menghadapi kendala seperti keterlambatan material, proses pengecoran yang memakan waktu lama, hingga biaya operasional yang membengkak. Penyebabnya beragam, mulai dari beton yang terlambat datang, alat pompa yang tidak sesuai kebutuhan, hingga kurangnya koordinasi antar penyedia jasa.\n\nMasalah-masalah ini tidak hanya memperlambat pekerjaan, tetapi juga berisiko menurunkan kualitas hasil pengecoran karena beton harus digunakan dalam waktu tertentu agar tidak mengalami penurunan kualitas.\n\nSolusinya Gampang! Cukup Pesan 1 Paket Pompa Beton & Beton Ready Mix\nFarrasindo Perkasa menghadirkan solusi praktis bagi Anda yang ingin pengecoran cepat, efisien, dan berkualitas: 1 Paket Pompa Beton & Beton Ready Mix.\n\nDengan memesan paket ini, Anda mendapatkan:\n-Pengiriman beton ready mix tepat waktu sesuai jadwal pengecoran.\n-Pompa beton yang langsung stand-by di lokasi untuk mempercepat proses distribusi beton.\n-Koordinasi yang terintegrasi antara tim pengiriman beton dan operator pompa, sehingga pekerjaan berjalan lancar tanpa jeda.\n\nKeunggulan Memesan Paket Ini\n-Hemat Waktu : Beton langsung dipompa ke titik pengecoran tanpa perlu proses manual yang memakan waktu.\n-Efisiensi Biaya : Mengurangi risiko pemborosan beton dan biaya tambahan akibat keterlambatan.\n-Kualitas Terjaga : Beton digunakan dalam durasi optimal sehingga saling sesuai standar proyek.\n-Koordinasi Lebih Mudah : Satu penyedia untuk dua kebutuhan sekaligus meminimalkan miskomunikasi.\n\nUntuk armada pengangkut beton, tersedia 3 tipe truk mixer:\n-Mini Beton (3 m³) – Cocok untuk akses jalan kecil atau pengecoran volume skala kecil.\n-Standar Truk Mixer (7–12 m³) – Digunakan untuk proyek skala menengah hingga besar.\n-Truck Mixer Self Diesel Engine – Mixer portabel bertenaga mesin diesel, fleksibel digunakan di lokasi proyek tanpa bergantung pada sumber listrik eksternal.\n\nTersedia Berbagai Tipe Pompa Beton\nFarrasindo Perkasa menyediakan berbagai pilihan pompa beton sesuai kebutuhan proyek, antara lain:\n-Mini Boom 15–17 M\n-Mini Long Boom 18–21 M\n-Standard Boom 24 M\n-Semi Long Boom 26 M\n-Long Boom 27–30 M\n-Super Long Boom 33–36 M\n-Double Super Long Boom 37–40 M\n-Extra Double Super Long Boom 41–60 M"
-        },
-        {
-          "id": 2,
-          "title": "Farrasindo Perkasa Gelar Aksi Donor Darah Bersama PMI Tangerang, Wujud Nyata Kepedulian Sosial",
-          "date": "15 Juli 2025",
-          "excerpt": "Dalam semangat kebersamaan dan kepedulian terhadap sesama, Farrasindo Perkasa menggelar kegiatan aksi donor darah.",
-          "link": "/news/aksi-donor-darah-bersama-pmi",
-          "slug": "aksi-donor-darah-bersama-pmi",
-          "author": "Group Farrasindo",
-          "image": "LatestNewsData[1]",
-          "description": "Farrasindo Perkasa Gelar Aksi Donor Darah Bersama PMI Tangerang, Wujud Nyata Kepedulian Sosial untuk Sesama\nDalam semangat kebersamaan dan kepedulian terhadap sesama, Farrasindo Perkasa menggelar kegiatan aksi donor darah yang bekerja sama dengan Palang Merah Indonesia (PMI) Kabupaten Tangerang, pada Kamis, 10 Juli 2025, pukul 09.00 hingga 12.00 WIB. Bertempat di kantor pusat Farrasindo Group lantai 1, kegiatan ini menjadi bentuk nyata komitmen perusahaan dalam mendukung gerakan kemanusiaan.\n\nMengusung tema “Ayo Bersama Berbagi Keselamatan”, kegiatan donor darah ini terbuka untuk seluruh karyawan di lingkungan Farrasindo Perkasa. Antusiasme peserta terasa sejak pagi hari, terlihat para pendonor mulai berdatangan untuk mendaftarkan diri dan mengikuti proses pemeriksaan kesehatan dari tim medis PMI.\n\nPenyerahan piagam apresiasi dari Farrasindo Group kepada tim PMI Kabupaten Tangerang, yaitu (dari kiri ke kanan) Zikrullah Kumar, Eka Januarsa, dan Adelia Novitasari. Penyerahan dilakukan oleh Direktur Marketing Farrasindo Perkasa, Evitha Annisa (tengah kanan), didampingi oleh Anjar Prambudi (paling kanan) selaku Ketua Kegiatan Donor Darah dan Antonius Trianto (kedua dari kiri) selaku Manager HRD. Kegiatan ini merupakan bagian dari program #Farracare, sebagai wujud nyata kepedulian Farrasindo Perkasa terhadap sesama.\n“Harapannya, kegiatan ini bisa dilakukan secara darah rutin agar membantu masyarakat yang membutuhkan, karena setetes darah bisa menyelamatkan tiga nyawa,” ujar Adelia Novitasari dari PMI, yang saat itu bertugas mendampingi proses pemeriksaan kesehatan.\n\nKomitmen Sosial yang Berkelanjutan\nSebagai bagian dari program Corporate Social Responsibility (CSR) melalui inisiatif #Farracare, Farrasindo Perkasa tidak hanya fokus pada pengembangan bisnis dan layanan profesional, tetapi juga turut hadir di tengah masyarakat melalui berbagai kegiatan sosial yang membawa dampak positif.\n\n“Kegiatan ini merupakan bagian dari program CSR kami. Melalui donor darah, kami ingin memberikan kontribusi langsung kepada masyarakat dan tentunya mendukung kerja kemanusiaan dari PMI,” ujar Direktur Marketing Farrasindo Perkasa, Evitha Annisa.\n\nManfaat Nyata untuk Kesehatan dan Kemanusiaan\nSelain membantu sesama, donor darah juga membawa berbagai manfaat kesehatan bagi pendonor, mulai dari menjaga kesehatan jantung, meningkatkan produksi sel darah merah, hingga mendeteksi penyakit serius lebih dini. Tak heran jika banyak peserta mengaku senang bisa berpartisipasi, bukan hanya bisa membantu orang lain, tetapi sekaligus menjaga kesehatan diri sendiri.\n\nKaryawan Farrasindo Group turut andil dalam kegiatan aksi donor darah yang digelar bersama PMI Kabupaten Tangerang.\nFarrasindo Perkasa percaya bahwa kegiatan seperti ini bukan sekadar acara seremonial, melainkan bagian dari upaya membangun solidaritas dan budaya jangka panjang. Dalam suasana yang akrab dan penuh semangat, kegiatan ini ditutup dengan senyum para pendonor dan rasa syukur karena bisa menjadi bagian dari aksi kemanusiaan yang mulia.\n\nDi dekatnya, Farrasindo Perkasa berkomitmen untuk terus menghadirkan program-program sosial lainnya yang berdampak langsung bagi masyarakat. Keberhasilan Farrasindo Perkasa tidak hanya diwujudkan dari pencapaian bisnis, tetapi juga dari nilai-nilai kemanusiaan yang terus dihidupkan melalui aksi nyata."
-        },
-        {
-          "id": 3,
-          "title": "Kenalan Sama Wheel Loader",
-          "date": "13 Juni 2025",
-          "excerpt": "Wheel loader merupakan salah satu alat berat yang sangat populer dan banyak digunakan di berbagai sektor.",
-          "link": "/news/kenalan-sama-wheel-loader",
-          "slug": "kenalan-sama-wheel-loader",
-          "author": "Group Farrasindo",
-          "image": "LatestNewsData[2]",
-          "description": "Wheel loader merupakan salah satu alat berat yang sangat populer dan banyak digunakan di berbagai sektor industri. Dengan bentuknya yang dilengkapi bucket di bagian depan, wheel loader dirancang untuk memindahkan material dalam jumlah besar secara cepat dan efisien.\n\nApa Itu Wheel Loader?\nWheel loader adalah alat berat beroda yang berfungsi untuk memuat, memindahkan, dan mengangkut material seperti tanah, pasir, kerikil, batu bara, hingga limbah industri. Dibandingkan alat berat lainnya, wheel loader memiliki keunggulan pada mobilitasnya yang tinggi di area kerja dan kemampuan manuver yang baik meskipun di medan yang cukup sempit.\n\nKegunaan Wheel Loader di Berbagai Bidang Konstruksi\nWheel loader sering digunakan untuk mengangkut material bangunan seperti pasir dan semen. Fungsinya sangat penting dalam proses persiapan dan pembersihan area proyek.\n\nPertambangan\nDalam industri tambang, wheel loader digunakan untuk memindahkan hasil galian seperti batu bara atau penambangan logam dari lokasi penambangan ke truk pengangkut.\n\nPerkebunan dan Alat Pertanian juga dimanfaatkan untuk mengangkut pupuk, hasil panen, serta membersihkan area lahan pertanian.\n\nPengolahan Limbah dan Daur Ulang\nWheel loader membantu dalam proses transfer dan penataan material limbah agar lebih mudah diolah kembali.\n\nPelabuhan dan Logistik\nDi pelabuhan, wheel loader berguna untuk memindahkan barang curah dan membantu kegiatan bongkar muat.\n\nJual Wheel Loader di Farrasindo\nDengan kebutuhan wheel loader yang begitu luas, tentu penting memilih alat yang tepat dan layanan yang terpercaya. Farrasindo Perkasa hadir sebagai solusi untuk Anda yang membutuhkan wheel loader berkualitas, baik untuk pembelian maupun penyewaan.\n\nKami menyediakan berbagai jenis dan kapasitas wheel loader yang siap digunakan untuk berbagai kebutuhan proyek Anda. Dengan pengalaman lebih dari 20 tahun, Farrasindo menjamin unit yang prima, dukungan teknis yang sigap, serta layanan purna jual yang profesional.\n\nButuh wheel loader untuk proyek Anda?\nHubungi Farrasindo sekarang dan temukan solusi alat berat terbaik untuk setiap kebutuhan Anda!"
-        },
-        {
-          "id": 4,
-          "title": "Satu Mesin, Tiga Fungsi: Keunggulan Batchpump dari Farrasindo",
-          "date": "13 Juni 2025",
-          "excerpt": "Farrasindo Perkasa telah memperluas jangkauan layanannya dengan membuka 7 cabang strategis di berbagai wilayah Indonesia.",
-          "slug": "keunggulan-batchpump-farrasindo",
-          "author": "Group Farrasindo",
-          "image": "LatestNewsData[3]",
-          "description": "Satu Mesin, Tiga Fungsi: Keunggulan Batchpump dari Farrasindo\nDalam dunia konstruksi modern, kecepatan dan efisiensi kerja menjadi kunci utama untuk menyelesaikan proyek tepat waktu dan tepat biaya. Untuk menjawab tantangan tersebut, Farrasindo Perkasa menghadirkan Batchpump, sebuah inovasi 3-in-1 yang menggabungkan fungsi Batching, Mixing, dan Pumping dalam satu unit mesin.\n\nApa Itu Batchpump?\nBatchpump adalah mesin portabel multifungsi yang dapat mencampur dan memanaskan beton langsung di lokasi proyek. Berbeda dengan metode konvensional yang memerlukan alat terpisah, batching plant, truk mixer, dan pompa beton. Batchpump mengarahkan semuanya dalam satu proses rangkaian.\n\nDengan kemampuannya yang fleksibel dan desain yang kompak, Batchpump sangat cocok digunakan untuk proyek skala kecil hingga menengah, terutama di area yang sulit dijangkau oleh truk besar atau beton ready mix.\n\nTiga Fungsi Utama Batchpump\nBatching\nBatchpump dapat mengukur dan menakar komposisi material beton sesuai kebutuhan proyek.\n\nPencampuran\nProses pencampuran dilakukan langsung dalam unit untuk menghasilkan beton yang homogen dengan saling terkontrol.\n\nPemompaan\nSetelah tercampur, beton langsung dipompa ke area pengecoran tanpa perlu alat bantu tambahan.\n\nKeunggulan Batchpump dari Farrasindo Perkasa\n✅ Efisien & Hemat Waktu\nBatchpump mempersingkat proses dari batching hingga pumping dalam satu alat, mengurangi waktu tunggu dan meningkatkan kecepatan kerja di lapangan.\n\n✅ Cocok untuk Lokasi Sulit Dijangkau\nDengan desain kompak dan mobilitas tinggi, Batchpump dapat menjangkau lokasi proyek yang tidak dapat dilalui truk mixer besar.\n\n✅ Lebih Hemat Biaya\nTanpa perlu memisahkannya untuk batching plant, truk mixer, dan pompa beton, Anda dapat menghemat pengeluaran operasional secara signifikan.\n\n✅ Operasional\nBatchpump Fleksibel ideal untuk proyek skala kecil hingga menengah, seperti perumahan, ruko, saluran air, jalan lingkungan, hingga proyek perkebunan dan pertambangan.\n\nSebagai produk asli dari Farrasindo, Batchpump telah terbukti andal digunakan di berbagai proyek konstruksi di seluruh Indonesia, mulai dari pembangunan jalan desa, pengecoran lantai gudang, hingga proyek perumahan di wilayah terpencil. Inovasi ini menjadi solusi tepat ketika pasokan beton ready mix sulit diakses atau tidak efisien dari sisi logistik.\n\nIngin Tahu Lebih Lanjut?\nHubungi tim kami sekarang untuk demo produk, harga sewa, atau pembelian Batchpump."
-        },
-        {
-          "id": 5,
-          "title": "Farrasindo Berbagi di Bulan Ramadhan: Kepedulian terhadap Anak Yatim dan Masyarakat Sekitar",
-          "date": "",
-          "excerpt": "",
-          "slug": "farrasindo-berbagi-ramadhan",
-          "author": "Group Farrasindo",
-          "image": "LatestNewsData[4]",
-          "description": "Farrasindo Berbagi di Bulan Ramadhan: Kepedulian terhadap Anak Yatim dan Masyarakat Sekitar\n\nBulan Ramadhan merupakan waktu yang penuh berkah, di mana umat Islam di seluruh dunia menjalankan ibadah puasa dan memperbanyak amal ibadah. Dalam semangat bulan suci ini, PT Farrasindo, sebuah perusahaan yang dikenal akan komitmennya dalam berbagi dan memberikan dampak positif bagi masyarakat, menggelar acara sosial yang menyentuh hati, yaitu berbagi kepada anak-anak yatim di lingkungan sekitar perusahaan.\n\nAcara berbagi ini berlangsung dengan penuh kehangatan di kantor pusat Farrasindo, dan dihadiri oleh berbagai pihak, termasuk Ketua RT 08 setempat, serta Direktur Utama Farrasindo, Evitha Putri. Kegiatan ini menjadi momen spesial yang menunjukkan bahwa Farrasindo tidak hanya fokus pada perkembangan bisnis, tetapi juga pada pengembangan sosial dan kepedulian terhadap masyarakat.\n\nAcara Berbagi kepada Anak Yatim\nDalam acara berbagi ini, Farrasindo memberikan bantuan berupa paket sembako dan bingkisan kepada anak-anak yatim dan keluarga kurang mampu yang berada di sekitar perusahaan. Kegiatan ini dilaksanakan dengan tujuan untuk meringankan beban mereka selama bulan Ramadhan, terutama di tengah kondisi yang penuh tantangan.\n\nEvitha Putri, selaku Direktur Utama Farrasindo, dalam sambutannya menyampaikan bahwa acara ini merupakan bentuk tanggung jawab sosial perusahaan untuk memberikan manfaat langsung kepada masyarakat sekitar. “Kami ingin memberikan kebahagiaan dan berbagi berkah dengan anak-anak yatim dan keluarga kurang mampu. Semoga ini dapat membantu mereka menjalani Ramadhan dengan penuh kebahagiaan,” ujarnya.\n\nKehadiran Ketua RT 08\nKetua RT 08 yang turut hadir dalam acara ini memberikan apresiasi yang tinggi kepada Farrasindo atas perhatian dan kepedulian perusahaan terhadap warga sekitar. “Kami sangat berterima kasih kepada Farrasindo yang selalu peduli terhadap warga di lingkungan kami, terutama anak-anak yatim. Ini adalah contoh nyata dari perusahaan yang tidak hanya fokus pada bisnis, tetapi juga memiliki jiwa sosial yang tinggi,” kata Ketua RT 08.\n\nAcara Rutin yang Diadakan Setiap Tahun\nAcara berbagi ini bukanlah hal baru bagi Farrasindo. Setiap tahunnya, perusahaan ini rutin mengadakan kegiatan serupa di cabang-cabang mereka yang tersebar di berbagai wilayah. Hal ini menunjukkan komitmen Farrasindo untuk terus berperan aktif dalam menciptakan dampak positif bagi masyarakat. Tidak hanya pada bulan Ramadhan, Farrasindo juga terlibat dalam berbagai kegiatan sosial sepanjang tahun, baik dalam bentuk bantuan pendidikan, kesehatan, maupun dukungan bagi masyarakat yang membutuhkan.\n\nMenguatkan Semangat Berbagi di Ramadhan\nKegiatan berbagi ini diharapkan dapat menginspirasi banyak pihak untuk meningkatkan rasa kepedulian terhadap sesama, terutama bagi mereka yang membutuhkan uluran tangan. Di bulan Ramadhan yang penuh berkah ini, Farrasindo menunjukkan bahwa keberhasilan perusahaan tidak hanya diukur dari segi ekonomi, tetapi juga dari mana mereka dapat memberikan kontribusi positif kepada masyarakat.\n\nDengan semakin banyaknya perusahaan yang mengadopsi prinsip tanggung jawab sosial ini, diharapkan dapat tercipta masyarakat yang lebih peduli, berbagi, dan saling mendukung satu sama lain, sehingga menciptakan lingkungan yang lebih harmonis dan sejahtera bagi semua.\n\nFarrasindo tetap berkomitmen untuk menjalankan program-program sosial yang bermanfaat bagi masyarakat, khususnya di bulan Ramadhan, sebagai wujud nyata dari tanggung jawab sosial perusahaan (CSR) yang berkelanjutan."
-        },
-        {
-          "id": 6,
-          "title": "Employee Wellness Day, Farrasindo Bekerja sama dengan Puskesmas Srengseng Melakukan Screening Kesehatan",
-          "date": "14 Mar 2025",
-          "excerpt": "Farrasindo Perkasa Group adakan acara Employee Wellness Day bersama Puskesmas Srengseng untuk pemeriksaan kesehatan karyawan.",
-          "slug": "employee-wellness-day-farrasindo",
-          "author": "Group Farrasindo",
-          "image": "LatestNewsData[5]",
-          "description": "Employee Wellness Day, Farrasindo Bekerja sama dengan Puskesmas Srengseng Melakukan Screening Kesehatan\n\nMengutamakan kesehatan karyawan, Farrasindo Perkasa Group adakan acara Employee Wellness Day.\n\nPada tanggal 14 Februari 2024, Farrasindo Perkasa bekerja sama dengan Puskesmas Srengseng menyelenggarakan kegiatan Employee Wellness Day yang bertujuan untuk menjaga kesehatan dan kesejahteraan para karyawan. Acara ini diikuti oleh lebih dari 150 karyawan Farrasindo Perkasa, yang antusias mengikuti berbagai pemeriksaan kesehatan yang disediakan.\n\nTujuan dan Manfaat Kegiatan\nEmployee Wellness Day ini diselenggarakan dengan tujuan memberikan fasilitas pemeriksaan kesehatan bagi seluruh karyawan, serta memberikan edukasi penting mengenai pentingnya menjaga kesehatan tubuh. Kegiatan ini bukan hanya sebagai deteksi dini masalah kesehatan, namun juga sebagai langkah preventif yang sangat bermanfaat untuk menciptakan lingkungan kerja yang sehat dan produktif.\n\nJenis Pemeriksaan Kesehatan yang Dilakukan\nDalam kegiatan ini, berbagai jenis pemeriksaan kesehatan dilakukan untuk mengetahui kondisi tubuh secara menyeluruh, antara lain:\n\nPemeriksaan Tinggi Badan dan Berat Badan: Pemeriksaan ini bertujuan untuk menghitung Indeks Massa Tubuh (IMT) karyawan. IMT adalah ukuran yang digunakan untuk mengetahui apakah seseorang memiliki berat badan yang ideal atau berisiko mengalami gangguan kesehatan akibat kelebihan atau kekurangan berat badan.\n\nPemeriksaan Tekanan: Salah satu pemeriksaan yang sangat penting adalah tekanan darah. Pemeriksaan ini dilakukan untuk mendeteksi potensi hipertensi atau tekanan darah tinggi yang bisa berbahaya jika tidak segera diatasi.\n\nPemeriksaan Gula Darah: Pemeriksaan gula darah ini dilakukan untuk memantau kadar glukosa dalam darah, guna mendeteksi dini kemungkinan adanya gangguan seperti diabetes. Kegiatan ini juga menjadi langkah pencegahan agar karyawan dapat menjaga pola makan dan gaya hidup sehat.\n\nPemeriksaan Kolesterol : Pemeriksaan Kolesterol berguna untuk mengetahui kadar Kolesterol dalam tubuh, Kolesterol baik total, LDL (kolesterol jahat), maupun HDL (kolesterol baik). Deteksi kadar kolesterol tinggi sangat penting untuk mencegah penyakit jantung dan pembuluh darah.\n\nPemeriksaan TBC (Tuberkulosis): Puskesmas Srengseng juga melakukan pemeriksaan TBC untuk mendeteksi gejala atau indikasi penyakit menular ini. Dengan deteksi dini, penyebaran TBC dapat dicegah dan diobati dengan lebih cepat.\n\nKegiatan yang Berdampak Positif\nEmployee Wellness Day yang dilaksanakan pada tanggal 14 Februari 2024 di Farrasindo Perkasa merupakan langkah yang positif untuk meningkatkan kesadaran dan kesehatan para karyawan. Dengan melibatkan Puskesmas Srengseng dalam pemeriksaan kesehatan yang mencakup berbagai aspek penting, perusahaan ini menunjukkan komitmennya terhadap kesehatan dan kesejahteraan karyawannya. Semoga kegiatan seperti ini dapat terus berlanjut dan menjadi budaya perusahaan, yang tidak hanya berfokus pada kinerja, tetapi juga pada kesehatan dan kebahagiaan karyawan."
-        },
-        {
-          "id": 7,
-          "title": "RAKERNAS 2025, Farrasindo Mengusung Teman Jorney Menuju Puncak",
-          "date": "6 Maret 2025",
-          "excerpt": "Farrasindo Group menyelenggarakan Rapat Kerja Nasional (RAKERNAS) 2025 dengan tema 'Journey to the Top'.",
-          "slug": "rakernas-2025-journey-to-the-top",
-          "author": "Group Farrasindo",
-          "image": "LatestNewsData[6]",
-          "description": "RAKERNAS 2025, Farrasindo Mengusung Teman Jorney Menuju Puncak\n\nFarrasindo Group baru-baru ini menyelenggarakan Rapat Kerja Nasional (RAKERNAS) 2025 dengan tema 'Journey to the Top'. Acara yang berlangsung selama dua hari penuh ini menjadi kesempatan bagi seluruh departemen dan cabang Farrasindo Group di seluruh Indonesia untuk melakukan evaluasi mendalam terhadap pencapaian dan tantangan yang dihadapi sepanjang tahun 2024, serta menyusun langkah-langkah strategi yang akan membawa perusahaan menuju kesuksesan lebih tinggi di tahun 2025.\n\nDalam kesempatan kali ini, Farrasindo Group juga memperkenalkankan direktur utama baru, yaitu Evitha Putri Annisa, yang sebelumnya menjabat sebagai Head of Marketing Communication and Growth. Pengangkatan ini menjadi langkah penting dalam memperkuat struktur kepemimpinan dan mempersiapkan perusahaan untuk tantangan mendatang.\n\nAcara ini dihadiri oleh seluruh petinggi-petinggi, kepala cabang, dan sales-sales Farrasindo Group yang terdiri dari PT Farrasindo Perkasa, PT Fresh Beton Indonesia, PT Farracon Precast Industi, PT Gunung Bumi Perkasa, PT Citi Pump Perkasa, dan CV. Simi Pijat Refleksi.\n\nHari Pertama dan Kedua: Evaluasi Pencapaian dan Tantangan 2024\nPada hari kedua RAKERNAS 2025, agenda utama adalah evaluasi dan tantangan yang dihadapi oleh setiap departemen dan cabang dari setiap unit bisnis selama tahun 2024. Masing-masing perwakilan dari departemen dan cabang diberi kesempatan untuk mempresentasikan mereka dalam berbagai aspek, termasuk penjualan, operasional, pengembangan produk, serta inovasi yang telah berlangsung selama setahun terakhir.\n\nTidak hanya pencapaian, presentasi ini juga menyoroti tantangan-tantangan yang menghadang tim selama tahun 2024. Diskusi terbuka ini memungkinkan setiap departemen untuk berbagi pengalaman mengenai kendala yang muncul, serta solusi yang telah dicoba untuk mengatasinya. Dengan demikian, acara ini menjadi forum yang sangat berguna bagi seluruh waktu untuk saling belajar dan menemukan pendekatan baru untuk menghadapi tantangan serupa di masa depan.\n\nHari pertama dan kedua RAKERNAS juga diwarnai dengan diskusi yang mendalam mengenai bagaimana perusahaan dapat meningkatkan efisiensi operasional dan mengoptimalkan hasil yang sudah ada. Hal ini menjadi pijakan yang kuat untuk merencanakan langkah-langkah strategi di tahun mendatang.\n\nMalam Apresiasi: Malam Penghargaan dan Hiburan\nSetelah dua hari penuh dengan diskusi, acara RAKERNAS 2025 ditutup dengan malam penghargaan yang penuh keceriaan di hari kedua. Malam ini menjadi ajang bagi Farrasindo Perkasa untuk memberikan penghargaan kepada para karyawan yang telah memberikan kontribusi terbaik mereka sepanjang tahun 2024.\n\nBerbagai penghargaan diberikan pada malam tersebut, seperti Sales Terbaik, Cabang Terbaik dan kategori-kategori lainnya yang memberikan pengakuan atas kerja keras dan dedikasi. Pemberian penghargaan ini bertujuan untuk memotivasi seluruh karyawan agar terus berusaha dan memberikan yang terbaik di tahun berikutnya.\n\nTidak hanya diberikan penghargaan, malam itu juga diisi dengan hiburan yang menyenangkan. Para karyawan berkesempatan mengikuti berbagai permainan seru yang meningkatkan kebersamaan antar tim, serta sesi bernyanyi bersama yang menciptakan suasana penuh tawa dan kebahagiaan. Acara puncak ini ditutup dengan makan malam bersama yang mempererat hubungan antar sesama karyawan dan memberikan kesempatan untuk saling berbincang dalam suasana yang lebih santai.\n\nRAKERNAS 2025 Farrasindo Perkasa dengan tema 'Journey to the Top' tidak hanya menjadi ajang evaluasi, tetapi juga merupakan momentum penting bagi perusahaan untuk merencanakan langkah-langkah strategi menuju puncak kesuksesan. Melalui pembahasan pencapaian dan tantangan selama tahun 2024, serta penghargaan kepada karyawan terbaik, Farrasindo Perkasa semakin siap menghadapi tantangan baru di tahun 2025 dan terus mengoptimalkan kinerjanya dengan semangat kolaborasi dan inovasi."
-        },
-        {
-          "id": 8,
-          "title": "Rayakan HUT Ke-23, Farrasindo …",
-          "date": "7 Februari 2025",
-          "excerpt": "Rayakan HUT Ke-23, Farrasindo Mengajak Semua Karyawan Saling Mengapresiasi.",
-          "slug": "rayakan-hut-ke-23-farrasindo",
-          "author": "Group Farrasindo",
-          "image": "LatestNewsData[7]",
-          "description": "Rayakan HUT Ke-23, Farrasindo Mengajak Semua Karyawan Saling Mengapresiasi\n\nTahun 2024 menjadi momen istimewa bagi Farrasindo, perusahaan yang telah berkiprah selama 23 tahun di industri ini. Dalam rangka merayakan HUT ke-23, Farrasindo mengusung tema *Tim Hebat, Kerja Hebat*, yang mencerminkan pentingnya kolaborasi dan semangat tim dalam mencapai kesuksesan. Tema ini juga mengajak seluruh karyawan untuk saling mengapresiasi kolaborasi dalam perjalanan panjang perusahaan selama 23 tahun.\n\nAcara Penuh Makna dengan Berbagai Kegiatan\nPeringatan HUT kali ini tidak hanya dirayakan dengan seremonial semata, namun juga diisi dengan berbagai kegiatan yang penuh makna. Salah satu momen yang sangat menyentuh adalah pembagian sembako untuk anak yatim. Farrasindo menunjukkan kepeduliannya terhadap sesama dengan memberikan bantuan sembako kepada anak-anak yatim di sekitar lingkungan perusahaan. Ini menjadi bentuk nyata dari tanggung jawab sosial perusahaan yang senantiasa peduli terhadap kesejahteraan masyarakat.\n\nSelain itu, diberikan penghargaan untuk karyawan juga menjadi bagian penting dalam perayaan ini. Farrasindo memberikan penghargaan kepada karyawan yang telah menunjukkan dedikasi luar biasa dalam pekerjaan mereka. Penghargaan ini bertujuan untuk memotivasi setiap individu untuk terus memberikan yang terbaik dan menjadi bagian dari tim yang solid dan produktif.\n\nMakan Malam Bersama dan Kompetisi Seru Antar Cabang\nAcara semakin meriah dengan adanya makan malam bersama yang mempererat ikatan antara sesama karyawan. Momen makan bersama ini bukan hanya tentang makanan lezat, tetapi juga sebagai ajang untuk saling berbagicerita, pengalaman, dan tentunya mencapai pencapaian perusahaan yang luar biasa.\n\nTidak ketinggalan, Farrasindo juga mengadakan kompetisi seru antar cabang yang menjadi ajang untuk menunjukkan kreativitas dan tim kerja. Setiap cabanglomba-lomba menampilkan keahlian terbaik mereka, baik dalam hal kreativitas, kerjasama, maupun inovasi. Kompetisi ini tidak hanya menghibur, namun juga menampilkan bahwa setiap cabang memiliki kontribusi penting dalam kesuksesan perusahaan secara keseluruhan.\n\nMomen Perayaan yang Penuh Makna\nHUT ke-23 Farrasindo menjadi ajang untuk merayakan kerja keras, dedikasi, dan kebersamaan seluruh karyawan. Dengan tema *Great Team, Great Work*, acara ini menjadi simbol betapa pentingnya tim kerja dan apresiasi terhadap setiap individu. Farrasindo terus berkomitmen untuk berkembang, tidak hanya sebagai perusahaan, tetapi juga sebagai keluarga yang saling mendukung dan mengapresiasi. Selamat ulang tahun yang ke-23, Farrasindo! Semoga terus sukses dan berkembang untuk tahun-tahun yang akan datang."
-        },
-        {
-          "id": 9,
-          "title": "Ingin Proyek Konstruksi Tepat Waktu dengan Kualitas Terbaik? Pilih Beton Ready Mix!",
-          "date": "22 Januari 2025",
-          "excerpt": "Solusi konstruksi cepat dan berkualitas dengan beton ready mix dari Fresh Beton Indonesia.",
-          "slug": "beton-ready-mix-proyek-konstruksi-2",
-          "author": "Campuran Siap Pakai",
-          "image": "LatestNewsData[8]",
-          "description": "Mau Proyek Konstruksi Cepat dan Berkualitas? Pilih Beton Ready Mix\n\nDalam dunia konstruksi, waktu dan kualitas adalah dua faktor yang sangat krusial. Keterlambatan dalam penyelesaian proyek atau penggunaan bahan bangunan yang tidak memenuhi standar bisa berbahaya dan mengganggu seluruh tahapan pembangunan. Salah satu solusi terbaik untuk memastikan proyek konstruksi Anda cepat selesai dan memiliki kualitas yang terjamin adalah dengan menggunakan beton ready mix.\n\nBeton ready mix adalah beton yang telah diproduksi dan dicampur secara profesional di pabrik, kemudian diangkut menggunakan truk mixer ke lokasi proyek. Dengan berbagai keunggulan yang dimiliki, beton ready mix menjadi pilihan favorit bagi banyak kontraktor dan developer.\n\nKeunggulan Beton Ready Mix untuk Proyek Konstruksi :\nKualitas yang Terjamin\nBeton ready mix diproduksi dengan sistem yang terkontrol dengan baik di pabrik, menggunakan bahan-bahan yang sudah terstandarisasi. Hal ini memastikan bahwa kualitas beton yang digunakan di proyek selalu konsisten dan sesuai dengan kebutuhan teknis. Tidak ada lagi risiko pencampuran yang tidak tepat atau kualitas beton yang kurang optimal.\n\nMenghemat Waktu\nPencampuran beton di lokasi proyek seringkali memakan waktu yang cukup lama, apalagi jika dilakukan secara manual. Dengan beton ready mix, semua pencampuran sudah dilakukan sebelumnya di pabrik, sehingga waktu yang dibutuhkan untuk menuangkan beton ke dalam bekisting jauh lebih cepat. Jadi dapat mengurangi waktu tunggu dan mempercepat kemajuan pembangunan.\n\nHasil yang Lebih Presisi\nDengan beton ready mix, campuran beton lebih presisi sesuai dengan rasio yang dibutuhkan. Ini membantu mengurangi kesalahan yang bisa terjadi pada pencampuran beton secara manual dan memastikan bahwa beton yang digunakan memiliki kekuatan dan ketahanan yang optimal. Mudah dalam Pengaturan Jumlah Beton Beton ready mix tersedia dalam berbagai jumlah, mulai dari skala kecil hingga besar, sesuai dengan kebutuhan proyek. Tidak perlu khawatir kelebihan atau kekurangan beton di lokasi, karena beton akan dikirim sesuai dengan jumlah yang telah dipesan. Ini juga mengurangi pemborosan material yang sering terjadi pada pencampuran manual.\n\nMinimalkan Risiko Kerusakan\nBeton yang dicampur secara manual seringkali memiliki risiko kekurangan atau kelebihan bahan campuran, yang dapat berdampak pada kualitas dan kekuatan beton. Dengan beton ready mix, setiap batch yang dikirim akan sesuai dengan standar kualitas yang diharapkan, mengurangi risiko kerusakan atau masalah di kemudian hari.\n\nDengan semua keunggulan tersebut, beton ready mix jelas menjadi pilihan yang lebih baik dibandingkan dengan beton yang dicampur di lokasi. Selain lebih cepat dan efisien, penggunaan beton ready mix juga membantu memastikan kualitas konstruksi yang lebih baik dan tahan lama. Jika sedang mencari solusi beton ready mix untuk proyek konstruksi, Fresh Beton Indonesia adalah pilihan yang tepat. Sediakan beton ready mix berkualitas tinggi dengan pengawasan ketat di setiap tahap produksi, pastikan beton yang kami kirim sesuai dengan kebutuhan proyekmu. Dengan pengalaman kami yang sudah terbukti, Fresh Beton Indonesia siap membantu mempercepat kemajuan pembangunan proyek mu tanpa mengorbankan kualitas.\n\nJadi, untuk memastikan proyek konstruksi berjalan cepat, efisien, dan berkualitas, mempercayai kebutuhan beton ready mix kepada Fresh Beton Indonesia. Hubungi kami sekarang untuk informasi lebih lanjut dan penawaran yang menarik!"
-        },
-        {
-          "id": 10,
-          "title": "Fresh Beton Indonesia menyediakan Beton Berkualitas dengan 7 Cabang Strategis di Seluruh Indonesia",
-          "date": "22 Januari 2025",
-          "excerpt": "Fresh Beton Indonesia hadir sebagai pionir dalam menyediakan beton berkualitas tinggi dengan jaringan cabang di berbagai lokasi strategis.",
-          "slug": "fresh-beton-indonesia-7-cabang-strategis",
-          "author": "Fresh Beton Indonesia",
-          "image": "LatestNewsData[9]",
-          "description": "Fresh Beton Indonesia menyediakan Beton Berkualitas dengan 7 Cabang Strategis di Seluruh Indonesia\n\nFresh Beton Indonesia hadir sebagai pionir dalam menyediakan beton berkualitas tinggi dengan jaringan yang luas dan cabang yang tersebar di berbagai lokasi strategis di Indonesia. Dengan 7 cabang yang tersebar di Meruya, Sentul, Cianjur, Sukabumi, Serpong, Balaraja, dan Cikembang, Fresh Beton Indonesia siap melayani kebutuhan konstruksi Anda dengan lebih cepat, efisien, dan terpercaya.\n\nKenapa Beton Segar Indonesia?\nFresh Beton Indonesia bukan hanya sekedar penyedia beton, namun juga partner yang dapat diandalkan dalam setiap proyek konstruksi. Dengan pengalaman bertahun-tahun dan komitmen untuk memberikan produk beton terbaik, Fresh Beton Indonesia memastikan bahwa setiap pelanggan mendapatkan layanan yang optimal.\n\nSetiap cabang Fresh Beton Indonesia berfungsi untuk menjangkau lokasi yang berbeda dan memenuhi kebutuhan beton sesuai dengan permintaan proyek, baik itu untuk pembangunan gedung, infrastruktur, jalan raya, hingga proyek kecil dan besar lainnya. Dengan 7 cabang yang tersebar di berbagai lokasi seperti Meruya, Sentul, Cianjur, Sukabumi, Serpong, Balaraja, dan Cikembang, Fresh Beton Indonesia memastikan distribusi yang cepat dan produk yang selalu dalam kondisi terbaik.\n\nKeunggulan 7 Cabang Fresh Beton Indonesia\nMeruya: Berada di pusat kota Jakarta, cabang Meruya memudahkan akses ke proyek-proyek besar di ibu kota, memastikan pengiriman tepat waktu ke lokasi konstruksi.\n\nSentul: Dikenal dengan pesatnya perkembangan sektor properti dan infrastruktur, cabang Sentul menjadi pilihan utama untuk proyek-proyek di kawasan ini.\n\nCianjur: Untuk proyek-proyek di wilayah Jawa Barat, cabang Cianjur hadir sebagai penyedia beton berkualitas dengan harga bersaing.\n\nSukabumi: Sebagai kota dengan potensi industri yang berkembang, cabang Sukabumi hadir untuk mendukung berbagai proyek pembangunan lokal dan industri.\n\nSerpong: Terletak di kawasan yang tengah berkembang pesat, cabang Serpong sangat strategis untuk melayani proyek-proyek di kawasan Tangerang Selatan dan sekitarnya.\n\nBalaraja: Dengan konektivitas yang baik ke berbagai kawasan industri, cabang Balaraja siap memenuhi kebutuhan beton untuk proyek-proyek besar dan konstruksi industri.\n\nCikembang: Cabang Cikembang, yang terletak di daerah yang berkembang, menjadi pilihan tepat untuk pembangunan infrastruktur dan proyek lainnya di wilayah Jawa Barat.\n\nDi mana pun kamu berada, Fresh Beton Indonesia siap menjangkau dan menjadi partner konstruksi terbaikmu!"
-        },
-        {
-          "id": 11,
-          "title": "Mesin Pompa Beton Sewa dengan Layanan Profesional oleh Farrasindo Perkasa",
-          "date": "22 Januari 2025",
-          "excerpt": "Farrasindo Perkasa menyediakan jasa sewa mesin pompa beton berkualitas tinggi untuk berbagai kebutuhan proyek konstruksi.",
-          "slug": "mesin-pompa-beton-sewa-farrasindo-perkasa",
-          "author": "Group Farrasindo",
-          "image": "LatestNewsData[10]",
-          "description": "Farrasindo Perkasa adalah perusahaan terpercaya yang menyediakan jasa sewa mesin pompa beton berkualitas tinggi untuk berbagai kebutuhan proyek konstruksi. Dengan pengalaman bertahun-tahun dan peralatan modern, kami siap memenuhi kebutuhan proyek Anda, baik skala kecil maupun besar. Kami menawarkan berbagai jenis pompa beton, masing-masing dengan fungsi spesifik untuk memastikan efisiensi dan hasil terbaik.\n\nJenis-Jenis Mesin Pompa Beton yang Tersedia\nPompa Beton Mini: Ideal untuk proyek skala kecil seperti pembangunan rumah atau rekonstruksi. Ukurannya yang ringkas memudahkan alat ini menjangkau area yang sulit diakses, seperti gang sempit atau lokasi terpencil. Fungsi: Ideal untuk proyek skala kecil seperti pembangunan rumah, rekonstruksi, atau proyek di area dengan akses terbatas. Panjang Boom: 10–15 meter. Keunggulan: Ringkas dan mudah dioperasikan di lokasi yang sempit.\n\nPompa Beton Standar: Cocok untuk proyek berukuran menengah. Alat ini memiliki jangkauan standar yang efisien untuk pekerjaan konstruksi gedung bertingkat rendah hingga menengah. Fungsi: Cocok untuk proyek berskala menengah seperti konstruksi gedung bertingkat rendah. Panjang Boom: 15–28 meter. Keunggulan: Serbaguna dan memiliki kemampuan jangkauan yang cukup luas.\n\nLong Boom Concrete Pump: Dengan jangkauan yang lebih panjang, alat ini mendukung proyek gedung tinggi dan jembatan. Teknologi long boom mempermudah pengaliran beton ke lokasi yang lebih tinggi atau sulit dijangkau. Fungsi: Mendukung proyek dengan jangkauan kebutuhan yang lebih luas, seperti pembangunan gedung bertingkat tinggi atau infrastruktur skala besar. Panjang Boom: 28–36 meter. Keunggulan: Efisien untuk lokasi akses dengan kesulitan atau tingkat ketinggian lebih tinggi.\n\nDouble Super Long Boom: Untuk proyek-proyek besar seperti konstruksi gedung pencakar langit atau infrastruktur skala besar, double super long boom memberikan transmisi dan jangkauan maksimum. Fungsi: dirancang untuk proyek besar seperti pembangunan jembatan atau gedung pencakar langit. Panjang Boom: 36–48 meter. Keunggulan: Memiliki kemampuan menjangkau area yang sangat luas dan tinggi.\n\nExtra Double Super Long Boom: Alat ini dirancang untuk proyek-proyek paling menantang dengan kebutuhan jangkauan beton ekstrem. Cocok untuk proyek dengan tingkat kompleksitas tinggi. Fungsi: Menjawab kebutuhan ekstrem pada proyek-proyek kompleks seperti bendungan atau struktur tinggi lainnya. Panjang Boom: 48–62 meter. Keunggulan: Daya jangkauan maksimum dengan kualitas terbaik.\n\nStationery Concrete Pump (Moli/Mounted Line Pump): Biasanya digunakan pada proyek yang membutuhkan aliran beton konstan dalam jarak jauh. Pompa stasioner cocok untuk infrastruktur jalan raya atau bendungan. Fungsi: Aliran beton jarak jauh untuk proyek seperti jalan raya, bendungan, atau proyek besar lainnya. Keunggulan: Stabil, konsisten, dan efisien untuk kebutuhan beton dalam volume besar.\n\nSelf-Loading Concrete Pump: Menggabungkan pencampuran fungsi dan pemompaan dalam satu alat. Alat ini memberikan efisiensi tinggi, terutama pada lokasi proyek terpencil yang memerlukan mobilitas. Fungsi: Menggabungkan pencampuran beton dan pemompaan dalam satu unit, cocok untuk lokasi proyek terpencil. Keunggulan: Efisien, hemat waktu, dan tenaga kerja.\n\nBatching Plant: Fasilitas ini memungkinkan pencampuran beton dalam jumlah besar dengan presisi tinggi. Batching plant sangat cocok untuk proyek besar dengan pasokan kebutuhan beton kontinyu. Fungsi: Memproduksi beton secara massal dengan presisi tinggi untuk mendukung kebutuhan proyek skala besar. Keunggulan: Menjamin kualitas beton yang seragam dan sesuai spesifikasi.\n\nMengapa Memilih Farrasindo Perkasa?\nPenanganan Profesional: Tim kami terdiri dari tenaga ahli berpengalaman yang memahami kebutuhan setiap proyek. Dengan perawatan berkala pada alat, kami menjamin kinerja optimal di lapangan.\nPengalaman Tinggi: Berbekal pengalaman dalam berbagai proyek, kami mampu memberikan solusi terbaik untuk mendukung keberhasilan konstruksi Anda.\nPeralatan Lengkap dan Modern: Dari mini Concrete Pump hingga Batching Plant, semua alat kami dirancang untuk memenuhi kebutuhan konstruksi dengan efisiensi maksimal.\nHarga Kompetitif: Kami menyediakan layanan berkualitas tinggi dengan harga yang terjangkau, menjadikan Farrasindo Perkasa sebagai mitra terbaik untuk proyek Anda."
-        },
-        {
-          "id": 12,
-          "title": "Inovasi terbaru, Farrasindo Perkasa Group meluncurkan Mobile Batching Plant",
-          "date": "16 Des 2024",
-          "excerpt": "PT Farrasindo Perkasa Group meluncurkan Mobile Batching Plant sebagai solusi inovatif untuk proyek konstruksi modern di Indonesia.",
-          "slug": "inovasi-mobile-batching-plant-farrasindo-perkasa",
-          "author": "Group Farrasindo",
-          "image": "LatestNewsData[11]",
-          "description": "PT Farrasindo Perkasa Group sebagai salah satu perusahaan penyedia layanan konstruksi bangunan perbetonan yang modern, ikut andil dalam perkembangan industri konstruksi yang terus meningkat. Menyanggapi perkembangan tersebut serta permintaan pasar yang tinggi di lapangan, PT Farrasindo Perkasa Group memberikan solusi dengan terus meningkatkan inovasi terbarunya.\n\nPada tahun 2013, PT Farrasindo Perkasa Group memperkenalkan inovasi terbaru dan pertama di Indonesia, yaitu Mobile Batching Plant dengan kapasitas 0,5 meter kubik, sebuah terobosan yang dirancang untuk memenuhi kebutuhan proyek-proyek kecil dan menengah. Alat ini memungkinkan pencampuran beton langsung di lokasi dengan akurasi tinggi, mengurangi ketergantungan pada pengiriman beton dari pabrik, serta menghemat waktu dan biaya. Dengan dimensi yang kompak dan mudah dipindahkan, alat ini menjadi solusi ideal untuk proyek konstruksi di lokasi terpencil atau dengan akses terbatas.\n\nTak berhenti di situ, seiring dengan semakin banyaknya permintaan pasar, PT Farrasindo Perkasa Group meluncurkan kembali inovasi Mobile Batching Plant dengan kapasitas 1 meter kubik pada tahun 2023. Versi terbaru ini dirancang untuk menangani proyek dengan skala yang lebih besar tanpa mengingatkan dan kemudahan transportasi. Selain peningkatan kapasitas, alat ini dilengkapi dengan teknologi terkini, termasuk sistem kontrol otomatis dan pemantauan digital yang memungkinkan operator untuk memadukan kinerja dan kualitas beton secara real-time.\n\nMenurut pernyataan resmi dari manajemen PT Farrasindo Perkasa Group, inovasi ini bertujuan untuk menjawab tantangan konstruksi modern yang membutuhkan solusi cepat, fleksibel, dan ramah lingkungan. “Kami ingin memastikan bahwa setiap proyek, baik besar maupun kecil, memiliki akses ke alat yang dapat meningkatkan efisiensi dan kualitas pekerjaan,” ujar perwakilan perusahaan.\n\nPenggunaan Mobile Batching Plant berkapasitas 1 meter kubik ini diharapkan dapat mengurangi limbah material konstruksi dan meminimalkan emisi karbon, sejalan dengan komitmen perusahaan terhadap kepunahan lingkungan. Selain itu, teknologi ini juga membantu perusahaan untuk mematuhi standar internasional dalam kualitas beton yang diproduksi.\n\nDengan berbagai inovasi ini, PT Farrasindo Perkasa Group memperkuat posisinya sebagai pelopor solusi konstruksi yang modern dan efisien di Indonesia. Kehadiran Mobile Batching Plant ini memberikan harapan baru bagi pelaku industri konstruksi untuk terus berkembang dengan cara yang lebih cerdas dan berkelanjutan."
-        },
-        {
-          "id": 13,
-          "title": "Tanam 1000 pohon, Farrasindo Perkasa Group dan Fresh Beton Indonesia mendukung pelestarian lingkungan",
-          "date": "14 Des 2024",
-          "excerpt": "PT Farrasindo Perkasa Group dan PT Fresh Beton Indonesia menanam 1000 pohon sebagai bagian dari program pelestarian lingkungan dan tanggung jawab sosial perusahaan.",
-          "slug": "tanam-1000-pohon-farrasindo-fresh-beton",
-          "author": "Group Farrasindo",
-          "image": "LatestNewsData[12]",
-          "description": "PT Farrasindo Perkasa Group bersama dengan PT Fresh Beton Indonesia melaksanakan program pelestarian lingkungan dengan menanam 1000 pohon sekaligus sebagai salah satu tanggung jawab sosial perusahaan terhadap lingkungan. Program ini merupakan bagian inisiatif dari #FarraCare, yang menyoroti komitmen perusahaan terhadap lingkungan dan pembangunan berkelanjutan.\n\nAcara penanaman pohon ini dilaksanakan bersamaan dengan HUT Farrasindo Perkasa Group yang ke-22 tahun, serta melibatkan seluruh karyawan perusahaan yang berada di wilayah Jabodetabek. Lokasi penanaman difokuskan pada kawasan yang membutuhkan penghijauan, terutama di wilayah risiko dengan erosi tinggi di Sukabumi.\n\nDalam berbagai hal, Direktur PT Farrasindo Group menyampaikan bahwa inisiatif ini bukan hanya bentuk perayaan, tetapi juga merupakan wujud nyata dari tanggung jawab perusahaan terhadap lingkungan. “HUT ke-22 ini menjadi momen penting bagi kami untuk berkontribusi lebih besar dalam menjaga keseimbangan alam. Kami ingin mewariskan warisan positif tidak hanya bagi industri, tetapi juga bagi lingkungan dan masyarakat,” ujarnya. Ia juga menambahkan bahwa inisiatif ini bertujuan untuk mengurangi dampak karbon dari aktivitas industri, sekaligus memberikan kontribusi nyata dalam menjaga keseimbangan ekosistem.\n\nPerwakilan dari PT Fresh Beton Indonesia juga menambahkan bahwa kegiatan ini merupakan bagian dari visi perusahaan untuk menciptakan dampak positif melalui inovasi dan aksi nyata. “Melalui #Farracare, kami berharap dapat menginspirasi lebih banyak pihak untuk bersama-sama menjaga lingkungan. Kami percaya bahwa kolaborasi antara industri dan masyarakat adalah kunci untuk keinginan,” katanya.\n\nProgram ini tidak hanya mendukung pelestarian lingkungan, tetapi juga menunjukkan bagaimana perusahaan besar dapat memainkan peran penting dalam menciptakan perubahan positif. Melalui program ini, diharapkan dapat menjadi inspirasi bagi pelaku industri lain untuk ikut serta dalam menjaga kelestarian alam di tengah pesatnya pembangunan."
-        },
-            {
-        "id": 14,
-        "title": "Meriahkan HUT RI ke-80, Farrasindo Group Gelar Lomba dan Kuliner Nusantara",
-        "date": "3 Desember 2025",
-        "excerpt": "Dalam rangka menyambut Hari Ulang Tahun Kemerdekaan Republik Indonesia ke-80, Farrasindo Group mengadakan acara kebersamaan pada 15 Agustus 2025. Perayaan ini berlangsung meriah, dipenuhi semangat persatuan dan kegembiraan seluruh karyawan.",
-        "link": "/news/meriahkan-hut-ri-80-farrasindo-group-lomba-kuliner-nusantara",
-        "slug": "meriahkan-hut-ri-80-farrasindo-group-lomba-kuliner-nusantara",
-        "author": "Group Farrasindo",
-        "image": "LatestNewsData[16]",
-        "description": "Dalam rangka menyambut Hari Ulang Tahun Kemerdekaan Republik Indonesia ke-80, Farrasindo Group mengadakan acara kebersamaan pada 15 Agustus 2025. Perayaan ini berlangsung meriah, dipenuhi semangat persatuan dan kegembiraan seluruh karyawan.\n\nDengan mengenakan pakaian adat dan kebaya, para karyawan menampilkan nuansa budaya yang kental. Suasana semakin hangat ketika berbagai lomba tradisional dimulai, di antaranya:\n\n- Tarik Tambang – seru dan penuh semangat tim.\n- Panjat Pinang – mengundang tawa sekaligus menguji kerja sama.\n- Kait Galon – mengasah ketelitian dan strategi.\n- Ular Balon – menghadirkan keceriaan dan kebersamaan.\n\nSelain keseruan lomba, acara ini juga menghadirkan aneka kuliner khas UMKM lokal yang menambah semarak suasana. Para karyawan dapat menikmati berbagai hidangan, seperti sate, bakso, rujak, hingga martabak mini. Kehadiran UMKM ini bukan hanya menyajikan cita rasa Nusantara, tetapi juga menjadi bentuk dukungan Farrasindo Group terhadap pertumbuhan usaha kecil di sekitar.\n\nKebersamaan, sportivitas, dan rasa nasionalisme benar-benar tercermin dalam perayaan ini. Melalui semangat kemerdekaan, Farrasindo Group berharap seluruh karyawan semakin solid, penuh energi positif, dan bersama-sama melangkah maju demi kemajuan perusahaan serta bangsa.\n\nDirgahayu Republik Indonesia ke-80!\nMerdeka!"
-      },
-      {
-          "id": 15,
-          "title": "Farrasindo Esport Club: Membangun Kebersamaan Lewat Game",
-          "date": "3 Desember 2025",
-          "excerpt": "Farrasindo Esport Club hadir sebagai wadah hiburan positif untuk mempererat kebersamaan karyawan melalui game Mobile Legends dan FIFA.",
-          "link": "/news/farrasindo-esport-club",
-          "slug": "farrasindo-esport-club",
-          "author": "Group Farrasindo",
-          "image": "LatestNewsData[14]",
-          "description": "Di Farrasindo Group, kebersamaan dan kekompakan tim adalah kunci utama dalam menunjang keberhasilan kerja. Tidak hanya diwujudkan melalui aktivitas kantor dan proyek, tetapi juga lewat kegiatan positif yang bisa dinikmati bersama. Salah satunya adalah dengan hadirnya Farrasindo Esport Club.\n\n**Game yang Dipilih: Mobile Legends & FIFA**\nFarrasindo Esport Club berfokus pada dua game populer yang mudah dimainkan bersama, yaitu:\n\n- **Mobile Legends** – game strategi 5 vs 5 yang mengajarkan pentingnya kerjasama tim, komunikasi, serta kemampuan membaca situasi.\n- **FIFA** – game olahraga yang memberikan pengalaman bermain sepak bola virtual, melatih konsentrasi, strategi, sekaligus menjadi sarana hiburan bersama.\n\n**Tujuan Dibentuknya Esport Club**\nBerbeda dengan klub e-sport profesional, Farrasindo Esport Club tidak ditujukan untuk kompetisi besar atau mencari prestasi tertentu. Fokus utama klub ini adalah:\n\n- Membangun kebersamaan antar karyawan lewat permainan yang seru dan menyenangkan.\n- Menguatkan kekompakan tim di luar rutinitas kerja.\n- Menjadi sarana refreshing yang positif setelah aktivitas padat sehari-hari.\n\n**Lebih Dekat, Lebih Kompak**\nDengan adanya Farrasindo Esport Club, diharapkan hubungan antar karyawan semakin erat, komunikasi lebih cair, dan semangat kerja tim pun semakin solid. Karena di balik setiap permainan, ada nilai kebersamaan dan kekompakan yang dapat dibawa kembali ke lingkungan kerja."
-        },
-        {
-          "id": 16,
-          "title": "Farrasindo Group Rayakan Ulang Tahun ke-24 dengan Semangat “Stronger Together”",
-          "date": "3 Desember 2025",
-          "excerpt": "Farrasindo Group merayakan ulang tahun ke-24 dengan tema “Stronger Together”, menghadirkan rangkaian acara penuh kebersamaan, apresiasi, dan rasa syukur.",
-          "link": "/news/farrasindo-group-ulang-tahun-24-stronger-together",
-          "slug": "farrasindo-group-ulang-tahun-24-stronger-together",
-          "author": "Group Farrasindo",
-          "image": "LatestNewsData[15]",
-          "description": "Perjalanan panjang selama 24 tahun menjadi momen penuh makna bagi Farrasindo Group, perusahaan yang dikenal sebagai penyedia solusi terdepan di industri beton dan alat berat. Tahun ini, perayaan ulang tahun ke-24 digelar dengan tema “Stronger Together”, mencerminkan semangat kebersamaan dan kekuatan kolektif yang telah membawa perusahaan ini terus bertumbuh hingga hari ini.\n\nAcara berlangsung meriah dengan berbagai rangkaian kegiatan, dimulai dari pemotongan tumpeng yang menjadi simbol rasa syukur atas perjalanan Farrasindo Group sekaligus peresmian dua anak perusahaan baru, yaitu Nafcon Konstruksi dan SIMI Sport Club. Keduanya menjadi langkah strategis dalam memperluas kiprah Farrasindo Group menuju masa depan yang lebih dinamis.\n\nMomen perayaan juga diisi dengan tausiyah dan doa bersama Ustadz Maulana, yang menambah suasana khidmat dan penuh makna. Tidak hanya itu, kegiatan berbagi kebahagiaan dengan anak yatim turut menjadi bagian penting dari acara, sebagai wujud kepedulian sosial dan rasa syukur atas setiap pencapaian yang telah diraih.\n\nSebagai bentuk apresiasi, Farrasindo Group juga memberikan penghargaan kepada karyawan terbaik dari seluruh cabang, menegaskan bahwa sumber daya manusia adalah fondasi utama keberhasilan perusahaan. Suasana semakin meriah dengan pembagian doorprize menarik, mulai dari jam tangan, televisi, emas, hingga hadiah utama berupa motor listrik dan umroh.\n\nMenambah kehangatan acara, berbagai hidangan khas favorit seperti bakso, siomay, es doger, kopi, dan popcorn turut disajikan, menciptakan suasana kebersamaan yang hangat dan penuh keceriaan.\n\nPerayaan ulang tahun ke-24 ini menjadi penegasan komitmen Farrasindo Group untuk terus berinovasi, memperkuat kolaborasi, dan memberikan kontribusi nyata bagi industri konstruksi di Indonesia. Dengan semangat “Stronger Together”, Farrasindo Group melangkah mantap menuju masa depan yang lebih kuat, solid, dan penuh keberkahan."
-        }
-      ],
-      "featured": {
-        "id": 99,
-        "title": "Pengecoran Hotel & Resort 500 Kamar",
-        "label": "Project Highlight",
-        "excerpt": "Proyek pengecoran lantai untuk pembangunan Hotel & Resort di Bogor membutuhkan beton dengan total volume 229 m³. Proses pengecoran berlangsung cepat dan lebih efisien karena menggunakan pompa beton tipe long boom dari Farrasindo Perkasa yang dapat memastikan kualitas dan ketepatan waktu dalam pembangunan proyek ini.",
-        "link": "/news/proyek-hotel-resort-500-kamar",
-        "image": "LatestNewsData[17]",
-        "author": "Tim Redaksi"
-      }
     }
   },
   "aboutPage": {
@@ -1023,7 +834,7 @@
           },
           "url": null
         },
-          
+
         {
           "id": "ihi-pg115b-8e26-4",
           "name": "PG115B-8E26/4",
@@ -1146,7 +957,7 @@
         }
       ]
     },
-       {
+    {
       "category": "Moli",
       "slug": "moli",
       "products": [
@@ -1159,23 +970,17 @@
           "imageUrl": "ProductData[24]",
           "localImage": "zoomlion-10020r-0f621270.png",
           "details": {
-            "PUMPING_UNINT": {
-              "Maximum theorical output": "100/55m3/h",
-              "Maximum theorical pressure on concrete": "20/11Mpa",
-              "Distribution valve type": "S Valve",
-              "Concrete cylinder": "Φ200mm×1650mm",
-              "Hopper capacity×feeding height": "600L×1500mm",
-              "Recommended concrete slump": "12-23cm"
-            },
-            "POWER_SYSTEM": {
-              "Rated power": "199/2300kW/(r/min)",
-              "Engine moment": "1200/1200-1500N.m/(r/min)",
-              "Maximum displacement": "7470cc"
-            },
-            "OTHER": {
-              "Total weight": "13800kg",
-              "Length×width×height": "9100mm×2450mm×3140mm"
-            }
+            "Maximum theorical output": "100/55m3/h",
+            "Maximum theorical pressure on concrete": "20/11Mpa",
+            "Distribution valve type": "S Valve",
+            "Concrete cylinder": "Φ200mm×1650mm",
+            "Hopper capacity×feeding height": "600L×1500mm",
+            "Recommended concrete slump": "12-23cm",
+            "Rated power": "199/2300kW/(r/min)",
+            "Engine moment": "1200/1200-1500N.m/(r/min)",
+            "Maximum displacement": "7470cc",
+            "Total weight": "13800kg",
+            "Length×width×height": "9100mm×2450mm×3140mm"
           },
           "url": null
         },
@@ -1188,27 +993,20 @@
           "imageUrl": "ProductData[23]",
           "localImage": "truemax-lp50-10-60du-34a1ef5c.png",
           "details": {
-            "PUMPING_UNINT": {
-              "Maximum theorical output": "49/26 m3/h",
-              "Maximum theorical pressure on concrete": "5/10 Mpa",
-              "Distribution valve type": "S Valve",
-              "Concrete cylinder": "Ф180×1200 mm",
-              "Hopper capacity×feeding height": "0.5×1370",
-              "Recommended concrete slump": "12-23cm"
-            },
-            "POWER_SYSTEM": {
-              "Rated power": "60 kW",
-              "Engine moment": "2000 r/min",
-              "Maximum displacement": "7470cc"
-            },
-            "OTHER": {
-              "Total weight": "500 Kg",
-              "Length×width×height": "5200X2100X02500"
-            }
+            "Maximum theorical output": "49/26 m3/h",
+            "Maximum theorical pressure on concrete": "5/10 Mpa",
+            "Distribution valve type": "S Valve",
+            "Concrete cylinder": "Ф180×1200 mm",
+            "Hopper capacity×feeding height": "0.5×1370",
+            "Recommended concrete slump": "12-23cm",
+            "Rated power": "60 kW",
+            "Engine moment": "2000 r/min",
+            "Maximum displacement": "7470cc",
+            "Total weight": "500 Kg",
+            "Length×width×height": "5200X2100X02500"
           },
           "url": null
         }
-      
       ]
     },
     {
@@ -1935,6 +1733,5 @@
         }
       ]
     }
- 
   ]
 }

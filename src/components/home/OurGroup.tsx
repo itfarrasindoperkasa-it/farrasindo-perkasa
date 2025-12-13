@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import dynamic from "next/dynamic";
 import OurPartnerData from "@/lib/datas/our_partner";
 import Image from "next/image";
@@ -14,46 +15,56 @@ const groups = OurPartnerData.map((logo, idx) => ({
 }));
 
 export function OurGroup() {
+  const [slidesToShow, setSlidesToShow] = React.useState(5);
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setSlidesToShow(2);
+      } else if (window.innerWidth < 1024) {
+        setSlidesToShow(3);
+      } else if (window.innerWidth < 1280) {
+        setSlidesToShow(4);
+      } else {
+        setSlidesToShow(5);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  if (!mounted) return null;
+
   const settings = {
     dots: false,
     arrows: false,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 0, // 0 + cssEase linear = jalan terus
-    speed: 10000, // makin besar makin pelan
+    autoplaySpeed: 0,
+    speed: 10000,
     cssEase: "linear" as const,
-    slidesToShow: 5,
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,
     pauseOnHover: false,
-    responsive: [
-      {
-        breakpoint: 1280,
-        settings: { slidesToShow: 4 },
-      },
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 3 },
-      },
-      {
-        breakpoint: 640,
-        settings: { slidesToShow: 2 },
-      },
-    ],
   };
 
   return (
-    <section className="w-full bg-[#cfcfcf] py-6">
+    <section className="w-full bg-[#cfcfcf]">
       <div className="mx-auto container px-4">
         <Slider {...settings}>
           {groups.slice(0, 6).map((group) => (
             <div key={group.id}>
               <div className="flex items-center justify-center">
-                <div className="relative h-16 w-56 md:h-40 md:w-64">
+                <div className="">
                   <Image
                     src={group.logo}
                     alt={group.name}
-                    fill
-                    className="object-cover"
+                    className="object-contain w-full md:max-h-[150px] max-h-[100px]"
                   />
                 </div>
               </div>

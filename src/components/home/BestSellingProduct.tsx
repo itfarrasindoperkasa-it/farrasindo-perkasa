@@ -37,7 +37,7 @@ export function BestSellingProduct() {
     <section className="bg-white py-10 md:py-16 lg:py-20">
       <div className="container mx-auto space-y-8 ">
         {/* Section Title */}
-        <h2 className="text-center text-2xl md:text-4xl font-semibold text-neutral-900">
+        <h2 className="text-center text-3xl font-semibold text-neutral-900">
           {sectionTitle}
         </h2>
 

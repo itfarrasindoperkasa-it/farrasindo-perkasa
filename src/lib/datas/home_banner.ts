@@ -11,8 +11,8 @@ const HomeBannerData = [
   banner2,
   banner3,
   banner4,
-  bannerPort5,
-  bannerNews,
-  bannerAllunit,
+  // bannerPort5,
+  // bannerNews,
+  // bannerAllunit,
 ];
 export default HomeBannerData;

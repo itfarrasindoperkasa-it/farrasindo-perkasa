@@ -3,9 +3,10 @@ import HomeBannerData from "@/lib/datas/home_banner";
 import PortfolioData from "@/lib/datas/portofolio";
 import idMessages from "@/messages/id.json";
 import Image from "next/image";
+import PortofolioBanner from "@/asset/images/homes/bannerPort.jpeg";
 
 export default function PortfolioPage() {
-  const banner = HomeBannerData[4];
+  const banner = PortofolioBanner;
   // Gabungkan data image, title, dan location
   const portfolioProjects = (idMessages.home?.portfolio?.projects || [])
     .map((project, i) => ({
@@ -29,20 +30,9 @@ export default function PortfolioPage() {
       </section>
 
       {/* Portfolio Grid */}
-      <section className="w-full py-16 px-4">
+      <main className="w-full py-16 px-4">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold">Portfolio</h2>
-          <div className="flex justify-center gap-4 mt-5">
-            <button className="px-4 py-2 bg-orange-500 text-white rounded-lg text-sm">
-              ALL
-            </button>
-            <button className="px-4 py-2 border rounded-lg text-sm">
-              Batch Pump
-            </button>
-            <button className="px-4 py-2 border rounded-lg text-sm">
-              Concrete Pump
-            </button>
-          </div>
+          <h1 className="text-3xl md:text-4xl font-bold">Portfolio</h1>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 max-w-360 mx-auto">
@@ -77,7 +67,7 @@ export default function PortfolioPage() {
             </div>
           ))}
         </div>
-      </section>
+      </main>
 
       {/* Partner & Customer */}
       <section>

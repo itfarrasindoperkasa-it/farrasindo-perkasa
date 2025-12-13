@@ -2,6 +2,7 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import React from "react";
 import dynamic from "next/dynamic";
 import OurPartnerData from "@/lib/datas/our_partner";
 import Image from "next/image";
@@ -15,6 +16,31 @@ const groups = OurPartnerData.map((logo, idx) => ({
 }));
 
 export function PartnerCustomer() {
+  const [slidesToShow, setSlidesToShow] = React.useState(5);
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setSlidesToShow(2);
+      } else if (window.innerWidth < 1024) {
+        setSlidesToShow(3);
+      } else if (window.innerWidth < 1280) {
+        setSlidesToShow(4);
+      } else {
+        setSlidesToShow(5);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  if (!mounted) return null;
+
   const settings = {
     dots: false,
     arrows: false,
@@ -23,23 +49,9 @@ export function PartnerCustomer() {
     autoplaySpeed: 0,
     speed: 10000,
     cssEase: "linear",
-    slidesToShow: 5,
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,
     pauseOnHover: false,
-    responsive: [
-      {
-        breakpoint: 1280, // < xl
-        settings: { slidesToShow: 4 },
-      },
-      {
-        breakpoint: 1024, // < lg
-        settings: { slidesToShow: 3 },
-      },
-      {
-        breakpoint: 640, // < sm
-        settings: { slidesToShow: 2 },
-      },
-    ],
   };
 
   return (

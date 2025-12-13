@@ -33,3 +33,15 @@ const PortfolioData: string[] = [
 ];
 // console.log(PortfolioData);
 export default PortfolioData;
+
+export type PortfolioProject = {
+  title: string;
+  location: string;
+};
+
+export type PortfolioConfig = {
+  title: string;
+  buttonText: string;
+  subtitle?: string;
+  projects: PortfolioProject[];
+};

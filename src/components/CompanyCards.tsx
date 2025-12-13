@@ -1,50 +1,56 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import type { StaticImageData } from "next/image"
-import OurPartnerData from "@/lib/datas/our_partner"
-import AboutData from "@/lib/datas/about"
+import { useState } from "react";
+import Image from "next/image";
+import type { StaticImageData } from "next/image";
+import OurPartnerData from "@/lib/datas/our_partner";
+import AboutData from "@/lib/datas/about";
 
 export type CompanyEntry = {
-  name: string
-  logo?: string | StaticImageData | any
-  link?: string
-  description?: string
-}
+  name: string;
+  logo?: string | StaticImageData | any;
+  link?: string;
+  description?: string;
+};
 
 /**
  * Helper function to resolve logo references from data files
  */
-export function resolveRef(value?: unknown): StaticImageData | string | undefined {
-  if (!value) return undefined
+export function resolveRef(
+  value?: unknown
+): StaticImageData | string | undefined {
+  if (!value) return undefined;
 
-  if (typeof value === "object") return value as StaticImageData
+  if (typeof value === "object") return value as StaticImageData;
 
   if (typeof value === "string") {
-    const op = value.match(/^OurPartnerData\[(\d+)\]$/)
+    const op = value.match(/^OurPartnerData\[(\d+)\]$/);
     if (op) {
-      const idx = parseInt(op[1], 10)
-      return (OurPartnerData as any)[idx] ?? value
+      const idx = parseInt(op[1], 10);
+      return (OurPartnerData as any)[idx] ?? value;
     }
-    const ad = value.match(/^AboutData\[(\d+)\]$/)
+    const ad = value.match(/^AboutData\[(\d+)\]$/);
     if (ad) {
-      const idx = parseInt(ad[1], 10)
-      return (AboutData as any)[idx] ?? value
+      const idx = parseInt(ad[1], 10);
+      return (AboutData as any)[idx] ?? value;
     }
-    return value
+    return value;
   }
 
-  return undefined
+  return undefined;
 }
 
-export default function CompanyCards({ companies }: { companies: CompanyEntry[] }) {
-  const [openIdx, setOpenIdx] = useState<number | null>(null)
+export default function CompanyCards({
+  companies,
+}: {
+  companies: CompanyEntry[];
+}) {
+  const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   return (
     <>
       {companies.map((c, idx) => {
-        const logo = resolveRef(c.logo)
+        const logo = resolveRef(c.logo);
         return (
           <div
             key={`${c.name}-${idx}`}
@@ -57,13 +63,7 @@ export default function CompanyCards({ companies }: { companies: CompanyEntry[] 
               className=" w-full flex justify-center"
             >
               {logo && typeof logo !== "string" ? (
-                <Image
-                  src={logo}
-                  alt={c.name}
-                  width={150}
-                  height={75}
-                  className="object-contain"
-                />
+                <Image src={logo} alt={c.name} className="object-contain" />
               ) : logo && typeof logo === "string" ? (
                 <img
                   src={logo}
@@ -93,8 +93,8 @@ export default function CompanyCards({ companies }: { companies: CompanyEntry[] 
               {openIdx === idx ? "▲" : "▼"}
             </button>
           </div>
-        )
+        );
       })}
     </>
-  )
+  );
 }

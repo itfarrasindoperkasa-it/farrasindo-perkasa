@@ -12,6 +12,8 @@ import { BestSellingProduct } from "@/components/home/BestSellingProduct";
 import { TestimonialSection } from "@/components/home/Testimonial";
 import { LatestNews } from "@/components/home/LatestNews";
 import { OurGroup } from "@/components/home/OurGroup";
+import LatestNewsArticle from "@/components/home/LatestNewsArticle";
+import { Locale } from "@/lib/datas/global";
 
 export const metadata: Metadata = {
   title: "Farrasindo - Solusi Terbaik untuk Kebutuhan Anda",
@@ -68,15 +70,16 @@ export const metadata: Metadata = {
 export default async function Home({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: Locale }>;
 }) {
-  const message = (await import("../../messages/id.json")).default;
+  const locale = (await params).locale;
+  const message = (await import(`../../messages/${locale}.json`)).default;
 
   return (
     <main id="home" className="w-full overflow-x-hidden ">
       <Banner
         className={`banner bg-black w-screen p-0`}
-        height="h-[260px] sm:h-[360px] md:h-[800px]"
+        height="h-[60vh] sm:h-[360px] md:h-[100vh]"
         messages={message.home.banner}
       />
       <section
@@ -96,7 +99,7 @@ export default async function Home({
 
           {/* TEXT — MOBILE DI BAWAH */}
           <div className="flex flex-1 flex-col justify-between gap-4 md:gap-6">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug">
+            <h1 className="text-3xl font-bold leading-snug">
               {message.home.about.title.split(" ")[0]}{" "}
               <span className="bg-orange-400 px-2 py-1 sm:px-3 sm:py-2 rounded-md text-white">
                 {message.home.about.title.split(" ")[1]}
@@ -119,7 +122,7 @@ export default async function Home({
 
       <section id="ourServices" className="py-20 px-4 sm:px-6 bg-gray-100">
         <div className="max-w-360 mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-10">
+          <h2 className="text-3xl font-bold text-center mb-10">
             {message.home.our_service.title}
           </h2>
           <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
@@ -183,7 +186,7 @@ export default async function Home({
         </div>
       </section>
       <section id="portfolio">
-        <Portfolio />
+        <Portfolio lang={locale} />
       </section>
       <section id="bestSellingProduct">
         <BestSellingProduct />
@@ -192,7 +195,7 @@ export default async function Home({
         <TestimonialSection />
       </section>
       <section id="lastestNews">
-        <LatestNews />
+        <LatestNewsArticle lang={locale} />
       </section>
       <section id="ourGroup">
         <OurGroup />

@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -44,6 +45,32 @@ function Banner({
   messages: any[];
 }) {
   const banners = HomeBannerData;
+  const [mounted, setMounted] = React.useState(false);
+  const [showArrows, setShowArrows] = React.useState(true);
+
+  React.useEffect(() => {
+    setMounted(true);
+
+    const handleResize = () => {
+      setShowArrows(window.innerWidth >= 640);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <div className={`w-full ${className ?? ""}`} {...props}>
+        <div className={`relative w-full ${height} bg-gray-900`}>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="animate-pulse text-white">Loading...</div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   var settings = {
     autoplay: true,
@@ -53,37 +80,9 @@ function Banner({
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
-    arrows: false,
+    arrows: showArrows,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 0,
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-        },
-      },
-    ],
   };
   return (
     <div className={`w-full ${className ?? ""}`} {...props}>
@@ -113,8 +112,7 @@ function Banner({
   "
               >
                 <h2
-                  className="text-white font-bold leading-tight
-      text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+                  className="text-white font-bold leading-tight text-3xl sm:text-4xl md:text-5xl
       max-w-[90vw] sm:max-w-[70vw] md:max-w-[60vw]"
                 >
                   {messages[idx]?.title}

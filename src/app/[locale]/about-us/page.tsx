@@ -7,7 +7,10 @@ import type { StaticImageData } from "next/image";
 import aboutJson from "@/messages/id.json";
 import AboutData from "@/lib/datas/about";
 import OurPartnerData from "@/lib/datas/our_partner";
-import CompanyCards, { type CompanyEntry, resolveRef } from "@/components/CompanyCards";
+import CompanyCards, {
+  type CompanyEntry,
+  resolveRef,
+} from "@/components/CompanyCards";
 
 import {
   UserCheck,
@@ -30,8 +33,6 @@ type Tab = {
   id: string;
   label: string;
 };
-
-
 
 type WhyItem = {
   id: number;
@@ -149,7 +150,7 @@ function TabButton({
     <button
       onClick={() => onClick(id)}
       aria-pressed={active}
-      className={`px-4 py-3 border-b-2 text-xs sm:text-sm md:text-base ${
+      className={`px-4 py-3 border-b-2 md:text-lg md:text-base ${
         active
           ? "border-orange-500 text-orange-500 font-semibold"
           : "border-transparent hover:border-orange-300 hover:text-orange-500 transition-colors"
@@ -240,8 +241,11 @@ export default function AboutUsPage(): JSX.Element {
       </div>
 
       {/* OVERVIEW */}
-      <section id="company-overview" className="w-full py-10 sm:py-14 md:py-16">
-        <section className="max-w-360 mx-auto px-4 sm:px-6 relative">
+      <section
+        id="company-overview"
+        className="w-full pb-10 sm:pb-14 md:pb-16 px-6 md:px-10 max-w-7xl"
+      >
+        <div className="mx-auto relative">
           <div className="flex flex-col md:flex-row gap-8 md:gap-10 items-start">
             <div className="relative w-full md:w-2/3 h-[220px] sm:h-[300px] md:h-[430px]">
               <Image
@@ -265,13 +269,13 @@ export default function AboutUsPage(): JSX.Element {
               </p>
             </div>
           </div>
-        </section>
+        </div>
       </section>
 
       {/* TAB HEADER */}
-      <section className="border-t border-b border-gray-200">
-        <div className="max-w-360 mx-auto px-4 sm:px-6">
-          <div className="flex justify-between">
+      <section className="border-t border-b border-gray-200 px-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex justify-between md:flex-row flex-col">
             {tabs.map((t) => (
               <TabButton
                 key={t.id}
@@ -287,18 +291,17 @@ export default function AboutUsPage(): JSX.Element {
 
       {/* TAB CONTENT (HANYA 3 BAGIAN) */}
       <section id="our-group" className="w-full py-8 sm:py-10">
-        <div className="max-w-360 mx-auto px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto px-6">
           {/* GROUP */}
           {activeTab === "group" && (
             <Fragment>
-              <div className="flex items-center mb-5 gap-x-2">
+              <div className="flex justify-center mb-5 gap-x-2">
                 <span className="text-lg sm:text-xl md:text-2xl uppercase tracking-wide font-semibold">
                   {about.groupOverview?.title ?? "Farrasindo"}
                 </span>
-               
               </div>
 
-              <p className="text-xs sm:text-sm mb-6 text-gray-600">
+              <p className="md:text-lg mb-6 text-gray-600 text-justify">
                 {about.groupOverview?.description}
               </p>
 
@@ -358,12 +361,12 @@ export default function AboutUsPage(): JSX.Element {
               {/* VISI */}
               <div className="flex flex-col items-center text-center mb-12">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="bg-orange-500 text-white font-semibold px-4 py-1 rounded-md text-lg">
+                  <span className="bg-orange-500 text-white font-semibold px-4 py-1 rounded-md md:text-lg">
                     {about.visionMission?.vision?.title}
                   </span>
                 </div>
 
-                <p className="text-gray-800 max-w-3xl leading-relaxed text-lg">
+                <p className="text-gray-800 max-w-3xl leading-relaxed md:text-lg">
                   {about.visionMission?.vision?.description}
                 </p>
               </div>
@@ -376,12 +379,12 @@ export default function AboutUsPage(): JSX.Element {
               {/* MISI */}
               <div className="flex flex-col items-center text-center">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="bg-orange-500 text-white font-semibold px-4 py-1 rounded-md text-lg">
+                  <span className="bg-orange-500 text-white font-semibold px-4 py-1 rounded-md md:text-lg">
                     {about.visionMission?.mission?.title}
                   </span>
                 </div>
 
-                <p className="text-gray-800 max-w-3xl leading-relaxed text-lg">
+                <p className="text-gray-800 max-w-3xl leading-relaxed md:text-lg">
                   {about.visionMission?.mission?.description}
                 </p>
               </div>
@@ -391,21 +394,21 @@ export default function AboutUsPage(): JSX.Element {
           {activeTab === "history" && (
             <div>
               <div className="flex flex-col items-center text-justify mb-12">
-                <h2 className="bg-orange-500 text-white font-semibold p-3 rounded-md text-lg mb-4">
+                <h2 className="bg-orange-500 text-white font-semibold p-3 rounded-md md:text-lg mb-4">
                   {about.historyDetail?.title}
                 </h2>
                 {about.historyDetail?.paragraphs?.map(
                   (p: string, i: number) => (
                     <p
                       key={i}
-                      className="text-black/60 max-w-5xl leading-relaxed text-lg mb-4"
+                      className="text-black/60 max-w-5xl leading-relaxed md:text-lg mb-4"
                     >
                       {p}
                     </p>
                   )
                 )}
                 <div className="w-full h-px bg-gray-300 my-10"></div>
-                <p className="text-gray-800 max-w-5xl leading-relaxed text-lg mb-4 text-center">
+                <p className="text-gray-800 max-w-5xl leading-relaxed md:text-lg mb-4 text-center">
                   {about.historyDetail?.text}
                 </p>
               </div>
@@ -416,9 +419,9 @@ export default function AboutUsPage(): JSX.Element {
 
       {/* FOUNDER MESSAGE (SELALU TAMPIL) */}
       <section className="w-full bg-orange-400 py-10 sm:py-14">
-        <div className="max-w-360 mx-auto px-4 sm:px-6">
-          <div className="flex flex-col md:flex-row items-stretch gap-8 md:gap-10 bg-white p-6 sm:p-8 md:p-10 shadow-md">
-            <div className="w-full md:w-3/5 text-sm sm:text-base leading-relaxed text-justify">
+        <div className="max-w-360 mx-auto px-4 sm:px-10">
+          <div className="flex flex-col md:flex-row items-stretch bg-white p-6 gap-8 py-10 md:p-10 shadow-md flex-col-reverse">
+            <div className="w-full flex-4 text-sm sm:text-base leading-relaxed text-justify">
               <h3 className="text-lg sm:text-xl font-semibold mb-4 text-orange-600">
                 {about.founderMessage?.title}
               </h3>
@@ -442,13 +445,11 @@ export default function AboutUsPage(): JSX.Element {
               </div>
             </div>
 
-            <div className="w-full md:w-1/3 flex justify-center">
+            <div className="w-full flex-3 flex items-center">
               <Image
                 src={AboutData[2]}
                 alt="Pendiri"
-                width={400}
-                height={400}
-                className="object-cover"
+                className="object-cover w-full h-full"
               />
             </div>
           </div>
@@ -469,8 +470,6 @@ export default function AboutUsPage(): JSX.Element {
           </div>
 
           <div className="relative">
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200" />
-
             <div className="space-y-2">
               {timeline.map((item, index) => {
                 const isLeft = index % 2 === 0;

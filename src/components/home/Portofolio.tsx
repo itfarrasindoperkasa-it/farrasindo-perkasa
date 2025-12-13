@@ -1,21 +1,7 @@
-// components/Portfolio.tsx
-"use client";
-
 import { Search } from "lucide-react";
-import messages from "@/messages/id.json";
-import PortfolioData from "@/lib/datas/portofolio";
-
-type PortfolioProject = {
-  title: string;
-  location: string;
-};
-
-type PortfolioConfig = {
-  title: string;
-  buttonText: string;
-  subtitle?: string;
-  projects: PortfolioProject[];
-};
+import PortfolioData, { PortfolioConfig } from "@/lib/datas/portofolio";
+import { Locale } from "@/lib/datas/global";
+import Link from "next/link";
 
 type CardProps = {
   src: string;
@@ -67,7 +53,8 @@ const Card = ({
   );
 };
 
-export function Portfolio() {
+export async function Portfolio({ lang }: { lang: Locale }) {
+  const messages = (await import(`../../messages/${lang}.json`)).default;
   // ambil config dari JSON
   const portfolioConfig = messages.home.portfolio as PortfolioConfig;
 
@@ -89,9 +76,9 @@ export function Portfolio() {
     <section className="bg-orange-400 py-12 md:py-16">
       <div className="mx-auto max-w-7xl px-4 md:px-6 space-y-10">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-4">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-4 px-4">
           <div>
-            <h2 className="text-lg md:text-2xl font-semibold text-white">
+            <h2 className="text-3xl font-bold text-white text-center md:text-start">
               {title}
             </h2>
             {subtitle && (
@@ -100,9 +87,14 @@ export function Portfolio() {
               </p>
             )}
           </div>
-          <button className="self-start md:self-auto rounded-full border border-white/90 bg-transparent px-5 py-2 text-sm font-medium text-white transition hover:bg-white hover:text-orange-400">
-            {buttonText}
-          </button>
+          <div className="self-center md:self-start md:self-auto">
+            <Link
+              href={`/${lang}/portfolio`}
+              className=" rounded-full border border-white/90 bg-transparent px-5 py-2 font-medium text-white transition hover:bg-white hover:text-orange-400 cursor-pointer"
+            >
+              {buttonText}
+            </Link>
+          </div>
         </div>
 
         {/* SECTION 1 */}

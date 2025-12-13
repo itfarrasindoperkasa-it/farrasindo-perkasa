@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import messages from "@/messages/id.json";
@@ -28,6 +28,28 @@ type Testimonial = {
 export function TestimonialSection() {
   const sliderRef = useRef<Slider | null>(null);
   const [activeDot, setActiveDot] = useState(0);
+  const [slidesToShow, setSlidesToShow] = useState(3);
+  const [mounted, setMounted] = useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setSlidesToShow(1);
+      } else if (window.innerWidth < 1024) {
+        setSlidesToShow(2);
+      } else {
+        setSlidesToShow(3);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  if (!mounted) return null;
 
   // 🔹 ambil config dari id.json
   const testimonialsConfig = messages.home.testimonials as TestimonialsConfig;
@@ -49,13 +71,11 @@ export function TestimonialSection() {
     autoplay: true,
     autoplaySpeed: 3500,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,
+    swipeToSlide: true,
+    touchThreshold: 10,
     beforeChange: (_: number, next: number) => setActiveDot(next),
-    responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 768, settings: { slidesToShow: 1 } },
-    ],
     appendDots: () => (
       <div className="mt-14 md:mt-16">
         <div className="flex items-center justify-center gap-4">

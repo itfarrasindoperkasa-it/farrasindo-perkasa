@@ -23,7 +23,7 @@ export function Footer() {
 
   return (
     <footer className="bg-[#111111] text-white">
-      <div className="mx-auto max-w-7xl px-4 py-12 lg:py-16">
+      <div className="mx-auto max-w-7xl px-4 md:px-10 py-12 lg:py-16">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1.1fr_1.4fr]">
           {/* LEFT – Logo + about + socials */}
           <div className="space-y-5">
@@ -31,14 +31,14 @@ export function Footer() {
               <Image
                 src="/assets/images/farrasindo-group-logo-white.png"
                 alt="Farrasindo Group"
-                fill
-                className="object-cover"
+                fill={true}
+                className="object-cover w-full h-full"
               />
             </div>
 
             <div>
               <h3 className="text-sm font-semibold">{footer.about.title}</h3>
-              <p className="text-sm text-white/80 leading-relaxed max-w-md">
+              <p className="text-sm text-white/80 leading-relaxed max-w-md text-justify">
                 {footer.about.description}
               </p>
             </div>
@@ -148,7 +148,7 @@ export function Footer() {
 
           {/* MAPS */}
           <div className="w-full flex justify-center">
-            <div className="relative h-72 md:h-96  w-full">
+            <div className="relative h-72 md:h-96  w-full rounded-lg overflow-hidden">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31731.96517620447!2d106.71794387431642!3d-6.198149100000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f77305c654ff%3A0x5c50db3133a6daae!2sPT.%20FARRASINDO%20PERKASA%20-%20HEAD%20OFFICE!5e0!3m2!1sid!2sid!4v1764125369653!5m2!1sid!2sid"
                 className="absolute inset-0 h-full w-full border-0"

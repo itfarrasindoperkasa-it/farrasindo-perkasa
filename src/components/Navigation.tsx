@@ -142,7 +142,7 @@ export default function Navigation() {
               <li>
                 <Link
                   href="#company-overview"
-                  className="text-orange-400 hover:text-orange-600 w-full text-left block"
+                  className="text-orange-400 hover:text-orange-600 w-full text-left block mb-3"
                   scroll={false}
                   onClick={(e) => handleScrollToSection("company-overview", e)}
                 >
@@ -152,7 +152,7 @@ export default function Navigation() {
               <li>
                 <Link
                   href="#company-history"
-                  className="text-orange-400 hover:text-orange-600 w-full text-left block"
+                  className="text-orange-400 hover:text-orange-600 w-full text-left block mb-3"
                   scroll={false}
                   onClick={(e) => handleScrollToSection("company-history", e)}
                 >
@@ -162,7 +162,7 @@ export default function Navigation() {
               <li>
                 <Link
                   href="#our-group"
-                  className="text-orange-400 hover:text-orange-600 w-full text-left block"
+                  className="text-orange-400 hover:text-orange-600 w-full text-left block mb-3"
                   scroll={false}
                   onClick={(e) => handleScrollToSection("our-group", e)}
                 >
@@ -184,12 +184,12 @@ export default function Navigation() {
               href={`/id/portfolio`}
               className="hover:text-foreground/80 font-bold"
             >
-              Portofolio
+              Portfolio
             </Link>
           </li>
           <li>
             <Link
-              href={`/id/news-and-event`}
+              href={`/id/news-event`}
               className="hover:text-foreground/80 font-bold"
             >
               News and Event
@@ -197,7 +197,7 @@ export default function Navigation() {
           </li>
           <li>
             <Link
-              href="#contact"
+              href={`/id/career`}
               className="hover:text-foreground/80 font-bold"
             >
               Career
@@ -205,7 +205,15 @@ export default function Navigation() {
           </li>
           <li>
             <Link
-              href="#contact"
+              href={`/id/csr`}
+              className="hover:text-foreground/80 font-bold"
+            >
+              CSR
+            </Link>
+          </li>
+          <li>
+            <Link
+              href={`/id/contact-us`}
               className="hover:text-foreground/80 font-bold"
             >
               Contact Us
@@ -233,7 +241,7 @@ export default function Navigation() {
           <ul className="flex flex-col px-4 py-3 space-y-2 text-base font-medium">
             <li>
               <Link
-                href="#home"
+                href={`/id`}
                 className="block py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -247,7 +255,7 @@ export default function Navigation() {
                 className="w-full flex items-center justify-between py-2"
                 onClick={() => setIsMobileAboutOpen((prev) => !prev)}
               >
-                <span>About Us</span>
+                About Us
                 {isMobileAboutOpen ? (
                   <ChevronUp size={18} />
                 ) : (
@@ -255,11 +263,11 @@ export default function Navigation() {
                 )}
               </button>
               {isMobileAboutOpen && (
-                <ul className="pl-4 pb-2 space-y-1 text-sm">
+                <ul className="pl-4 space-y-1 text-sm">
                   <li>
                     <Link
-                      href="#company-overview"
-                      className="block py-1 text-orange-500"
+                      href={`/id/about-us#company-overview`}
+                      className="block py-1"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       Company Overview
@@ -268,7 +276,7 @@ export default function Navigation() {
                   <li>
                     <Link
                       href="#company-history"
-                      className="block py-1 text-orange-500"
+                      className="block py-1"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       History
@@ -277,7 +285,7 @@ export default function Navigation() {
                   <li>
                     <Link
                       href="#our-group"
-                      className="block py-1 text-orange-500"
+                      className="block py-1"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       Our Group
@@ -286,7 +294,7 @@ export default function Navigation() {
                   <li>
                     <Link
                       href="#our-group"
-                      className="block py-1 text-orange-500"
+                      className="block py-1"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       CSR
@@ -307,16 +315,16 @@ export default function Navigation() {
             </li>
             <li>
               <Link
-                href={"/portofolio"}
+                href={"/id/portfolio"}
                 className="block py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Portofolio
+                Portfolio
               </Link>
             </li>
             <li>
               <Link
-                href="#contact"
+                href={`/id/news-event`}
                 className="block py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -325,7 +333,7 @@ export default function Navigation() {
             </li>
             <li>
               <Link
-                href="#contact"
+                href={`/id/career`}
                 className="block py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
