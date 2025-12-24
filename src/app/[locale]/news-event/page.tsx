@@ -57,7 +57,7 @@ export default async function NewsandEvent({
 
   // Server-side data fetching
   const initialData = paginationArticle(1, itemsPerPage, locale);
-  const categories = getUniqueCategory(locale);
+  const categories = getUniqueCategory(locale as Locale);
   const newsTitle =
     locale === "id" ? "Berita & Artikel Terbaru" : "Latest News & Articles";
 

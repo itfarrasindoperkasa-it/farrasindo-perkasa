@@ -145,7 +145,7 @@ const companiesData = {
 };
 
 export const CompaniesData = ({ locale }: { locale: string }): Company[] => {
-  return companiesData[locale].map((company, index) => ({
+  return companiesData[locale as Locale].map((company, index) => ({
     id: index + 1,
     ...company,
   }));
