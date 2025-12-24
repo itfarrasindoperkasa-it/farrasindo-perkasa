@@ -17,7 +17,7 @@ export default function ContactForm({
   locale,
   contactData,
 }: {
-  locale: Locale;
+  locale: string;
   contactData: any;
 }) {
   const [formData, setFormData] = useState<FormData>({

@@ -20,7 +20,7 @@ export default function NewsEventFiltering({
   selectedCategory: any;
   categories: any;
   keyword: string;
-  locale: Locale;
+  locale: string;
 }) {
   const searchTitle =
     locale === "id" ? "Kata Kunci Pencarian" : "Search Keyword";

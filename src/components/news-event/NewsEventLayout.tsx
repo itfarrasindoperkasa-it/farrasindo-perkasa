@@ -10,7 +10,7 @@ interface NewsEventLayoutProps {
   initialArticles: Article[];
   initialTotalPages: number;
   categories: string[];
-  locale: Locale;
+  locale: string;
 }
 
 export default function NewsEventLayout({

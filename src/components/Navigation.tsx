@@ -18,7 +18,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Navigation({ locale }: { locale: Locale }) {
+export default function Navigation({ locale }: { locale: string }) {
   const [openNavbar, setOpenNavbar] = useState<any>({
     aboutus: false,
     portfolio: false,
@@ -67,7 +67,9 @@ export default function Navigation({ locale }: { locale: Locale }) {
               className="flex items-center text-white"
             >
               <Locate className="text-orange-400 me-2" />
-              Srengseng, Kota Jakarta Barat
+              {locale == "id"
+                ? "Srengseng, Kota Jakarta Barat"
+                : "Srengseng, West Jakarta City"}
             </Link>
           </li>
         </ul>

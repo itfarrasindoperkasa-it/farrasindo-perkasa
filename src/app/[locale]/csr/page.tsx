@@ -12,7 +12,7 @@ import { Metadata } from "next";
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
   const baseUrl = "https://farrasindo-cp.co.id";
@@ -53,7 +53,7 @@ export async function generateMetadata({
 export default async function CSRPage({
   params,
 }: {
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
   const localeContent = await import(`@/messages/${locale}.json`);

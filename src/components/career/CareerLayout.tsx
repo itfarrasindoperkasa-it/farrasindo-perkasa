@@ -8,7 +8,7 @@ import CareerJobList from "@/components/career/CareerJobList";
 
 interface CareerLayoutProps {
   allJobs: Job[];
-  locale: Locale;
+  locale: string;
 }
 
 export default function CareerLayout({ allJobs, locale }: CareerLayoutProps) {

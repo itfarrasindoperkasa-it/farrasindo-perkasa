@@ -53,7 +53,7 @@ const Card = ({
   );
 };
 
-export async function Portfolio({ lang }: { lang: Locale }) {
+export async function Portfolio({ lang }: { lang: string }) {
   const messages = (await import(`../../messages/${lang}.json`)).default;
   // ambil config dari JSON
   const portfolioConfig = messages.home.portfolio as PortfolioConfig;

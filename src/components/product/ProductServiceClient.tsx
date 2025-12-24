@@ -24,7 +24,7 @@ export default function ProductServiceClient({
   locale,
 }: {
   messages: any;
-  locale: Locale;
+  locale: string;
 }) {
   const searchParams = useSearchParams();
   const router = useRouter();

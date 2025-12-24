@@ -5,7 +5,7 @@ import ProductServiceClient from "@/components/product/ProductServiceClient";
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
   const baseUrl = "https://farrasindo-cp.co.id";
@@ -46,7 +46,7 @@ export async function generateMetadata({
 export default async function ProductServicePage({
   params,
 }: {
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
   const messages = await import(`@/messages/${locale}.json`);

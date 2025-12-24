@@ -3,7 +3,7 @@ import { paginationArticle } from "@/lib/datas/latest_news";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function LatestNewsArticle({ lang }: { lang: Locale }) {
+export default function LatestNewsArticle({ lang }: { lang: string }) {
   const articles = paginationArticle(1, 4, lang).articles;
   return (
     <div className="py-20 px-5 md:px-10 bg-white">

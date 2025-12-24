@@ -407,7 +407,7 @@ export const articles: ArticlesByLocale = {
 export const paginationArticle = (
   page: number,
   pageSize: number,
-  lang: Locale,
+  lang: string,
   filters?: {
     author?: string;
     title?: string;

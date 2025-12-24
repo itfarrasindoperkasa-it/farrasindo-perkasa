@@ -9,7 +9,7 @@ import { RootLayoutProps } from "../layout";
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: Locale }>;
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
   const baseUrl = "https://farrasindo-cp.co.id";

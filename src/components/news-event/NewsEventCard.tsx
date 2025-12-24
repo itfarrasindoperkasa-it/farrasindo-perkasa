@@ -17,7 +17,7 @@ export default function NewsEventCard({
   setPage: (page: number) => void;
   page: number;
   totalPages: number;
-  locale: Locale;
+  locale: string;
 }) {
   return (
     <>

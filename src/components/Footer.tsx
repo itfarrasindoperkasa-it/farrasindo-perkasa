@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { Locale } from "@/lib/datas/global";
 
-export function Footer({ footer, locale }: { footer: any; locale: Locale }) {
+export function Footer({ footer, locale }: { footer: any; locale: string }) {
   const productListFooter = footer.product_list_footer ?? {};
   const info = footer.information;
 

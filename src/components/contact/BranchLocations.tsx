@@ -9,7 +9,7 @@ export default function BranchLocations({
   locale,
   branchLocationData,
 }: {
-  locale: Locale;
+  locale: string;
   branchLocationData: any;
 }) {
   const [selectedCompany, setSelectedCompany] = useState<string>("all");
