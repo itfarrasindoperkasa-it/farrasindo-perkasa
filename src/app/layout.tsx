@@ -108,9 +108,7 @@ const inter = Inter({
 
 export interface RootLayoutProps {
   children: React.ReactNode;
-  params: {
-    locale: Locale;
-  };
+  params: Promise<{ locale: Locale }>;
 }
 
 export default function RootLayout({
