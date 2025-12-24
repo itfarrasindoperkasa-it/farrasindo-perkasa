@@ -177,7 +177,7 @@ export default async function RootLayout({
   children,
   params,
 }: Readonly<RootLayoutProps>) {
-  const locale = (await params).locale;
+  const { locale } = await params;
   const localeContent = await import(`@/messages/${locale}.json`);
   const { organizationSchema, localBusinessSchema, serviceSchema } =
     await import("@/lib/structured-data");

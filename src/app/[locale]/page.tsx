@@ -18,7 +18,7 @@ export default async function Home({
 }: {
   params: Promise<{ locale: Locale }>;
 }) {
-  const locale = (await params).locale;
+  const { locale } = await params;
   const message = (await import(`../../messages/${locale}.json`)).default;
 
   return (

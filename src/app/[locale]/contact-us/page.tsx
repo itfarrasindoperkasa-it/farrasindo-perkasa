@@ -51,7 +51,7 @@ export default async function ContactUs({
 }: {
   params: Promise<{ locale: Locale }>;
 }) {
-  const locale = (await params).locale;
+  const { locale } = await params;
   const localeContent = await import(`@/messages/${locale}.json`);
   const contactUsPage = localeContent.contactUsPage;
 
