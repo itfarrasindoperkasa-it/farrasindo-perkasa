@@ -413,7 +413,7 @@ export const paginationArticle = (
     title?: string;
   }
 ) => {
-  let filtered = [...articles[lang]];
+  let filtered = [...articles[lang as Locale]];
 
   // Apply filters
   if (filters?.author) {
@@ -451,6 +451,6 @@ export const paginationArticle = (
 };
 
 export const getUniqueCategory = (locale: Locale) => {
-  const authors = articles[locale].map((article) => article.author);
+  const authors = articles[locale as Locale].map((article) => article.author);
   return Array.from(new Set(authors));
 };

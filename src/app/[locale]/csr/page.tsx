@@ -60,7 +60,7 @@ export default async function CSRPage({
   const csrPage = localeContent.csrPage;
 
   // Filter artikel CSR (artikel yang berhubungan dengan kegiatan sosial/kesehatan/donor darah)
-  const csrArticles = articles[locale]
+  const csrArticles = articles[locale as Locale]
     .filter(
       (article) =>
         article.categories.includes("csr-employee") ||

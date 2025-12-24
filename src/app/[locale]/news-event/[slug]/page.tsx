@@ -20,7 +20,7 @@ export async function generateStaticParams() {
   const locales: Locale[] = ["id", "en"];
 
   for (const locale of locales) {
-    const articlesList = articles[locale] || articles.id;
+    const articlesList = articles[locale as Locale] || articles.id;
     for (const news of articlesList) {
       params.push({
         locale,
@@ -40,7 +40,7 @@ export async function generateMetadata({
   const { slug, locale } = await params;
   const baseUrl = "https://farrasindo-cp.co.id";
 
-  const articlesList = articles[locale] || articles.id;
+  const articlesList = articles[locale as Locale] || articles.id;
   const news = articlesList.find((item) => item.slug === slug);
 
   if (!news) {
@@ -69,7 +69,7 @@ export default async function NewsDetail({ params }: NewsDetailParams) {
   const { slug, locale } = await params;
 
   // Ambil data news dari articles berdasarkan locale dan slug
-  const articlesList = articles[locale] || articles.id;
+  const articlesList = articles[locale as Locale] || articles.id;
   const news = articlesList.find((item) => item.slug === slug);
 
   // Get image index from news.image field
