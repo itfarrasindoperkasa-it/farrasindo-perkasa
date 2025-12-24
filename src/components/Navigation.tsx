@@ -1,5 +1,6 @@
 "use client";
 
+import { Locale } from "@/lib/datas/global";
 import {
   ChevronDown,
   ChevronUp,
@@ -17,7 +18,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Navigation() {
+export default function Navigation({ locale }: { locale: Locale }) {
   const [openNavbar, setOpenNavbar] = useState<any>({
     aboutus: false,
     portfolio: false,
@@ -60,7 +61,7 @@ export default function Navigation() {
           </li>
           <li className="flex items-center justify-center">
             <Link
-              href="https://maps.google.com/?q=Srengseng, Kota Jakarta Barat"
+              href="https://maps.google.com/maps?ll=-6.198149,106.756053&z=13&t=m&hl=id&gl=ID&mapclient=embed&cid=6652057653992676014"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center text-white"
@@ -72,27 +73,47 @@ export default function Navigation() {
         </ul>
         <ul className="flex gap-2">
           <li className="flex items-center justify-center">
-            <Link href="#" className="flex items-center text-white">
+            <Link
+              href="https://www.facebook.com/farrasindo"
+              target="__blank"
+              className="flex items-center text-white"
+            >
               <FacebookIcon className="text-orange-400 me-2" />
             </Link>
           </li>
           <li className="flex items-center justify-center">
-            <Link href="#" className="flex items-center text-white">
+            <Link
+              href="https://www.tiktok.com/@farrasindo_group"
+              target="__blank"
+              className="flex items-center text-white"
+            >
               <Music2 className="text-orange-400 me-2" />
             </Link>
           </li>
           <li className="flex items-center justify-center">
-            <Link href="#" className="flex items-center text-white">
+            <Link
+              href="https://www.linkedin.com/company/farrasindo-perkasa-group"
+              target="__blank"
+              className="flex items-center text-white"
+            >
               <Linkedin className="text-orange-400 me-2" />
             </Link>
           </li>
           <li className="flex items-center justify-center">
-            <Link href="#" className="flex items-center text-white">
+            <Link
+              href="https://www.instagram.com/farrasindo_group"
+              target="__blank"
+              className="flex items-center text-white"
+            >
               <InstagramIcon className="text-orange-400 me-2" />
             </Link>
           </li>
           <li className="flex items-center justify-center">
-            <Link href="#" className="flex items-center text-white">
+            <Link
+              href="https://www.youtube.com/channel/UCTLUMhIMoWrkgSNelac3aRQ"
+              target="__blank"
+              className="flex items-center text-white"
+            >
               <YoutubeIcon className="text-orange-400 me-2" />
             </Link>
           </li>
@@ -105,6 +126,7 @@ export default function Navigation() {
           src={`/assets/images/farrasindo-group-logo.png`}
           width={120}
           height={30}
+          loading="eager"
           alt="Farrasindo Logo"
           className="h-auto w-[180px] md:w-[220px]"
         />
@@ -112,8 +134,11 @@ export default function Navigation() {
         {/* DESKTOP MENU */}
         <ul className="hidden md:flex gap-x-6 mr-10 text-lg font-medium items-center md:flex-wrap">
           <li className="flex gap-2 items-center">
-            <Link href={`/id`} className="hover:text-foreground/80 font-bold">
-              Home
+            <Link
+              href={`/${locale}`}
+              className="hover:text-foreground/80 font-bold"
+            >
+              {locale == "id" ? "Beranda" : "Home"}
             </Link>
           </li>
           <li>
@@ -122,10 +147,10 @@ export default function Navigation() {
               onClick={() => handleOpenNavbar("aboutus")}
             >
               <Link
-                href={`/id/about-us`}
+                href={`/${locale}/about-us`}
                 className="hover:text-foreground/80 font-bold"
               >
-                About Us
+                {locale == "id" ? "Tentang Kami" : "About Us"}
               </Link>
               <ChevronDown
                 size={16}
@@ -141,47 +166,47 @@ export default function Navigation() {
             >
               <li>
                 <Link
-                  href="#company-overview"
+                  href={`/${locale}/about-us#company-overview`}
                   className="text-orange-400 hover:text-orange-600 w-full text-left block mb-3"
                   scroll={false}
                   onClick={(e) => handleScrollToSection("company-overview", e)}
                 >
-                  Company Overview
+                  {locale == "id" ? "Gambaran Perusahaan" : "Company Overview"}
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#company-history"
+                  href={`/${locale}/about-us#company-history`}
                   className="text-orange-400 hover:text-orange-600 w-full text-left block mb-3"
                   scroll={false}
                   onClick={(e) => handleScrollToSection("company-history", e)}
                 >
-                  History
+                  {locale == "id" ? "Sejarah" : "History"}
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#our-group"
+                  href={`/${locale}/about-us#our-group`}
                   className="text-orange-400 hover:text-orange-600 w-full text-left block mb-3"
                   scroll={false}
                   onClick={(e) => handleScrollToSection("our-group", e)}
                 >
-                  Kelompok Kami
+                  {locale == "id" ? "Kelompok Kami" : "Our Group"}
                 </Link>
               </li>
             </ul>
           </li>
           <li>
             <Link
-              href={`/id/product-service`}
+              href={`/${locale}/product-service`}
               className="hover:text-foreground/80 font-bold"
             >
-              Products and Service
+              {locale == "id" ? "Produk Layanan" : "Products Service"}
             </Link>
           </li>
           <li>
             <Link
-              href={`/id/portfolio`}
+              href={`/${locale}/portfolio`}
               className="hover:text-foreground/80 font-bold"
             >
               Portfolio
@@ -189,23 +214,23 @@ export default function Navigation() {
           </li>
           <li>
             <Link
-              href={`/id/news-event`}
+              href={`/${locale}/news-event`}
               className="hover:text-foreground/80 font-bold"
             >
-              News and Event
+              {locale == "id" ? "Berita Acara" : "News Event"}
             </Link>
           </li>
           <li>
             <Link
-              href={`/id/career`}
+              href={`/${locale}/career`}
               className="hover:text-foreground/80 font-bold"
             >
-              Career
+              {locale == "id" ? "Karir" : "Career"}
             </Link>
           </li>
           <li>
             <Link
-              href={`/id/csr`}
+              href={`/${locale}/csr`}
               className="hover:text-foreground/80 font-bold"
             >
               CSR
@@ -213,10 +238,10 @@ export default function Navigation() {
           </li>
           <li>
             <Link
-              href={`/id/contact-us`}
+              href={`/${locale}/contact-us`}
               className="hover:text-foreground/80 font-bold"
             >
-              Contact Us
+              {locale == "id" ? "Hubungi Kami" : "Contact Us"}
             </Link>
           </li>
         </ul>
@@ -241,7 +266,7 @@ export default function Navigation() {
           <ul className="flex flex-col px-4 py-3 space-y-2 text-base font-medium">
             <li>
               <Link
-                href={`/id`}
+                href={`/${locale}`}
                 className="block py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -266,38 +291,31 @@ export default function Navigation() {
                 <ul className="pl-4 space-y-1 text-sm">
                   <li>
                     <Link
-                      href={`/id/about-us#company-overview`}
+                      href={`/${locale}/about-us#company-overview`}
                       className="block py-1"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      Company Overview
+                      {locale == "id"
+                        ? "Gambaran Perusahaan"
+                        : "Company Overview"}
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="#company-history"
+                      href={`/${locale}/about-us#company-history`}
                       className="block py-1"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      History
+                      {locale == "id" ? "Sejarah" : "History"}
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="#our-group"
+                      href={`/${locale}/about-us#our-group`}
                       className="block py-1"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      Our Group
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#our-group"
-                      className="block py-1"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      CSR
+                      {locale == "id" ? "Kelompok" : "Our Group"}
                     </Link>
                   </li>
                 </ul>
@@ -306,38 +324,47 @@ export default function Navigation() {
 
             <li>
               <Link
-                href={`product-service`}
+                href={`/${locale}/product-service`}
                 className="block py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Products and Service
+                {locale == "id" ? "Produk dan Layanan" : "Products and Service"}
               </Link>
             </li>
             <li>
               <Link
-                href={"/id/portfolio"}
+                href={`/${locale}/portfolio`}
                 className="block py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Portfolio
+                {locale == "id" ? "Portofolio" : "Portfolio"}
               </Link>
             </li>
             <li>
               <Link
-                href={`/id/news-event`}
+                href={`/${locale}/news-event`}
                 className="block py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                News and Event
+                {locale == "id" ? "Berita dan Acara" : "News and Event"}
               </Link>
             </li>
             <li>
               <Link
-                href={`/id/career`}
+                href={`/${locale}/career`}
                 className="block py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Career
+                {locale == "id" ? "Karir" : "Career"}
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={`/${locale}/csr`}
+                className="block py-1"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                CSR
               </Link>
             </li>
             <li>
@@ -346,7 +373,7 @@ export default function Navigation() {
                 className="block py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Contact Us
+                {locale == "id" ? "Hubungi Kami" : "Contact Us"}
               </Link>
             </li>
           </ul>

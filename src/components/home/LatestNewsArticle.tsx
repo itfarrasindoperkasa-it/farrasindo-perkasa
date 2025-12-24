@@ -11,16 +11,18 @@ export default function LatestNewsArticle({ lang }: { lang: Locale }) {
         <div className="header flex flex-col md:flex-row md:justify-between items-center gap-5 md:gap-0">
           <div>
             <span className="text-orange-400 font-semibold">
-              Berita Terbaru
+              {lang == "id" ? "Berita Terbaru" : "Latest News"}
             </span>
-            <h2 className="text-4xl font-bold">Artikel Berita</h2>
+            <h2 className="text-4xl font-bold">
+              {lang == "id" ? "Artikel Berita" : "News Articles"}
+            </h2>
           </div>
           <div>
             <Link
               href={`/${lang}/news-event`}
               className="rounded-full border border-orange-400 px-4 py-3 font-semibold text-orange-400 hover:bg-orange-400 hover:text-white"
             >
-              Baca Selengkapnya
+              {lang == "id" ? "Baca Selengkapnya" : "Read More"}
             </Link>
           </div>
         </div>

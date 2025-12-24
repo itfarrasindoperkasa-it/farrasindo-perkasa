@@ -3,8 +3,15 @@
 import React, { useState } from "react";
 import branches, { Branch } from "@/lib/datas/contact";
 import { MapPin, ExternalLink } from "lucide-react";
+import { Locale } from "@/lib/datas/global";
 
-export default function BranchLocations() {
+export default function BranchLocations({
+  locale,
+  branchLocationData,
+}: {
+  locale: Locale;
+  branchLocationData: any;
+}) {
   const [selectedCompany, setSelectedCompany] = useState<string>("all");
   const [selectedBranch, setSelectedBranch] = useState<Branch | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -53,11 +60,10 @@ export default function BranchLocations() {
         {/* Title */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Branch Locations
+            {branchLocationData.title}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Find our offices across Indonesia. Select a company to view specific
-            branch locations.
+            {branchLocationData.description}
           </p>
         </div>
 
@@ -77,10 +83,55 @@ export default function BranchLocations() {
           </div>
         </div>
 
+        {/* Selected Branch Detail */}
+        {selectedBranch && (
+          <div className="my-12 bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl p-8 border-2 border-orange-200">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              {locale == `id` ? `Lokasi Terpilih` : `Selected Location`}
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <p className="text-sm text-gray-600 mb-1">
+                  {locale == `id` ? `Nama Cabang` : `Branch Name`}
+                </p>
+                <p className="font-semibold text-gray-900 mb-4">
+                  {selectedBranch.name}
+                </p>
+
+                <p className="text-sm text-gray-600 mb-1">
+                  {locale == `id` ? `Alamat` : `Address`}
+                </p>
+                <p className="text-gray-900 mb-4">{selectedBranch.address}</p>
+
+                <p className="text-sm text-gray-600 mb-1">
+                  {locale == `id` ? `Koordinat` : `Coordinates`}
+                </p>
+                <p className="text-gray-900 font-mono text-sm">
+                  {selectedBranch.coordinates.lat},{" "}
+                  {selectedBranch.coordinates.lng}
+                </p>
+              </div>
+              <div className="flex items-center justify-center">
+                <a
+                  href={selectedBranch.googleMapsLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors inline-flex items-center gap-2 shadow-lg hover:shadow-xl"
+                >
+                  <MapPin size={20} />
+                  {locale == `id`
+                    ? `Buka di Google Maps`
+                    : `Open in Google Maps`}
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Company Filter */}
         <div className="mb-8">
           <label className="block text-sm font-medium text-gray-700 mb-3">
-            Select Company
+            {locale == `id` ? `Pilih Perusahaan` : `Select Company`}
           </label>
           <select
             value={selectedCompany}
@@ -90,7 +141,9 @@ export default function BranchLocations() {
             }}
             className="w-full md:w-96 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all bg-white"
           >
-            <option value="all">All Companies</option>
+            <option value="all">
+              {locale == `id` ? `Seluruh Perusahaan` : `All Companies`}
+            </option>
             {companies.slice(1).map((company) => (
               <option key={company} value={company}>
                 {company}
@@ -139,7 +192,9 @@ export default function BranchLocations() {
                 className="inline-flex items-center gap-2 text-orange-500 hover:text-orange-600 font-semibold text-sm transition-colors"
               >
                 <ExternalLink size={16} />
-                View on Google Maps
+                {locale == `id`
+                  ? `Tampilkan di Google Maps`
+                  : `View on Google Maps`}
               </a>
             </div>
           ))}
@@ -149,45 +204,10 @@ export default function BranchLocations() {
         {filteredBranches.length === 0 && (
           <div className="text-center py-12">
             <p className="text-gray-500 text-lg">
-              No branches found for the selected company.
+              {locale == `id`
+                ? `Tidak ada cabang yang ditemukan untuk perusahaan yang dipilih.`
+                : `No branches found for the selected company.`}
             </p>
-          </div>
-        )}
-
-        {/* Selected Branch Detail */}
-        {selectedBranch && (
-          <div className="mt-12 bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl p-8 border-2 border-orange-200">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Selected Location
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <p className="text-sm text-gray-600 mb-1">Branch Name</p>
-                <p className="font-semibold text-gray-900 mb-4">
-                  {selectedBranch.name}
-                </p>
-
-                <p className="text-sm text-gray-600 mb-1">Address</p>
-                <p className="text-gray-900 mb-4">{selectedBranch.address}</p>
-
-                <p className="text-sm text-gray-600 mb-1">Coordinates</p>
-                <p className="text-gray-900 font-mono text-sm">
-                  {selectedBranch.coordinates.lat},{" "}
-                  {selectedBranch.coordinates.lng}
-                </p>
-              </div>
-              <div className="flex items-center justify-center">
-                <a
-                  href={selectedBranch.googleMapsLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors inline-flex items-center gap-2 shadow-lg hover:shadow-xl"
-                >
-                  <MapPin size={20} />
-                  Open in Google Maps
-                </a>
-              </div>
-            </div>
           </div>
         )}
       </div>

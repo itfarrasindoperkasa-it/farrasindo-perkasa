@@ -1,10 +1,18 @@
 "'use client';";
-import idMessages from "@/messages/id.json";
 import LatestNewsData, { articles } from "@/lib/datas/latest_news";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Locale } from "@/lib/datas/global";
+import { Metadata } from "next";
+import { formatDate } from "@/lib/helper";
+
+interface NewsDetailParams {
+  params: Promise<{
+    slug: string;
+    locale: Locale;
+  }>;
+}
 
 export async function generateStaticParams() {
   // Generate static params for both locales
@@ -24,25 +32,41 @@ export async function generateStaticParams() {
   return params;
 }
 
-interface NewsDetailParams {
-  params: Promise<{
-    slug: string;
-    locale: Locale;
-  }>;
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string; locale: Locale }>;
+}): Promise<Metadata> {
+  const { slug, locale } = await params;
+  const baseUrl = "https://farrasindo-cp.co.id";
+
+  const articlesList = articles[locale] || articles.id;
+  const news = articlesList.find((item) => item.slug === slug);
+
+  if (!news) {
+    return {
+      title: "Artikel Tidak Ditemukan",
+    };
+  }
+
+  return {
+    title: `${news.title} - Farrasindo Group`,
+    description: news.excerpt,
+    openGraph: {
+      title: news.title,
+      description: news.excerpt,
+      url: `${baseUrl}/${locale}/news-event/${slug}`,
+      type: "article",
+      publishedTime: news.date,
+    },
+    alternates: {
+      canonical: `${baseUrl}/${locale}/news-event/${slug}`,
+    },
+  };
 }
 
 export default async function NewsDetail({ params }: NewsDetailParams) {
   const { slug, locale } = await params;
-
-  // Helper function to format date using Intl
-  const formatDate = (dateStr: string): string => {
-    const date = new Date(dateStr);
-    return new Intl.DateTimeFormat(locale, {
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-    }).format(date);
-  };
 
   // Ambil data news dari articles berdasarkan locale dan slug
   const articlesList = articles[locale] || articles.id;
@@ -141,9 +165,12 @@ export default async function NewsDetail({ params }: NewsDetailParams) {
                     />
                     <div>
                       <span className="block text-xs text-gray-400 mb-1">
-                        {formatDate(news.date)}
+                        {formatDate(news.date, locale)}
                       </span>
-                      <Link href={`/id/news-event/${news.slug}`} passHref>
+                      <Link
+                        href={`/${locale}/news-event/${news.slug}`}
+                        passHref
+                      >
                         <span className="font-semibold hover:text-orange-400 transition-colors cursor-pointer">
                           {news.title}
                         </span>
@@ -187,7 +214,7 @@ export default async function NewsDetail({ params }: NewsDetailParams) {
                   {news.author}
                 </span>
                 <span className="text-xs text-gray-500">
-                  {formatDate(news.date)}
+                  {formatDate(news.date, locale)}
                 </span>
               </div>
               <h1 className="text-2xl md:text-3xl font-bold mb-4 text-orange-400">

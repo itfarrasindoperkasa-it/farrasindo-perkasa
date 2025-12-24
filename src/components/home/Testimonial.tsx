@@ -3,7 +3,6 @@
 import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import messages from "@/messages/id.json";
 import TestimoniData from "@/lib/datas/testimoni";
 import Image from "next/image";
 
@@ -25,7 +24,7 @@ type Testimonial = {
   image: string; // sudah jadi URL string
 };
 
-export function TestimonialSection() {
+export function TestimonialSection({ testimonial }: { testimonial: any }) {
   const sliderRef = useRef<Slider | null>(null);
   const [activeDot, setActiveDot] = useState(0);
   const [slidesToShow, setSlidesToShow] = useState(3);
@@ -52,7 +51,7 @@ export function TestimonialSection() {
   if (!mounted) return null;
 
   // 🔹 ambil config dari id.json
-  const testimonialsConfig = messages.home.testimonials as TestimonialsConfig;
+  const testimonialsConfig = testimonial as TestimonialsConfig;
 
   const sectionTitle = testimonialsConfig.title;
 

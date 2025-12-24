@@ -40,7 +40,7 @@ export const branches: Branch[] = [
     id: "fp-meruya",
     company: "PT Farrasindo Perkasa",
     abbreviation: "FP",
-    name: "PT Farrasindo Perkasa - Meruya Branch",
+    name: "PT Farrasindo Perkasa - Meruya",
     address: "Srengseng, Kembangan, West Jakarta City, Jakarta",
     googleMapsLink:
       "https://www.google.com/maps?q=-6.197423941874169,106.7561193",
@@ -50,7 +50,7 @@ export const branches: Branch[] = [
     id: "fp-sentul",
     company: "PT Farrasindo Perkasa",
     abbreviation: "FP",
-    name: "PT Farrasindo Perkasa - Sentul Ranch",
+    name: "PT Farrasindo Perkasa - Sentul",
     address:
       "Jl. Bina Marga No. 76 RT 003 / 005, Sanja, Kec. Citeureup, Kabupaten Bogor, Jawa Barat 16810",
     googleMapsLink: "https://www.google.com/maps?q=-6.5004403,106.8683186",
@@ -60,7 +60,7 @@ export const branches: Branch[] = [
     id: "fp-belanga",
     company: "PT Farrasindo Perkasa",
     abbreviation: "FP",
-    name: "PT Farrasindo Perkasa - Belanga Branch",
+    name: "PT Farrasindo Perkasa - Belanga",
     address: "QFWF+4PR, Pasir Bolang, Tigaraksa, Tangerang Regency, Banten",
     googleMapsLink: "https://www.google.com/maps?q=-6.2046346,106.4742541",
     coordinates: { lat: -6.2046346, lng: 106.4742541 },
@@ -69,7 +69,7 @@ export const branches: Branch[] = [
     id: "fp-cikarang",
     company: "PT Farrasindo Perkasa",
     abbreviation: "FP",
-    name: "PT Farrasindo Perkasa - Cikarang Branch",
+    name: "PT Farrasindo Perkasa - Cikarang",
     address:
       "Jl. Gemalajaya No.111, Pasirarja, Cikarang Sel, Kabupaten Bekasi, Jawa Barat 17530",
     googleMapsLink: "https://www.google.com/maps?q=-6.3188659,107.1434337",
@@ -79,7 +79,7 @@ export const branches: Branch[] = [
     id: "fp-jatiasih",
     company: "PT Farrasindo Perkasa",
     abbreviation: "FP",
-    name: "PT Farrasindo Perkasa - Jatiasih Branch",
+    name: "PT Farrasindo Perkasa - Jatiasih",
     address:
       "PXR4+7WM, Jl. Cikunir Raya, RT.013/RW.012, Jaka Mulya, Kec. Bekasi Sel., Kota Bks, Jawa Barat 17146",
     googleMapsLink: "https://www.google.com/maps?q=-6.2592639,106.9572703",
@@ -89,7 +89,7 @@ export const branches: Branch[] = [
     id: "fp-bandung",
     company: "PT Farrasindo Perkasa",
     abbreviation: "FP",
-    name: "PT Farrasindo Perkasa - Bandung Branch",
+    name: "PT Farrasindo Perkasa - Bandung",
     address:
       "Jl. Gedebage Selatan No.165, Cisaranten Kidul, Kec. Gedebage, Kota Bandung, Jawa Barat 40295",
     googleMapsLink: "https://www.google.com/maps?q=-6.953604,107.6868523",
@@ -99,7 +99,7 @@ export const branches: Branch[] = [
     id: "fp-cirebon",
     company: "PT Farrasindo Perkasa",
     abbreviation: "FP",
-    name: "PT Farrasindo Perkasa - Cirebon Branch",
+    name: "PT Farrasindo Perkasa - Cirebon",
     address:
       "Jl. Mundupesisir, Mundupesisir, Kec. Mundu, Kabupaten Cirebon, Jawa Barat 45173",
     googleMapsLink: "https://www.google.com/maps?q=-6.7590489,108.5950413",
@@ -109,7 +109,7 @@ export const branches: Branch[] = [
     id: "fp-semarang",
     company: "PT Farrasindo Perkasa",
     abbreviation: "FP",
-    name: "PT Farrasindo Perkasa - Semarang Branch",
+    name: "PT Farrasindo Perkasa - Semarang",
     address:
       "Jl. Semarang - Demak No.KM.8, Trimulyo, Banjardowo, Kec. Genuk, Kabupaten Demak, Jawa Tengah 50117",
     googleMapsLink: "https://www.google.com/maps?q=-6.9473098,110.4921044",
@@ -119,7 +119,7 @@ export const branches: Branch[] = [
     id: "fp-yogyakarta",
     company: "PT Farrasindo Perkasa",
     abbreviation: "FP",
-    name: "PT Farrasindo Perkasa - Yogyakarta Branch",
+    name: "PT Farrasindo Perkasa - Yogyakarta",
     address:
       "Jl. Berbah - Kalasan, Karang, Kalitirto, Kec. Berbah, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55283",
     googleMapsLink: "https://www.google.com/maps?q=-7.7934434,110.4583884",
@@ -129,7 +129,7 @@ export const branches: Branch[] = [
     id: "fp-solo",
     company: "PT Farrasindo Perkasa",
     abbreviation: "FP",
-    name: "PT Farrasindo Perkasa - Solo Branch",
+    name: "PT Farrasindo Perkasa - Solo",
     address:
       "Jalan Jogja - Solo Kraprak RT.01/RW07 Kartasura, Dusun III, Pucangan, Kabupaten Sukoharjo, Jawa Tengah 57168",
     googleMapsLink: "https://www.google.com/maps?q=-7.5650498,110.7226363",
@@ -139,7 +139,7 @@ export const branches: Branch[] = [
     id: "fp-kediri",
     company: "PT Farrasindo Perkasa",
     abbreviation: "FP",
-    name: "PT Farrasindo Perkasa - Kediri Branch",
+    name: "PT Farrasindo Perkasa - Kediri",
     address: "Gempolan, Baye, Kayen Kidul, Kediri Regency, East Java",
     googleMapsLink: "https://www.google.com/maps?q=-7.7391185,112.0443738",
     coordinates: { lat: -7.7391185, lng: 112.0443738 },
@@ -148,7 +148,7 @@ export const branches: Branch[] = [
     id: "fp-pool4",
     company: "PT Farrasindo Perkasa",
     abbreviation: "FP",
-    name: "PT Farrasindo Perkasa - POOL 4 Branch",
+    name: "PT Farrasindo Perkasa - POOL 4",
     address:
       "Jl. Srengseng Raya, RT.4/RW.6, Srengseng, Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11630",
     googleMapsLink: "https://www.google.com/maps?q=-6.2131684,106.7595977",
@@ -158,7 +158,7 @@ export const branches: Branch[] = [
     id: "fp-pool5",
     company: "PT Farrasindo Perkasa",
     abbreviation: "FP",
-    name: "PT Farrasindo Perkasa - POOL 5 Branch",
+    name: "PT Farrasindo Perkasa - POOL 5",
     address:
       "RT.3/RW.4, Meruya Utara, Kec. Kembangan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11620",
     googleMapsLink: "https://www.google.com/maps?q=-6.2043943,106.7371067",
@@ -168,7 +168,7 @@ export const branches: Branch[] = [
     id: "fp-surabaya",
     company: "PT Farrasindo Perkasa",
     abbreviation: "FP",
-    name: "PT Farrasindo Perkasa - Surabaya Branch",
+    name: "PT Farrasindo Perkasa - Surabaya",
     address: "Prasungtani, Prasung, Buduran, Sidoarjo Regency, East Java 61252",
     googleMapsLink: "https://www.google.com/maps?q=-7.4181106,112.7393345",
     coordinates: { lat: -7.4181106, lng: 112.7393345 },
@@ -177,7 +177,7 @@ export const branches: Branch[] = [
     id: "fp-malang",
     company: "PT Farrasindo Perkasa",
     abbreviation: "FP",
-    name: "PT Farrasindo Perkasa - Malang Branch",
+    name: "PT Farrasindo Perkasa - Malang",
     address:
       "Jl Perum An-Nur Regency, Sonosari, Kebonagung, Kec. Pakisaji, Kabupaten Malang, Jawa Timur 65162",
     googleMapsLink: "https://www.google.com/maps?q=-8.0345392,112.6102968",

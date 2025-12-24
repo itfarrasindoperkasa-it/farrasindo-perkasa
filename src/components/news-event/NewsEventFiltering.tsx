@@ -13,23 +13,26 @@ export default function NewsEventFiltering({
   selectedCategory,
   categories,
   keyword,
-  lang,
+  locale,
 }: {
   latestArticle: any;
   handleFilter: (keyword: string, key: "keyword" | "category") => void;
   selectedCategory: any;
   categories: any;
   keyword: string;
-  lang: string;
+  locale: Locale;
 }) {
-  const searchTitle = "Kata Kunci Pencarian";
-  const searchPlaceholder = "Search ...";
-  const recentPostTitle = "Terbaru Posting";
-  const anyQuestionTitle = "Ada Pertanyaan";
-  const anyQuestionSubtitle = "Tentang Industri";
-  const anyQuestionPhone = "Telepon: 021 – 587 0525";
-  const sidebarTitle = "Kategori";
-  const allCategoryLabel = "Semua";
+  const searchTitle =
+    locale === "id" ? "Kata Kunci Pencarian" : "Search Keyword";
+  const searchPlaceholder = locale === "id" ? "Cari ..." : "Search ...";
+  const recentPostTitle = locale === "id" ? "Terbaru Posting" : "Recent Posts";
+  const anyQuestionTitle = locale === "id" ? "Ada Pertanyaan" : "Any Questions";
+  const anyQuestionSubtitle =
+    locale === "id" ? "Tentang Industri" : "About Industry";
+  const anyQuestionPhone =
+    locale === "id" ? "Telepon: 021 – 587 0525" : "Phone: 021 – 587 0525";
+  const sidebarTitle = locale === "id" ? "Kategori" : "Category";
+  const allCategoryLabel = locale === "id" ? "Semua" : "All";
 
   return (
     <>
@@ -85,12 +88,13 @@ export default function NewsEventFiltering({
                 width={70}
                 height={40}
                 className="rounded object-cover"
+                style={{ height: "auto", width: "auto" }}
               />
               <div>
                 <span className="block text-xs text-gray-400 mb-1">
-                  {formatDate(news.date, "")}
+                  {formatDate(news.date, locale)}
                 </span>
-                <Link href={`/id/news-event/${news.slug}`} passHref>
+                <Link href={`/${locale}/news-event/${news.slug}`} passHref>
                   <span className="font-semibold hover:text-orange-400 transition-colors cursor-pointer">
                     {news.title}
                   </span>

@@ -71,7 +71,7 @@ export default function NewsEventLayout({
           selectedCategory={selectedCategory}
           categories={categories}
           keyword={keyword}
-          lang={locale}
+          locale={locale}
         />
       </aside>
       {/* Main Content */}
@@ -81,7 +81,7 @@ export default function NewsEventLayout({
           page={page}
           setPage={handlePageChange}
           totalPages={totalPages}
-          lang={locale}
+          locale={locale}
         />
       </main>
     </div>

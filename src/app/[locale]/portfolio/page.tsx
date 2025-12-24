@@ -1,15 +1,63 @@
 import { PartnerCustomer } from "@/components/portfolio/PartnerCustomer";
-import HomeBannerData from "@/lib/datas/home_banner";
 import PortfolioData from "@/lib/datas/portofolio";
-import idMessages from "@/messages/id.json";
 import Image from "next/image";
 import PortofolioBanner from "@/asset/images/homes/bannerPort.jpeg";
+import { Metadata } from "next";
+import { Locale } from "@/lib/datas/global";
 
-export default function PortfolioPage() {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const baseUrl = "https://farrasindo-cp.co.id";
+
+  if (locale === "id") {
+    return {
+      title: "Portfolio Proyek - Referensi Proyek Konstruksi Indonesia",
+      description:
+        "Lihat portfolio proyek konstruksi yang telah dikerjakan Farrasindo Group di seluruh Indonesia. Proyek infrastruktur, gedung tinggi, dan berbagai proyek prestisius lainnya.",
+      openGraph: {
+        title: "Portfolio Proyek - Farrasindo Group",
+        description:
+          "Portfolio proyek konstruksi prestisius di seluruh Indonesia menggunakan layanan dan produk Farrasindo Group.",
+        url: "https://farrasindo-cp.co.id/id/portfolio",
+      },
+      alternates: {
+        canonical: "https://farrasindo-cp.co.id/id/portfolio",
+      },
+    };
+  }
+
+  return {
+    title:
+      "Project Portfolio - Reference for Construction Projects in Indonesia",
+    description:
+      "See the construction project portfolio completed by Farrasindo Group across Indonesia. Infrastructure projects, high-rise buildings, and other prestigious projects.",
+    openGraph: {
+      title: "Project Portfolio - Farrasindo Group",
+      description:
+        "Prestigious construction project portfolio throughout Indonesia using Farrasindo Group's services and products.",
+      url: "https://farrasindo-cp.co.id/en/portfolio",
+    },
+    alternates: {
+      canonical: "https://farrasindo-cp.co.id/en/portfolio",
+    },
+  };
+}
+
+export default async function PortfolioPage({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
   const banner = PortofolioBanner;
   // Gabungkan data image, title, dan location
-  const portfolioProjects = (idMessages.home?.portfolio?.projects || [])
-    .map((project, i) => ({
+  const localeContent = await import(`@/messages/${locale}.json`);
+  const portfolioProjects = (localeContent.home?.portfolio?.projects || [])
+    .map((project: any, i: number) => ({
       image: PortfolioData[i] || "",
       title: project.title,
       location: project.location,
@@ -24,6 +72,7 @@ export default function PortfolioPage() {
           src={banner}
           alt="Portfolio Banner"
           fill
+          sizes="(max-width: 768px) 100vw, 100vw"
           className="object-cover"
           priority
         />
@@ -36,7 +85,7 @@ export default function PortfolioPage() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 max-w-360 mx-auto">
-          {portfolioProjects.map((item, i) => (
+          {portfolioProjects.map((item: any, i: number) => (
             <div
               key={i}
               className="relative w-full md:h-[350px] h-[250px] group rounded-lg overflow-hidden cursor-pointer"
@@ -45,6 +94,7 @@ export default function PortfolioPage() {
                 src={item.image}
                 alt={item.title}
                 fill
+                sizes="(max-width: 768px) 100vw, 100vw"
                 className="object-cover rounded-lg group-hover:scale-105 transition-all duration-300"
               />
               {/* Overlay for hover effect with orange bg only at bottom, always visible on mobile */}

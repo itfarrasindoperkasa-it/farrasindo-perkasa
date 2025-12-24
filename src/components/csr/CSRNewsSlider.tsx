@@ -105,7 +105,7 @@ export default function CSRNewsSlider({
                   </p>
                   <div className="mt-4">
                     <span className="text-orange-500 text-sm font-semibold hover:text-orange-600">
-                      Baca Selengkapnya →
+                      {locale === "id" ? "Baca Selengkapnya →" : "Read More →"}
                     </span>
                   </div>
                 </div>

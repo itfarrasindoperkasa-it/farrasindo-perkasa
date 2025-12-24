@@ -1,5 +1,4 @@
 import Banner from "@/components/home/Banner";
-import { Metadata } from "next";
 import Image from "next/image";
 import AllUnitImage from "@/asset/images/homes/all-unit.png";
 import Link from "next/link";
@@ -13,58 +12,6 @@ import { TestimonialSection } from "@/components/home/Testimonial";
 import { OurGroup } from "@/components/home/OurGroup";
 import LatestNewsArticle from "@/components/home/LatestNewsArticle";
 import { Locale } from "@/lib/datas/global";
-
-export const metadata: Metadata = {
-  title: "Farrasindo - Solusi Terbaik untuk Kebutuhan Anda",
-  description:
-    "Farrasindo menyediakan layanan dan produk berkualitas untuk memenuhi kebutuhan Anda. Temukan solusi terbaik bersama kami.",
-  keywords: [
-    "Farrasindo",
-    "solusi",
-    "layanan",
-    "produk",
-    "terbaik",
-    "Indonesia",
-  ],
-  authors: [{ name: "Farrasindo" }],
-  openGraph: {
-    title: "Farrasindo - Solusi Terbaik untuk Kebutuhan Anda",
-    description:
-      "Farrasindo menyediakan layanan dan produk berkualitas untuk memenuhi kebutuhan Anda.",
-    url: "https://farrasindo.com",
-    siteName: "Farrasindo",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Farrasindo Banner",
-      },
-    ],
-    locale: "id_ID",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Farrasindo - Solusi Terbaik untuk Kebutuhan Anda",
-    description:
-      "Farrasindo menyediakan layanan dan produk berkualitas untuk memenuhi kebutuhan Anda.",
-    images: ["/og-image.jpg"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: false,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-};
 
 export default async function Home({
   params,
@@ -110,7 +57,7 @@ export default async function Home({
             </p>
 
             <Link
-              href={`/id/about`}
+              href={`/${locale}/about`}
               className="py-2 px-4 text-white rounded-md font-bold text-base sm:text-lg bg-orange-400 w-full sm:w-fit text-center"
             >
               {message.home.about.buttonText}
@@ -188,10 +135,12 @@ export default async function Home({
         <Portfolio lang={locale} />
       </section>
       <section id="bestSellingProduct">
-        <BestSellingProduct />
+        <BestSellingProduct
+          bestSellingProduct={message.home.best_selling_products}
+        />
       </section>
       <section id="testimonial">
-        <TestimonialSection />
+        <TestimonialSection testimonial={message.home.testimonials} />
       </section>
       <section id="lastestNews">
         <LatestNewsArticle lang={locale} />

@@ -11,13 +11,13 @@ export default function NewsEventCard({
   page,
   setPage,
   totalPages,
-  lang,
+  locale,
 }: {
   paginatedNews: any;
   setPage: (page: number) => void;
   page: number;
   totalPages: number;
-  lang: Locale;
+  locale: Locale;
 }) {
   return (
     <>
@@ -32,6 +32,7 @@ export default function NewsEventCard({
                 width={360}
                 height={250}
                 className="rounded-lg object-cover mb-4 w-full h-[250px] shadow-lg/20"
+                style={{ height: "auto", width: "auto" }}
               />
               <div className="flex justify-between items-center w-full mb-2">
                 <span className="bg-orange-400 text-white font-bold text-xs px-3 py-1 rounded">
@@ -39,10 +40,10 @@ export default function NewsEventCard({
                 </span>
                 <span className="text-xs text-orange-500 flex items-center gap-1">
                   <Calendar size={16} className="inline-block" />
-                  {formatDate(news.date, lang)}
+                  {formatDate(news.date, locale)}
                 </span>
               </div>
-              <Link href={`/id/news-event/${news.slug}`} passHref>
+              <Link href={`/${locale}/news-event/${news.slug}`} passHref>
                 <div className="text-lg font-bold mb-2 hover:text-orange-400 transition-colors duration-200">
                   {news.title}
                 </div>

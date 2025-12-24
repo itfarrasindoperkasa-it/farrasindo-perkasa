@@ -1,0 +1,54 @@
+# robots.txt for Farrasindo Group
+# https://farrasindo-cp.co.id
+
+# Root path (/) is blocked - redirect only, not indexed
+User-agent: *
+Disallow: /
+
+# Allow all locale-specific pages
+Allow: /id
+Allow: /en
+Allow: /id/*
+Allow: /en/*
+
+# Block API routes from indexing
+Disallow: /api/
+Disallow: /_next/
+Disallow: /api-proxy/
+
+# Allow public assets
+Allow: /assets/
+Allow: /images/
+Allow: /videos/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.webp
+Allow: /*.svg
+Allow: /*.gif
+Allow: /*.ico
+
+# Sitemap location
+Sitemap: https://farrasindo-cp.co.id/sitemap.xml
+Sitemap: https://farrasindo-cp.co.id/id/sitemap.xml
+Sitemap: https://farrasindo-cp.co.id/en/sitemap.xml
+
+# Crawl delay (optional, adjust as needed)
+Crawl-delay: 1
+
+# Special instructions for major search engines
+User-agent: Googlebot
+Disallow: /
+Allow: /id
+Allow: /en
+Allow: /id/*
+Allow: /en/*
+
+User-agent: Bingbot
+Disallow: /
+Allow: /id
+Allow: /en
+Allow: /id/*
+Allow: /en/*

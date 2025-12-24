@@ -1333,7 +1333,7 @@ export const products = [
 
 export const productCategoryFilter = [
   {
-    label: "Semua",
+    label: "All",
     value: "all",
   },
   ...Array.from(new Set(products.map((p) => p.category))).map((category) => ({
@@ -1344,3 +1344,10 @@ export const productCategoryFilter = [
     value: category,
   })),
 ];
+
+export const productServiceFooter = Array.from(
+  new Set(products.map((p) => p.category))
+).map((category, idx) => ({
+  label: "View Products",
+  url: "/products",
+}));

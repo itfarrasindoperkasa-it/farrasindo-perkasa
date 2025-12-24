@@ -88,6 +88,7 @@ export default function ProductRange({ message }: { message: any }) {
                 <Image
                   src={product.image}
                   fill={true}
+                  sizes="(max-width: 1024px) 90vw, 400px"
                   alt={`Product Range ${idx}`}
                   className={`object-contain hover:scale-130 cursor-pointer transition-all`}
                 />

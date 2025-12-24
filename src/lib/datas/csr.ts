@@ -2,18 +2,19 @@ import { StaticImageData } from "next/image";
 import GridImage from "@/asset/images/csr/csr-grid.webp";
 import GridImage2 from "@/asset/images/csr/csr-grid(1).webp";
 import GridImage3 from "@/asset/images/csr/csr-grid(2).webp";
+import { User, Users, Leaf } from "lucide-react";
 import bgCareer from "@/asset/images/career/bg-career.jpg";
 
 export type CSRCard = {
   title: string;
   icon: any;
   description: string;
+  points: string[];
 };
 
 export type CSRDetail = {
   title: string;
   description: string;
-  points: string[];
 };
 
 export type CSRActivity = {
@@ -24,25 +25,33 @@ export type CSRActivity = {
 
 const CSRData = {
   banner: bgCareer,
-
   cards: [
     {
       title: "Employee",
-      icon: "👤",
+      icon: "User",
       description:
         "We provide our people with opportunities for growth and development.",
+      points: [
+        "We care for the planet through responsible practices and a strong commitment to sustainability",
+      ],
     },
     {
       title: "Society",
-      icon: "👥",
+      icon: "Users",
       description:
         "We support local communities through various educational initiatives and social programs.",
+      points: [
+        "We support local communities through social, health, and educational initiatives that create real impact",
+      ],
     },
     {
       title: "Environment",
-      icon: "🌿",
+      icon: "Leaf",
       description:
         "We care for the planet through responsible practices and a strong commitment to sustainability.",
+      points: [
+        "We prioritize a safe, inclusive workplace with opportunities for growth and well-being.",
+      ],
     },
   ] as CSRCard[],
 
@@ -53,30 +62,9 @@ const CSRData = {
   },
 
   details: {
-    employee: {
-      title: "FARRACARE",
-      description:
-        "At Farrasindo Group, we believe that business growth must go hand in hand with care and responsibility. Through FARRACARE, we are committed to deliver excellence in our industries while also making a positive impact on the environment, communities, and societies around us.",
-      points: [
-        "We care for the planet through responsible practices and a strong commitment to sustainability",
-      ],
-    },
-    society: {
-      title: "FARRACARE",
-      description:
-        "At Farrasindo Group, we believe that business growth must go hand in hand with care and responsibility. Through FARRACARE, we are committed to deliver excellence in our industries while also making a positive impact on the environment, communities, and societies around us.",
-      points: [
-        "We support local communities through social, health, and educational initiatives that create real impact",
-      ],
-    },
-    environment: {
-      title: "FARRACARE",
-      description:
-        "At Farrasindo Group, we believe that business growth must go hand in hand with care and responsibility. Through FARRACARE, we are committed to deliver excellence in our industries while also making a positive impact on the environment, communities, and societies around us.",
-      points: [
-        "We prioritize a safe, inclusive workplace with opportunities for growth and well-being.",
-      ],
-    },
+    title: "FARRACARE",
+    description:
+      "At Farrasindo Group, we believe that business growth must go hand in hand with care and responsibility. Through FARRACARE, we are committed to deliver excellence in our industries while also making a positive impact on the environment, communities, and societies around us.",
   },
 
   activities: [

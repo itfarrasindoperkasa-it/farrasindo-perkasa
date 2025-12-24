@@ -1,1 +1,1852 @@
-{}
+{
+  "footer": {
+    "about": {
+      "title": "About Farrasindo CP",
+      "description": "Farrasindo CP is a leading packaging solutions provider committed to delivering high-quality products and services to our customers."
+    },
+    "product_list_footer": {
+      "title": "Product Services",
+      "list": [
+        {
+          "label": "All",
+          "link": "/en/product-service?category=All&quickFind=true"
+        },
+        {
+          "label": "Crane",
+          "link": "/en/product-service?category=Crane&quickFind=true"
+        },
+        {
+          "label": "Concrete Pump",
+          "link": "/en/product-service?category=Concrete%20Pump&quickFind=true"
+        },
+        {
+          "label": "Batch Pump",
+          "link": "/en/product-service?category=Batch%20pump&quickFind=true"
+        },
+        {
+          "label": "Blend Plant",
+          "link": "/en/product-service?category=Blend%20Plant&quickFind=true"
+        },
+        {
+          "label": "Self Loading Mixer",
+          "link": "/en/product-service?category=Self%20loading%20Mixer&quickFind=true"
+        },
+        {
+          "label": "Stationery Concrete",
+          "link": "/en/product-service?category=Stationery%20Concrete&quickFind=true"
+        },
+        {
+          "label": "Moli",
+          "link": "/en/product-service?category=Moli&quickFind=true"
+        },
+        {
+          "label": "Placing Boom",
+          "link": "/en/product-service?category=Placing%20Boom&quickFind=true"
+        }
+      ]
+    },
+    "information": {
+      "title": "Contact Us",
+      "emails": [
+        {
+          "label": "Info",
+          "value": "marketing@farrasindo-cp.co.id"
+        }
+      ],
+      "phones": {
+        "title": "Office Contact",
+        "items": [
+          {
+            "label": "WhatsApp",
+            "value": "081574747474 <br> 081575453564"
+          },
+          {
+            "label": "Phone",
+            "value": "0215870525"
+          }
+        ]
+      },
+      "address": "Jl. Srengseng Raya No.41 AB, RT.3/RW.8, Srengseng, Kembangan District, West Jakarta City, Special Capital Region of Jakarta 11630"
+    }
+  },
+  "home": {
+    "banner": [
+      {
+        "title": "Concrete Pumping Made Easier",
+        "description": ""
+      },
+      {
+        "title": "Providing Mini to Long Concrete Pumps",
+        "description": ""
+      },
+      {
+        "title": "Supporting Strategic Retail and Government Projects",
+        "description": ""
+      },
+      {
+        "title": "24/7 Customer Service",
+        "description": ""
+      }
+    ],
+    "about": {
+      "title": "About Farrasindo",
+      "description": "We understand the crucial role of reliable equipment in your project’s success. That’s why we offer a complete fleet of advanced machines, including concrete pumps, mobile batching plants, and mixers, all maintained to the highest standards to ensure optimal performance at your project site. PT. Farrasindo Perkasa is proud to serve customers and deliver the best quality through partnerships with leading companies such as PT. Fresh Beton Indonesia, PT Inti Jaya Industri, PT Citi Pump Indonesia, PT Citi Crane Perkasa, PT Gunung Bumi Perkasa, and PT Farracon Precast Industry.",
+      "buttonText": "Learn More"
+    },
+    "our_service": {
+      "title": "Our Services",
+      "rent": {
+        "title": "Machine Rental",
+        "description": "We offer high-quality packaging machine rental services to meet your production needs without large investments."
+      },
+      "sell": {
+        "title": "Machine Sales",
+        "description": "Get the latest packaging machines with advanced technology from us. We provide various types of machines for different business needs."
+      },
+      "sparepart": {
+        "title": "Spare Parts",
+        "description": "We provide genuine spare parts for various types of packaging machines, ensuring optimal performance and long machine life."
+      }
+    },
+    "product_range": {
+      "title": "Our Product Range",
+      "filters": [
+        {
+          "label": "All",
+          "value": "all"
+        },
+        {
+          "label": "Crane",
+          "value": "crane"
+        },
+        {
+          "label": "Concrete Pump",
+          "value": "concrete-pumo"
+        },
+        {
+          "label": "Batch Pump",
+          "value": "batch-pump"
+        },
+        {
+          "label": "Blend Plant",
+          "value": "blend-plant"
+        },
+        {
+          "label": "Self Loading Mixer",
+          "value": "self-loading-mixer"
+        }
+      ]
+    },
+    "portfolio": {
+      "title": "Our Portfolio",
+      "buttonText": "More Details",
+      "projects": [
+        {
+          "title": "RM Pagi Sore",
+          "location": "West Java, Indonesia"
+        },
+        {
+          "title": "PT Lianhua",
+          "location": "Cianjur, West Java, Indonesia"
+        },
+        {
+          "title": "Menara Sentraya",
+          "location": "Blok M, South Jakarta"
+        },
+        {
+          "title": "School",
+          "location": "Cianjur, West Java, Indonesia"
+        },
+        {
+          "title": "Tennis Court",
+          "location": "Pesanggrahan, West Jakarta"
+        },
+        {
+          "title": "Kodam Jaya",
+          "location": "East Jakarta, Indonesia"
+        },
+        {
+          "title": "RS Hermina",
+          "location": "Depok, West Java, Indonesia"
+        },
+        {
+          "title": "Saint John’s Catholic School",
+          "location": "Cipondoh, Tangerang"
+        },
+        {
+          "title": "PT Cheetham Garam Indonesia",
+          "location": "Bogor, West Java"
+        },
+        {
+          "title": "Hotel Wellness",
+          "location": "Bogor, West Java"
+        },
+        {
+          "title": "PT. Yoosan, Office Project",
+          "location": "Kembang Kerep, West Jakarta"
+        },
+        {
+          "title": "Chitaland Tower",
+          "location": "Kuningan Setiabudi, South Jakarta"
+        },
+        {
+          "title": "Pondok Indah Residence",
+          "location": "South Jakarta"
+        },
+        {
+          "title": "RS Hermina",
+          "location": "Bogor, West Java"
+        }
+      ]
+    },
+    "best_selling_products": {
+      "title": "Best Selling Products",
+      "buttonLabel": "Read More",
+      "items": [
+        {
+          "title": "One Package Concrete Pump & Readymix Construction",
+          "link": "/en/news-event/one-package-concrete-pump-ready-mix"
+        },
+        {
+          "title": "3 in 1 Mobile Batching Plant",
+          "link": "/en/news-event/keunggulan-batchpump-farrasindo"
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Testimonials",
+      "items": [
+        {
+          "text": "Alhamdulillah, everything went well and our requests were fulfilled.",
+          "name": "Mr. Ahmad",
+          "role": "Project Contractor, Serpong Garden 2 Housing - Tangerang."
+        },
+        {
+          "text": "We’ve been loyal users of Farrasindo Concrete Pumps… awesome!",
+          "name": "Mr. Alfian",
+          "role": "Project Supervisor, West Jakarta"
+        },
+        {
+          "text": "The service is great, and the quality also seems excellent…",
+          "name": "Mr. Kamsir",
+          "role": "Project Contractor, Bogor"
+        },
+        {
+          "text": "On-site service is responsive and communicative, very helpful for project progress.",
+          "name": "Mr. Asep",
+          "role": "Project Contractor, Jakarta"
+        }
+      ]
+    }
+  },
+  "aboutPage": {
+    "tabs": [
+      {
+        "id": "group",
+        "label": "Group"
+      },
+      {
+        "id": "why_us",
+        "label": "Why Choose Us"
+      },
+      {
+        "id": "vision_mission",
+        "label": "Vision & Mission"
+      },
+      {
+        "id": "history",
+        "label": "History"
+      }
+    ],
+    "overview": {
+      "title": "Company Overview",
+      "company": "PT Farrasindo Perkasa",
+      "description": "PT Farrasindo Perkasa was established to address the challenges and demands of major cities in Indonesia, particularly the limited availability of land for office facilities, commercial infrastructure, and residential development. The implementation of regional autonomy is seen as an opportunity to observe the growth of modern cities, characterized by increasingly taller skyscrapers and the development of ready-mix concrete-based housing."
+    },
+    "groupOverview": {
+      "title": "Farrasindo Group",
+      "description": "For more than two decades, Farrasindo Group has been contributing to the development of Indonesia. Our business lines span across Mining, Concrete Machinery, Cranes, Spare Parts, and Services. All business units collaborate from upstream to downstream to meet the construction needs of communities throughout Indonesia."
+    },
+    "companies": [
+      {
+        "name": "PT Farrasindo Perkasa (FP)",
+        "logo": "OurPartnerData[2]",
+        "link": "https://farrasindo.co.id",
+        "description": "PT Farrasindo Perkasa (FP) is a construction heavy equipment rental and sales company specializing in Concrete Pumps, Batching Plants, and various other concrete machinery."
+      },
+      {
+        "name": "PT Inti Jaya Industri",
+        "logo": "OurPartnerData[4]",
+        "link": "https://intijaya-parts.com",
+        "description": "PT Inti Jaya Industri is a sister company of Farrasindo Group, focusing on Spare Parts and After-Sales Services for concrete machinery, ensuring smooth operations for your construction projects."
+      },
+      {
+        "name": "CITI PUMP",
+        "logo": "OurPartnerData[1]",
+        "link": "https://citipump.co.id",
+        "description": "CITI PUMP provides concrete heavy equipment solutions for urban areas where high development demand is not supported by road access capable of accommodating large machinery."
+      },
+      {
+        "name": "PT Citi Crane Perkasa",
+        "logo": "OurPartnerData[0]",
+        "link": "https://citicrane.co.id",
+        "description": "PT Citi Crane Perkasa is a heavy equipment rental company in Indonesia with extensive experience in heavy lifting and transportation. Supported by a continuously expanding fleet, we serve various industries with a strong focus on efficiency and safety."
+      },
+      {
+        "name": "PT Fresh Beton Indonesia",
+        "logo": "OurPartnerData[5]",
+        "link": "https://freshbeton.co.id",
+        "description": "PT Fresh Beton Indonesia operates in the ready-mix concrete and precast concrete industry, delivering high-quality concrete products for a wide range of construction projects."
+      },
+      {
+        "name": "PT Gunung Bumi Perkasa",
+        "logo": "OurPartnerData[3]",
+        "link": "https://gbp.co.id",
+        "description": "PT Gunung Bumi Perkasa is a mining company established in 2016. Our main products include Andesite stone, stone dust, split stone, base course, screening, and macadam, which are used as raw materials for high-quality concrete and asphalt."
+      },
+      {
+        "name": "PT Farracon Precast Indonesia",
+        "logo": "OurPartnerData[6]",
+        "link": "https://farraconprecast.co.id",
+        "description": "PT Farracon Precast Indonesia produces high-quality precast concrete products such as u-ditch, road barriers, GRC, and more, supported by 15 years of experience in construction and heavy equipment."
+      },
+      {
+        "name": "Simi",
+        "logo": "OurPartnerData[7]",
+        "link": "https://simi.co.id",
+        "description": "Simi is a wellness center offering reflexology and spa services. Focused on relaxation, Simi provides a variety of traditional massage techniques tailored to individual needs, delivering a deeply refreshing and rejuvenating experience."
+      }
+    ],
+    "whyChooseUs": {
+      "title": "Why Choose Us?",
+      "items": [
+        {
+          "id": 1,
+          "title": "Industry Experts",
+          "description": "Supported by professional resources and modern technology, Farrasindo Group continues to contribute to society, the nation, and the country as a trusted and leading company."
+        },
+        {
+          "id": 2,
+          "title": "Technology-Driven",
+          "description": "Farrasindo Group operates in the construction industry by prioritizing modern technology to support the acceleration of Indonesia’s infrastructure development."
+        },
+        {
+          "id": 3,
+          "title": "Concrete Machinery Specialists",
+          "description": "We operate a fleet of more than 200 concrete machines of various sizes and types, ready to support both small-scale and large-scale construction projects."
+        },
+        {
+          "id": 4,
+          "title": "Proven Portfolio",
+          "description": "Farrasindo has completed numerous strategic and retail projects, demonstrating our experience and consistency in supporting national development."
+        }
+      ]
+    },
+    "visionMission": {
+      "title": "Vision & Mission",
+      "vision": {
+        "title": "Farrasindo Vision",
+        "description": "To become a leading and influential concrete pump equipment rental and spare parts provider in Southeast Asia."
+      },
+      "mission": {
+        "title": "Farrasindo Mission",
+        "description": "To develop and expand concrete pump equipment rental services and spare parts supply, while assisting customers in their usage to achieve higher levels of quality and productivity in line with customer expectations."
+      }
+    },
+    "founderMessage": {
+      "title": "Message from Our Founder",
+      "signature": {
+        "name": "Encep Suherman",
+        "title": "Founder of Farrasindo Group / President Director of Farrasindo Group"
+      },
+      "paragraphs": [
+        "We are proud of the journey that has taken us from humble beginnings to becoming one of Indonesia’s leading construction equipment and service companies. It all started with a single concrete pump unit, a commitment to hard work, and a vision to improve construction efficiency nationwide.",
+        "Over time, through perseverance and dedication to excellence, we grew Farrasindo Group into a fleet of more than 300 units, serving projects across multiple industries.",
+        "Our company has expanded its services and is now involved in various sectors, from heavy equipment rental to the production of construction materials such as ready-mix and precast concrete. Each step of our growth is guided by the same core principles—integrity, reliability, and a passion for helping our clients achieve their construction goals.",
+        "Our aspiration is to provide builders, contractors, and developers across Indonesia with the equipment and services they need to realize their visions—whenever and wherever they need them. At Farrasindo Group, we are committed to making this vision a reality and contributing to a stronger, more connected Indonesia."
+      ]
+    },
+    "historyDetail": {
+      "title": "History of Farrasindo Perkasa",
+      "paragraphs": [
+        "PT Farrasindo Perkasa was established to respond to the challenges faced by major cities in Indonesia, particularly limited land availability for office, commercial, and residential infrastructure.",
+        "Regional autonomy provided an opportunity for PT Farrasindo Perkasa to observe the development of modern global cities characterized by taller skyscrapers, modern shopping centers, and ready-mix concrete-based housing, ensuring building quality and durability.",
+        "Concrete pumps are the most effective solution to maintain concrete freshness and quality while significantly accelerating construction work.",
+        "To support building owners and contractors in achieving fast and high-quality construction goals, Farrasindo focuses on concrete pump rental services and spare parts supply.",
+        "Farrasindo Perkasa (FP) is a concrete construction equipment rental company founded on October 3, 2001, by experienced practitioners in the ready-mix concrete industry, consistently prioritizing quality, speed, and punctuality.",
+        "Driven by the goal of helping contractors and building owners achieve efficient construction while maintaining concrete strength and quality, we focus on fast concrete pouring solutions to keep concrete fresh through concrete pump rental and spare parts services."
+      ],
+      "text": "Driven by the mission to support contractors and building owners in achieving fast and high-quality construction while maintaining concrete strength, we provide efficient concrete pouring solutions to keep concrete fresh through concrete pump rental and spare parts services."
+    },
+    "history": {
+      "title": "History of Farrasindo Group",
+      "timeline": [
+        {
+          "id": 1,
+          "year": "2001",
+          "title": "PT Farrasindo Perkasa",
+          "description": "Mr. H. Encep Suherman founded PT Farrasindo Perkasa.",
+          "image": "AboutData[3]"
+        },
+        {
+          "id": 2,
+          "year": "2002",
+          "title": "First Concrete Pump Unit",
+          "description": "F01 marked the debut of the first concrete pump designed and produced by Farrasindo Group.",
+          "image": "AboutData[4]"
+        },
+        {
+          "id": 3,
+          "year": "2003",
+          "title": "First Head Office",
+          "description": "The first Farrasindo head office (2001–2008), now serving as Pool 2 in front of the current headquarters.",
+          "image": "AboutData[5]"
+        },
+        {
+          "id": 4,
+          "year": "2004",
+          "title": "Leadership",
+          "description": "Briefing conducted by Mr. Encep Suherman with the crew before project execution.",
+          "image": "AboutData[6]"
+        },
+        {
+          "id": 5,
+          "year": "2007",
+          "title": "PT Farrasindo Perkasa",
+          "description": "Group gathering ahead of Eid al-Fitr 2007 at the land that would later become the current headquarters.",
+          "image": "AboutData[7]"
+        },
+        {
+          "id": 6,
+          "year": "2008",
+          "title": "New Head Office",
+          "description": "Construction of the new headquarters was completed in 2008, located in Srengseng, Jakarta.",
+          "image": "AboutData[8]"
+        },
+        {
+          "id": 7,
+          "year": "2011",
+          "title": "Birth of Citi Pump",
+          "description": "PT CITI PUMP INDONESIA was established, focusing on concrete machinery.",
+          "image": "AboutData[9]"
+        },
+        {
+          "id": 8,
+          "year": "2013",
+          "title": "Birth of Inti Jaya",
+          "description": "Established in 2013, PT Inti Jaya Industri focuses on concrete machinery spare parts.",
+          "image": "AboutData[10]"
+        },
+        {
+          "id": 9,
+          "year": "2014",
+          "title": "Batch Pump Innovation",
+          "description": "The first concrete machine combining a mixer truck, stationary concrete pump, and batching plant.",
+          "image": "AboutData[11]"
+        },
+        {
+          "id": 10,
+          "year": "2014",
+          "title": "Birth of Gunung Bumi",
+          "description": "PT Gunung Bumi Perkasa, a mining company, was established on November 4, 2014, in Sukabumi.",
+          "image": "AboutData[12]"
+        },
+        {
+          "id": 11,
+          "year": "2016",
+          "title": "Birth of Fresh Beton",
+          "description": "On June 27, 2016, Farrasindo established PT Fresh Beton Indonesia to strengthen construction synergy.",
+          "image": "AboutData[13]"
+        },
+        {
+          "id": 12,
+          "year": "2015",
+          "title": "Birth of Citi Crane",
+          "description": "On December 8, 2015, PT CITI CRANE PERKASA was established to strengthen Farrasindo Group.",
+          "image": "AboutData[14]"
+        },
+        {
+          "id": 13,
+          "year": "2022",
+          "title": "Citi MCP 8E - 22/4 Mini Pump",
+          "description": "PT Farracon Precast Industri focuses on the production and distribution of precast concrete products.",
+          "image": "AboutData[15]"
+        },
+        {
+          "id": 14,
+          "year": "2023",
+          "title": "Birth of Farracon Precast",
+          "description": "PT Farracon Precast Industri operates in the production and distribution of precast concrete products.",
+          "image": "AboutData[16]"
+        }
+      ]
+    }
+  },
+  "ProductPage": [
+    {
+      "category": "Concrete Pump",
+      "slug": "concrete-pump",
+      "products": [
+        {
+          "id": "d469c5d120c5",
+          "name": "Schwing S20",
+          "slug": "schwing-s20",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[19]",
+          "localImage": "schwing-s20-cc5ebe7c.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "19.4 m",
+              "Maximum horizontal reach": "15.8 m",
+              "Maximum depth reach": "10.8 m",
+              "Minimum unfolding height": "3.9 m",
+              "Section numbers": 4,
+              "Boom type": "Z",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "111 cu m/h",
+              "Maximum theoretical pressure on concrete": "70 bar",
+              "Concrete cylinders (diam. × stroke)": "200 mm x 2000m",
+              "Hydraulic circuit": "Open"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
+        },
+        {
+          "id": "1b9509e2d35a",
+          "name": "S Schwing S28 X",
+          "slug": "s-schwing-s28-x",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[18]",
+          "localImage": "s-schwing-s28-x-cc5ebe7c.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "27.7 m",
+              "Maximum horizontal reach": "23.7 m",
+              "Maximum depth reach": "18 m",
+              "Minimum unfolding height": "5.8 m",
+              "Section numbers": 4,
+              "Boom type": "Z",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "161/100 cu m/h",
+              "Maximum theoretical pressure on concrete": "65/69 bar",
+              "Concrete cylinders (diam. × stroke)": "230 mm x 2006.6 mm",
+              "Hydraulic circuit": "MPS"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
+        },
+        {
+          "id": "764a656c03ab",
+          "name": "Schwing S31 XT",
+          "slug": "schwing-s31-xt",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[20]",
+          "localImage": "schwing-s31-xt-cc5ebe7c.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "30.5 m",
+              "Maximum horizontal reach": "26.5 m",
+              "Maximum depth reach": "14.3 m",
+              "Minimum unfolding height": "5.7 m",
+              "Section numbers": 5,
+              "Boom type": "Z",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "159 cu m/h",
+              "Maximum theoretical pressure on concrete": "69 bar",
+              "Concrete cylinders (diam. × stroke)": "230 mm x 2000m",
+              "Hydraulic circuit": "MPS"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
+        },
+        {
+          "id": "9f319693c438",
+          "name": "Schwing S32 X",
+          "slug": "schwing-s32-x",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[21]",
+          "localImage": "schwing-s32-x-cc5ebe7c.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "31.9 m",
+              "Maximum horizontal reach": "28 m",
+              "Maximum depth reach": "20.5 m",
+              "Minimum unfolding height": "7.55 m",
+              "Section numbers": 4,
+              "Boom type": "Z",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "159 cu m/h",
+              "Maximum theoretical pressure on concrete": "69 bar",
+              "Concrete cylinders (diam. × stroke)": "230 mm x 2006.6 mm",
+              "Hydraulic circuit": "MPS"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
+        },
+        {
+          "id": "4c3056fba477",
+          "name": "Schwing S36 X",
+          "slug": "schwing-s36-x",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[19]",
+          "localImage": "schwing-s20-cc5ebe7c.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "35.2 m",
+              "Maximum horizontal reach": "31.2 m",
+              "Maximum depth reach": "24 m",
+              "Minimum unfolding height": "8.3 m",
+              "Section numbers": 4,
+              "Boom type": "Full Articulation, Roll & Fold®",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "136 cu m/h",
+              "Maximum theoretical pressure on concrete": "76 bar",
+              "Concrete cylinders (diam. × stroke)": "254 mm x 2000 mm",
+              "Hydraulic circuit": "MPS"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
+        },
+        {
+          "id": "dbe8397861c1",
+          "name": "Schwing S38 SX",
+          "slug": "schwing-s38-sx",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[19]",
+          "localImage": "schwing-s20-cc5ebe7c.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "37.3 m",
+              "Maximum horizontal reach": "32.6 m",
+              "Maximum depth reach": "25.9 m",
+              "Minimum unfolding height": "8.3 m",
+              "Section numbers": 5,
+              "Boom type": "Hyper Extension",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "163 cu m/h",
+              "Maximum theoretical pressure on concrete": "81 bar",
+              "Concrete cylinders (diam. × stroke)": "254 mm x 2500 mm",
+              "Hydraulic circuit": "MPS"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
+        },
+        {
+          "id": "e09e6d7697bc",
+          "name": "IHI IPF110B-8E21",
+          "slug": "ihi-ipf110b-8e21",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[14]",
+          "localImage": "ihi-ipf110b-8e21-1a5d193d.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "20.9m",
+              "Maximum horizontal reach": "17.0m",
+              "Maximum depth reach": "18 m",
+              "Minimum unfolding height": "3.9 m",
+              "Section numbers": 4,
+              "Boom type": "M Type",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "10-100m3/h ",
+              "Maximum theoretical pressure on concrete": "8.09MPa (82.6kgf/cm2)",
+              "Concrete cylinders (diam. × stroke)": "220 mm x 1600 mm",
+              "Hydraulic circuit": "open"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
+        },
+        {
+          "id": "89e0179113c7",
+          "name": "IHI IPF50B-4N14",
+          "slug": "ihi-ipf50b-4n14",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[19]",
+          "localImage": "schwing-s20-cc5ebe7c.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "14m",
+              "Maximum horizontal reach": "10.7m",
+              "Maximum depth reach": "-",
+              "Minimum unfolding height": "2.75",
+              "Section numbers": 3,
+              "Boom type": "M Type",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "10-50m3/h",
+              "Maximum theoretical pressure on concrete": "Maximum 4.65Mpa (47.5kgf/cm2)",
+              "Concrete cylinders (diam. × stroke)": "180 mm x 900 mm",
+              "Hydraulic circuit": "open"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
+        },
+        {
+          "id": "e1687e414eb3",
+          "name": "IHI IPF60B-5N17/4",
+          "slug": "ihi-ipf60b-5n17-4",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[19]",
+          "localImage": "schwing-s20-cc5ebe7c.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "16.8m",
+              "Maximum horizontal reach": "13.3m",
+              "Maximum depth reach": "8m",
+              "Minimum unfolding height": "2.75",
+              "Section numbers": 4,
+              "Boom type": "M Type",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "10-60m3/h",
+              "Maximum theoretical pressure on concrete": "Maximum 4.9MPa (50kgf/cm2)",
+              "Concrete cylinders (diam. × stroke)": "180 mm x 1150 mm",
+              "Hydraulic circuit": "open"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
+        },
+        {
+          "id": "73de41a01316",
+          "name": "IHI IPJ70B-4N18",
+          "slug": "ihi-ipj70b-4n18",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[15]",
+          "localImage": "ihi-ipj70b-4n18-e04c67e8.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "16.6m",
+              "Maximum horizontal reach": "14.6m",
+              "Maximum depth reach": "7,25m",
+              "Minimum unfolding height": "2.75",
+              "Section numbers": 4,
+              "Boom type": "3-stage Z-shape",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "10-70m3/h",
+              "Maximum theoretical pressure on concrete": "Max 4.17MPa (42.6kgf/cm2)",
+              "Concrete cylinders (diam. × stroke)": "205mm x 1200mm",
+              "Hydraulic circuit": "open"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
+        },
+        {
+          "id": "kyokuto-py115a-26c",
+          "name": "PY115A-26C",
+          "slug": "kyokuto-py115a-26c",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[19]",
+          "localImage": "kyokuto-py115a-26c.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "25.8m",
+              "Maximum horizontal reach": "21.8m",
+              "Maximum depth reach": "12.4m",
+              "Minimum unfolding height": "3.5 m",
+              "Section numbers": 4,
+              "Boom type": "M Type",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "115m3/h",
+              "Maximum theoretical pressure on concrete": "7.8Mpa",
+              "Concrete cylinders (diam. × stroke)": "220 mm x 1600 mm",
+              "Hydraulic circuit": "open"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
+        },
+        {
+          "id": "kyokuto-py115a-26b",
+          "name": "PY115A-26B",
+          "slug": "kyokuto-py115a-26b",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[19]",
+          "localImage": "kyokuto-py115a-26b.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "25.8m",
+              "Maximum horizontal reach": "21.8m",
+              "Maximum depth reach": "12.4m",
+              "Minimum unfolding height": "3.5 m",
+              "Section numbers": 4,
+              "Boom type": "M Type",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "115m3/h",
+              "Maximum theoretical pressure on concrete": "7.8Mpa",
+              "Concrete cylinders (diam. × stroke)": "225 mm x 1650 mm",
+              "Hydraulic circuit": "open"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
+        },
+
+        {
+          "id": "ihi-pg115b-8e26-4",
+          "name": "PG115B-8E26/4",
+          "slug": "ihi-pg115b-8e26-4",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[27]",
+          "localImage": "ihi-pg115b-8e26-4.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "25.5m",
+              "Maximum horizontal reach": "21.5m",
+              "Maximum depth reach": "14.89m",
+              "Minimum unfolding height": "3.45 m",
+              "Section numbers": 3,
+              "Boom type": "3-stage Z-shape",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "10-115m3/h",
+              "Maximum theoretical pressure on concrete": "7.04MPa (71.8kgf/cm2)",
+              "Concrete cylinders (diam. × stroke)": "220mm x 1600mm",
+              "Hydraulic circuit": "open"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
+        },
+        {
+          "id": "ihi-ipg135b-6n33-4",
+          "name": "IPG 135B-6N33/4",
+          "slug": "ihi-ipg135b-6n33-4",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[28]",
+          "localImage": "ihi-ipg135b-6n33-4.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "32.6m",
+              "Maximum horizontal reach": "29.2m",
+              "Maximum depth reach": "20.3m",
+              "Minimum unfolding height": "3.4m",
+              "Section numbers": 4,
+              "Boom type": "M Type",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "135m3/h",
+              "Maximum theoretical pressure on concrete": "3.9MPaX320Lit/min",
+              "Concrete cylinders (diam. × stroke)": "220mm x 1800m",
+              "Hydraulic circuit": "open"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
+        },
+        {
+          "id": "ihi-pg135b-6n36-4",
+          "name": "PG135B-6N36/4",
+          "slug": "ihi-pg135b-6n36-4",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[29]",
+          "localImage": "ihi-pg135b-6n36-4.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "35m",
+              "Maximum horizontal reach": "32.15m",
+              "Maximum depth reach": "23m",
+              "Minimum unfolding height": "3.4 m",
+              "Section numbers": 4,
+              "Boom type": "M Type",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "135m3/h",
+              "Maximum theoretical pressure on concrete": "3.9MPax320Lit/min",
+              "Concrete cylinders (diam. × stroke)": "220mm x 2200mm",
+              "Hydraulic circuit": "open"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
+        },
+        {
+          "id": "ihi-ipg115b-8e26-4",
+          "name": "IPG115B-8E26/4",
+          "slug": "ihi-ipg115b-8e26-4",
+          "brand": "Concrete Pump",
+          "className": "product-item",
+          "imageUrl": "ProductData[ProductData[18]",
+          "localImage": "ihi-ipg115b-8e26-4.png",
+          "details": {
+            "BOOM": {
+              "Maximum vertical reach": "30m",
+              "Maximum horizontal reach": "25.95m",
+              "Maximum depth reach": "14.89m",
+              "Minimum unfolding height": "18",
+              "Section numbers": 3,
+              "Boom type": "3-stage Z-shape",
+              "Pipeline diameter": "125mm"
+            },
+            "PUMP": {
+              "Maximum theoretical output": "10-115m3/h",
+              "Maximum theoretical pressure on concrete": "40Kgf/cm2 x320 Lit/min",
+              "Concrete cylinders (diam. × stroke)": "220mm x 1600mm",
+              "Hydraulic circuit": "open"
+            },
+            "CHASSIS": {
+              "Chassis brand": "Multiple Choices"
+            }
+          },
+          "url": null
+        }
+      ]
+    },
+    {
+      "category": "Moli",
+      "slug": "moli",
+      "products": [
+        {
+          "id": "4ca6cc365a50",
+          "name": "ZOOMLION 10020R",
+          "slug": "zoomlion-10020r",
+          "brand": "Moli",
+          "className": "product-item-moli",
+          "imageUrl": "ProductData[24]",
+          "localImage": "zoomlion-10020r-0f621270.png",
+          "details": {
+            "Maximum theorical output": "100/55m3/h",
+            "Maximum theorical pressure on concrete": "20/11Mpa",
+            "Distribution valve type": "S Valve",
+            "Concrete cylinder": "Φ200mm×1650mm",
+            "Hopper capacity×feeding height": "600L×1500mm",
+            "Recommended concrete slump": "12-23cm",
+            "Rated power": "199/2300kW/(r/min)",
+            "Engine moment": "1200/1200-1500N.m/(r/min)",
+            "Maximum displacement": "7470cc",
+            "Total weight": "13800kg",
+            "Length×width×height": "9100mm×2450mm×3140mm"
+          },
+          "url": null
+        },
+        {
+          "id": "47f067db989b",
+          "name": "TRUEMAX LP50.10.60DU",
+          "slug": "truemax-lp50-10-60du",
+          "brand": "Moli",
+          "className": "product-item-moli",
+          "imageUrl": "ProductData[23]",
+          "localImage": "truemax-lp50-10-60du-34a1ef5c.png",
+          "details": {
+            "Maximum theorical output": "49/26 m3/h",
+            "Maximum theorical pressure on concrete": "5/10 Mpa",
+            "Distribution valve type": "S Valve",
+            "Concrete cylinder": "Ф180×1200 mm",
+            "Hopper capacity×feeding height": "0.5×1370",
+            "Recommended concrete slump": "12-23cm",
+            "Rated power": "60 kW",
+            "Engine moment": "2000 r/min",
+            "Maximum displacement": "7470cc",
+            "Total weight": "500 Kg",
+            "Length×width×height": "5200X2100X02500"
+          },
+          "url": null
+        }
+      ]
+    },
+    {
+      "category": "Stationery Concrete",
+      "slug": "stationery-concrete",
+      "products": [
+        {
+          "id": "4c582725423f",
+          "name": "HBT50S-13",
+          "slug": "hbt50s-13",
+          "brand": "Citi Pump",
+          "className": "product-item-stationary",
+          "imageUrl": "ProductData[12]",
+          "localImage": "hbt50s-13-44c088b7.png",
+          "details": {
+            "Maximum theorical output": "49/26m3/h",
+            "Maximum theorical pressure on concrete": "50/100bar",
+            "Strokes/minute": "98/54m3/h",
+            "Concrete cylinder": "Φ180mm×1200mm",
+            "Hopper capacity": "600L",
+            "Filling height": "1400mm",
+            "Maximum aggregate diameter": "50/Φ150mm",
+            "Inside diameter of delivering pipe": "40/Φ125mm",
+            "Inside diameter of pipe": "Φ125/Φ150mm",
+            "Hydraulic system type": "Open",
+            "Power": "60kW",
+            "Length×width×height": "4894mm×1539mm×2043mm",
+            "Weight": "191kW"
+          },
+          "url": null
+        },
+        {
+          "id": "86347386bc49",
+          "name": "HBT80-16-176",
+          "slug": "hbt80-16-176",
+          "brand": "Citi Pump",
+          "className": "product-item-stationary",
+          "imageUrl": "ProductData[13]",
+          "localImage": "hbt80-16-176-44c088b7.png",
+          "details": {
+            "Maximum theorical output": "81/49m3/h",
+            "Maximum theorical pressure on concrete": "90/160bar",
+            "Strokes/minute": "100/200bar",
+            "Concrete cylinder": "Φ200mm×1650mm",
+            "Hopper capacity": "600L",
+            "Filling height": "1450mm",
+            "Maximum aggregate diameter": "50/Φ150mm",
+            "Inside diameter of delivering pipe": "40/Φ125mm",
+            "Inside diameter of pipe": "Φ125/Φ150mm",
+            "Hydraulic system type": "Open",
+            "Power": "174kW",
+            "Length×width×height": "6600mmx1930mmx2190mm",
+            "Weight": "6800mmx1930mmx2190mm"
+          },
+          "url": null
+        },
+        {
+          "id": "8df15461debc",
+          "name": "HBT100-20-191",
+          "slug": "hbt100-20-191",
+          "brand": "Citi Pump",
+          "className": "product-item-stationary",
+          "imageUrl": "ProductData[12]",
+          "localImage": "hbt50s-13-44c088b7.png",
+          "details": {
+            "Maximum theorical output": "98/54m3/h",
+            "Maximum theorical pressure on concrete": "23/14Min -1",
+            "Strokes/minute": "27.3/15.8Min -1",
+            "Concrete cylinder": "Φ180mm×1800mm",
+            "Hopper capacity": "600L",
+            "Filling height": "1450mm",
+            "Maximum aggregate diameter": "50/Φ150mm",
+            "Inside diameter of delivering pipe": "40/Φ125mm",
+            "Inside diameter of pipe": "Φ125/Φ150mm",
+            "Hydraulic system type": "Open",
+            "Power": "191kW",
+            "Length×width×height": "6600kg",
+            "Weight": "7600kg"
+          },
+          "url": null
+        },
+        {
+          "id": "bfac05b5e8a1",
+          "name": "SP 2800",
+          "slug": "sp-2800",
+          "brand": "Stationery Concrete",
+          "className": "product-item-stationary",
+          "imageUrl": "ProductData[12]",
+          "localImage": "hbt50s-13-44c088b7.png",
+          "details": {
+            "Maximum theorical output": "58/101m3/h",
+            "Maximum theorical pressure on concrete": "119/66 bar",
+            "Strokes/minute": 2200,
+            "Concrete cylinder": "200mmx1600mm",
+            "Hopper capacity": "600L",
+            "Filling height": "-",
+            "Maximum aggregate diameter": "50/Φ150mm",
+            "Inside diameter of delivering pipe": "40/Φ125mm",
+            "Inside diameter of pipe": "Φ125/Φ150mm",
+            "Hydraulic system type": "Open",
+            "Power": "132kW",
+            "Length×width×height": "-",
+            "Weight": "5300kg"
+          },
+          "url": null
+        },
+        {
+          "id": "f2ae5246391d",
+          "name": "SP 3000",
+          "slug": "sp-3000",
+          "brand": "Stationery Concrete",
+          "className": "product-item-stationary",
+          "imageUrl": "ProductData[12]",
+          "localImage": "hbt50s-13-44c088b7.png",
+          "details": {
+            "Maximum theorical output": "35/64m3h",
+            "Maximum theorical pressure on concrete": "156/86 bar",
+            "Strokes/minute": 2100,
+            "Concrete cylinder": "180mmx1600mm",
+            "Hopper capacity": "400L",
+            "Filling height": "-",
+            "Maximum aggregate diameter": "50/Φ150mm",
+            "Inside diameter of delivering pipe": "40/Φ125mm",
+            "Inside diameter of pipe": "Φ125/Φ150mm",
+            "Hydraulic system type": "Open",
+            "Power": "173kW",
+            "Length×width×height": "-",
+            "Weight": "5500kg"
+          },
+          "url": null
+        },
+        {
+          "id": "1c11c90fba78",
+          "name": "SP 3500 D/E",
+          "slug": "sp-3500-d-e",
+          "brand": "Stationery Concrete",
+          "className": "product-item-stationary",
+          "imageUrl": "ProductData[12]",
+          "localImage": "hbt50s-13-44c088b7.png",
+          "details": {
+            "Maximum theorical output": "49/79m3/h",
+            "Maximum theorical pressure on concrete": "169/100Bar",
+            "Strokes/minute": "2100/1450mIN-1",
+            "Concrete cylinder": "180mmX2000mm",
+            "Hopper capacity": "600L",
+            "Filling height": "-",
+            "Maximum aggregate diameter": "50/Φ150mm",
+            "Inside diameter of delivering pipe": "40/Φ125mm",
+            "Inside diameter of pipe": "Φ125/Φ150mm",
+            "Hydraulic system type": "Open",
+            "Power": "181/160kW",
+            "Length×width×height": "-",
+            "Weight": "7000kg"
+          },
+          "url": null
+        },
+        {
+          "id": "011c771febb8",
+          "name": "SP 4800",
+          "slug": "sp-4800",
+          "brand": "Stationery Concrete",
+          "className": "product-item-stationary",
+          "imageUrl": "ProductData[12]",
+          "localImage": "hbt50s-13-44c088b7.png",
+          "details": {
+            "Maximum theorical output": "43/66m3/h",
+            "Maximum theorical pressure on concrete": "243/156 bar",
+            "Strokes/minute": "1500Min-1",
+            "Concrete cylinder": "180mmX2000mm",
+            "Hopper capacity": "600L",
+            "Filling height": "-",
+            "Maximum aggregate diameter": "50/Φ150mm",
+            "Inside diameter of delivering pipe": "40/Φ125mm",
+            "Inside diameter of pipe": "Φ125/Φ150mm",
+            "Hydraulic system type": "Open",
+            "Power": "E200",
+            "Length×width×height": "-",
+            "Weight": "8000kg"
+          },
+          "url": null
+        },
+        {
+          "id": "e2a22705ee57",
+          "name": "HBT50.10.60RS",
+          "slug": "hbt50-10-60rs",
+          "brand": "Stationery Concrete",
+          "className": "product-item-stationary",
+          "imageUrl": "ProductData[12]",
+          "localImage": "hbt50s-13-44c088b7.png",
+          "details": {
+            "Maximum theorical output": "49/26m3/h",
+            "Maximum theorical pressure on concrete": "50/100bar",
+            "Strokes/minute": "26/13.8Min -1",
+            "Concrete cylinder": "Φ180mm×1250mm",
+            "Hopper capacity": "500L",
+            "Filling height": "1335mm",
+            "Maximum aggregate diameter": "50/Φ150mm",
+            "Inside diameter of delivering pipe": "40/Φ125mm",
+            "Inside diameter of pipe": "Φ125/Φ150mm",
+            "Hydraulic system type": "Open",
+            "Power": "60kW",
+            "Length×width×height": "5300mm×2020mm×2550mm",
+            "Weight": "4500kg"
+          },
+          "url": null
+        },
+        {
+          "id": "a403cbab5dc3",
+          "name": "HBT60.13.90SU",
+          "slug": "hbt60-13-90su",
+          "brand": "Stationery Concrete",
+          "className": "product-item-stationary",
+          "imageUrl": "ProductData[12]",
+          "localImage": "hbt50s-13-44c088b7.png",
+          "details": {
+            "Maximum theorical output": "67/41m3/h",
+            "Maximum theorical pressure on concrete": "70/130bar",
+            "Strokes/minute": "19.8/12Min -1",
+            "Concrete cylinder": "Φ200mm×1800mm",
+            "Hopper capacity": "600L",
+            "Filling height": "1450mm",
+            "Maximum aggregate diameter": "50/Φ150mm",
+            "Inside diameter of delivering pipe": "40/Φ125mm",
+            "Inside diameter of pipe": "Φ125/Φ150mm",
+            "Hydraulic system type": "Open",
+            "Power": "90kW",
+            "Length×width×height": "7000mm×2200mm×2300mm",
+            "Weight": "6950kg"
+          },
+          "url": null
+        },
+        {
+          "id": "c3206d4e4277",
+          "name": "HBT60.13.118RSD",
+          "slug": "hbt60-13-118rsd",
+          "brand": "Stationery Concrete",
+          "className": "product-item-stationary",
+          "imageUrl": "ProductData[12]",
+          "localImage": "hbt50s-13-44c088b7.png",
+          "details": {
+            "Maximum theorical output": "67/41m3/h",
+            "Maximum theorical pressure on concrete": "70/130bar",
+            "Strokes/minute": "21/13Min -1",
+            "Concrete cylinder": "Φ200mm×1710mm",
+            "Hopper capacity": "600L",
+            "Filling height": "1400mm",
+            "Maximum aggregate diameter": "50/Φ150mm",
+            "Inside diameter of delivering pipe": "40/Φ125mm",
+            "Inside diameter of pipe": "Φ125/Φ150mm",
+            "Hydraulic system type": "Open",
+            "Power": "118kW",
+            "Length×width×height": "6700mmx2100mmx2700mm",
+            "Weight": "6500kg"
+          },
+          "url": null
+        }
+      ]
+    },
+    {
+      "category": "Self loading Mixer",
+      "slug": "self-loading-mixer",
+      "products": [
+        {
+          "id": "9d5f117fc9a5",
+          "name": "FSLM 600",
+          "slug": "fslm-600",
+          "brand": "Self loading Mixer",
+          "className": "product-item-self",
+          "imageUrl": "ProductData[3]",
+          "localImage": "fslm-600-feacd11b.png",
+          "details": {
+            "Concrete theorical output": "600 L /batch",
+            "Total Drum Capacity": "1000L",
+            "Front Shovel Capacity": "500L",
+            "Water tank capacity": "2x200L",
+            "Max. Drum Slewing Angle": "0° ",
+            "Productivity": "5 batch / Hour , 3m3/ h ",
+            "Engine Power": "55 kW",
+            "Engine Type": "YUNNEI, 490, Turbo-charged",
+            "Drive Type": "4x4",
+            "Transmision": "Automatic, 4 F+4R Shift",
+            "Weight": "4200 Kg",
+            "Overall Size": "6750 x 1810 x 2800 mm"
+          },
+          "url": null
+        },
+        {
+          "id": "4ee143ddf3db",
+          "name": "FSLM 1200",
+          "slug": "fslm-1200",
+          "brand": "Self loading Mixer",
+          "className": "product-item-self",
+          "imageUrl": "ProductData[4]",
+          "localImage": "fslm-1200-f5f95889.png",
+          "details": {
+            "Concrete theorical output": "1200 L/ batch",
+            "Total Drum Capacity": "1800 L",
+            "Front Shovel Capacity": "500L",
+            "Water tank capacity": "2x200L",
+            "Max. Drum Slewing Angle": "0° ",
+            "Productivity": "5 batch / Hour , 6m3/ h ",
+            "Engine Power": "55 kW",
+            "Engine Type": "YUNNEI, 490, Turbo-charged",
+            "Drive Type": "4x4",
+            "Transmision": "Automatic, 4 F+4R Shift",
+            "Weight": "4500 Kg",
+            "Overall Size": "6400 x 2550 x 2450 mm"
+          },
+          "url": null
+        },
+        {
+          "id": "c67b4eb17b58",
+          "name": "FSLM 1800",
+          "slug": "fslm-1800",
+          "brand": "Self loading Mixer",
+          "className": "product-item-self",
+          "imageUrl": "ProductData[5]",
+          "localImage": "fslm-1800-f5f95889.png",
+          "details": {
+            "Concrete theorical output": "1800 L / batch",
+            "Total Drum Capacity": "2700 L",
+            "Front Shovel Capacity": "500L",
+            "Water tank capacity": "2x200L",
+            "Max. Drum Slewing Angle": "270° ",
+            "Productivity": "5 batch / Hour , 9m3/ h ",
+            "Engine Power": "78 kW",
+            "Engine Type": "YUCHAI, 4102, Turbo-charged",
+            "Drive Type": "4x4",
+            "Transmision": "Automatic, 4 F+4R Shift",
+            "Weight": "5600 Kg",
+            "Overall Size": "7300 x 2650 x 2750 mm"
+          },
+          "url": null
+        },
+        {
+          "id": "b76c85e2f08d",
+          "name": "FSLM 2600R",
+          "slug": "fslm-2600r",
+          "brand": "Self loading Mixer",
+          "className": "product-item-self",
+          "imageUrl": "ProductData[5]",
+          "localImage": "fslm-2600r-cde1c5eb.png",
+          "details": {
+            "Concrete theorical output": "2600 L / batch",
+            "Total Drum Capacity": "3900 L",
+            "Front Shovel Capacity": "600 L",
+            "Water tank capacity": "2x250L",
+            "Max. Drum Slewing Angle": "270° ",
+            "Productivity": "4 batch / Hour , 10.4m3/ h ",
+            "Engine Power": "78 kW",
+            "Engine Type": "YUCHAI, 4102, Turbo-charged",
+            "Drive Type": "4x4",
+            "Transmision": "Automatic, 4 F+4R Shift",
+            "Weight": "6500 Kg",
+            "Overall Size": "7860 x 2750 x 3000 mm"
+          },
+          "url": null
+        },
+        {
+          "id": "8fcbcff6128a",
+          "name": "FSLM 3500R",
+          "slug": "fslm-3500r",
+          "brand": "Self loading Mixer",
+          "className": "product-item-self",
+          "imageUrl": "ProductData[6]",
+          "localImage": "fslm-3500r-7820e159.png",
+          "details": {
+            "Concrete theorical output": "3500 L / batch",
+            "Total Drum Capacity": "5200 L",
+            "Front Shovel Capacity": "600 L",
+            "Water tank capacity": "2x260L",
+            "Max. Drum Slewing Angle": "270° ",
+            "Productivity": "4 batch / Hour , 14m3/ h ",
+            "Engine Power": "85 kW",
+            "Engine Type": "YUCHAI, 4105, Turbo-charged",
+            "Drive Type": "4x4",
+            "Transmision": "Automatic, 4 F+4R Shift",
+            "Weight": "7500 Kg",
+            "Overall Size": "7830 x 2680 x 3300 mm"
+          },
+          "url": null
+        },
+        {
+          "id": "f8d3effae8a1",
+          "name": "FSLM 3500RH",
+          "slug": "fslm-3500rh",
+          "brand": "Self loading Mixer",
+          "className": "product-item-self",
+          "imageUrl": "ProductData[7]",
+          "localImage": "fslm-3500rh-5a45c43a.png",
+          "details": {
+            "Concrete theorical output": "3500 L / batch",
+            "Total Drum Capacity": "5200 L",
+            "Front Shovel Capacity": "600 L",
+            "Water tank capacity": "2x310L",
+            "Max. Drum Slewing Angle": "90° ",
+            "Productivity": "4 batch / Hour , 14m3/ h ",
+            "Engine Power": "85 kW",
+            "Engine Type": "YUCHAI, 4105, Turbo-charged",
+            "Drive Type": "4x4",
+            "Transmision": "Automatic, 4 F+4R Shift",
+            "Weight": "8100 Kg",
+            "Overall Size": "7520 x 2600 x 3270 mm"
+          },
+          "url": null
+        },
+        {
+          "id": "1f0a586ab62d",
+          "name": "FSLM 3500RW",
+          "slug": "fslm-3500rw",
+          "brand": "Self loading Mixer",
+          "className": "product-item-self",
+          "imageUrl": "ProductData[8]",
+          "localImage": "fslm-3500rw-ff1f690b.png",
+          "details": {
+            "Concrete theorical output": "3500 L / batch",
+            "Total Drum Capacity": "5200 L",
+            "Front Shovel Capacity": "600 L",
+            "Water tank capacity": "2x310L",
+            "Max. Drum Slewing Angle": "270° ",
+            "Productivity": "4 batch / Hour , 14m3/ h ",
+            "Engine Power": "85 kW",
+            "Engine Type": "YUCHAI, 4105, Turbo-charged",
+            "Drive Type": "4x4",
+            "Transmision": "Automatic, 4 F+4R Shift",
+            "Weight": "8200 Kg",
+            "Overall Size": "7710 x 2900 x 3300 mm"
+          },
+          "url": null
+        },
+        {
+          "id": "77aae34537e3",
+          "name": "FSLM 4000 R",
+          "slug": "fslm-4000-r",
+          "brand": "Self loading Mixer",
+          "className": "product-item-self",
+          "imageUrl": "ProductData[9]",
+          "localImage": "fslm-4000-r-f2871c46.png",
+          "details": {
+            "Concrete theorical output": "4000 L / batch",
+            "Total Drum Capacity": "6100 L",
+            "Front Shovel Capacity": "600 L",
+            "Water tank capacity": "2x330L",
+            "Max. Drum Slewing Angle": "290° ",
+            "Productivity": "4 batch / Hour , 16m3/ h ",
+            "Engine Power": "85 kW",
+            "Engine Type": "YUCHAI, 4105, Turbo-charged",
+            "Drive Type": "4x4x4",
+            "Transmision": "Automatic, 4 F+4R Shift",
+            "Weight": "9200 Kg",
+            "Overall Size": "7500 x 2850 x 3600 mm"
+          },
+          "url": null
+        },
+        {
+          "id": "8b84e58a4c4e",
+          "name": "FSLM 5500 R",
+          "slug": "fslm-5500-r",
+          "brand": "Self loading Mixer",
+          "className": "product-item-self",
+          "imageUrl": "ProductData[10]",
+          "localImage": "fslm-5500-r-e60dcb1a.jpg",
+          "details": {
+            "Concrete theorical output": "5500 L / batch",
+            "Total Drum Capacity": "8200 L ",
+            "Front Shovel Capacity": "800 L ",
+            "Water tank capacity": "2 x 430 L",
+            "Max. Drum Slewing Angle": "270° ",
+            "Productivity": "4 batch / Hour , 22m3/ h ",
+            "Engine Power": "92 kW",
+            "Engine Type": "FAW, 6105, Turbo-charged",
+            "Drive Type": "4x4",
+            "Transmision": "Automatic, 4 F+4R Shift",
+            "Weight": "11,200 Kg",
+            "Overall Size": "8450 x 3100 x 3640 mm"
+          },
+          "url": null
+        },
+        {
+          "id": "27b348216240",
+          "name": "FSLM 6500 R",
+          "slug": "fslm-6500-r",
+          "brand": "Self loading Mixer",
+          "className": "product-item-self",
+          "imageUrl": "ProductData[11]",
+          "localImage": "fslm-6500-r-721c9615.jpg",
+          "details": {
+            "Concrete theorical output": "6500 L / batch",
+            "Total Drum Capacity": "9700 L",
+            "Front Shovel Capacity": "800 L ",
+            "Water tank capacity": "2 x 730 L",
+            "Max. Drum Slewing Angle": "290° ",
+            "Productivity": "4 batch / Hour , 26m3/ h ",
+            "Engine Power": "92 kW",
+            "Engine Type": "DEUTZ, 6105, Turbo-charged",
+            "Drive Type": "4x4x4",
+            "Transmision": "Automatic, 4 F+4R Shift",
+            "Weight": "12,500 Kg",
+            "Overall Size": "8450 x 3050 x 3860 mm"
+          },
+          "url": null
+        }
+      ]
+    },
+    {
+      "category": "Placing Boom",
+      "slug": "placing-boom",
+      "products": [
+        {
+          "id": "b67757af9c85",
+          "name": "PB17B-3R-II",
+          "slug": "pb17b-3r-ii",
+          "brand": "Placing Boom",
+          "className": "product-item-placing",
+          "imageUrl": "ProductData[16]",
+          "localImage": "pb17b-3r-ii-5137aaf9.png",
+          "details": {
+            "Maximum Vertical Reach": "17 m",
+            "Arms": 3,
+            "Slewing Range": "360° ",
+            "Hydraulic Pressure": "25 Mpa",
+            "Model of Slewing": "Turbo Worm Drive",
+            "Delivery Pipeline Diameter": "φ133×4.5 mm",
+            "Total Weight": "6500 kg",
+            "Max Lifting Unit": "1520 kg"
+          },
+          "url": null
+        },
+        {
+          "id": "dd6f67624cee",
+          "name": "PB32A-3R-II",
+          "slug": "pb32a-3r-ii",
+          "brand": "Placing Boom",
+          "className": "product-item-placing",
+          "imageUrl": "ProductData[17]",
+          "localImage": "pb32a-3r-ii-5137aaf9.png",
+          "details": {
+            "Maximum Vertical Reach": "31.7 m",
+            "Arms": 4,
+            "Slewing Range": "360° ",
+            "Hydraulic Pressure": "28 Mpa",
+            "Model of Slewing": "Gear Slewing",
+            "Delivery Pipeline Diameter": "φ133×4.5 mm",
+            "Total Weight": "18150 kg",
+            "Max Lifting Unit": "4150 kg"
+          },
+          "url": null
+        },
+        {
+          "id": "18833a05252a",
+          "name": "PB28A-3R-II",
+          "slug": "pb28a-3r-ii",
+          "brand": "Placing Boom",
+          "className": "product-item-placing",
+          "imageUrl": "ProductData[16]",
+          "localImage": "pb17b-3r-ii-5137aaf9.png",
+          "details": {
+            "Maximum Vertical Reach": "27.7 m",
+            "Arms": 4,
+            "Slewing Range": "360° ",
+            "Hydraulic Pressure": "28 Mpa",
+            "Model of Slewing": "Gear Slewing",
+            "Delivery Pipeline Diameter": "φ133×4.5 mm",
+            "Total Weight": "16200 kg",
+            "Max Lifting Unit": "4100 kg"
+          },
+          "url": null
+        }
+      ]
+    },
+    {
+      "category": "Blend Plant",
+      "slug": "blend-plant",
+      "products": [
+        {
+          "id": "f3a877bf9401",
+          "name": "Blend E025",
+          "slug": "blend-e025",
+          "brand": "Blend Plant",
+          "className": "product-item-bland",
+          "imageUrl": "ProductData[1]",
+          "localImage": "blend-e025-c6952c5a.png",
+          "details": {
+            "Aggregates": "5 m3",
+            "Cement": "2.3 m3",
+            "Water": "1500 / 3000 lt ( Opt )",
+            "Emulsion": "300 ltr ",
+            "Admixtures": "3x42 lt (ops)",
+            "Output": "<50 m3/h",
+            "Power": "44 kW PTO",
+            "Empty Weight": "2870kg",
+            "DimensionS": "4317 x 2250 x 1994 mm"
+          },
+          "url": null
+        },
+        {
+          "id": "f6a430a22afb",
+          "name": "Blend Seventy",
+          "slug": "blend-seventy",
+          "brand": "Blend Plant",
+          "className": "product-item-bland",
+          "imageUrl": "ProductData[2]",
+          "localImage": "blend-seventy-96e0b7a1.png",
+          "details": {
+            "Aggregates": "12 m3",
+            "Cement": "2.3 m3",
+            "Water": "2.000/4000 ( Opt )",
+            "Emulsion": "600 lt (Opt)",
+            "Admixtures": "3x42 lt (ops)",
+            "Output": "<50 m3/h",
+            "Power": "45 kW PTO",
+            "Empty Weight": "3750 kg",
+            "DimensionS": "6150 x 2250 x 2276 mm"
+          },
+          "url": null
+        }
+      ]
+    },
+    {
+      "category": "Batch pump",
+      "slug": "batch-pump",
+      "products": [
+        {
+          "id": "3910ef5533d3",
+          "name": "Batch Pump BLP - W/25",
+          "slug": "batch-pump-blp-w-25",
+          "brand": "Batch pump",
+          "className": "product-item-batch",
+          "imageUrl": "ProductData[0]",
+          "localImage": "batch-pump-blp-w-25-327b6bd1.png",
+          "details": {
+            "Max. Theo Pumping Output": "40 m3/h",
+            "System Pressure": "28 Mpa",
+            "Delivery Cylinder x Stroke ": "Φ200X1000",
+            "Distribute Valve": "S Valve",
+            "Generator": "100 kW",
+            "Main Motor": "37 kW",
+            "Main Pump": "Flutek Kawasaki K3V112",
+            "Hopper Capacity": "1.8 m3"
+          },
+          "url": null
+        },
+        {
+          "id": "a0ff5e9e078e",
+          "name": "Trailer Batch Pump BLP - W/25",
+          "slug": "trailer-batch-pump-blp-w-25",
+          "brand": "Batch pump",
+          "className": "product-item-batch",
+          "imageUrl": "ProductData[22]",
+          "localImage": "trailer-batch-pump-blp-w-25-a4aa4880.png",
+          "details": {
+            "Max. Theo Pumping Output": "40 m3/h",
+            "System Pressure": "28 Mpa",
+            "Delivery Cylinder x Stroke ": "Φ200X1000",
+            "Distribute Valve": "S Valve",
+            "Generator": "100 kW",
+            "Main Motor": "37 kW",
+            "Main Pump": "Flutek Kawasaki K3V112",
+            "Hopper Capacity": "1.8 m3"
+          },
+          "url": null
+        },
+        {
+          "id": "fc4cd5bb0431",
+          "name": "Batch Pump BLP - W/40",
+          "slug": "batch-pump-blp-w-40",
+          "brand": "Batch pump",
+          "className": "product-item-batch",
+          "imageUrl": "ProductData[0]",
+          "localImage": "batch-pump-blp-w-25-327b6bd1.png",
+          "details": {
+            "Max. Theo Pumping Output": "40 m3/h",
+            "System Pressure": "28 Mpa",
+            "Delivery Cylinder x Stroke ": "Φ200X1262",
+            "Distribute Valve": "S Valve",
+            "Generator": "120 kW",
+            "Main Motor": "37 kW",
+            "Main Pump": "KAWASAKI 140",
+            "Hopper Capacity": "1.8 m3"
+          },
+          "url": null
+        }
+      ]
+    },
+    {
+      "category": "Crane",
+      "slug": "crane",
+      "products": [
+        {
+          "id": "0a043ecf2c93",
+          "name": "Zoomlion QY 55",
+          "slug": "zoomlion-qy-55",
+          "brand": "Crane",
+          "className": "product-item-bland",
+          "imageUrl": "ProductData[26]",
+          "localImage": "zoomlion-qy-55-d27c5c87.png",
+          "details": {
+            "Max. rated lifting capacity": "55t",
+            "Max. load moment of basic boom": "1568kN.m",
+            "Max. load moment of main boom (fully extended)": "940.8kN.m",
+            "Max. lifting height of basic boom": "11.8m",
+            "Max. lifting height of main boom": "44m",
+            "Max. lifting height of jib": "60m"
+          },
+          "url": null
+        },
+        {
+          "id": "9330a4fa2ec7",
+          "name": "Zoomlion QY 25",
+          "slug": "zoomlion-qy-25",
+          "brand": "Crane",
+          "className": "product-item-bland",
+          "imageUrl": "ProductData[25]",
+          "localImage": "zoomlion-qy-25-a4f13453.png",
+          "details": {
+            "Max. rated lifting capacity": "25t",
+            "Max. load moment of basic boom": "1067kN.m",
+            "Max. load moment of main boom (fully extended)": "700kN.m",
+            "Max. lifting height of basic boom": "11.3m",
+            "Max. lifting height of main boom": "42.1m",
+            "Max. lifting height of jib": "50m"
+          },
+          "url": null
+        }
+      ]
+    }
+  ],
+  "careerPage": {
+    "banner": {
+      "title": "Career",
+      "description": "Join the Team",
+      "linkText": "See Vacancies",
+      "linkUrl": "#job-section"
+    },
+    "sectionGrow": {
+      "title": "Ready to grow with us?",
+      "description": "Farrasindo Group is a growing business group with diverse operations in construction, concrete manufacturing, heavy equipment, and healthcare services. We offer exciting career opportunities across various industries."
+    },
+    "sectionJoinOurGroup": {
+      "title": "Join Our Group!",
+      "description": "",
+      "companies": [
+        {
+          "fp": {
+            "description": "PT. Farracon Precast Indonesia produces high-quality precast concrete to meet customer needs such as u-ditch, road barriers, GRC, etc., supported by 15 years of experience in construction and heavy equipment."
+          },
+          "fbi": {
+            "description": "PT Farrasindo Perkasa (FP) is a company specializing in the rental and sale of construction heavy equipment, with expertise in Concrete Pumps, Batching Plants, and various other Concrete Machines."
+          },
+          "iji": {
+            "description": "PT Inti Jaya Industri is a sister company of Farrasindo Group. We focus on Spare Parts and After Sales Service for Concrete Machines, supporting the smooth operation of your construction industry."
+          },
+          "citipump": {
+            "description": "CITI PUMP focuses on providing concrete heavy equipment solutions for urban areas, where high construction demand is not matched by wide road access for heavy equipment."
+          },
+          "citicrane": {
+            "description": "PT Citi Crane Perkasa is a heavy equipment rental company in Indonesia with extensive experience in heavy transport and logistics. Supported by a continuously growing fleet, we serve various industries with a focus on efficiency and safety."
+          },
+          "simi": {
+            "description": "Simi is a place that provides reflexology and spa services. Focusing on relaxation, Simi offers various traditional massage techniques tailored to individual needs, aiming to provide a deep and refreshing relaxation experience for customers."
+          },
+          "gbp": {
+            "description": "PT Gunung Bumi Perkasa is a mining company established in 2016. Our main products include Andesite stone, stone dust, split, base course, screening, and macadam, which are used as raw materials for high-quality concrete and asphalt."
+          },
+          "fpi": {
+            "description": "PT. Farracon Precast Indonesia produces high-quality precast concrete to meet customer needs such as u-ditch, road barriers, GRC, etc., supported by 15 years of experience in construction and heavy equipment."
+          }
+        }
+      ],
+      "lessViewText": "Less View",
+      "loadMoreText": "Load more"
+    },
+    "sectionJobVacancy": {
+      "title": "Explore job and send us your resume today",
+      "description": "",
+      "applyNowText": "Lamar Sekarang"
+    },
+    "sectionFarracare": {
+      "title": "FarraCare - Program Kesejahteraan Karyawan Kami",
+      "description": "At Farrasindo Group, we believe that employee welfare is the key to shared success. Through the FarraCare program, we are committed to creating a work environment that supports the personal and professional growth of every team member.",
+      "linkUrl": "csr",
+      "linkText": "Read More"
+    }
+  },
+  "csrPage": {
+    "banner": {
+      "title": "CSR & FarraCare",
+      "description": "Our Commitment to Society and Employees",
+      "pilar": [
+        {
+          "name": "Employee",
+          "icon": "<User />",
+          "description": "We prioritize a safe and inclusive workplace with opportunities for growth and well-being."
+        },
+        {
+          "name": "Society",
+          "icon": "<Users />",
+          "description": "We support local communities through social, health, and educational initiatives that make a real impact."
+        },
+        {
+          "name": "Environment",
+          "icon": "<Rose />",
+          "description": "We care for the earth through responsible practices and a strong commitment to sustainability."
+        }
+      ]
+    },
+    "sectionNews": {
+      "title": "Latest CSR News & Activities",
+      "description": "Stay updated with our latest corporate social responsibility initiatives"
+    }
+  },
+  "contactUsPage": {
+    "banner": {
+      "title": "Contact Us",
+      "description": "We are ready to help you. Please contact us for questions, support, or more information about our services and products."
+    },
+    "sectionContactInfo": {
+      "title": "Our Contact Information",
+      "description": "We are here to help you. Here are various ways to contact us."
+    },
+    "sectionContactForm": {
+      "title": "Send Us a Message",
+      "description": "Your message will be sent via WhatsApp for a faster response."
+    },
+    "sectionBranchLocation": {
+      "title": "Our Branch Locations",
+      "description": "Find our branches throughout Indonesia for the best service."
+    }
+  }
+}

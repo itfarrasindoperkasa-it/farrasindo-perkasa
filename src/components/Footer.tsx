@@ -11,14 +11,12 @@ import {
   Mail,
   Phone,
   MapPin,
+  Linkedin,
 } from "lucide-react";
+import { Locale } from "@/lib/datas/global";
 
-import messages from "@/messages/id.json";
-
-export function Footer() {
-  const footer = messages.footer;
-  const services = footer["product services"];
-  const productListFooter = footer.product_list_footer ?? [];
+export function Footer({ footer, locale }: { footer: any; locale: Locale }) {
+  const productListFooter = footer.product_list_footer ?? {};
   const info = footer.information;
 
   return (
@@ -30,6 +28,8 @@ export function Footer() {
             <div className="relative h-14 w-56 md:h-20 md:w-72">
               <Image
                 src="/assets/images/farrasindo-group-logo-white.png"
+                sizes="(max-width: 768px) 150px, 288px"
+                loading="eager"
                 alt="Farrasindo Group"
                 fill={true}
                 className="object-cover w-full h-full"
@@ -44,16 +44,19 @@ export function Footer() {
             </div>
 
             <div className="flex items-center gap-3">
-              <SocialIcon href="#">
+              <SocialIcon href="https://www.facebook.com/farrasindo">
                 <Facebook className="h-4 w-4" />
               </SocialIcon>
-              <SocialIcon href="#">
+              <SocialIcon href="https://www.tiktok.com/@farrasindo_group">
                 <Music2 className="h-4 w-4" />
               </SocialIcon>
-              <SocialIcon href="#">
+              <SocialIcon href="https://www.linkedin.com/company/farrasindo-perkasa-group">
+                <Linkedin className="h-4 w-4" />
+              </SocialIcon>
+              <SocialIcon href="https://www.instagram.com/farrasindo_group">
                 <Instagram className="h-4 w-4" />
               </SocialIcon>
-              <SocialIcon href="#">
+              <SocialIcon href="https://www.youtube.com/channel/UCTLUMhIMoWrkgSNelac3aRQ">
                 <Youtube className="h-4 w-4" />
               </SocialIcon>
             </div>
@@ -62,22 +65,41 @@ export function Footer() {
           {/* MIDDLE – Product & Services */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-lg font-semibold">Product & Services</h3>
+              <h3 className="text-lg font-semibold">
+                {productListFooter.title}
+              </h3>
               <ul className="mt-3 space-y-2 text-sm text-white/80">
-                {productListFooter.map((item) => (
-                  <li key={item} className="flex items-start gap-2">
-                    <span className="mt-0.5 text-orange-400">&raquo;</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
+                {Array.isArray(productListFooter.list) &&
+                  productListFooter.list
+                    .filter(
+                      (ps: any) => ps.label !== "All" && ps.label !== "Semua"
+                    )
+                    .map((item: any, idx: number) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <span className="mt-0.5 text-orange-400">&raquo;</span>
+                        <Link
+                          href={item.link}
+                          className="hover:text-orange-400 transition-all"
+                          prefetch={false}
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
               </ul>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold">Career</h3>
-              <button className="mt-3 flex items-center gap-2 text-sm text-white/80 hover:text-orange-400">
-                <span className="text-orange-400">&raquo;</span> Join Us Now
-              </button>
+              <h3 className="text-lg font-semibold">
+                {locale == "id" ? "Karir" : "Career"}
+              </h3>
+              <Link
+                href={`/${locale}/career`}
+                className="mt-3 flex items-center gap-2 text-sm text-white/80 hover:text-orange-400"
+              >
+                <span className="text-orange-400">&raquo;</span>{" "}
+                {locale == "id" ? "Bergabung Sekarang" : "Join Us Now"}
+              </Link>
             </div>
           </div>
 
@@ -89,7 +111,7 @@ export function Footer() {
               {/* Emails */}
               <div>
                 <p className="font-semibold text-white">Email Address</p>
-                {info.emails.map((email) => (
+                {info.emails.map((email: any) => (
                   <div
                     key={email.value}
                     className="mt-1 flex items-center gap-2"
@@ -111,7 +133,7 @@ export function Footer() {
               <div>
                 <p className="font-semibold text-white">{info.phones.title}</p>
 
-                {info.phones.items.map((phone, i) => {
+                {info.phones.items.map((phone: any, i: number) => {
                   const lines = phone.value.split(/<br\s*\/?>/i);
 
                   return (
@@ -125,9 +147,33 @@ export function Footer() {
                         <p className="font-semibold">{phone.label}</p>
 
                         {/* multi line dari <br> */}
-                        {lines.map((line, idx) => (
-                          <p key={idx}>{line.trim()}</p>
-                        ))}
+                        {lines.map((line: any, idx: number) => {
+                          return phone.label.toLowerCase() === "whatsapp" ? (
+                            <Link
+                              key={idx}
+                              href={`https://api.whatsapp.com/send?phone=${encodeURIComponent(
+                                line.trim().replace(/^08/, "628")
+                              )}`}
+                              className="hover:text-orange-400 block"
+                              target="_blank"
+                            >
+                              {line.trim()}
+                            </Link>
+                          ) : phone.label.toLowerCase() === "phone" ||
+                            phone.label.toLowerCase() === "telepon" ? (
+                            <a
+                              key={idx}
+                              href={`tel:${line
+                                .trim()
+                                .replace(/^021/, "6221")}`}
+                              className="hover:text-orange-400 block"
+                            >
+                              {line.trim()}
+                            </a>
+                          ) : (
+                            <span key={idx}>{line.trim()}</span>
+                          );
+                        })}
                       </div>
                     </div>
                   );

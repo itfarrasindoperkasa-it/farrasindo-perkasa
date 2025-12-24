@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { contactInfo } from "@/lib/datas/contact";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Locale } from "@/lib/datas/global";
 
 interface FormData {
   firstName: string;
@@ -12,7 +13,13 @@ interface FormData {
   message: string;
 }
 
-export default function ContactForm() {
+export default function ContactForm({
+  locale,
+  contactData,
+}: {
+  locale: Locale;
+  contactData: any;
+}) {
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
@@ -61,6 +68,9 @@ ${formData.message}`;
     });
   };
 
+  const contactInfoData = contactData.sectionContactInfo;
+  const contactFormData = contactData.sectionContactForm;
+
   return (
     <section className="py-16 px-4 md:px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
@@ -69,12 +79,9 @@ ${formData.message}`;
           <div className="space-y-8">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                You can contact us here!
+                {contactInfoData.title}
               </h2>
-              <p className="text-gray-600">
-                We'd love to hear from you. Please fill out the form or reach us
-                through the contact information below.
-              </p>
+              <p className="text-gray-600">{contactInfoData.description}</p>
             </div>
 
             {/* Contact Details */}
@@ -132,7 +139,9 @@ ${formData.message}`;
 
             {/* Social Media */}
             <div>
-              <h3 className="font-semibold text-gray-900 mb-4">Follow Us</h3>
+              <h3 className="font-semibold text-gray-900 mb-4">
+                {locale == "id" ? `Ikuti kami` : `Follow us`}
+              </h3>
               <div className="flex gap-4">
                 {/* Facebook */}
                 <a
@@ -211,14 +220,14 @@ ${formData.message}`;
           {/* Right Side - Contact Form */}
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Request for Quotation
+              {contactFormData.title}
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Fields */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    First Name *
+                    {locale == "id" ? "Nama Depan *" : "First Name *"}
                   </label>
                   <input
                     type="text"
@@ -232,7 +241,7 @@ ${formData.message}`;
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Last Name *
+                    {locale == "id" ? "Nama Belakang *" : "Last Name *"}
                   </label>
                   <input
                     type="text"
@@ -265,7 +274,7 @@ ${formData.message}`;
               {/* Phone */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Phone Number *
+                  {locale == "id" ? `Nomor Telepon *` : `Phone Number *`}
                 </label>
                 <input
                   type="tel"
@@ -281,7 +290,7 @@ ${formData.message}`;
               {/* Message */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Message *
+                  {locale == "id" ? `Pesan *` : `Message *`}
                 </label>
                 <textarea
                   name="message"
@@ -300,11 +309,11 @@ ${formData.message}`;
                 className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
               >
                 <Send size={20} />
-                Submit via WhatsApp
+                {locale == "id" ? `Kirim via WhatsApp` : `Submit via WhatsApp`}
               </button>
 
               <p className="text-sm text-gray-500 text-center">
-                Your message will be sent via WhatsApp for faster response
+                {contactFormData.description}
               </p>
             </form>
           </div>

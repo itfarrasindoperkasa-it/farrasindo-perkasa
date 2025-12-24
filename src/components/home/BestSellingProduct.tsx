@@ -4,7 +4,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import type { StaticImageData } from "next/image";
 
-import messages from "@/messages/id.json";
 import BestSellingProductsData from "@/lib/datas/best_sellingproducts";
 
 type BestSellingProductItem = {
@@ -18,20 +17,20 @@ type BestSellingProductsConfig = {
   items: BestSellingProductItem[];
 };
 
-export function BestSellingProduct() {
-  // Ambil data dari id.json
-  const bestSellingConfig = messages.home
-    .best_selling_products as BestSellingProductsConfig;
-
-  const { title: sectionTitle, items, buttonLabel } = bestSellingConfig;
+export function BestSellingProduct({
+  bestSellingProduct,
+}: {
+  bestSellingProduct: any;
+}) {
+  const { title: sectionTitle, items, buttonLabel } = bestSellingProduct;
 
   // Gabungkan JSON + gambar berdasarkan index
   const products = items
-    .map((item, idx) => ({
+    .map((item: any, idx: number) => ({
       ...item,
       image: BestSellingProductsData[idx] as StaticImageData | undefined,
     }))
-    .filter((p) => p.image);
+    .filter((p: any) => p.image);
 
   return (
     <section className="bg-white py-10 md:py-16 lg:py-20">
@@ -42,7 +41,7 @@ export function BestSellingProduct() {
         </h2>
 
         <div className="grid gap-6 md:gap-0  md:grid-cols-2">
-          {products.map((product, idx) => (
+          {products.map((product: any, idx: number) => (
             <article
               key={`${product.title}-${idx}`}
               className="relative flex flex-col justify-between"

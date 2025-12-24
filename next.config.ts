@@ -2,9 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  
+
   // Output standalone untuk Docker deployment
-  output: 'standalone',
+  output: "standalone",
 
   // Rewrites untuk proxy ke API eksternal
   async rewrites() {
@@ -39,6 +39,16 @@ const nextConfig: NextConfig = {
               "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization",
           },
         ],
+      },
+    ];
+  },
+
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/id",
+        permanent: true,
       },
     ];
   },

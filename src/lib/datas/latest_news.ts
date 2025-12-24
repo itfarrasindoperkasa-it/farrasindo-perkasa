@@ -41,6 +41,9 @@ const LatestNewsData = [
 ];
 
 export default LatestNewsData;
+
+type Category = "csr-employee" | "csr-society" | "csr-environment" | "";
+
 export type Article = {
   title: string;
   date: string;
@@ -48,6 +51,7 @@ export type Article = {
   link?: string;
   slug: string;
   author: string;
+  categories: Category[];
   image: StaticImageData;
   description: string;
 };
@@ -59,6 +63,7 @@ export const articles: ArticlesByLocale = {
   id: [
     {
       title: "Satu Paket Pompa Beton dan Beton Siap Pakai",
+      categories: [],
       date: "2025-07-25T00:00:00.000Z",
       excerpt:
         "Dalam dunia konstruksi, waktu adalah aset berharga. Namun, banyak proyek pengecoran sering menghadapi tantangan.",
@@ -72,6 +77,7 @@ export const articles: ArticlesByLocale = {
     {
       title:
         "Farrasindo Perkasa Gelar Aksi Donor Darah Bersama PMI Tangerang, Wujud Nyata Kepedulian Sosial",
+      categories: ["csr-employee"],
       date: "2025-07-15T00:00:00.000Z",
       excerpt:
         "Dalam semangat kebersamaan dan kepedulian terhadap sesama, Farrasindo Perkasa menggelar kegiatan aksi donor darah.",
@@ -84,6 +90,7 @@ export const articles: ArticlesByLocale = {
     },
     {
       title: "Kenalan Sama Wheel Loader",
+      categories: [],
       date: "2025-06-13T00:00:00.000Z",
       excerpt:
         "Wheel loader merupakan salah satu alat berat yang sangat populer dan banyak digunakan di berbagai sektor.",
@@ -96,6 +103,7 @@ export const articles: ArticlesByLocale = {
     },
     {
       title: "Satu Mesin, Tiga Fungsi: Keunggulan Batchpump dari Farrasindo",
+      categories: [],
       date: "2025-06-13T00:00:00.000Z",
       excerpt:
         "Farrasindo Perkasa telah memperluas jangkauan layanannya dengan membuka 7 cabang strategis di berbagai wilayah Indonesia.",
@@ -108,6 +116,7 @@ export const articles: ArticlesByLocale = {
     {
       title:
         "Farrasindo Berbagi di Bulan Ramadhan: Kepedulian terhadap Anak Yatim dan Masyarakat Sekitar",
+      categories: ["csr-society"],
       date: "2025-03-20T00:00:00.000Z",
       excerpt:
         "Farrasindo berbagi kebahagiaan di bulan Ramadhan dengan memberikan bantuan kepada anak yatim dan masyarakat sekitar.",
@@ -120,6 +129,7 @@ export const articles: ArticlesByLocale = {
     {
       title:
         "Employee Wellness Day, Farrasindo Bekerja sama dengan Puskesmas Srengseng Melakukan Screening Kesehatan",
+      categories: ["csr-employee"],
       date: "2025-02-14T00:00:00.000Z",
       excerpt:
         "Farrasindo Perkasa Group adakan acara Employee Wellness Day bersama Puskesmas Srengseng untuk pemeriksaan kesehatan karyawan.",
@@ -131,6 +141,7 @@ export const articles: ArticlesByLocale = {
     },
     {
       title: "RAKERNAS 2025, Farrasindo Mengusung Teman Jorney Menuju Puncak",
+      categories: ["csr-employee"],
       date: "2025-03-06T00:00:00.000Z",
       excerpt:
         "Farrasindo Group menyelenggarakan Rapat Kerja Nasional (RAKERNAS) 2025 dengan tema 'Journey to the Top'.",
@@ -142,6 +153,7 @@ export const articles: ArticlesByLocale = {
     },
     {
       title: "Rayakan HUT Ke-23, Farrasindo …",
+      categories: [],
       date: "2025-02-07T00:00:00.000Z",
       excerpt:
         "Rayakan HUT Ke-23, Farrasindo Mengajak Semua Karyawan Saling Mengapresiasi.",
@@ -154,6 +166,7 @@ export const articles: ArticlesByLocale = {
     {
       title:
         "Ingin Proyek Konstruksi Tepat Waktu dengan Kualitas Terbaik? Pilih Beton Ready Mix!",
+      categories: [],
       date: "2025-01-22T00:00:00.000Z",
       excerpt:
         "Solusi konstruksi cepat dan berkualitas dengan beton ready mix dari Fresh Beton Indonesia.",
@@ -166,6 +179,7 @@ export const articles: ArticlesByLocale = {
     {
       title:
         "Fresh Beton Indonesia menyediakan Beton Berkualitas dengan 7 Cabang Strategis di Seluruh Indonesia",
+      categories: [],
       date: "2025-01-22T00:00:00.000Z",
       excerpt:
         "Fresh Beton Indonesia hadir sebagai pionir dalam menyediakan beton berkualitas tinggi dengan jaringan cabang di berbagai lokasi strategis.",
@@ -178,6 +192,7 @@ export const articles: ArticlesByLocale = {
     {
       title:
         "Mesin Pompa Beton Sewa dengan Layanan Profesional oleh Farrasindo Perkasa",
+      categories: [],
       date: "2025-01-22T00:00:00.000Z",
       excerpt:
         "Farrasindo Perkasa menyediakan jasa sewa mesin pompa beton berkualitas tinggi untuk berbagai kebutuhan proyek konstruksi.",
@@ -190,6 +205,7 @@ export const articles: ArticlesByLocale = {
     {
       title:
         "Inovasi terbaru, Farrasindo Perkasa Group meluncurkan Mobile Batching Plant",
+      categories: [],
       date: "2024-12-16T00:00:00.000Z",
       excerpt:
         "PT Farrasindo Perkasa Group meluncurkan Mobile Batching Plant sebagai solusi inovatif untuk proyek konstruksi modern di Indonesia.",
@@ -202,6 +218,7 @@ export const articles: ArticlesByLocale = {
     {
       title:
         "Tanam 1000 pohon, Farrasindo Perkasa Group dan Fresh Beton Indonesia mendukung pelestarian lingkungan",
+      categories: ["csr-environment"],
       date: "2024-12-14T00:00:00.000Z",
       excerpt:
         "PT Farrasindo Perkasa Group dan PT Fresh Beton Indonesia menanam 1000 pohon sebagai bagian dari program pelestarian lingkungan dan tanggung jawab sosial perusahaan.",
@@ -214,6 +231,7 @@ export const articles: ArticlesByLocale = {
     {
       title:
         "Meriahkan HUT RI ke-80, Farrasindo Group Gelar Lomba dan Kuliner Nusantara",
+      categories: [],
       date: "2025-08-15T00:00:00.000Z",
       excerpt:
         "Dalam rangka menyambut Hari Ulang Tahun Kemerdekaan Republik Indonesia ke-80, Farrasindo Group mengadakan acara kebersamaan pada 15 Agustus 2025. Perayaan ini berlangsung meriah, dipenuhi semangat persatuan dan kegembiraan seluruh karyawan.",
@@ -226,6 +244,7 @@ export const articles: ArticlesByLocale = {
     },
     {
       title: "Farrasindo Esport Club: Membangun Kebersamaan Lewat Game",
+      categories: ["csr-employee"],
       date: "2025-11-10T00:00:00.000Z",
       excerpt:
         "Farrasindo Esport Club hadir sebagai wadah hiburan positif untuk mempererat kebersamaan karyawan melalui game Mobile Legends dan FIFA.",
@@ -239,6 +258,7 @@ export const articles: ArticlesByLocale = {
     {
       title:
         "Farrasindo Group Rayakan Ulang Tahun ke-24 dengan Semangat “Stronger Together”",
+      categories: [],
       date: "2025-12-03",
       excerpt:
         "Farrasindo Group merayakan ulang tahun ke-24 dengan tema “Stronger Together”, menghadirkan rangkaian acara penuh kebersamaan, apresiasi, dan rasa syukur.",
@@ -253,6 +273,7 @@ export const articles: ArticlesByLocale = {
   en: [
     {
       title: "One Package: Concrete Pump and Ready-Mix Concrete",
+      categories: [],
       date: "2025-07-25T00:00:00.000Z",
       excerpt:
         "In the world of construction, time is a valuable asset. However, many casting projects often face challenges.",
@@ -266,6 +287,7 @@ export const articles: ArticlesByLocale = {
     {
       title:
         "Farrasindo Perkasa Holds Blood Donation Drive with PMI Tangerang, A Real Manifestation of Social Care",
+      categories: ["csr-employee"],
       date: "2025-07-15T00:00:00.000Z",
       excerpt:
         "In the spirit of togetherness and care for others, Farrasindo Perkasa held a blood donation drive activity.",
@@ -278,6 +300,7 @@ export const articles: ArticlesByLocale = {
     },
     {
       title: "Get to Know the Wheel Loader",
+      categories: [],
       date: "2025-06-13T00:00:00.000Z",
       excerpt:
         "A wheel loader is one of the most popular heavy equipment machines and is widely used in various sectors.",
@@ -291,6 +314,7 @@ export const articles: ArticlesByLocale = {
     {
       title:
         "One Machine, Three Functions: The Superiority of Batchpump from Farrasindo",
+      categories: [],
       date: "2025-06-13T00:00:00.000Z",
       excerpt:
         "Farrasindo Perkasa has expanded its service reach by opening 7 strategic branches across various regions in Indonesia.",
@@ -303,6 +327,7 @@ export const articles: ArticlesByLocale = {
     {
       title:
         "Farrasindo Sharing in Ramadan: Care for Orphans and the Surrounding Community",
+      categories: ["csr-society"],
       date: "2025-03-20T00:00:00.000Z",
       excerpt:
         "Farrasindo shared joy during the month of Ramadan by providing assistance to orphans and the surrounding community.",
@@ -315,6 +340,7 @@ export const articles: ArticlesByLocale = {
     {
       title:
         "Employee Wellness Day: Farrasindo Collaborates with Srengseng Public Health Center for Employee Health Screening",
+      categories: ["csr-employee"],
       date: "2025-02-14T00:00:00.000Z",
       excerpt:
         "Farrasindo Perkasa Group held an Employee Wellness Day event with Srengseng Public Health Center for employee health checks.",
@@ -326,6 +352,7 @@ export const articles: ArticlesByLocale = {
     },
     {
       title: "RAKERNAS 2025: Farrasindo Carries the Theme 'Journey to the Top'",
+      categories: ["csr-employee"],
       date: "2025-03-06T00:00:00.000Z",
       excerpt:
         "Farrasindo Group held the National Work Meeting (RAKERNAS) 2025 with the theme 'Journey to the Top'.",
@@ -337,6 +364,7 @@ export const articles: ArticlesByLocale = {
     },
     {
       title: "Celebrating its 23rd Anniversary, Farrasindo…",
+      categories: [],
       date: "2025-02-07T00:00:00.000Z",
       excerpt:
         "Celebrating its 23rd Anniversary, Farrasindo Encourages All Employees to Appreciate Each Other.",
@@ -349,11 +377,12 @@ export const articles: ArticlesByLocale = {
     {
       title:
         "Want Your Construction Project On Time with the Best Quality? Choose Ready-Mix Concrete!",
+      categories: [],
       date: "2025-01-22T00:00:00.000Z",
       excerpt:
         "The solution for fast and quality construction with ready-mix concrete from Fresh Beton Indonesia.",
       slug: "best-quality-ready-mix-concrete-for-construction",
-      author: "Campuran Siap Pakai",
+      author: "Ready Mix",
       image: imgArtikel9,
       description:
         "Want Your Construction Project Fast and Quality? Choose Ready-Mix Concrete\n\nIn the construction world, time and quality are two critical factors. Delays in project completion or the use of substandard building materials can be dangerous and disrupt the entire construction process. One of the best solutions to ensure your construction project is completed quickly and with guaranteed quality is to use ready-mix concrete.\n\nReady-mix concrete is concrete that has been professionally produced and mixed in a factory, then transported using a mixer truck to the project site. With various advantages, ready-mix concrete is the favorite choice for many contractors and developers.\n\nAdvantages of Ready-Mix Concrete for Construction Projects:\nGuaranteed Quality\nReady-mix concrete is produced with a well-controlled system at the plant, using standardized materials. This ensures that the quality of the concrete used in the project is always consistent and meets technical requirements. There is no longer the risk of incorrect mixing or suboptimal concrete quality.\n\nTime-Saving\nMixing concrete on the project site often takes a considerable amount of time, especially if done manually. With ready-mix concrete, all mixing is done beforehand at the factory, so the time needed to pour the concrete into the formwork is much faster. This reduces waiting time and accelerates construction progress.\n\nMore Precise Results\nWith ready-mix concrete, the concrete mixture is more precise according to the required ratio. This helps reduce errors that can occur during manual concrete mixing and ensures that the concrete used has optimal strength and durability. Easy Volume Management\nReady-mix concrete is available in various volumes, from small to large scale, depending on project needs. No need to worry about excess or lack of concrete on site, as the concrete will be delivered according to the ordered amount. This also reduces material waste that often occurs with manual mixing.\n\nMinimize Risk of Damage\nConcrete mixed manually often runs the risk of having too little or too much of the ingredients, which can impact the quality and strength of the concrete. With ready-mix concrete, every batch delivered adheres to the expected quality standards, reducing the risk of damage or problems later on.\n\nWith all these advantages, ready-mix concrete is clearly a better choice compared to concrete mixed on-site. Besides being faster and more efficient, the use of ready-mix concrete also helps ensure better and more durable construction quality. If you are looking for a ready-mix concrete solution for your construction project, Fresh Beton Indonesia is the right choice. We provide high-quality ready-mix concrete with strict supervision at every production stage, ensuring the concrete we deliver meets your project needs. With our proven experience, Fresh Beton Indonesia is ready to help accelerate your project's progress without compromising quality.\n\nSo, to ensure your construction project runs fast, efficiently, and with quality, entrust your ready-mix concrete needs to Fresh Beton Indonesia. Contact us now for more information and attractive offers!",
@@ -361,6 +390,7 @@ export const articles: ArticlesByLocale = {
     {
       title:
         "Fresh Beton Indonesia Provides Quality Concrete with 7 Strategic Branches Across Indonesia",
+      categories: [],
       date: "2025-01-22T00:00:00.000Z",
       excerpt:
         "Fresh Beton Indonesia is present as a pioneer in providing high-quality concrete with a network of branches in various strategic locations.",
@@ -387,8 +417,6 @@ export const paginationArticle = (
 
   // Apply filters
   if (filters?.author) {
-    console.log("category");
-    console.log(filters?.author);
     filtered = filtered.filter((article) =>
       article.author.toLowerCase().includes(filters.author!.toLowerCase())
     );
@@ -422,7 +450,7 @@ export const paginationArticle = (
   };
 };
 
-export const getUniqueCategory = () => {
-  const authors = articles["id"].map((article) => article.author);
+export const getUniqueCategory = (locale: Locale) => {
+  const authors = articles[locale].map((article) => article.author);
   return Array.from(new Set(authors));
 };

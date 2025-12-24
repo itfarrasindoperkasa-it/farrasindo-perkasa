@@ -6,6 +6,49 @@ import CSRActivitySlider from "@/components/csr/CSRActivitySlider";
 import CSRNewsSlider from "@/components/csr/CSRNewsSlider";
 import CSRBanner from "@/asset/images/csr/csr-banner.jpg";
 import EmployeeBanner from "@/asset/images/csr/employee-banner.jpg";
+import { User, Users, Leaf } from "lucide-react";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const baseUrl = "https://farrasindo-cp.co.id";
+
+  if (locale === "id") {
+    return {
+      title: "CSR - Tanggung Jawab Sosial & Lingkungan Farrasindo Group",
+      description:
+        "Program CSR Farrasindo Group untuk karyawan, masyarakat, dan lingkungan. Komitmen kami dalam menciptakan dampak positif melalui berbagai kegiatan sosial dan lingkungan.",
+      openGraph: {
+        title: "Corporate Social Responsibility - Farrasindo Group",
+        description:
+          "Program CSR Farrasindo: kesejahteraan karyawan, pemberdayaan masyarakat, dan pelestarian lingkungan.",
+        url: `${baseUrl}/id/csr`,
+      },
+      alternates: {
+        canonical: `${baseUrl}/id/csr`,
+      },
+    };
+  }
+
+  return {
+    title: "CSR - Corporate Social & Environmental Responsibility",
+    description:
+      "Farrasindo Group's CSR programs for employees, community, and environment. Our commitment to creating positive impact through various social and environmental activities.",
+    openGraph: {
+      title: "Corporate Social Responsibility - Farrasindo Group",
+      description:
+        "Farrasindo CSR programs: employee welfare, community empowerment, and environmental preservation.",
+      url: `${baseUrl}/en/csr`,
+    },
+    alternates: {
+      canonical: `${baseUrl}/en/csr`,
+    },
+  };
+}
 
 export default async function CSRPage({
   params,
@@ -13,26 +56,25 @@ export default async function CSRPage({
   params: Promise<{ locale: Locale }>;
 }) {
   const { locale } = await params;
+  const localeContent = await import(`@/messages/${locale}.json`);
+  const csrPage = localeContent.csrPage;
 
   // Filter artikel CSR (artikel yang berhubungan dengan kegiatan sosial/kesehatan/donor darah)
   const csrArticles = articles[locale]
     .filter(
       (article) =>
-        article.title.toLowerCase().includes("donor") ||
-        article.title.toLowerCase().includes("santunan") ||
-        article.title.toLowerCase().includes("wellness") ||
-        article.title.toLowerCase().includes("screening") ||
-        article.title.toLowerCase().includes("kesehatan") ||
-        article.title.toLowerCase().includes("sosial") ||
-        article.title.toLowerCase().includes("ramadhan") ||
-        article.title.toLowerCase().includes("esport") ||
-        article.title.toLowerCase().includes("ulang tahun") ||
-        article.title.toLowerCase().includes("hut ri") ||
-        article.slug.includes("donor") ||
-        article.slug.includes("santunan") ||
-        article.slug.includes("wellness")
+        article.categories.includes("csr-employee") ||
+        article.categories.includes("csr-society") ||
+        article.categories.includes("csr-environment")
     )
     .slice(0, 6);
+
+  // Icon mapping
+  const iconMap = {
+    User,
+    Users,
+    Leaf,
+  };
 
   return (
     <div className="w-full">
@@ -54,10 +96,10 @@ export default async function CSRPage({
           {/* Title */}
           <div className="text-center mb-12">
             <h1 className="text-white text-5xl md:text-6xl font-bold mb-4">
-              CSR
+              {csrPage.title}
             </h1>
             <p className="text-white text-lg md:text-xl">
-              Corporate Social Responsibility
+              {csrPage.description}
             </p>
           </div>
         </div>
@@ -65,18 +107,23 @@ export default async function CSRPage({
         {/* 3 Cards Override Banner - Absolute positioning */}
         <div className="absolute hidden md:block bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-10 w-full px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {CSRData.cards.map((card, index) => (
-              <div
-                key={index}
-                className="bg-orange-400/60 cursor-pointer hover:bg-orange-400 transition-all duration-300 rounded-xl p-8 text-white shadow-2xl transform hover:-translate-y-2"
-              >
-                <div className="text-5xl mb-4">{card.icon}</div>
-                <h3 className="text-2xl font-bold mb-3">{card.title}</h3>
-                <p className="text-white/90 leading-relaxed">
-                  {card.description}
-                </p>
-              </div>
-            ))}
+            {CSRData.cards.map((card: any, index) => {
+              const Icon = iconMap[card.icon as keyof typeof iconMap];
+              return (
+                <div
+                  key={index}
+                  className="bg-orange-400/60 cursor-pointer hover:bg-orange-400 transition-all duration-300 rounded-xl p-8 text-white shadow-2xl transform hover:-translate-y-2"
+                >
+                  <div className="text-5xl mb-4">
+                    {Icon ? <Icon size={48} /> : null}
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">{card.title}</h3>
+                  <p className="text-white/90 leading-relaxed">
+                    {card.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -114,64 +161,34 @@ export default async function CSRPage({
               <div className="rounded-2xl">
                 <div className="flex items-center gap-4 mb-6">
                   <h3 className="text-3xl font-bold text-gray-900">
-                    {CSRData.details.employee.title}
+                    {CSRData.details.title}
                   </h3>
                 </div>
 
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  {CSRData.details.employee.description}
+                  {CSRData.details.description}
                 </p>
 
                 {/* Expandable Details */}
                 <div className="flex flex-col gap-2">
-                  <details className="group">
-                    <summary className="cursor-pointer list-none flex items-center justify-between bg-orange-500 hover:bg-orange-600 text-white px-6 py-4 rounded-lg transition-colors">
-                      <span className="font-semibold">Employee</span>
-                      <span className="transform group-open:rotate-180 transition-transform">
-                        ▼
-                      </span>
-                    </summary>
-                    <div className="mt-4 space-y-3 pl-4">
-                      {CSRData.details.employee.points.map((point, idx) => (
-                        <div key={idx} className="flex items-start gap-3">
-                          <span className="text-orange-500 mt-1">✓</span>
-                          <p className="text-gray-700">{point}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </details>
-                  <details className="group">
-                    <summary className="cursor-pointer list-none flex items-center justify-between bg-orange-500 hover:bg-orange-600 text-white px-6 py-4 rounded-lg transition-colors">
-                      <span className="font-semibold">Society</span>
-                      <span className="transform group-open:rotate-180 transition-transform">
-                        ▼
-                      </span>
-                    </summary>
-                    <div className="mt-4 space-y-3 pl-4">
-                      {CSRData.details.society.points.map((point, idx) => (
-                        <div key={idx} className="flex items-start gap-3">
-                          <span className="text-orange-500 mt-1">✓</span>
-                          <p className="text-gray-700">{point}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </details>
-                  <details className="group">
-                    <summary className="cursor-pointer list-none flex items-center justify-between bg-orange-500 hover:bg-orange-600 text-white px-6 py-4 rounded-lg transition-colors">
-                      <span className="font-semibold">Environment</span>
-                      <span className="transform group-open:rotate-180 transition-transform">
-                        ▼
-                      </span>
-                    </summary>
-                    <div className="mt-4 space-y-3 pl-4">
-                      {CSRData.details.environment.points.map((point, idx) => (
-                        <div key={idx} className="flex items-start gap-3">
-                          <span className="text-orange-500 mt-1">✓</span>
-                          <p className="text-gray-700">{point}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </details>
+                  {CSRData.cards.map((card, idx) => (
+                    <details className="group" key={idx}>
+                      <summary className="cursor-pointer list-none flex items-center justify-between bg-orange-500 hover:bg-orange-600 text-white px-6 py-4 rounded-lg transition-colors">
+                        <span className="font-semibold">{card.title}</span>
+                        <span className="transform group-open:rotate-180 transition-transform">
+                          ▼
+                        </span>
+                      </summary>
+                      <div className="mt-4 space-y-3 pl-4">
+                        {card.points.map((point, idx) => (
+                          <div key={idx} className="flex items-start gap-3">
+                            <span className="text-orange-500 mt-1">✓</span>
+                            <p className="text-gray-700">{point}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </details>
+                  ))}
                 </div>
               </div>
             </div>
@@ -191,6 +208,7 @@ export default async function CSRPage({
                       alt={activity.title}
                       fill
                       className="object-cover hover:scale-110 transition-transform duration-300"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
                 ))}
@@ -205,49 +223,16 @@ export default async function CSRPage({
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Latest CSR News & Activities
+              {csrPage.sectionNews.title}
             </h2>
             <p className="text-gray-600 text-lg">
-              Stay updated with our recent corporate social responsibility
-              initiatives
+              {csrPage.sectionNews.description}
             </p>
           </div>
 
           <CSRNewsSlider articles={csrArticles} locale={locale} />
         </div>
       </section>
-
-      {/* CSR Activity Gallery Slider */}
-      {/* <section className="py-16 px-4 md:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Our CSR Activities
-            </h2>
-            <p className="text-gray-600 text-lg">
-              Documenting our commitment to society and environment
-            </p>
-          </div>
-
-          <CSRActivitySlider activities={CSRData.activities} />
-        </div>
-      </section> */}
-
-      {/* Call to Action Section */}
-      {/* <section className="relative py-20 px-4 md:px-8 bg-gradient-to-r from-orange-500 to-orange-600">
-        <div className="max-w-4xl mx-auto text-center text-white">
-          <h2 className="text-4xl font-bold mb-6">
-            Join Us in Making a Difference
-          </h2>
-          <p className="text-xl mb-8 text-white/90">
-            Together, we can create a positive impact on communities and the
-            environment
-          </p>
-          <button className="bg-white text-orange-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors shadow-xl">
-            Learn More About Our Programs
-          </button>
-        </div>
-      </section> */}
     </div>
   );
 }
