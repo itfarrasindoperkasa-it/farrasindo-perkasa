@@ -98,7 +98,7 @@ export default function manifest(): MetadataRoute.Manifest {
       },
     ],
     categories: ["business", "construction", "industrial"],
-    lang: string,
+    lang: locale,
     dir: "ltr",
     shortcuts: selectedContent.shortcuts.map((shortcut) => ({
       ...shortcut,
