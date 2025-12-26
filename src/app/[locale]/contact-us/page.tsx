@@ -104,7 +104,7 @@ export default async function ContactUs({
               : "Contact us today and let's discuss how we can help you"}
           </p>
           <a
-            href={`https://wa.me/6289643418173`}
+            href={`https://api.whatsapp.com/send?phone=6281575453564&text=Halo+PT+FARRASINDO+PERKASA%2C+Saya+mendapatkan+informasi+ini+dari+website+dan+ada+yang+mau+saya+tanyakan+%E2%80%A6`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-white text-orange-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors shadow-xl"

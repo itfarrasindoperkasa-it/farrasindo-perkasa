@@ -32,7 +32,7 @@ export const contactInfo: ContactInfo = {
     fax: "021 – 587 0538",
   },
   email: "marketing@farrasindo-cp.co.id",
-  whatsapp: "6289643418173",
+  whatsapp: "6281575453564",
 };
 
 export const branches: Branch[] = [

@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { contactInfo } from "@/lib/datas/contact";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { Locale } from "@/lib/datas/global";
 
 interface FormData {
   firstName: string;

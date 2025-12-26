@@ -56,7 +56,7 @@ export default function ActionButton() {
       {/* Mobile Bottom Bar Buttons */}
       <div className="flex md:hidden fixed bottom-0 left-0 w-full z-[9999] backdrop-blur-lg shadow-t py-4 px-10 justify-around items-center rounded-t-4xl">
         <a
-          href="tel:+6281234567890"
+          href="tel:0215870525"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-orange-400/70 rounded-full w-8 h-8 flex items-center justify-center shadow-lg text-white text-2xl overflow-hidden"
@@ -65,7 +65,7 @@ export default function ActionButton() {
           <Phone size={20} />
         </a>
         <a
-          href="https://wa.me/6281234567890"
+          href="https://api.whatsapp.com/send?phone=6281575453564&text=Halo+PT+FARRASINDO+PERKASA%2C+Saya+mendapatkan+informasi+ini+dari+website+dan+ada+yang+mau+saya+tanyakan+%E2%80%A6"
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-full w-8 h-8 flex items-center justify-center shadow-lg text-white text-2xl relative"
@@ -74,7 +74,7 @@ export default function ActionButton() {
           <Image src={WaLogo} alt="WhatsApp" fill />
         </a>
         <a
-          href="https://www.tokopedia.com/farrasindo"
+          href="https://www.tokopedia.com/farrasindo-group"
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-full w-8 h-8 flex items-center justify-center shadow-lg text-white text-2xl relative"
@@ -83,7 +83,7 @@ export default function ActionButton() {
           <Image src={TokopediaLogo} alt="Tokopedia" fill />
         </a>
         <a
-          href="https://shopee.co.id/farrasindo"
+          href="https://shopee.co.id/farrasindoperkasa?categoryId=100636&entryPoint=ShopByPDP&itemId=27819455584&upstream=search"
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-full w-8 h-8 flex items-center justify-center shadow-lg text-white text-2xl relative"
