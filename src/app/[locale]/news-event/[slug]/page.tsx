@@ -207,7 +207,7 @@ export default async function NewsDetail({ params }: NewsDetailParams) {
             </div>
           </aside>
           {/* Main Content */}
-          <main className="lg:w-3/4 w-full flex flex-col gap-8">
+          <main className="lg:w-3/4 w-full flex flex-col gap-8 md:pe-18">
             <div className="bg-white rounded-xl shadow p-6">
               <div className="flex justify-between items-center mb-4">
                 <span className="bg-orange-400 text-white font-bold text-xs px-3 py-1 rounded">

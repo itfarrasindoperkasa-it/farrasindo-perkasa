@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Locale } from "@/lib/datas/global";
 import { RootLayoutProps } from "../layout";
+import ActionButton from "@/components/ActionButton";
 
 export async function generateMetadata({
   params,
@@ -185,6 +186,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body>
+        <ActionButton />
         {/* JSON-LD Structured Data for SEO */}
         <script
           type="application/ld+json"

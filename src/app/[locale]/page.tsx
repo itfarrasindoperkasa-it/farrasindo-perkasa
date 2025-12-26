@@ -11,7 +11,6 @@ import { BestSellingProduct } from "@/components/home/BestSellingProduct";
 import { TestimonialSection } from "@/components/home/Testimonial";
 import { OurGroup } from "@/components/home/OurGroup";
 import LatestNewsArticle from "@/components/home/LatestNewsArticle";
-import { Locale } from "@/lib/datas/global";
 
 export default async function Home({
   params,
@@ -30,7 +29,7 @@ export default async function Home({
       />
       <section
         id="about"
-        className="w-full px-4 sm:px-6 md:px-10  py-12 md:py-20"
+        className="w-full px-4 md:ps-10 md:pe-23 py-12 md:py-20"
       >
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 md:gap-20 items-center">
           {/* IMAGE — MOBILE DI ATAS */}
@@ -66,7 +65,7 @@ export default async function Home({
         </div>
       </section>
 
-      <section id="ourServices" className="py-20 px-4 sm:px-6 bg-gray-100">
+      <section id="ourServices" className="py-20 px-4 md:px-6 bg-gray-100">
         <div className="max-w-360 mx-auto">
           <h2 className="text-3xl font-bold text-center mb-10">
             {message.home.our_service.title}
@@ -126,25 +125,31 @@ export default async function Home({
           </div>
         </div>
       </section>
+
       <section id="productRange" className="py-20">
         <div className="max-w-360 mx-auto">
           <ProductRange message={message.home.product_range} />
         </div>
       </section>
+
       <section id="portfolio">
         <Portfolio lang={locale} />
       </section>
+
       <section id="bestSellingProduct">
         <BestSellingProduct
           bestSellingProduct={message.home.best_selling_products}
         />
       </section>
+
       <section id="testimonial">
         <TestimonialSection testimonial={message.home.testimonials} />
       </section>
+
       <section id="lastestNews">
         <LatestNewsArticle lang={locale} />
       </section>
+
       <section id="ourGroup">
         <OurGroup />
       </section>

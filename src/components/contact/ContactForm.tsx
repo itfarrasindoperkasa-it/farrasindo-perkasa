@@ -218,7 +218,7 @@ ${formData.message}`;
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="bg-white rounded-2xl shadow-xl p-8">
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:pe-18">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
               {contactFormData.title}
             </h3>

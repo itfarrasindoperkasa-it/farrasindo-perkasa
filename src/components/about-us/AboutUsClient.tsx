@@ -237,7 +237,7 @@ export default function AboutUsClient({
       {/* OVERVIEW */}
       <section
         id="company-overview"
-        className="w-full pb-10 sm:pb-14 md:pb-16 px-6 md:px-10 max-w-7xl"
+        className="w-full pb-10 sm:pb-14 md:pb-16 px-6 md:px-15 max-w-7xl"
       >
         <div className="mx-auto relative">
           <div className="flex flex-col md:flex-row gap-8 md:gap-10 items-start">
@@ -255,7 +255,7 @@ export default function AboutUsClient({
                 {about.overview?.company}
               </h2>
 
-              <p className="mb-3">
+              <p className="mb-3 text-justify">
                 <span className="text-white bg-orange-400 w-fit mr-2 px-1 rounded">
                   {about.overview?.company}
                 </span>
@@ -284,7 +284,7 @@ export default function AboutUsClient({
       </section>
 
       {/* TAB CONTENT (HANYA 3 BAGIAN) */}
-      <section id="our-group" className="w-full py-8 sm:py-10">
+      <section id="our-group" className="w-full py-8 sm:py-10 md:px-18">
         <div className="max-w-7xl mx-auto px-6">
           {/* GROUP */}
           {activeTab === "group" && (

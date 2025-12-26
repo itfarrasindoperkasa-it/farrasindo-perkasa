@@ -1,6 +1,5 @@
 "use client";
 
-import { Locale } from "@/lib/datas/global";
 import {
   ChevronDown,
   ChevronUp,
@@ -17,6 +16,8 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import enFlag from "@/asset/images/homes/en-flag.png";
+import idFlag from "@/asset/images/homes/id-flag.png";
 
 export default function Navigation({ locale }: { locale: string }) {
   const [openNavbar, setOpenNavbar] = useState<any>({
@@ -119,19 +120,46 @@ export default function Navigation({ locale }: { locale: string }) {
               <YoutubeIcon className="text-orange-400 me-2" />
             </Link>
           </li>
+          {/* Language Switcher Button */}
+          <li className="flex items-center justify-center">
+            {locale === "id" ? (
+              <button
+                className="px-3 py-1 rounded bg-white text-black font-bold overflow-hidden w-8 h-5 relative cursor-pointer"
+                onClick={() => {
+                  window.location.href =
+                    "/en" + window.location.pathname.replace(/^\/[a-z]{2}/, "");
+                }}
+              >
+                <Image src={enFlag} alt="English Flag" fill={true} />
+              </button>
+            ) : null}
+            {locale === "en" ? (
+              <button
+                className="px-3 py-1 rounded bg-white text-black font-bold overflow-hidden w-8 h-5 relative cursor-pointer"
+                onClick={() => {
+                  window.location.href =
+                    "/id" + window.location.pathname.replace(/^\/[a-z]{2}/, "");
+                }}
+              >
+                <Image src={idFlag} alt="English Flag" fill={true} />
+              </button>
+            ) : null}
+          </li>
         </ul>
       </div>
 
       {/* MAIN BAR (LOGO + MENU) */}
       <div className="flex items-center w-full h-full px-4 md:px-8 gap-15">
-        <Image
-          src={`/assets/images/farrasindo-group-logo.png`}
-          width={120}
-          height={30}
-          loading="eager"
-          alt="Farrasindo Logo"
-          className="h-auto w-[180px] md:w-[220px]"
-        />
+        <Link href={`/${locale}`} className="">
+          <Image
+            src={`/assets/images/farrasindo-group-logo.png`}
+            width={120}
+            height={30}
+            loading="eager"
+            alt="Farrasindo Logo"
+            className="h-auto w-[180px] md:w-[220px]"
+          />
+        </Link>
 
         {/* DESKTOP MENU */}
         <ul className="hidden md:flex gap-x-6 mr-10 text-lg font-medium items-center md:flex-wrap">
@@ -272,7 +300,7 @@ export default function Navigation({ locale }: { locale: string }) {
                 className="block py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Home
+                {locale == `id` ? "Beranda" : "Home"}
               </Link>
             </li>
 
@@ -282,7 +310,7 @@ export default function Navigation({ locale }: { locale: string }) {
                 className="w-full flex items-center justify-between py-2"
                 onClick={() => setIsMobileAboutOpen((prev) => !prev)}
               >
-                About Us
+                {locale == `id` ? "Tentang Kami" : "About Us"}
                 {isMobileAboutOpen ? (
                   <ChevronUp size={18} />
                 ) : (
@@ -377,6 +405,35 @@ export default function Navigation({ locale }: { locale: string }) {
               >
                 {locale == "id" ? "Hubungi Kami" : "Contact Us"}
               </Link>
+            </li>
+            {/* Language Switcher Button (Mobile) */}
+            <li className="flex items-center justify-start">
+              {locale === "id" ? (
+                <button
+                  className="px-3 py-1 rounded bg-white text-black font-bold overflow-hidden w-8 h-5 relative cursor-pointer"
+                  onClick={() => {
+                    window.location.href =
+                      "/en" +
+                      window.location.pathname.replace(/^\/[a-z]{2}/, "");
+                  }}
+                  aria-label="Switch to English"
+                >
+                  <Image src={enFlag} alt="English Flag" fill={true} />
+                </button>
+              ) : null}
+              {locale === "en" ? (
+                <button
+                  className="px-3 py-1 rounded bg-white text-black font-bold overflow-hidden w-8 h-5 relative cursor-pointer"
+                  onClick={() => {
+                    window.location.href =
+                      "/id" +
+                      window.location.pathname.replace(/^\/[a-z]{2}/, "");
+                  }}
+                  aria-label="Switch to Indonesian"
+                >
+                  <Image src={idFlag} alt="Indonesian Flag" fill={true} />
+                </button>
+              ) : null}
             </li>
           </ul>
         </div>
