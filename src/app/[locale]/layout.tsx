@@ -206,6 +206,19 @@ export default async function RootLayout({
             __html: JSON.stringify(serviceSchema),
           }}
         />
+        {/* Microsoft Clarity */}
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+                (function(c,l,a,r,i,t,y){
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, "clarity", "script", "spx1mdf9i7");
+              `,
+          }}
+        />
         <Navigation locale={locale} />
         {children}
         <Footer footer={localeContent.footer} locale={locale} />
