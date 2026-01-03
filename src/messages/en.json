@@ -323,22 +323,26 @@
         {
           "id": 1,
           "title": "Industry Experts",
-          "description": "Supported by professional resources and modern technology, Farrasindo Group continues to contribute to society, the nation, and the country as a trusted and leading company."
+          "description": "Supported by professional resources and modern technology, Farrasindo Group continues to contribute to society, the nation, and the country as a trusted and leading company.",
+          "icon": "UserCheck"
         },
         {
           "id": 2,
           "title": "Technology-Driven",
-          "description": "Farrasindo Group operates in the construction industry by prioritizing modern technology to support the acceleration of Indonesia’s infrastructure development."
+          "description": "Farrasindo Group operates in the construction industry by prioritizing modern technology to support the acceleration of Indonesia’s infrastructure development.",
+          "icon": "Cpu"
         },
         {
           "id": 3,
           "title": "Concrete Machinery Specialists",
-          "description": "We operate a fleet of more than 200 concrete machines of various sizes and types, ready to support both small-scale and large-scale construction projects."
+          "description": "We operate a fleet of more than 200 concrete machines of various sizes and types, ready to support both small-scale and large-scale construction projects.",
+          "icon": "Truck"
         },
         {
           "id": 4,
           "title": "Proven Portfolio",
-          "description": "Farrasindo has completed numerous strategic and retail projects, demonstrating our experience and consistency in supporting national development."
+          "description": "Farrasindo has completed numerous strategic and retail projects, demonstrating our experience and consistency in supporting national development.",
+          "icon": "Folder Open"
         }
       ]
     },

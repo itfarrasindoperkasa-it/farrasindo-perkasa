@@ -418,7 +418,12 @@ export default function Navigation({ locale }: { locale: string }) {
                   }}
                   aria-label="Switch to English"
                 >
-                  <Image src={enFlag} alt="English Flag" fill={true} />
+                  <Image
+                    src={enFlag}
+                    alt="English Flag"
+                    fill={true}
+                    sizes="100%"
+                  />
                 </button>
               ) : null}
               {locale === "en" ? (
@@ -431,7 +436,12 @@ export default function Navigation({ locale }: { locale: string }) {
                   }}
                   aria-label="Switch to Indonesian"
                 >
-                  <Image src={idFlag} alt="Indonesian Flag" fill={true} />
+                  <Image
+                    src={idFlag}
+                    alt="Indonesian Flag"
+                    fill={true}
+                    sizes="100%"
+                  />
                 </button>
               ) : null}
             </li>

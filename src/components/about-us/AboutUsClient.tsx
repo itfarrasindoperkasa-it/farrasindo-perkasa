@@ -155,7 +155,13 @@ function TimelineCard({ item }: { item: TimelineEntry }) {
     <div className="bg-white border border-gray-100 rounded-md shadow-sm hover:shadow-md transition-shadow overflow-hidden max-w-md">
       <div className="relative w-full md:h-48 h-36">
         {image && typeof image !== "string" ? (
-          <Image src={image} alt={item.title} fill className="object-cover" />
+          <Image
+            src={image}
+            alt={item.title}
+            fill
+            className="object-cover"
+            sizes="100%"
+          />
         ) : image && typeof image === "string" ? (
           <img
             src={image}

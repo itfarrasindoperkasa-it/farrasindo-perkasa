@@ -56,7 +56,7 @@ export default async function Home({
             </p>
 
             <Link
-              href={`/${locale}/about`}
+              href={`/${locale}/about-us`}
               className="py-2 px-4 text-white rounded-md font-bold text-base sm:text-lg bg-orange-400 w-full sm:w-fit text-center"
             >
               {message.home.about.buttonText}

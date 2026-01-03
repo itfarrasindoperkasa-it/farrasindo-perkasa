@@ -29,7 +29,7 @@ export default function ActionButton() {
           className="rounded-full w-12 h-12 flex items-center justify-center shadow-lg text-white text-2xl hover:scale-110 transition-transform duration-200 relative"
           aria-label="WhatsApp Farrasindo"
         >
-          <Image src={WaLogo} alt="WhatsApp" fill />
+          <Image src={WaLogo} alt="WhatsApp" fill sizes="100%" />
         </a>
         {/* Tokopedia Button */}
         <a
@@ -39,7 +39,7 @@ export default function ActionButton() {
           className="rounded-full w-12 h-12 flex items-center justify-center shadow-lg text-white text-2xl hover:scale-110 transition-transform duration-200 relative"
           aria-label="Tokopedia Farrasindo"
         >
-          <Image src={TokopediaLogo} alt="Tokopedia" fill />
+          <Image src={TokopediaLogo} alt="Tokopedia" fill sizes="100%" />
         </a>
         {/* Shopee Button */}
         <a
@@ -49,7 +49,7 @@ export default function ActionButton() {
           className="rounded-full w-12 h-12 flex items-center justify-center shadow-lg text-white text-2xl hover:scale-110 transition-transform duration-200 relative"
           aria-label="Shopee Farrasindo"
         >
-          <Image src={ShopeeLogo} alt="Shopee" fill />
+          <Image src={ShopeeLogo} alt="Shopee" fill sizes="100%" />
         </a>
       </div>
 
@@ -71,7 +71,7 @@ export default function ActionButton() {
           className="rounded-full w-8 h-8 flex items-center justify-center shadow-lg text-white text-2xl relative"
           aria-label="WhatsApp Farrasindo"
         >
-          <Image src={WaLogo} alt="WhatsApp" fill />
+          <Image src={WaLogo} alt="WhatsApp" fill sizes="()" />
         </a>
         <a
           href="https://www.tokopedia.com/farrasindo-group"
@@ -80,7 +80,7 @@ export default function ActionButton() {
           className="rounded-full w-8 h-8 flex items-center justify-center shadow-lg text-white text-2xl relative"
           aria-label="Tokopedia Farrasindo"
         >
-          <Image src={TokopediaLogo} alt="Tokopedia" fill />
+          <Image src={TokopediaLogo} alt="Tokopedia" fill sizes="100%" />
         </a>
         <a
           href="https://shopee.co.id/farrasindoperkasa?categoryId=100636&entryPoint=ShopByPDP&itemId=27819455584&upstream=search"
@@ -89,7 +89,7 @@ export default function ActionButton() {
           className="rounded-full w-8 h-8 flex items-center justify-center shadow-lg text-white text-2xl relative"
           aria-label="Shopee Farrasindo"
         >
-          <Image src={ShopeeLogo} alt="Shopee" fill />
+          <Image src={ShopeeLogo} alt="Shopee" fill sizes="100%" />
         </a>
       </div>
     </>

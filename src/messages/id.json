@@ -323,22 +323,26 @@
         {
           "id": 1,
           "title": "Para Ahli",
-          "description": "Dengan dukungan sumber daya yang profesional dan teknologi terkini, Farrasindo Group terus berkontribusi bagi masyarakat, bangsa, dan negara untuk menjadi perusahaan yang unggul dan terpercaya."
+          "description": "Dengan dukungan sumber daya yang profesional dan teknologi terkini, Farrasindo Group terus berkontribusi bagi masyarakat, bangsa, dan negara untuk menjadi perusahaan yang unggul dan terpercaya.",
+          "icon": "UserCheck"
         },
         {
           "id": 2,
           "title": "Teknologi",
-          "description": "Farrasindo Group bergerak di bidang industri konstruksi yang mengutamakan teknologi modern untuk mendukung percepatan pembangunan Indonesia."
+          "description": "Farrasindo Group bergerak di bidang industri konstruksi yang mengutamakan teknologi modern untuk mendukung percepatan pembangunan Indonesia.",
+          "icon": "Cpu"
         },
         {
           "id": 3,
           "title": "Ahli Mesin Beton",
-          "description": "Kami memiliki armada mesin beton lebih dari 200 unit berbagai ukuran dan jenis, siap mendukung proyek konstruksi skala kecil hingga besar."
+          "description": "Kami memiliki armada mesin beton lebih dari 200 unit berbagai ukuran dan jenis, siap mendukung proyek konstruksi skala kecil hingga besar.",
+          "icon": "Truck"
         },
         {
           "id": 4,
           "title": "Portofolio",
-          "description": "Farrasindo telah mengerjakan berbagai proyek strategis dan ritel, membuktikan pengalaman dan konsistensi kami dalam mendukung pembangunan nasional."
+          "description": "Farrasindo telah mengerjakan berbagai proyek strategis dan ritel, membuktikan pengalaman dan konsistensi kami dalam mendukung pembangunan nasional.",
+          "icon": "Folder Open"
         }
       ]
     },
