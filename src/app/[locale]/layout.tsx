@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Navigation from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { Locale } from "@/lib/datas/global";
-import { RootLayoutProps } from "../layout";
 import ActionButton from "@/components/ActionButton";
+
+export interface RootLayoutProps {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}
 
 export async function generateMetadata({
   params,
@@ -177,8 +179,16 @@ export async function generateMetadata({
 export default async function RootLayout({
   children,
   params,
-}: Readonly<RootLayoutProps>) {
+}: RootLayoutProps) {
   const { locale } = await params;
+
+  // Validasi locale: hanya izinkan 'id' dan 'en'
+  const validLocales = ["id", "en"];
+  if (!validLocales.includes(locale)) {
+    const { notFound } = await import("next/navigation");
+    notFound();
+  }
+
   const localeContent = await import(`@/messages/${locale}.json`);
   const { organizationSchema, localBusinessSchema, serviceSchema } =
     await import("@/lib/structured-data");
