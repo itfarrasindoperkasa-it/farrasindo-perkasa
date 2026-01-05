@@ -219,6 +219,22 @@ export default async function RootLayout({
               `,
           }}
         />
+
+        {/* Google tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-397510863"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+                      window.dataLayer = window.dataLayer || [];
+                      function gtag(){dataLayer.push(arguments);}
+                      gtag('js', new Date());
+                      gtag('config', 'AW-397510863');
+                    `,
+          }}
+        />
         <Navigation locale={locale} />
         {children}
         <Footer footer={localeContent.footer} locale={locale} />

@@ -33,7 +33,7 @@ export default function ActionButton() {
         </a>
         {/* Tokopedia Button */}
         <a
-          href="https://www.tokopedia.com/farrasindo"
+          href="https://www.tokopedia.com/farrasindo-group"
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-full w-12 h-12 flex items-center justify-center shadow-lg text-white text-2xl hover:scale-110 transition-transform duration-200 relative"
@@ -43,7 +43,7 @@ export default function ActionButton() {
         </a>
         {/* Shopee Button */}
         <a
-          href="https://shopee.co.id/farrasindo"
+          href="https://shopee.co.id/farrasindoperkasa?categoryId=100636&entryPoint=ShopByPDP&itemId=27819455584&upstream=search"
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-full w-12 h-12 flex items-center justify-center shadow-lg text-white text-2xl hover:scale-110 transition-transform duration-200 relative"

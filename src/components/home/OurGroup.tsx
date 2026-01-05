@@ -46,7 +46,7 @@ export function OurGroup() {
     infinite: true,
     autoplay: true,
     autoplaySpeed: 0,
-    speed: 10000,
+    speed: 3000,
     cssEase: "linear" as const,
     slidesToShow: slidesToShow,
     slidesToScroll: 1,
