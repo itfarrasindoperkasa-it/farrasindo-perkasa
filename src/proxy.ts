@@ -3,7 +3,8 @@ import { NextRequest, NextResponse } from "next/server";
 const locales = ["id", "en"];
 const defaultLocale = "id";
 
-export function middleware(request: NextRequest) {
+// Proxy function untuk Next.js 16 - lightweight Edge routing layer
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // 1. Bypass untuk file statis dan API
