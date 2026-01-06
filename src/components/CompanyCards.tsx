@@ -54,7 +54,8 @@ export default function CompanyCards({
         return (
           <div
             key={`${c.name}-${idx}`}
-            className="flex flex-col items-center justify-center p-2 rounded-md bg-white shadow-sm hover:shadow-md transition-shadow"
+            className="flex flex-col items-center justify-between p-2 rounded-md bg-white shadow-sm hover:shadow-md transition-shadow"
+            onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
           >
             <a
               href={c.link ?? "#"}
