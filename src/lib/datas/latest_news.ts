@@ -16,6 +16,7 @@ import imgArtikel15 from "@/asset/images/artikel/ARTIKELESPORTS.jpg";
 import imgArtikel16 from "@/asset/images/artikel/COVERARTIKELHUTFP24.jpg";
 import imgArtikel17 from "@/asset/images/artikel/COVERARTIKELHUTRI80.jpg";
 import imgArtikel18 from "@/asset/images/artikel/featured.jpg";
+import FarrasindoDonationDisasterSumatra from "@/asset/images/artikel/penyerahan-bantuan-bencana-aceh-2025-12-10.jpg";
 import { Locale } from "./global";
 import { StaticImageData } from "next/image";
 
@@ -269,6 +270,32 @@ export const articles: ArticlesByLocale = {
       description:
         "Perjalanan panjang selama 24 tahun menjadi momen penuh makna bagi Farrasindo Group, perusahaan yang dikenal sebagai penyedia solusi terdepan di industri beton dan alat berat. Tahun ini, perayaan ulang tahun ke-24 digelar dengan tema “Stronger Together”, mencerminkan semangat kebersamaan dan kekuatan kolektif yang telah membawa perusahaan ini terus bertumbuh hingga hari ini.\n\nAcara berlangsung meriah dengan berbagai rangkaian kegiatan, dimulai dari pemotongan tumpeng yang menjadi simbol rasa syukur atas perjalanan Farrasindo Group sekaligus peresmian dua anak perusahaan baru, yaitu Nafcon Konstruksi dan SIMI Sport Club. Keduanya menjadi langkah strategis dalam memperluas kiprah Farrasindo Group menuju masa depan yang lebih dinamis.\n\nMomen perayaan juga diisi dengan tausiyah dan doa bersama Ustadz Maulana, yang menambah suasana khidmat dan penuh makna. Tidak hanya itu, kegiatan berbagi kebahagiaan dengan anak yatim turut menjadi bagian penting dari acara, sebagai wujud kepedulian sosial dan rasa syukur atas setiap pencapaian yang telah diraih.\n\nSebagai bentuk apresiasi, Farrasindo Group juga memberikan penghargaan kepada karyawan terbaik dari seluruh cabang, menegaskan bahwa sumber daya manusia adalah fondasi utama keberhasilan perusahaan. Suasana semakin meriah dengan pembagian doorprize menarik, mulai dari jam tangan, televisi, emas, hingga hadiah utama berupa motor listrik dan umroh.\n\nMenambah kehangatan acara, berbagai hidangan khas favorit seperti bakso, siomay, es doger, kopi, dan popcorn turut disajikan, menciptakan suasana kebersamaan yang hangat dan penuh keceriaan.\n\nPerayaan ulang tahun ke-24 ini menjadi penegasan komitmen Farrasindo Group untuk terus berinovasi, memperkuat kolaborasi, dan memberikan kontribusi nyata bagi industri konstruksi di Indonesia. Dengan semangat “Stronger Together”, Farrasindo Group melangkah mantap menuju masa depan yang lebih kuat, solid, dan penuh keberkahan.",
     },
+    {
+      title:
+        "Farrasindo Group Ikut Serta Menyalurkan Bantuan Donasi untuk Bencana di Sumatera",
+      categories: [],
+      date: "2025-12-10T00:00:00.000Z",
+      excerpt:
+        "Farrasindo Group menunjukkan komitmen kepeduliannya terhadap sesama dengan menyalurkan bantuan kemanusiaan untuk warga yang terdampak banjir bandang di Aceh, Sumatera Utara, dan Sumatera Barat",
+      link: "/news/farrasindo-group-donasi-bencana-sumatera",
+      slug: "farrasindo-group-donasi-bencana-sumatera",
+      author: "Farrasindo Group",
+      image: FarrasindoDonationDisasterSumatra,
+      description: `Farrasindo Group menunjukkan komitmen kepeduliannya terhadap sesama dengan menyalurkan bantuan kemanusiaan untuk warga yang terdampak banjir bandang di Aceh, Sumatera Utara, dan Sumatera Barat. Melalui aksi solidaritas ini, Farrasindo Group menggalang donasi dan menghimpun bantuan kebutuhan darurat yang kemudian didistribusikan ke daerah yang paling membutuhkan.
+
+    Bantuan yang telah dikumpulkan berupa keperluan makanan pokok, sembako, pembalut wanita, obat-obatan, dan kebutuhan medis lainnya. Seluruh bantuan ini berhasil dikumpulkan sebanyak 449 koli oleh seluruh karyawan internal perusahaan yang turut peduli terhadap kondisi bencana.
+
+    Dalam proses penyalurannya, Farrasindo Group bekerja sama dengan Badan Nasional Penanggulangan Bencana (BNPB) sebagai mitra resmi pendistribusian bantuan. Kolaborasi ini memastikan seluruh bantuan dapat tersalurkan dengan tepat sasaran dan menjangkau warga di titik-titik yang sulit diakses.
+
+    Pihak BNPB juga menyampaikan apresiasi yang mendalam kepada seluruh masyarakat dan donatur yang telah mendukung penanganan bencana. “BNPB mengucapkan terima kasih atas kepedulian Farrasindo Group dan semua pihak yang telah memberikan bantuan bagi warga terdampak. Dukungan ini sangat berarti dalam upaya penanggulangan dan pemulihan pascabencana,” ujar Pak Diaz, selaku perwakilan BNPB.
+
+    Melalui aksi ini, Farrasindo Group berharap langkah ini dapat memberikan dukungan nyata bagi para korban, memberikan keringanan bagi masyarakat yang terdampak sekaligus menjadi wujud solidaritas dalam menghadapi situasi darurat. "Saya mewakili seluruh karyawan Farrasindo Group, kami berharap semoga bantuan ini dapat bermanfaat bagi warga yang terdampak bencana", ujar Pak E Suherman, selaku Direksi Farrasindo Group.
+
+    Dengan tersalurkannya bantuan ini, Farrasindo Group semakin menegaskan komitmennya dalam mendukung aksi-aksi kemanusiaan serta mendorong kolaborasi lintas sektor untuk membantu masyarakat yang membutuhkan.
+
+    "Bantuan kecil dari kita bisa jadi harapan besar bagi mereka"
+    `,
+    },
   ],
   en: [
     {
@@ -399,6 +426,32 @@ export const articles: ArticlesByLocale = {
       image: imgArtikel10,
       description:
         "Fresh Beton Indonesia Provides Quality Concrete with 7 Strategic Branches Across Indonesia\n\nFresh Beton Indonesia is present as a pioneer in providing high-quality concrete with an extensive network and branches spread across various strategic locations in Indonesia. With 7 branches spread across Meruya, Sentul, Cianjur, Sukabumi, Serpong, Balaraja, and Cikembang, Fresh Beton Indonesia is ready to serve your construction needs more quickly, efficiently, and reliably.\n\nWhy Fresh Beton Indonesia?\nFresh Beton Ind",
+    },
+    {
+      title:
+        "Farrasindo Group Participates in Distributing Donation Aid for Disasters in Sumatra",
+      categories: [],
+      date: "2025-12-10T00:00:00.000Z",
+      excerpt:
+        "Farrasindo Group demonstrates its commitment to caring for others by distributing humanitarian aid to residents affected by flash floods in Aceh, North Sumatra, and West Sumatra.",
+      link: "/news/farrasindo-group-donation-disaster-sumatera",
+      slug: "farrasindo-group-donation-disaster-sumatera",
+      author: "Farrasindo Group",
+      image: FarrasindoDonationDisasterSumatra,
+      description: `Farrasindo Group demonstrates its commitment to caring for others by distributing humanitarian aid to residents affected by flash floods in Aceh, North Sumatra, and West Sumatra. Through this act of solidarity, Farrasindo Group raised donations and collected emergency supplies, which were then distributed to the areas most in need.
+
+    The aid collected included staple foods, groceries, sanitary pads, medicines, and other medical necessities. All of this assistance was successfully gathered in a total of 449 packages by all internal company employees who care about the disaster situation.
+
+    In the distribution process, Farrasindo Group collaborated with the National Disaster Management Agency (BNPB) as the official partner for aid distribution. This collaboration ensures that all aid is delivered accurately and reaches residents in hard-to-access locations.
+
+    BNPB also expressed deep appreciation to all communities and donors who have supported disaster response efforts. "BNPB thanks Farrasindo Group and everyone who has provided assistance to affected residents. This support is very meaningful in the efforts of disaster management and post-disaster recovery," said Mr. Diaz, a BNPB representative.
+
+    Through this action, Farrasindo Group hopes this step can provide real support for the victims, ease the burden on affected communities, and serve as a form of solidarity in facing emergency situations. "On behalf of all Farrasindo Group employees, we hope this aid will be beneficial for those affected by the disaster," said Mr. E Suherman, Director of Farrasindo Group.
+
+    With the distribution of this aid, Farrasindo Group further affirms its commitment to supporting humanitarian actions and encouraging cross-sector collaboration to help those in need.
+
+    "A small help from us can be a great hope for them."
+    `,
     },
   ],
 };

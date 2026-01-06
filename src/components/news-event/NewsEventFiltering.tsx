@@ -6,6 +6,7 @@ import { formatDate } from "@/lib/helper";
 import Image from "next/image";
 import Link from "next/link";
 import { MouseEventHandler, useState } from "react";
+import NewsEventLatest from "./NewsEventLatest";
 
 export default function NewsEventFiltering({
   latestArticle,
@@ -77,7 +78,12 @@ export default function NewsEventFiltering({
           })}
         </ul>
       </div>
-      <div className="bg-white rounded-xl shadow p-6">
+      <NewsEventLatest
+        recentPostTitle={recentPostTitle}
+        latestArticle={latestArticle}
+        locale={locale}
+      />
+      {/* <div className="bg-white rounded-xl shadow p-6">
         <h3 className="font-bold text-lg mb-4">{recentPostTitle}</h3>
         <ul className="text-sm text-gray-700 space-y-4">
           {latestArticle.slice(0, 3).map((news: any, idx: any) => (
@@ -103,7 +109,7 @@ export default function NewsEventFiltering({
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
       <div className="relative flex flex-col items-center justify-center mt-2 hidden md:flex">
         <Image
           src={LatestNewsData[13]}

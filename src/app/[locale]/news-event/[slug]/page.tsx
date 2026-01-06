@@ -1,11 +1,15 @@
 "'use client';";
-import LatestNewsData, { articles } from "@/lib/datas/latest_news";
+import LatestNewsData, {
+  articles,
+  paginationArticle,
+} from "@/lib/datas/latest_news";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Locale } from "@/lib/datas/global";
 import { Metadata } from "next";
 import { formatDate } from "@/lib/helper";
+import NewsEventLatest from "@/components/news-event/NewsEventLatest";
 
 interface NewsDetailParams {
   params: Promise<{
@@ -71,6 +75,7 @@ export default async function NewsDetail({ params }: NewsDetailParams) {
   // Ambil data news dari articles berdasarkan locale dan slug
   const articlesList = articles[locale as Locale] || articles.id;
   const news = articlesList.find((item) => item.slug === slug);
+  const articleLatests = paginationArticle(1, 3, locale);
 
   // Get image index from news.image field
   let imgIdx = 0; // default
@@ -106,7 +111,7 @@ export default async function NewsDetail({ params }: NewsDetailParams) {
       {/* Banner Gambar per slug */}
       <section className="relative w-full h-[300px] md:h-[500px] overflow-hidden mb-8 ">
         <Image
-          src={LatestNewsData[imgIdx]}
+          src={news.image}
           alt={news.title}
           fill
           className="object-cover object-center w-full h-full"
@@ -151,7 +156,12 @@ export default async function NewsDetail({ params }: NewsDetailParams) {
                 ))}
               </ul>
             </div>
-            <div className="bg-white rounded-xl shadow p-6">
+            <NewsEventLatest
+              recentPostTitle={recentPostTitle}
+              latestArticle={articleLatests.articles}
+              locale={locale}
+            />
+            {/* <div className="bg-white rounded-xl shadow p-6">
               <h3 className="font-bold text-lg mb-4">{recentPostTitle}</h3>
               <ul className="text-sm text-gray-700 space-y-4">
                 {articlesList.slice(0, 3).map((news, idx) => (
@@ -179,7 +189,7 @@ export default async function NewsDetail({ params }: NewsDetailParams) {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
             <div className="relative flex flex-col items-center justify-center mt-2">
               <Image
                 src={LatestNewsData[13]}
