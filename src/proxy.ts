@@ -7,6 +7,11 @@ const defaultLocale = "id";
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // 🚨 HARD BYPASS metadata routes - HARUS DI AWAL
+  if (pathname === "/sitemap.xml" || pathname === "/robots.txt") {
+    return NextResponse.next();
+  }
+
   // 1. Bypass untuk file statis dan API
   const isStaticOrApi =
     pathname.startsWith("/_next/") ||
@@ -30,6 +35,8 @@ export function proxy(request: NextRequest) {
   request.nextUrl.pathname = `/${defaultLocale}${pathname}`;
   return NextResponse.redirect(request.nextUrl);
 }
+
+export const dynamic = "force-static";
 
 export const config = {
   matcher: [
