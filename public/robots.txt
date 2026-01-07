@@ -1,11 +1,9 @@
 # robots.txt for Farrasindo Group
 # https://farrasindo-cp.co.id
 
-# Root path (/) is blocked - redirect only, not indexed
+# 🚨 CRITICAL: All Allow rules FIRST, Disallow rules LAST
 User-agent: *
-Disallow: /
-
-# 🚨 CRITICAL: Allow sitemap and robots.txt
+# Allow sitemap and metadata files
 Allow: /sitemap.xml
 Allow: /robots.txt
 
@@ -14,11 +12,6 @@ Allow: /id
 Allow: /en
 Allow: /id/*
 Allow: /en/*
-
-# Block API routes from indexing
-Disallow: /api/
-Disallow: /_next/
-Disallow: /api-proxy/
 
 # Allow public assets
 Allow: /assets/
@@ -34,6 +27,12 @@ Allow: /*.svg
 Allow: /*.gif
 Allow: /*.ico
 
+# Disallow rules - LAST
+Disallow: /api/
+Disallow: /_next/
+Disallow: /api-proxy/
+Disallow: /
+
 # Sitemap location
 Sitemap: https://farrasindo-cp.co.id/sitemap.xml
 Sitemap: https://farrasindo-cp.co.id/id/sitemap.xml
@@ -44,19 +43,19 @@ Crawl-delay: 1
 
 # Special instructions for major search engines
 User-agent: Googlebot
-Disallow: /
 Allow: /sitemap.xml
 Allow: /robots.txt
 Allow: /id
 Allow: /en
 Allow: /id/*
 Allow: /en/*
+Disallow: /
 
 User-agent: Bingbot
-Disallow: /
 Allow: /sitemap.xml
 Allow: /robots.txt
 Allow: /id
 Allow: /en
 Allow: /id/*
 Allow: /en/*
+Disallow: /
