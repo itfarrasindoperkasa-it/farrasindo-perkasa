@@ -205,7 +205,7 @@ export default function ProductServiceClient({
         id="productRange"
         className="w-screen max-w-[120rem] mx-auto bg-white"
       >
-        <div className="h-[40vh] md:h-[60vh] bg-black mb-20 relative">
+        <div className="h-[60vh] max-h-[600px] bg-black mb-20 relative ">
           <Image
             src={HomeBannerData[0]}
             fill={true}

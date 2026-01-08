@@ -222,7 +222,7 @@ export default function AboutUsClient({
   );
 
   return (
-    <main className="w-full bg-white">
+    <main className="w-full bg-white mx-auto max-w-[2500px]">
       {/* HERO */}
       <section className="relative w-full h-[220px] sm:h-[260px] md:h-[500px] overflow-hidden">
         <Image
@@ -243,10 +243,10 @@ export default function AboutUsClient({
       {/* OVERVIEW */}
       <section
         id="company-overview"
-        className="w-full pb-10 sm:pb-14 md:pb-16 px-6 md:px-15 max-w-7xl"
+        className="w-full pb-10 sm:pb-14 md:pb-16 px-6 md:px-15 max-w-7xl mx-auto"
       >
-        <div className="mx-auto relative">
-          <div className="flex flex-col md:flex-row gap-8 md:gap-10 items-start">
+        <div className="relative">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-10 items-start mx-auto">
             <div className="relative w-full md:w-2/3 h-[220px] sm:h-[300px] md:h-[430px]">
               <Image
                 src={AboutData[1]}

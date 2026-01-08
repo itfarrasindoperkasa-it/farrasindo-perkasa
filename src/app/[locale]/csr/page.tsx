@@ -77,9 +77,9 @@ export default async function CSRPage({
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full max-w-[120rem] mx-auto">
       {/* Hero Section with 3 Cards */}
-      <section className="relative w-full h-[60vh] md:h-[80vh] overflow-visible">
+      <section className="relative w-full h-[60vh] md:h-[80vh] max-h-[600px] md:max-h-[800px] overflow-visible">
         <Image
           src={CSRBanner}
           alt="CSR Banner"
@@ -141,7 +141,7 @@ export default async function CSRPage({
       </section>
 
       {/* Background Image Section */}
-      <section className="relative h-[40vh] md:h-[70vh] w-full">
+      <section className="relative h-[40vh] md:h-[70vh] max-h-[400px] md:max-h-[700px] w-full">
         <Image
           src={EmployeeBanner}
           alt="CSR Background"

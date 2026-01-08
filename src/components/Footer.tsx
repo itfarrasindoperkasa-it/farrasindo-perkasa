@@ -20,8 +20,8 @@ export function Footer({ footer, locale }: { footer: any; locale: string }) {
   const info = footer.information;
 
   return (
-    <footer className="bg-[#111111] text-white pb-20 md:pb-0">
-      <div className="mx-auto max-w-7xl px-4 md:px-10 py-12 lg:py-16">
+    <footer className="bg-[#111111] text-white pb-20 md:pb-0 max-w-[120rem] mx-auto">
+      <div className="mx-auto px-4 md:px-10 py-12 lg:py-16">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1.1fr_1.4fr]">
           {/* LEFT – Logo + about + socials */}
           <div className="space-y-5">

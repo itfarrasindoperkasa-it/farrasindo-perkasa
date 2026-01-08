@@ -81,6 +81,16 @@ body {
   display: inline-block;
 }
 
+@media (max-width: 1024px) {
+  /* .slick-prev {
+    left: 2% !important;
+  } */
+
+  .slick-next {
+    left: 20% !important;
+  }
+}
+
 .quick-find-list > li p {
   /* line-height: 0px; */
   font-size: 1.2em;

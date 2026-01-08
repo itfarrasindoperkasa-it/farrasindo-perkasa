@@ -21,10 +21,10 @@ export default async function Home({
   const message = (await import(`../../messages/${locale}.json`)).default;
 
   return (
-    <main id="home" className="w-full overflow-x-hidden ">
+    <main id="home" className="w-full overflow-x-hidden mx-auto max-w-[120rem]">
       <Banner
         className={`banner bg-black w-screen p-0`}
-        height="h-[60vh] sm:h-[360px] md:h-[100vh]"
+        height="h-[60vh] lg:h-[100vh] max-h-[1000px]"
         messages={message.home.banner}
       />
       <section

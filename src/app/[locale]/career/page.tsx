@@ -62,9 +62,9 @@ export default async function CareerPage({
   const companies = CompaniesData({ locale });
 
   return (
-    <div className="w-full">
+    <div className="w-full max-w-[120rem] mx-auto">
       {/* Hero Section */}
-      <section className="relative w-full md:h-[80vh] h-[60vh] overflow-hidden flex items-center justify-center group">
+      <section className="relative w-full md:h-[80vh] h-[60vh] max-h-[600px] overflow-hidden flex items-center justify-center group">
         <Image
           src={CareerData.banner}
           alt="Career Banner"
@@ -98,8 +98,8 @@ export default async function CareerPage({
       </section>
 
       {/* Ready to Grow Section */}
-      <section className="pt-16 pb-0 px-4 md:px-8 bg-white max-w-7xl">
-        <div className="mx-auto text-center md:max-w-[70vw]">
+      <section className="pt-16 pb-0 px-4 md:px-8 bg-white">
+        <div className="mx-auto text-center md:max-w-7xl">
           <h2 className="text-2xl md:text-4xl font-bold mb-6 text-gray-900">
             {careerPage.sectionGrow.title}
           </h2>
@@ -111,7 +111,7 @@ export default async function CareerPage({
 
       {/* Join Our Group Section */}
       <section className="py-10 md:py-16 px-4 bg-white">
-        <div className="max-w-360 mx-auto">
+        <div className="px-20 mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             {/* Left Side - Logo and Equipment Image */}
             <div className="relative w-full lg:w-2/5">

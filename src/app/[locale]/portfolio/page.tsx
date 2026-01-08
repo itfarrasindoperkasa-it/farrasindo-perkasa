@@ -65,7 +65,7 @@ export default async function PortfolioPage({
     .slice(5, 15);
 
   return (
-    <div className="w-full overflow-x-hidden">
+    <div className="w-full overflow-x-hidden max-w-[120rem] mx-auto">
       {/* Banner */}
       <section className="relative w-full h-[300px] md:h-[500px] overflow-hidden">
         <Image

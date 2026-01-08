@@ -56,9 +56,9 @@ export default async function ContactUs({
   const contactUsPage = localeContent.contactUsPage;
 
   return (
-    <div className="w-full">
+    <div className="w-full max-w-[120rem] mx-auto">
       {/* Banner Section */}
-      <section className="relative w-full h-[50vh] md:h-[60vh] overflow-hidden">
+      <section className="relative w-full h-[60vh] max-h-[600px] overflow-hidden">
         <Image
           src={contactBanner}
           alt="Contact Us Banner"

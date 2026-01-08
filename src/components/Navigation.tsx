@@ -45,7 +45,7 @@ export default function Navigation({ locale }: { locale: string }) {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 flex flex-col max-w-[100vw] bg-white shadow-lg"
+      className="fixed top-0 left-0 right-0 z-50 flex flex-col max-w-[120rem] mx-auto bg-white shadow-lg"
       id="navigationWeb"
     >
       {/* TOP BAR (DESKTOP ONLY) */}

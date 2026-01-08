@@ -62,7 +62,7 @@ export default async function NewsandEvent({
     locale === "id" ? "Berita & Artikel Terbaru" : "Latest News & Articles";
 
   return (
-    <div className="w-full overflow-x-hidden">
+    <div className="w-full overflow-x-hidden max-w-[120rem] mx-auto">
       {/* Banner */}
       <section className="relative w-full h-[60vh] md:h-[500px] overflow-hidden">
         <Image
@@ -75,7 +75,7 @@ export default async function NewsandEvent({
       </section>
 
       {/* News & Event Content */}
-      <section className="max-w-7xl mx-auto md:px-4 py-12">
+      <section className="md:px-4 py-12">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
           {newsTitle}
         </h2>

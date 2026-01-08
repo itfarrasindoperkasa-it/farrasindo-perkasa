@@ -18,10 +18,18 @@ export default function ProductRange({ message }: { message: any }) {
     setMounted(true);
 
     const handleResize = () => {
-      if (window.innerWidth < 1024) {
-        setSlidesToShow(1);
-      } else {
+      if (window.innerWidth >= 1280) {
+        // xl
         setSlidesToShow(4);
+      } else if (window.innerWidth >= 1024) {
+        // lg
+        setSlidesToShow(3);
+      } else if (window.innerWidth >= 768) {
+        // md
+        setSlidesToShow(2);
+      } else {
+        // sm & xs
+        setSlidesToShow(1);
       }
     };
 
