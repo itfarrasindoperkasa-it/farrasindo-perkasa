@@ -31,7 +31,6 @@ Allow: /*.ico
 Disallow: /api/
 Disallow: /_next/
 Disallow: /api-proxy/
-Disallow: /
 
 # Sitemap location
 Sitemap: https://farrasindo-cp.co.id/sitemap.xml
@@ -49,7 +48,6 @@ Allow: /id
 Allow: /en
 Allow: /id/*
 Allow: /en/*
-Disallow: /
 
 User-agent: Bingbot
 Allow: /sitemap.xml
@@ -58,4 +56,3 @@ Allow: /id
 Allow: /en
 Allow: /id/*
 Allow: /en/*
-Disallow: /
