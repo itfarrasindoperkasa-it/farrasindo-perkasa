@@ -1,4 +1,7 @@
 import { MetadataRoute } from "next";
+import { articles } from "@/lib/datas/latest_news";
+
+export const revalidate = 86400; // regenerate setiap 24 jam (dalam detik)
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://farrasindo-cp.co.id";
@@ -113,5 +116,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  return routes;
+  // Indonesian article routes
+  const idArticleRoutes: MetadataRoute.Sitemap = articles.id.map((article) => ({
+    url: `${baseUrl}/id/news-event/${article.slug}`,
+    lastModified: new Date(article.date),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  // English article routes
+  const enArticleRoutes: MetadataRoute.Sitemap = articles.en.map((article) => ({
+    url: `${baseUrl}/en/news-event/${article.slug}`,
+    lastModified: new Date(article.date),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...routes, ...idArticleRoutes, ...enArticleRoutes];
 }

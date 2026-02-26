@@ -97,13 +97,15 @@ export default async function NewsDetail({ params }: NewsDetailParams) {
     notFound();
   }
   const categories = Array.from(
-    new Set(articlesList.map((news) => news.author))
+    new Set(articlesList.map((news) => news.author)),
   );
-  const searchTitle = "Search Keyword";
-  const sidebarTitle = "Kategori";
-  const recentPostTitle = "Recent Post";
-  const anyQuestionTitle = "Ada Pertanyaan";
-  const anyQuestionSubtitle = "Tentang Industri";
+  const searchTitle =
+    locale === "en" ? "Search Keyword" : "Kata Kunci Pencarian";
+  const sidebarTitle = locale === "en" ? "Category" : "Kategori";
+  const recentPostTitle = locale === "en" ? "Recent Post" : "Artikel Terbaru";
+  const anyQuestionTitle = locale === "en" ? "Any Question" : "Ada Pertanyaan";
+  const anyQuestionSubtitle =
+    locale === "en" ? "About Industry" : "Tentang Industri";
   const anyQuestionPhone = "Telepon: 021 – 587 0525";
 
   return (

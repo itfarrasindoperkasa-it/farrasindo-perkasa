@@ -16,6 +16,7 @@ import imgArtikel15 from "@/asset/images/artikel/ARTIKELESPORTS.jpg";
 import imgArtikel16 from "@/asset/images/artikel/COVERARTIKELHUTFP24.jpg";
 import imgArtikel17 from "@/asset/images/artikel/COVERARTIKELHUTRI80.jpg";
 import imgArtikel18 from "@/asset/images/artikel/featured.jpg";
+import imgArticleGlobalMeeting2026 from "@/asset/images/artikel/ARTIKEL-GLOBAL-MEETING-2026.jpg";
 import FarrasindoDonationDisasterSumatra from "@/asset/images/artikel/penyerahan-bantuan-bencana-aceh-2025-12-10.jpg";
 import { Locale } from "./global";
 import { StaticImageData } from "next/image";
@@ -296,6 +297,54 @@ export const articles: ArticlesByLocale = {
     "Bantuan kecil dari kita bisa jadi harapan besar bagi mereka"
     `,
     },
+    {
+      title:
+        "Farrasindo Group Gelar Rapat Kerja Nasional (RAKERNAS) dan Apresiasi Karyawan di Bali",
+      categories: [],
+      date: "2025-12-26T00:00:00.000Z",
+      excerpt:
+        "Farrasindo Group sukses menyelenggarakan Rapat Kerja Nasional (Rakernas) 2026 dan Apresiasi Karyawan di Bali, menyatukan visi dan memperkuat strategi bisnis untuk masa depan.",
+      link: "/news/farrasindo-group-rakernas-apresiasi-karyawan-di-bali",
+      slug: "farrasindo-group-rakernas-apresiasi-karyawan-di-bali",
+      author: "Farrasindo Group",
+      image: imgArticleGlobalMeeting2026,
+      description: `Farrasindo Group sukses menyelenggarakan Rapat Kerja Nasional (Rakernas) 2026 yang berlangsung pada 28–31 Januari 2026 di Bali. Kegiatan ini menjadi momentum strategis bagi seluruh karyawan dan divisi di bawah Farrasindo Group untuk menyatukan visi, menyelaraskan strategi, serta memperkuat arah bisnis perusahaan dalam menghadapi tantangan industri ke depan.
+
+    Mengusung semangat One Vision Forward, Rakernas 2026 dirancang sebagai ruang kolaborasi lintas cabang dan divisi untuk memastikan setiap langkah bisnis berjalan selaras, terintegrasi, dan berkelanjutan.
+
+    Hari Pertama: Penyelarasan Strategi Lintas Cabang dan Divisi
+    Hari pertama Rakernas diisi dengan sesi presentasi dari seluruh cabang dan unit perusahaan lainnya, meliputi PT Farrasindo Perkasa, PT Inti Jaya Industri, PT Citi Crane Perkasa, Divisi IT, serta Divisi Marcomm.
+
+    Dalam sesi ini, masing-masing unit memaparkan capaian kinerja, tantangan yang dihadapi, serta rencana pengembangan strategis guna mendukung penguatan bisnis grup secara menyeluruh. Diskusi berjalan dinamis dan konstruktif, mencerminkan komitmen Farrasindo Group untuk membangun sinergi yang solid dan konsisten antar lini usaha.
+
+    Rakernas hari pertama menegaskan pentingnya kolaborasi sebagai fondasi utama dalam mencapai tujuan bersama serta memperkuat daya saing perusahaan di tengah dinamika industri yang terus berkembang.
+
+    Hari Kedua: Evaluasi Kinerja dan Penguatan Operasional
+    Memasuki hari kedua, rangkaian presentasi dilanjutkan oleh seluruh plant dan transport PT Fresh Beton Indonesia, disusul oleh PT Gunung Bumi Perkasa, PT Simi Reflexology, PT Farracon Precast Industri, PT Nafcon, serta unit operasional dan divisi pendukung lainnya, termasuk Purchasing & Logistik, HRD & HSE, Finance & Accounting, dan Audit.
+
+    Fokus utama sesi ini adalah pemaparan kinerja, evaluasi operasional, serta rencana pengembangan masing-masing unit dalam mendukung efektivitas dan keberlanjutan bisnis grup secara menyeluruh.
+
+    Melalui sinergi lintas perusahaan dan divisi, Farrasindo Group semakin memantapkan keselarasan strategi serta memperkuat komitmen bersama untuk menghadapi tantangan industri di masa depan, sejalan dengan semangat One Vision Forward.
+
+    Employee Appreciation Night: Apresiasi untuk Karyawan Terbaik Farrasindo Group
+    Sebagai penutup rangkaian Rakernas 2026, Farrasindo Group menggelar Employee Appreciation Night sebagai bentuk apresiasi atas dedikasi, loyalitas, dan kerja keras seluruh karyawan yang telah berkontribusi bagi pertumbuhan perusahaan.
+
+    Malam apresiasi ini menjadi momen kebersamaan untuk merayakan pencapaian, mempererat kolaborasi, serta memberikan penghargaan kepada insan-insan terbaik Farrasindo Group.
+
+    Penghargaan yang diberikan meliputi:
+    1. Cabang Farrasindo Terbaik
+    2. Plant Fresh Beton Terbaik
+    3. Sales Beton Fresh Beton Terbaik
+    4. Sales Pompa Beton Retail Terbaik
+    5. Sales Pompa Beton Big Project Terbaik
+    6. Sales dengan Masa Kerja Lebih dari 10 Tahun
+
+    Penghargaan ini menjadi simbol apresiasi perusahaan atas kontribusi nyata para karyawan dalam mendorong pertumbuhan dan keberhasilan Farrasindo Group.
+
+    Melangkah Maju Bersama
+    Melalui Rapat Kerja Nasional 2026 dan Employee Appreciation Night, Farrasindo Group menegaskan komitmennya untuk terus melangkah maju secara terstruktur, adaptif, dan berkelanjutan. Dengan sinergi yang semakin kuat dan semangat One Vision Forward, Farrasindo Group optimis menghadapi masa depan dan terus menciptakan pertumbuhan yang solid bagi perusahaan, karyawan, serta seluruh pemangku kepentingan.
+  `,
+    },
   ],
   en: [
     {
@@ -453,6 +502,55 @@ export const articles: ArticlesByLocale = {
     "A small help from us can be a great hope for them."
     `,
     },
+    {
+      title:
+        "Farrasindo Group Holds National Work Meeting (RAKERNAS) and Employee Appreciation in Bali",
+      categories: [],
+      date: "2025-12-26T00:00:00.000Z",
+      excerpt:
+        "Farrasindo Group successfully held the 2026 National Work Meeting (Rakernas) and Employee Appreciation in Bali, uniting vision and strengthening business strategies for the future.",
+      link: "/news/farrasindo-group-rakernas-employee-appreciation-at-bali",
+      slug: "farrasindo-group-rakernas-employee-appreciation-at-bali",
+      author: "Farrasindo Group",
+      image: imgArticleGlobalMeeting2026,
+      description: `
+    Farrasindo Group successfully held the 2026 National Work Meeting (Rakernas) from January 28–31, 2026 in Bali. This event became a strategic momentum for all employees and divisions under Farrasindo Group to unite their vision, align strategies, and strengthen the company's business direction in facing future industry challenges.
+
+    Carrying the spirit of One Vision Forward, Rakernas 2026 was designed as a collaborative space across branches and divisions to ensure every business step runs in harmony, is integrated, and sustainable.
+
+    Day One: Strategy Alignment Across Branches and Divisions
+    The first day of Rakernas was filled with presentation sessions from all branches and other company units, including PT Farrasindo Perkasa, PT Inti Jaya Industri, PT Citi Crane Perkasa, IT Division, and Marcomm Division.
+
+    In these sessions, each unit presented their performance achievements, challenges faced, and strategic development plans to support the overall strengthening of the group’s business. The discussions were dynamic and constructive, reflecting Farrasindo Group’s commitment to building solid and consistent synergy across business lines.
+
+    The first day of Rakernas emphasized the importance of collaboration as the main foundation for achieving common goals and strengthening the company’s competitiveness amid the ever-evolving industry dynamics.
+
+    Day Two: Performance Evaluation and Operational Strengthening
+    On the second day, the presentations continued with all plants and transport units of PT Fresh Beton Indonesia, followed by PT Gunung Bumi Perkasa, PT Simi Reflexology, PT Farracon Precast Industri, PT Nafcon, and other operational and supporting divisions, including Purchasing & Logistics, HRD & HSE, Finance & Accounting, and Audit.
+
+    The main focus of these sessions was on performance presentations, operational evaluations, and development plans of each unit to support the effectiveness and sustainability of the group’s business as a whole.
+
+    Through synergy across companies and divisions, Farrasindo Group further solidified strategic alignment and strengthened the shared commitment to face future industry challenges, in line with the spirit of One Vision Forward.
+
+    Employee Appreciation Night: Appreciation for Farrasindo Group’s Best Employees
+    As the closing of Rakernas 2026, Farrasindo Group held an Employee Appreciation Night as a form of appreciation for the dedication, loyalty, and hard work of all employees who have contributed to the company’s growth.
+
+    This appreciation night became a moment of togetherness to celebrate achievements, strengthen collaboration, and give awards to the best people of Farrasindo Group.
+
+    The awards given included:
+    1. Best Farrasindo Branch
+    2. Best Fresh Beton Plant
+    3. Best Fresh Beton Sales
+    4. Best Retail Concrete Pump Sales
+    5. Best Big Project Concrete Pump Sales
+    6. Sales with More Than 10 Years of Service
+
+    These awards symbolize the company’s appreciation for the real contributions of employees in driving the growth and success of Farrasindo Group.
+
+    Moving Forward Together
+    Through the 2026 National Work Meeting and Employee Appreciation Night, Farrasindo Group reaffirms its commitment to continue moving forward in a structured, adaptive, and sustainable manner. With ever-stronger synergy and the spirit of One Vision Forward, Farrasindo Group is optimistic about the future and will continue to create solid growth for the company, employees, and all stakeholders.
+  `,
+    },
   ],
 };
 
@@ -464,26 +562,26 @@ export const paginationArticle = (
   filters?: {
     author?: string;
     title?: string;
-  }
+  },
 ) => {
   let filtered = [...articles[lang as Locale]];
 
   // Apply filters
   if (filters?.author) {
     filtered = filtered.filter((article) =>
-      article.author.toLowerCase().includes(filters.author!.toLowerCase())
+      article.author.toLowerCase().includes(filters.author!.toLowerCase()),
     );
   }
 
   if (filters?.title) {
     filtered = filtered.filter((article) =>
-      article.title.toLowerCase().includes(filters.title!.toLowerCase())
+      article.title.toLowerCase().includes(filters.title!.toLowerCase()),
     );
   }
 
   // Sort by date
   const sorted = filtered.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
 
   const total = sorted.length;
