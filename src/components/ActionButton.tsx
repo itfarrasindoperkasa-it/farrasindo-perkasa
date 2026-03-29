@@ -13,7 +13,7 @@ export default function ActionButton() {
       <div className="hidden md:flex fixed top-1/2 right-0 -translate-y-1/2 z-[9999] flex-col gap-3 p-2 backdrop-blur-lg rounded-full shadow-lg">
         {/* Call Button */}
         <a
-          href="tel:+6281234567890"
+          href="tel:+6281575453564"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-orange-400/70 rounded-full w-12 h-12 flex items-center justify-center shadow-lg text-white text-2xl hover:scale-110 transition-transform duration-200 overflow-hidden"
@@ -23,7 +23,7 @@ export default function ActionButton() {
         </a>
         {/* WhatsApp Button */}
         <a
-          href="https://wa.me/6281234567890"
+          href="https://wa.me/6281575453564?text=Halo%2C+PT+FARRASINDO+PERKASA%2C+Saya+mendapatkan+informasi+ini+dari+website%2C+dan+ada+yang+mau+saya+tanyakan%3F"
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-full w-12 h-12 flex items-center justify-center shadow-lg text-white text-2xl hover:scale-110 transition-transform duration-200 relative"
@@ -65,7 +65,7 @@ export default function ActionButton() {
           <Phone size={20} />
         </a>
         <a
-          href="https://api.whatsapp.com/send?phone=6281575453564&text=Halo+PT+FARRASINDO+PERKASA%2C+Saya+mendapatkan+informasi+ini+dari+website+dan+ada+yang+mau+saya+tanyakan+%E2%80%A6"
+          href="https://wa.me/6281575453564?text=Halo%2C+PT+FARRASINDO+PERKASA%2C+Saya+mendapatkan+informasi+ini+dari+website%2C+dan+ada+yang+mau+saya+tanyakan%3F"
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-full w-8 h-8 flex items-center justify-center shadow-lg text-white text-2xl relative"
