@@ -18,6 +18,7 @@ import imgArtikel17 from "@/asset/images/artikel/COVERARTIKELHUTRI80.jpg";
 import imgArtikel18 from "@/asset/images/artikel/featured.jpg";
 import imgArticleGlobalMeeting2026 from "@/asset/images/artikel/ARTIKEL-GLOBAL-MEETING-2026.jpg";
 import FarrasindoDonationDisasterSumatra from "@/asset/images/artikel/penyerahan-bantuan-bencana-aceh-2025-12-10.jpg";
+import imgArtikelParcel from "@/asset/images/artikel/ARTIKEL-PEMBAGIAN-PARCEL-2026.jpg";
 import { Locale } from "./global";
 import { StaticImageData } from "next/image";
 
@@ -40,6 +41,7 @@ const LatestNewsData = [
   imgArtikel16,
   imgArtikel17,
   imgArtikel18,
+  imgArtikelParcel,
 ];
 
 export default LatestNewsData;
@@ -345,6 +347,43 @@ export const articles: ArticlesByLocale = {
     Melalui Rapat Kerja Nasional 2026 dan Employee Appreciation Night, Farrasindo Group menegaskan komitmennya untuk terus melangkah maju secara terstruktur, adaptif, dan berkelanjutan. Dengan sinergi yang semakin kuat dan semangat One Vision Forward, Farrasindo Group optimis menghadapi masa depan dan terus menciptakan pertumbuhan yang solid bagi perusahaan, karyawan, serta seluruh pemangku kepentingan.
   `,
     },
+    {
+      title:
+        "Farrasindo Group Rutin Bagikan Parcel Lebaran untuk Karyawan Setiap Tahun",
+      categories: [],
+      date: "2026-04-02T00:00:00.000Z",
+      excerpt:
+        "Menjelang Hari Raya Idulfitri 1447 H, Farrasindo Group kembali melanjutkan tradisi tahunan dengan membagikan parcel lebaran kepada seluruh karyawan. Kegiatan ini merupakan bentuk apresiasi perusahaan terhadap dedikasi dan kerja keras tim yang telah berkontribusi bagi pertumbuhan Farrasindo Group sepanjang tahun.",
+      link: "/news/farrasindo-group-bagikan-parcel-lebaran-untuk-karyawan",
+      slug: "farrasindo-group-bagikan-parcel-lebaran-untuk-karyawan",
+      author: "Farrasindo Group",
+      image: imgArtikelParcel,
+      description: `Menjelang Hari Raya Idulfitri, banyak perusahaan memanfaatkan momen ini untuk mempererat hubungan dengan para karyawan. Hal yang sama juga dilakukan oleh Farrasindo Group, yang setiap tahunnya secara konsisten membagikan parcel Lebaran kepada seluruh karyawan sebagai bentuk apresiasi dan rasa terima kasih atas dedikasi mereka.
+
+Tradisi pembagian parcel Lebaran ini telah menjadi salah satu budaya perusahaan yang selalu dinantikan oleh para karyawan menjelang libur Lebaran.
+
+Tradisi Tahunan Menjelang Libur Lebaran
+Kegiatan pembagian parcel Lebaran biasanya dilaksanakan beberapa hari sebelum libur Idulfitri dimulai. Parcel tersebut berisi berbagai kebutuhan khas Lebaran yang dapat dinikmati bersama keluarga di rumah.
+
+Melalui kegiatan ini, Farrasindo Group ingin menghadirkan kebahagiaan kecil bagi para karyawan yang telah bekerja keras sepanjang tahun. Selain itu, parcel Lebaran juga menjadi simbol perhatian perusahaan terhadap kesejahteraan dan kebahagiaan tim yang menjadi bagian penting dari perjalanan perusahaan.
+
+Bentuk Apresiasi kepada Karyawan
+Bagi Farrasindo Group, karyawan merupakan aset utama perusahaan. Keberhasilan berbagai proyek dan kegiatan operasional perusahaan tidak terlepas dari kontribusi dan kerja sama seluruh tim.
+
+Oleh karena itu, pemberian parcel Lebaran menjadi salah satu bentuk apresiasi nyata dari perusahaan kepada para karyawan. Tradisi ini juga menjadi cara sederhana namun bermakna untuk menunjukkan rasa terima kasih atas dedikasi, loyalitas, dan kerja keras yang telah diberikan.
+
+Mempererat Kebersamaan di Lingkungan Kerja
+Selain sebagai bentuk apresiasi, kegiatan ini juga menjadi momen untuk mempererat rasa kebersamaan di lingkungan kerja. Suasana hangat dan penuh kebersamaan terlihat saat para karyawan menerima parcel Lebaran yang dibagikan oleh perusahaan.
+
+Momen seperti ini menjadi pengingat bahwa hubungan antara perusahaan dan karyawan bukan hanya sekadar hubungan profesional, tetapi juga bagian dari keluarga besar yang saling mendukung.
+
+Komitmen Farrasindo Group dalam Membangun Budaya Perusahaan
+Melalui tradisi pembagian parcel Lebaran yang rutin dilakukan setiap tahun, Farrasindo Group menunjukkan komitmennya dalam membangun budaya perusahaan yang positif, penuh kepedulian, dan menghargai kontribusi setiap individu.
+
+Perusahaan berharap tradisi ini dapat terus dipertahankan di masa mendatang sebagai bagian dari nilai kebersamaan dan semangat berbagi yang menjadi fondasi dalam perjalanan Farrasindo Group.
+
+Dengan semangat Ramadan yang penuh berkah, Farrasindo Group juga mengucapkan selamat menyambut Hari Raya Idulfitri kepada seluruh karyawan dan keluarga. Semoga kebahagiaan, kesehatan, dan keberkahan selalu menyertai kita semua.`,
+    },
   ],
   en: [
     {
@@ -550,6 +589,43 @@ export const articles: ArticlesByLocale = {
     Moving Forward Together
     Through the 2026 National Work Meeting and Employee Appreciation Night, Farrasindo Group reaffirms its commitment to continue moving forward in a structured, adaptive, and sustainable manner. With ever-stronger synergy and the spirit of One Vision Forward, Farrasindo Group is optimistic about the future and will continue to create solid growth for the company, employees, and all stakeholders.
   `,
+    },
+    {
+      title:
+        "Farrasindo Group Regularly Distributes Eid Parcels to Employees Every Year",
+      categories: [],
+      date: "2026-04-02T00:00:00.000Z",
+      excerpt:
+        "As Eid al-Fitr 1447 H approaches, Farrasindo Group is continuing its annual tradition of distributing Eid hampers to all employees. This initiative demonstrates the company's appreciation for the dedication and hard work of its team, which has contributed to Farrasindo Group's growth throughout the year.",
+      link: "/news/farrasindo-group-regularly-distributes-eid-parcels-to-employees",
+      slug: "farrasindo-group-regularly-distributes-eid-parcels-to-employees",
+      author: "Farrasindo Group",
+      image: imgArtikelParcel,
+      description: `As Eid al-Fitr approaches, many companies use this opportunity to strengthen relationships with their employees. The Farrasindo Group does the same, consistently distributing Eid parcels to all employees every year as a token of appreciation and gratitude for their dedication.
+
+This tradition of distributing Eid parcels has become a part of the company's culture, eagerly awaited by employees as the holiday approaches.
+
+Annual Traditions Ahead of the Eid Holiday
+The Eid parcel distribution activity usually takes place a few days before the Eid holiday begins. The parcels contain various Eid necessities that can be enjoyed with family at home.
+
+Through this activity, the Farrasindo Group aims to bring small joys to employees who have worked hard throughout the year. Furthermore, the Eid parcels also symbolize the company's concern for the well-being and happiness of the team, which is a vital part of the company's journey.
+
+A Form of Employee Appreciation
+For the Farrasindo Group, employees are the company's primary asset. The success of various projects and operational activities is inseparable from the contribution and cooperation of the entire team.
+
+Therefore, giving Eid hampers is a tangible form of appreciation from the company to its employees. This tradition is also a simple yet meaningful way to show gratitude for their dedication, loyalty, and hard work.
+
+Strengthening Togetherness in the Workplace
+Besides being a form of appreciation, this activity also serves as a moment to strengthen the sense of togetherness in the workplace. A warm and united atmosphere is evident when employees receive the Eid hampers distributed by the company.
+
+Moments like this serve as a reminder that the relationship between the company and its employees is not merely professional, but also part of a large, supportive family.
+
+Farrasindo Group's Commitment to Building a Corporate Culture
+Through the annual tradition of distributing Eid hampers, Farrasindo Group demonstrates its commitment to building a positive, caring corporate culture that values ​​the contributions of each individual.
+
+The company hopes this tradition will continue in the future as part of the values ​​of togetherness and the spirit of sharing that are the foundation of Farrasindo Group's journey.
+
+In the spirit of a blessed Ramadan, Farrasindo Group also wishes all employees and their families a Happy Eid al-Fitr. May happiness, health and blessings always be with us all.`,
     },
   ],
 };
