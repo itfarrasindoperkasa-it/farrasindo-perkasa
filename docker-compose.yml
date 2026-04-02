@@ -7,6 +7,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: farrasindo-website
+    image: farrasindo-cp-landing-page:2.2.7
     restart: unless-stopped
     ports:
       # Bind to localhost only - OpenLiteSpeed will proxy to this
