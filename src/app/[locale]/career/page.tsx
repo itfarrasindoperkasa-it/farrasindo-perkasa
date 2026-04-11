@@ -71,11 +71,11 @@ export default async function CareerPage({
           fill
           className="object-cover group-hover:scale-110 transition-all"
         />
-        {/* Overlay */}
-        <div className="md:hidden block group-hover:block absolute inset-0 bg-black opacity-30 pointer-events-none" />
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-black/40 pointer-events-none" />
 
-        {/* Content: placed above image (no overlay) */}
-        <div className="relative text-center mt-10 opacity-100 md:opacity-50 group-hover:opacity-100 flex flex-col gap-3 md:gap-4">
+        {/* Content: always visible */}
+        <div className="relative text-center mt-10 opacity-100 flex flex-col gap-3 md:gap-4">
           <h1 className="text-2xl md:text-4xl text-white tracking-widest">
             {careerPage.banner.title}
           </h1>
@@ -144,6 +144,24 @@ export default async function CareerPage({
           </h2>
 
           <CareerLayout allJobs={jobs} locale={locale} />
+
+          {/* Social Job Platform Links */}
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-12 mb-8">
+            <Link
+              href="https://id.jobstreet.com/id/Farrasindo-Perkasa-jobs/at-this-company"
+              target="_blank"
+              className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-lg transition-all min-w-[240px] text-center shadow-md hover:shadow-lg"
+            >
+              Jelajahi di Jobstreet
+            </Link>
+            <Link
+              href="https://glints.com/id/companies/farrasindo-perkasa-group/856101bf-ad91-4af2-87b7-5d75dea92bf9"
+              target="_blank"
+              className="bg-black hover:bg-zinc-800 text-white font-semibold px-8 py-3 rounded-lg transition-all min-w-[240px] text-center shadow-md hover:shadow-lg"
+            >
+              Jelajahi di Glints
+            </Link>
+          </div>
         </div>
       </section>
 

@@ -34,60 +34,32 @@ body {
   font-size: 0.9em;
 }
 
-.slick-prev,
-.slick-next {
-  cursor: pointer;
-  color: #0000;
-  background: none;
-  border: none;
-  outline: none;
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  font-size: 0;
-  line-height: 0;
-  display: block;
-  position: absolute;
-  top: 80% !important;
-  transform: translate(0, -50%) !important;
+/* Dots Styling for Banner Slider */
+.slick-dots li {
+  margin: 0 4px !important;
+  width: auto !important;
+  height: auto !important;
 }
 
-.slick-prev:before,
-.slick-next:before {
-  opacity: 0.5 !important;
-  color: #fff;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: slick;
-  font-size: 100px !important;
-  line-height: 1;
+.slick-dots li.slick-active .slick-dot-inner {
+  background-color: #fff;
+  width: 24px;
+  border-radius: 6px;
+  opacity: 1;
 }
 
-.slick-prev {
-  left: 5% !important;
+.slick-dot-inner {
+  transition: all 0.3s ease;
+  opacity: 0.5;
 }
 
-.slick-next {
-  left: 14% !important;
+.slick-dot-inner:hover {
+  opacity: 0.8;
 }
 
-.slick-prev:before {
-  transform: rotate(45deg);
-  display: inline-block;
-}
-
-.slick-next:before {
-  transform: rotate(-45deg);
-  display: inline-block;
-}
-
-@media (max-width: 1024px) {
-  /* .slick-prev {
-    left: 2% !important;
-  } */
-
-  .slick-next {
-    left: 20% !important;
+@media (max-width: 640px) {
+  .slick-dots {
+    bottom: 15px !important;
   }
 }
 

@@ -6,31 +6,29 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import HomeBannerData from "@/lib/datas/home_banner";
 import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 function SampleNextArrow(props: any) {
   const { className, style, onClick } = props;
   return (
-    <div
-      className={className}
-      style={{ ...style, display: "block" }}
+    <button
+      className="absolute right-5 top-1/2 -translate-y-1/2 z-30 flex h-12 w-12 items-center justify-center rounded-full bg-black/20 text-white backdrop-blur-sm transition-all hover:bg-black/40 hover:scale-110 active:scale-95"
       onClick={onClick}
-    />
+    >
+      <ChevronRight size={32} />
+    </button>
   );
 }
 
 function SamplePrevArrow(props: any) {
   const { className, style, onClick } = props;
   return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        display: "block",
-        left: 20,
-        zIndex: 10,
-      }}
+    <button
+      className="absolute left-5 top-1/2 -translate-y-1/2 z-30 flex h-12 w-12 items-center justify-center rounded-full bg-black/20 text-white backdrop-blur-sm transition-all hover:bg-black/40 hover:scale-110 active:scale-95"
       onClick={onClick}
-    />
+    >
+      <ChevronLeft size={32} />
+    </button>
   );
 }
 
@@ -81,8 +79,17 @@ function Banner({
     slidesToScroll: 1,
     initialSlide: 0,
     arrows: showArrows,
+    dots: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    appendDots: (dots: any) => (
+      <div style={{ bottom: "30px" }}>
+        <ul className="m-0 flex justify-center gap-2"> {dots} </ul>
+      </div>
+    ),
+    customPaging: (i: number) => (
+      <div className="w-3 h-3 bg-white/50 rounded-full transition-all duration-300 hover:bg-white slick-dot-inner" />
+    ),
   };
   return (
     <div className={`w-full ${className ?? ""}`} {...props}>

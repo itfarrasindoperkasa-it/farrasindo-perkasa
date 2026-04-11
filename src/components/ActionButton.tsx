@@ -10,7 +10,7 @@ export default function ActionButton() {
   return (
     <>
       {/* Desktop/Web Floating Buttons */}
-      <div className="hidden md:flex fixed top-1/2 right-0 -translate-y-1/2 z-[9999] flex-col gap-3 p-2 backdrop-blur-lg rounded-full shadow-lg">
+      <div className="hidden md:flex fixed bottom-[80px] right-[5px] z-[9999] flex-col gap-3 p-2 bg-white/30 backdrop-blur-lg rounded-full shadow-lg">
         {/* Call Button */}
         <a
           href="tel:+6281575453564"
@@ -54,7 +54,7 @@ export default function ActionButton() {
       </div>
 
       {/* Mobile Bottom Bar Buttons */}
-      <div className="flex md:hidden fixed bottom-0 left-0 w-full z-[9999] backdrop-blur-lg shadow-t py-4 px-10 justify-around items-center rounded-t-4xl">
+      <div className="flex md:hidden fixed bottom-0 left-0 w-full z-[9999] bg-white/30 backdrop-blur-lg shadow-t py-4 px-10 justify-around items-center rounded-t-4xl">
         <a
           href="tel:0215870525"
           target="_blank"

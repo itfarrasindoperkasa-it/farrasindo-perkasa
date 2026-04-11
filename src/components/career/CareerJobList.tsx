@@ -1,6 +1,7 @@
 "use client";
 
 import { Job } from "@/lib/datas/jobs";
+import Link from "next/link";
 import Image from "next/image";
 import FPLogo from "@/asset/images/logo_partner/fp-logo.png";
 
@@ -47,9 +48,14 @@ export default function CareerJobList({
                   <p className="text-sm text-gray-600">{job.type}</p>
                 </div>
               </div>
-              <button className="w-full bg-orange-400 hover:bg-orange-500 text-white font-semibold py-2 rounded-lg transition-colors">
+              <Link
+                href="https://id.jobstreet.com/id/Farrasindo-Perkasa-jobs/at-this-company"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-orange-400 hover:bg-orange-500 text-white font-semibold py-2 rounded-lg transition-colors text-center"
+              >
                 Apply!
-              </button>
+              </Link>
             </div>
           </div>
         ))}
