@@ -115,12 +115,12 @@ function Banner({
                 className="
     absolute inset-0 
     flex items-center 
-    z-20 px-4 sm:px-8
+    z-20 px-4 sm:px-[70px]
   "
               >
                 <h2
                   className="text-white font-bold leading-tight text-3xl sm:text-4xl md:text-5xl
-      max-w-[90vw] sm:max-w-[70vw] md:max-w-[60vw]"
+      max-w-full sm:max-w-[70vw] md:max-w-[60vw]"
                 >
                   {messages[idx]?.title}
                 </h2>
