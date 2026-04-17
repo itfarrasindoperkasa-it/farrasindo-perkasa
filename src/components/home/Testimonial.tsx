@@ -57,6 +57,9 @@ export function TestimonialSection({ testimonial }: { testimonial: any }) {
     slidesToShow: 3,
     slidesToScroll: 1,
     swipeToSlide: true,
+    centerMode: false,
+    variableWidth: false,
+    adaptiveHeight: false,
     dotsClass: "slick-dots testimonial-dots",
     responsive: [
       {
@@ -64,6 +67,8 @@ export function TestimonialSection({ testimonial }: { testimonial: any }) {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          centerMode: false,
+          variableWidth: false,
         },
       },
       {
@@ -71,13 +76,8 @@ export function TestimonialSection({ testimonial }: { testimonial: any }) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          centerMode: false,
+          variableWidth: false,
         },
       },
       {
@@ -85,6 +85,8 @@ export function TestimonialSection({ testimonial }: { testimonial: any }) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerMode: false,
+          variableWidth: false,
         },
       },
     ],

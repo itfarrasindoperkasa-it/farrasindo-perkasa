@@ -67,6 +67,9 @@ export default function PortfolioSlider({ items, lang }: { items: any[], lang: s
     autoplaySpeed: 4000,
     arrows: false,
     pauseOnHover: true,
+    centerMode: false,
+    variableWidth: false,
+    adaptiveHeight: false,
     cssEase: "cubic-bezier(0.23, 1, 0.32, 1)",
     dotsClass: "slick-dots custom-dots",
     responsive: [
@@ -75,6 +78,8 @@ export default function PortfolioSlider({ items, lang }: { items: any[], lang: s
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
+          centerMode: false,
+          variableWidth: false,
         },
       },
       {
@@ -82,6 +87,8 @@ export default function PortfolioSlider({ items, lang }: { items: any[], lang: s
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          centerMode: false,
+          variableWidth: false,
         },
       },
       {
@@ -89,13 +96,8 @@ export default function PortfolioSlider({ items, lang }: { items: any[], lang: s
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          centerMode: false,
+          variableWidth: false,
         },
       },
       {
@@ -103,6 +105,8 @@ export default function PortfolioSlider({ items, lang }: { items: any[], lang: s
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerMode: false,
+          variableWidth: false,
         },
       },
     ],

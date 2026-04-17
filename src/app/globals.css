@@ -22,7 +22,8 @@
 html,
 body {
   overflow-x: hidden;
-  width: 100vw;
+  width: 100%;
+  max-width: 100vw;
 }
 body {
   background: var(--background);
@@ -104,3 +105,46 @@ article,
 .quick-find-list > li ul.child li {
   line-height: 2em;
 } */
+
+/* === React-Slick Mobile Fix === */
+/* Forces correct slide width on real mobile devices */
+/* DevTools responsive mode uses a virtual viewport, but real phones */
+/* can have subtle width differences that break slick calculations */
+
+.slick-slider {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.slick-list {
+  overflow: hidden !important;
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  float: none !important;
+}
+
+@media (max-width: 767px) {
+  .slick-slide {
+    min-width: 100% !important;
+  }
+  
+  .slick-track {
+    width: auto !important;
+  }
+
+  .portfolio-slider-container,
+  .testimonial-slider-container {
+    max-width: 100vw;
+    overflow: hidden;
+  }
+
+  .portfolio-slider-container .slick-slide > div,
+  .testimonial-slider-container .slick-slide > div {
+    width: 100% !important;
+  }
+}

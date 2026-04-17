@@ -1,10 +1,16 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Urbanist } from "next/font/google";
 import "../globals.css";
 import Navigation from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import ActionButton from "@/components/ActionButton";
 import NextTopLoader from "nextjs-toploader";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 const urbanist = Urbanist({
   subsets: ["latin"],
