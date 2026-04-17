@@ -220,6 +220,7 @@
     },
     "best_selling_products": {
       "title": "Produk Terlaris",
+      "highlight": "Produk Terlaris",
       "buttonLabel": "Baca Selengkapnya",
       "items": [
         {
@@ -227,7 +228,7 @@
           "link": "/id/news-event/one-package-concrete-pump-ready-mix"
         },
         {
-          "title": "Pabrik Batching Bergerak 3 in 1",
+          "title": "3 in 1 Mobile Batching Plant",
           "link": "/id/news-event/keunggulan-batchpump-farrasindo"
         }
       ]

@@ -2,115 +2,132 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import type { StaticImageData } from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
-import BestSellingProductsData from "@/lib/datas/best_sellingproducts";
-
-type BestSellingProductItem = {
-  title: string;
-  link?: string;
-};
-
-type BestSellingProductsConfig = {
-  title: string;
-  buttonLabel: string;
-  items: BestSellingProductItem[];
-};
+// Assets untuk tampilan 3-in-1
+import mini1 from "@/asset/images/section/minipro1.png";
+import mini2 from "@/asset/images/section/minipro2.png";
+import mini3 from "@/asset/images/section/minipro3.png";
+import mainTruck from "@/asset/images/section/trukmerah.png";
 
 export function BestSellingProduct({
   bestSellingProduct,
 }: {
   bestSellingProduct: any;
 }) {
-  const { title: sectionTitle, items, buttonLabel } = bestSellingProduct;
+  const { highlight, items, buttonLabel } = bestSellingProduct;
 
-  // Gabungkan JSON + gambar berdasarkan index
-  const products = items
-    .map((item: any, idx: number) => ({
-      ...item,
-      image: BestSellingProductsData[idx] as StaticImageData | undefined,
-    }))
-    .filter((p: any) => p.image);
+  // Ambil produk "Pabrik Batching Bergerak 3 in 1" dari data JSON
+  const product3in1 =
+    items.find(
+      (item: any) =>
+        item.title &&
+        (item.title.includes("3 in 1") || item.title.includes("3in1"))
+    ) || items[1];
 
   return (
-    <section className="bg-white py-10 md:py-16 lg:py-20">
-      <div className="mx-auto space-y-8 ">
-        {/* Section Title */}
-        <h2 className="text-center text-3xl font-semibold text-neutral-900">
-          {sectionTitle}
-        </h2>
+    <section className="relative w-full overflow-hidden bg-white">
+      {/* Background #FF9314 dengan opacity 75% */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{ backgroundColor: "#FF9314", opacity: 0.75 }}
+      />
 
-        <div className="grid gap-6 md:gap-0  md:grid-cols-2">
-          {products.map((product: any, idx: number) => (
-            <article
-              key={`${product.title}-${idx}`}
-              className="relative flex flex-col justify-between"
-            >
-              {/* Gambar + background */}
-              <motion.div
-                className="relative w-full flex justify-center"
-                initial={{ x: idx === 0 ? -80 : 80, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.7, ease: "easeOut" }}
-              >
-                {/* Background – tinggi responsive & sama di kedua kolom */}
-                <motion.div
-                  className={`absolute inset-x-0 top-16 h-56  z-0 md:top-32 md:h-72 ${
-                    idx === 0 ? "bg-orange-400" : "bg-orange-600"
-                  }`}
-                  initial={{ x: idx === 0 ? -80 : 80, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.7, ease: "easeOut" }}
+      <div className="relative z-10 mx-auto max-w-7xl px-6 py-12 md:py-20 lg:px-12">
+        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-12">
+
+          {/* Kiri: teks + gambar mini */}
+          <motion.div
+            className="flex flex-col space-y-5 lg:col-span-7"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="space-y-1">
+              {/* Badge: "Produk Terlaris" (id) / "Product Highlight" (en) — dari JSON */}
+              <span className="text-sm font-bold uppercase tracking-widest text-black md:text-base">
+                {highlight}
+              </span>
+              {/* Judul: diambil dari items JSON, misalnya "Pabrik Batching Bergerak 3 in 1" */}
+              <h2 className="text-2xl font-extrabold leading-[1.15] text-black md:text-4xl lg:text-4xl">
+                {product3in1?.title}
+              </h2>
+            </div>
+
+            {/* 3 gambar mini + tanda plus */}
+            <div className="flex flex-wrap items-center gap-2 py-2 md:gap-4">
+              <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-white p-2 shadow-md md:h-28 md:w-28 md:rounded-2xl lg:h-32 lg:w-32">
+                <Image
+                  src={mini1}
+                  alt="Mini Product 1"
+                  className="max-h-full w-auto object-contain"
+                  style={{ width: "auto", height: "auto" }}
                 />
+              </div>
 
-                {/* Image */}
-                <motion.div
-                  className="relative z-10 flex justify-center w-full pb-10 md:pb-2"
-                  initial={{ x: idx === 0 ? -80 : 80, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.7, ease: "easeOut" }}
-                >
-                  <Image
-                    src={product.image as StaticImageData}
-                    alt={product.title}
-                    width={640}
-                    height={360}
-                    className="w-full max-w-[600px] h-auto object-contain"
-                    loading="lazy"
-                  />
-                </motion.div>
-              </motion.div>
+              <span className="text-2xl font-bold text-black md:text-4xl">+</span>
 
-              {/* Title + Button */}
-              <motion.div
-                className="relative z-20 w-full -mt-10 md:-mt-16 px-6 md:px-10 space-y-4"
-                initial={{ x: idx === 0 ? -80 : 80, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.7, ease: "easeOut" }}
+              <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-white p-2 shadow-md md:h-28 md:w-28 md:rounded-2xl lg:h-32 lg:w-32">
+                <Image
+                  src={mini2}
+                  alt="Mini Product 2"
+                  className="max-h-full w-auto object-contain"
+                  style={{ width: "auto", height: "auto" }}
+                />
+              </div>
+
+              <span className="text-2xl font-bold text-black md:text-4xl">+</span>
+
+              <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-white p-2 shadow-md md:h-28 md:w-28 md:rounded-2xl lg:h-32 lg:w-32">
+                <Image
+                  src={mini3}
+                  alt="Mini Product 3"
+                  className="max-h-full w-auto object-contain"
+                  style={{ width: "auto", height: "auto" }}
+                />
+              </div>
+            </div>
+
+            {/* Tombol */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block pt-2"
+            >
+              <a
+                href={product3in1?.link || "#"}
+                className="group flex w-fit items-center space-x-3 rounded-full bg-[#1A1A1A] px-7 py-3 text-white transition-all hover:bg-black md:px-10 md:py-4"
               >
-                <h3 className="text-white text-lg md:text-2xl font-semibold leading-snug whitespace-pre-line">
-                  {/* MOBILE — tanpa replace */}
-                  <span className="md:hidden">{product.title}</span>
+                <span className="text-sm font-bold md:text-base">{buttonLabel}</span>
+                <FontAwesomeIcon
+                  icon={faAnglesRight}
+                  className="text-sm transition-transform group-hover:translate-x-1"
+                />
+              </a>
+            </motion.div>
+          </motion.div>
 
-                  {/* DESKTOP — pakai replace */}
-                  <span className="hidden md:block">
-                    {product.title.replace(" & ", "\n& ")}
-                  </span>
-                </h3>
+          {/* Kanan: gambar truk utama */}
+          <motion.div
+            className="relative flex justify-center lg:col-span-5"
+            initial={{ opacity: 0, scale: 0.8, x: 50 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div className="relative w-full max-w-[450px] lg:max-w-none">
+              <div className="absolute left-1/2 top-1/2 h-[60%] w-[60%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/10 blur-3xl lg:h-[80%] lg:w-[80%]" />
+              <Image
+                src={mainTruck}
+                alt={product3in1?.title || "Farrasindo Batch Pump"}
+                className="relative z-10 h-auto w-full transition-transform duration-500 hover:scale-105"
+                priority
+              />
+            </div>
+          </motion.div>
 
-                {product.link && (
-                  <a
-                    href={product.link}
-                    className={`inline-flex rounded-full px-4 py-2 text-sm md:text-base font-semibold text-white ${
-                      idx === 0 ? "bg-orange-600" : "bg-orange-400"
-                    }`}
-                  >
-                    {buttonLabel}
-                  </a>
-                )}
-              </motion.div>
-            </article>
-          ))}
         </div>
       </div>
     </section>

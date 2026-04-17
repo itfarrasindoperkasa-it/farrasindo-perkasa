@@ -220,6 +220,7 @@
     },
     "best_selling_products": {
       "title": "Best Selling Products",
+      "highlight": "Product Highlight",
       "buttonLabel": "Read More",
       "items": [
         {
