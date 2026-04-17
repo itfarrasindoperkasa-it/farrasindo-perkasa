@@ -289,7 +289,7 @@ export default function Navigation({ locale }: { locale: string }) {
             <FontAwesomeIcon icon={faXmark} size="2xl" />
           </button>
         </div>
-        <ul className="flex flex-col p-8 gap-6 text-xl font-bold overflow-y-auto max-h-[calc(100vh-120px)]">
+        <ul className="flex flex-col p-6 gap-4 text-base font-bold overflow-y-auto max-h-[calc(100vh-120px)]">
           <li>
             <Link href={`/${locale}`} className="block py-3 border-b border-gray-100" onClick={() => setIsMobileMenuOpen(false)}>
               {locale == "id" ? "Beranda" : "Home"}
@@ -304,7 +304,7 @@ export default function Navigation({ locale }: { locale: string }) {
               <FontAwesomeIcon icon={isMobileAboutOpen ? faChevronUp : faChevronDown} />
             </button>
             {isMobileAboutOpen && (
-              <ul className="pl-6 mt-3 flex flex-col gap-4 font-bold text-gray-500">
+              <ul className="pl-5 mt-2 flex flex-col gap-3 font-semibold text-gray-500 text-sm">
                 <li>
                   <Link href={`/${locale}/about-us#company-overview`} className="block py-2" onClick={(e) => {
                     handleScrollToSection("company-overview", e);
@@ -360,20 +360,20 @@ export default function Navigation({ locale }: { locale: string }) {
           <li>
             <Link
               href={`/${locale}/contact-us`}
-              className="mt-6 bg-[#f97d00] text-white p-5 rounded-2xl text-center flex items-center justify-center gap-4 font-bold text-xl shadow-xl shadow-orange-500/30"
+              className="mt-6 bg-[#f97d00] text-white p-3.5 rounded-xl text-center flex items-center justify-center gap-3 font-bold text-base shadow-lg shadow-orange-500/30"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <FontAwesomeIcon icon={faPhone} />
               {locale == "id" ? "Hubungi Kami" : "Call Now"}
             </Link>
           </li>
-          <li className="flex items-center gap-6 mt-6 p-6 bg-gray-50 rounded-2xl relative z-[110]">
-             <Link href={getLangPath("id")} className={`flex items-center gap-3 ${locale === "id" ? "text-[#f97d00]" : "text-gray-400"}`} onClick={() => setIsMobileMenuOpen(false)}>
-               <Image src={idFlag} alt="ID" width={28} /> <span className="text-lg">ID</span>
+          <li className="flex items-center justify-center gap-6 mt-2 p-4 bg-gray-50 rounded-xl relative z-[110]">
+             <Link href={getLangPath("id")} className={`flex items-center gap-2 ${locale === "id" ? "text-[#f97d00]" : "text-gray-400"}`} onClick={() => setIsMobileMenuOpen(false)}>
+               <Image src={idFlag} alt="ID" width={24} /> <span className="text-base">ID</span>
              </Link>
-             <div className="w-px h-6 bg-gray-300"></div>
-             <Link href={getLangPath("en")} className={`flex items-center gap-3 ${locale === "en" ? "text-[#f97d00]" : "text-gray-400"}`} onClick={() => setIsMobileMenuOpen(false)}>
-               <Image src={enFlag} alt="EN" width={28} /> <span className="text-lg">EN</span>
+             <div className="w-px h-5 bg-gray-300"></div>
+             <Link href={getLangPath("en")} className={`flex items-center gap-2 ${locale === "en" ? "text-[#f97d00]" : "text-gray-400"}`} onClick={() => setIsMobileMenuOpen(false)}>
+               <Image src={enFlag} alt="EN" width={24} /> <span className="text-base">EN</span>
              </Link>
           </li>
         </ul>
