@@ -118,7 +118,7 @@ export default function ProductRange({ message, locale }: { message: any, locale
               animate={{ opacity: 1, x: 0 }}
               className="flex flex-col"
             >
-              <h2 className="text-4xl md:text-6xl font-black text-[#171717] uppercase tracking-tighter">
+              <h2 className="text-4xl md:text-5xl font-black text-[#171717] uppercase tracking-tighter">
                 {message.categories[currentProduct.category] || currentProduct.category}
               </h2>
             </motion.div>

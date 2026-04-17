@@ -15,7 +15,8 @@ export async function Portfolio({ lang }: { lang: string }) {
       image: PortfolioData[index],
     }))
     // Filter out items without images
-    .filter((item) => !!item.image);
+    .filter((item) => !!item.image)
+    .slice(0, 7);
 
   return (
     <section className="bg-white py-20 md:py-24 overflow-hidden">
