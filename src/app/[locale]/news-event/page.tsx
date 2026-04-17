@@ -77,16 +77,18 @@ export default async function NewsandEvent({
       </section>
 
       {/* News & Event Content */}
-      <section className="md:px-4 py-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
-          {newsTitle}
-        </h2>
-        <NewsEventLayout
-          initialArticles={initialData.articles}
-          initialTotalPages={initialData.totalPages}
-          categories={categories}
-          locale={locale}
-        />
+      <section className="pt-12 pb-20 md:pt-20 md:pb-32 bg-[#fcfcfc]">
+        <div className="container mx-auto px-4 md:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-900 tracking-wide">
+            {newsTitle}
+          </h2>
+          <NewsEventLayout
+            initialArticles={initialData.articles}
+            initialTotalPages={initialData.totalPages}
+            categories={categories}
+            locale={locale}
+          />
+        </div>
       </section>
     </div>
   );

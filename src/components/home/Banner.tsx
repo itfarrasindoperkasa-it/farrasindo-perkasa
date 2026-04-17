@@ -15,10 +15,10 @@ function SampleNextArrow(props: any) {
   const { className, style, onClick } = props;
   return (
     <button
-      className="absolute right-5 md:right-10 top-1/2 -translate-y-1/2 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md transition-all hover:bg-[#f97d00] hover:scale-110 active:scale-95 border border-white/20 hidden md:flex"
+      className="absolute right-5 md:right-10 top-1/2 -translate-y-1/2 z-30 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md transition-all hover:bg-[#f97d00] hover:scale-110 active:scale-95 border border-white/20 hidden md:flex"
       onClick={onClick}
     >
-      <ChevronRight size={32} />
+      <ChevronRight size={24} />
     </button>
   );
 }
@@ -27,10 +27,10 @@ function SamplePrevArrow(props: any) {
   const { className, style, onClick } = props;
   return (
     <button
-      className="absolute left-5 md:left-10 top-1/2 -translate-y-1/2 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md transition-all hover:bg-[#f97d00] hover:scale-110 active:scale-95 border border-white/20 hidden md:flex"
+      className="absolute left-5 md:left-10 top-1/2 -translate-y-1/2 z-30 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md transition-all hover:bg-[#f97d00] hover:scale-110 active:scale-95 border border-white/20 hidden md:flex"
       onClick={onClick}
     >
-      <ChevronLeft size={32} />
+      <ChevronLeft size={24} />
     </button>
   );
 }
@@ -127,7 +127,7 @@ function Banner({
                     <div className="pt-4 opacity-0 translate-y-4 animate-fade-in-up [animation-delay:600ms]">
                       <Link
                         href={messages[idx]?.link || "#"}
-                        className="group inline-flex items-center gap-4 bg-[#f97d00] hover:bg-white text-white hover:text-[#f97d00] px-8 md:px-12 py-4 md:py-5 rounded-2xl font-extrabold text-sm md:text-xl transition-all duration-300 shadow-2xl shadow-orange-500/30 hover:shadow-white/20 hover:-translate-y-1"
+                        className="group inline-flex items-center gap-4 bg-[#f97d00] hover:bg-white text-white hover:text-[#f97d00] px-6 md:px-10 py-3 md:py-4 rounded-2xl font-extrabold text-sm md:text-lg transition-all duration-300 shadow-2xl shadow-orange-500/30 hover:shadow-white/20 hover:-translate-y-1"
                       >
                         {messages[idx]?.buttonText}
                         <FontAwesomeIcon 

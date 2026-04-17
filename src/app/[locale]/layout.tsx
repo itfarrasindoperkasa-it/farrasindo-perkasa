@@ -4,6 +4,7 @@ import "../globals.css";
 import Navigation from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import ActionButton from "@/components/ActionButton";
+import NextTopLoader from "nextjs-toploader";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -203,6 +204,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={`${urbanist.className} ${urbanist.variable}`}>
+        <NextTopLoader color="#f97d00" showSpinner={false} height={3} />
         <ActionButton />
         {/* JSON-LD Structured Data for SEO */}
         <script

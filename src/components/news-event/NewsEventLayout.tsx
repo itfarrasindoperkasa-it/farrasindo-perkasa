@@ -62,9 +62,20 @@ export default function NewsEventLayout({
   };
 
   return (
-    <div className="flex flex-col lg:flex-row gap-8 md:px-10">
-      {/* Sidebar */}
-      <aside className="lg:w-1/4 w-full flex flex-col gap-6">
+    <div className="flex flex-col lg:flex-row gap-12">
+      {/* Main Content - Moved to top for mobile */}
+      <main className="lg:w-3/4 w-full flex flex-col gap-8 order-1 lg:order-2">
+        <NewsEventCard
+          paginatedNews={paginatedNews}
+          page={page}
+          setPage={handlePageChange}
+          totalPages={totalPages}
+          locale={locale}
+        />
+      </main>
+
+      {/* Sidebar - Moved to bottom for mobile */}
+      <aside className="lg:w-1/4 w-full flex flex-col gap-6 order-2 lg:order-1">
         <NewsEventFiltering
           latestArticle={latestArticle}
           handleFilter={globalFilterArticle}
@@ -74,16 +85,6 @@ export default function NewsEventLayout({
           locale={locale}
         />
       </aside>
-      {/* Main Content */}
-      <main className="lg:w-3/4 w-full flex flex-col gap-8">
-        <NewsEventCard
-          paginatedNews={paginatedNews}
-          page={page}
-          setPage={handlePageChange}
-          totalPages={totalPages}
-          locale={locale}
-        />
-      </main>
     </div>
   );
 }

@@ -28,10 +28,10 @@ export function BestSellingProduct({
 
   return (
     <section className="relative w-full overflow-hidden bg-white">
-      {/* Background #FF9314 dengan opacity 75% */}
+      {/* Background #f97d00 dengan opacity 75% */}
       <div
         className="absolute inset-0 z-0"
-        style={{ backgroundColor: "#FF9314", opacity: 0.75 }}
+        style={{ backgroundColor: "#f97d00", opacity: 0.75 }}
       />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-12 md:py-20 lg:px-12">

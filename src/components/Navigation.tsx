@@ -6,6 +6,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import enFlag from "@/asset/images/homes/en-flag.png";
 import idFlag from "@/asset/images/homes/id-flag.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -33,6 +34,7 @@ export default function Navigation({ locale }: { locale: string }) {
     portfolio: false,
   });
 
+  const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -50,11 +52,15 @@ export default function Navigation({ locale }: { locale: string }) {
   };
 
   const handleScrollToSection = (id: string, e?: React.MouseEvent) => {
-    if (e) e.preventDefault();
-    const cleanId = id.replace(/^#/, "");
-    const el = document.getElementById(cleanId);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
+    const isAboutUsPage = pathname.includes("about-us");
+    
+    if (isAboutUsPage) {
+      if (e) e.preventDefault();
+      const cleanId = id.replace(/^#/, "");
+      const el = document.getElementById(cleanId);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 
@@ -223,17 +229,17 @@ export default function Navigation({ locale }: { locale: string }) {
                 </ul>
               </li>
               <li>
-                <Link href={`/${locale}/product-service`} className="hover:text-[#f97d00] transition-colors">
+                <Link href={`/${locale}/product-service`} prefetch={true} className="hover:text-[#f97d00] transition-colors">
                   {locale == "id" ? "Produk Layanan" : "Products Service"}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/portfolio`} className="hover:text-[#f97d00] transition-colors">
+                <Link href={`/${locale}/portfolio`} prefetch={true} className="hover:text-[#f97d00] transition-colors">
                   Portfolio
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/news-event`} className="hover:text-[#f97d00] transition-colors">
+                <Link href={`/${locale}/news-event`} prefetch={true} className="hover:text-[#f97d00] transition-colors">
                   {locale == "id" ? "Berita" : "News & Event"}
                 </Link>
               </li>
@@ -241,6 +247,7 @@ export default function Navigation({ locale }: { locale: string }) {
 
             <Link
               href={`/${locale}/contact-us`}
+              prefetch={true}
               className="bg-[#f97d00] hover:bg-[#e67300] text-white px-7 py-3 rounded-lg font-bold shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 transition-all flex items-center gap-2 text-[17px]"
             >
               {locale == "id" ? "Hubungi Kami" : "Call Now"}
@@ -289,17 +296,26 @@ export default function Navigation({ locale }: { locale: string }) {
             {isMobileAboutOpen && (
               <ul className="pl-6 mt-3 flex flex-col gap-4 font-bold text-gray-500">
                 <li>
-                  <Link href={`/${locale}/about-us#company-overview`} className="block py-2" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Link href={`/${locale}/about-us#company-overview`} className="block py-2" onClick={(e) => {
+                    handleScrollToSection("company-overview", e);
+                    setIsMobileMenuOpen(false);
+                  }}>
                     {locale == "id" ? "Gambaran Perusahaan" : "Company Overview"}
                   </Link>
                 </li>
                 <li>
-                  <Link href={`/${locale}/about-us#company-history`} className="block py-2" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Link href={`/${locale}/about-us#company-history`} className="block py-2" onClick={(e) => {
+                    handleScrollToSection("company-history", e);
+                    setIsMobileMenuOpen(false);
+                  }}>
                     {locale == "id" ? "Sejarah" : "History"}
                   </Link>
                 </li>
                 <li>
-                  <Link href={`/${locale}/about-us#our-group`} className="block py-2" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Link href={`/${locale}/about-us#our-group`} className="block py-2" onClick={(e) => {
+                    handleScrollToSection("our-group", e);
+                    setIsMobileMenuOpen(false);
+                  }}>
                     {locale == "id" ? "Kelompok Kami" : "Our Group"}
                   </Link>
                 </li>

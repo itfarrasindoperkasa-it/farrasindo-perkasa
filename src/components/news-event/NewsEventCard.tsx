@@ -20,56 +20,76 @@ export default function NewsEventCard({
   locale: string;
 }) {
   return (
-    <>
+    <div className="flex flex-col gap-8">
       {/* News List with Pagination */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {paginatedNews.map((news: any) => {
           return (
-            <div key={news.slug} className="p-6 flex flex-col ">
-              <Image
-                src={news.image}
-                alt={news.title}
-                width={360}
-                height={250}
-                className="rounded-lg object-cover mb-4 w-full h-[250px] shadow-lg/20"
-                style={{ height: "auto", width: "auto" }}
-              />
-              <div className="flex justify-between items-center w-full mb-2">
-                <span className="bg-orange-400 text-white font-bold text-xs px-3 py-1 rounded">
-                  {news.author}
-                </span>
-                <span className="text-xs text-orange-500 flex items-center gap-1">
-                  <Calendar size={16} className="inline-block" />
-                  {formatDate(news.date, locale)}
-                </span>
+            <div
+              key={news.slug}
+              className="bg-[#fafafa] border border-gray-100 flex flex-col h-full shadow-sm hover:shadow-md transition-shadow duration-300 rounded-xl overflow-hidden"
+            >
+              <div className="relative w-full aspect-[16/10] overflow-hidden rounded-t-xl">
+                <Image
+                  src={news.image}
+                  alt={news.title}
+                  fill
+                  className="object-cover transition-transform duration-500 hover:scale-105"
+                />
               </div>
-              <Link href={`/${locale}/news-event/${news.slug}`} passHref>
-                <div className="text-lg font-bold mb-2 hover:text-orange-400 transition-colors duration-200">
-                  {news.title}
+              
+              <div className="p-8 flex flex-col flex-grow">
+                <div className="flex items-center gap-6 mb-6">
+                  <span className="bg-[#f97d00] text-white font-bold text-xs px-4 py-2 uppercase tracking-widest">
+                    {news.author === "Farrasindo Group" ? "Farrasindo" : news.author}
+                  </span>
+                  <div className="flex items-center gap-2 text-gray-500 font-semibold">
+                    <Calendar size={18} className="text-[#f97d00]" />
+                    <span className="text-sm tracking-tight">
+                      {formatDate(news.date, locale)}
+                    </span>
+                  </div>
                 </div>
-              </Link>
+
+                <Link href={`/${locale}/news-event/${news.slug}`} passHref className="group">
+                  <h3 className="text-lg md:text-xl font-bold mb-6 text-gray-900 line-clamp-2 group-hover:text-[#f97d00] transition-colors leading-snug">
+                    {news.title}
+                  </h3>
+                </Link>
+
+                <div className="mt-auto pt-6 border-t border-gray-100">
+                  <Link 
+                    href={`/${locale}/news-event/${news.slug}`}
+                    className="inline-flex items-center text-gray-700 font-bold hover:text-[#f97d00] transition-colors gap-2 group"
+                  >
+                    <span className="text-base">Read More</span>
+                    <span className="text-lg transition-transform group-hover:translate-x-1">»</span>
+                  </Link>
+                </div>
+              </div>
             </div>
           );
         })}
       </div>
+
       {/* Pagination Controls */}
       {totalPages > 1 && (
         <div className="flex justify-center items-center gap-2 mt-8">
           <button
-            className="px-3 py-1 rounded bg-gray-200 hover:bg-orange-400 hover:text-white"
+            className="px-4 py-2 rounded-md bg-white border border-gray-200 text-gray-600 hover:bg-[#f97d00] hover:text-white transition-colors disabled:opacity-50 disabled:hover:bg-white disabled:hover:text-gray-600"
             disabled={page === 1}
             onClick={() => setPage(page - 1)}
           >
             Previous
           </button>
-          <div className="flex gap-2">
+          <div className="flex gap-2 text-sm font-medium">
             {Array.from({ length: totalPages }).map((_, i) => (
               <button
                 key={i}
-                className={`px-3 py-1 rounded-lg ${
+                className={`w-10 h-10 flex items-center justify-center rounded-md transition-colors ${
                   page === i + 1
-                    ? "bg-orange-400 text-white"
-                    : "bg-gray-200 hover:bg-orange-400 hover:text-white"
+                    ? "bg-[#f97d00] text-white shadow-md shadow-orange-200"
+                    : "bg-white border border-gray-200 text-gray-600 hover:border-[#f97d00] hover:text-[#f97d00]"
                 }`}
                 onClick={() => setPage(i + 1)}
               >
@@ -78,7 +98,7 @@ export default function NewsEventCard({
             ))}
           </div>
           <button
-            className="px-3 py-1 rounded-lg bg-gray-200 hover:bg-orange-400 hover:text-white"
+            className="px-4 py-2 rounded-md bg-white border border-gray-200 text-gray-600 hover:bg-[#f97d00] hover:text-white transition-colors disabled:opacity-50 disabled:hover:bg-white disabled:hover:text-gray-600"
             disabled={page === totalPages}
             onClick={() => setPage(page + 1)}
           >
@@ -86,6 +106,6 @@ export default function NewsEventCard({
           </button>
         </div>
       )}
-    </>
+    </div>
   );
 }
