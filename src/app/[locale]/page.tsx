@@ -1,7 +1,5 @@
 import Banner from "@/components/home/Banner";
 import Image from "next/image";
-import AllUnitImage from "@/asset/images/homes/all-unit.png";
-import Link from "next/link";
 import OurServiceSellImage from "@/asset/images/homes/our-service-sell.png";
 import OurServiceRentImage from "@/asset/images/homes/our-service-rent.png";
 import OurServicePartAfterSaleImage from "@/asset/images/homes/our-service-part-after-sales.png";
@@ -11,6 +9,11 @@ import { BestSellingProduct } from "@/components/home/BestSellingProduct";
 import { TestimonialSection } from "@/components/home/Testimonial";
 import { OurGroup } from "@/components/home/OurGroup";
 import LatestNewsArticle from "@/components/home/LatestNewsArticle";
+
+import AboutSection from "@/components/home/AboutSection";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 export default async function Home({
   params,
@@ -27,100 +30,94 @@ export default async function Home({
         height="h-[60vh] lg:h-[100vh] max-h-[1000px]"
         messages={message.home.banner}
       />
-      <section
-        id="about"
-        className="w-full px-4 md:ps-10 md:pe-23 py-12 md:py-20"
-      >
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 md:gap-20 items-center">
-          {/* IMAGE — MOBILE DI ATAS */}
-          <div className="w-full flex-1 flex justify-center">
-            <Image
-              src={AllUnitImage}
-              alt="All Unit Farrasindo"
-              className="w-full max-w-xl h-auto object-contain"
-              priority
-            />
+      
+      <AboutSection locale={locale} message={message.home.about} />
+
+      <section id="ourServices" className="py-20 bg-gray-50/50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="text-center space-y-4 mb-16">
+            <h2 className="text-4xl font-extrabold text-[#171717]">
+              {message.home.our_service.title}
+            </h2>
           </div>
-
-          {/* TEXT — MOBILE DI BAWAH */}
-          <div className="flex flex-1 flex-col justify-between gap-4 md:gap-6">
-            <h1 className="text-3xl font-bold leading-snug">
-              {message.home.about.title.split(" ")[0]}{" "}
-              <span className="bg-orange-400 px-2 py-1 sm:px-3 sm:py-2 rounded-md text-white">
-                {message.home.about.title.split(" ")[1]}
-              </span>
-            </h1>
-
-            <p className="text-justify leading-relaxed text-sm sm:text-base">
-              {message.home.about.description}
-            </p>
-
-            <Link
-              href={`/${locale}/about-us`}
-              className="py-2 px-4 text-white rounded-md font-bold text-base sm:text-lg bg-orange-400 w-full sm:w-fit text-center"
-            >
-              {message.home.about.buttonText}
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section id="ourServices" className="py-20 px-4 md:px-6 bg-gray-100">
-        <div className="max-w-360 mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-10">
-            {message.home.our_service.title}
-          </h2>
-          <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
-            <div className="p-8 card shadow-lg items-center justify-center flex flex-col border-2 rounded-lg border-gray-200 py-5 gap-5">
-              <Image
-                src={OurServiceRentImage}
-                width={150}
-                height={150}
-                alt="Our Service Part After Sales"
-              />
-              <h3 className="font-bold text-2xl">
-                {message.home.our_service.rent.title}
-              </h3>
-              <details className="text-justify flex flex-col gap-5 items-center">
-                <summary className="text-orange-400 border border-1 border-orange-400 rounded-lg px-2 py-1 w-fit cursor-pointer">
-                  Detail
-                </summary>
-                {message.home.our_service.rent.description}
-              </details>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Rent Section */}
+            <div className="group bg-white p-10 rounded-3xl shadow-sm hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 hover:-translate-y-2 border border-gray-100 flex flex-col items-center text-center gap-6">
+              <div className="w-32 h-32 relative group-hover:scale-110 transition-transform duration-500">
+                <Image
+                  src={OurServiceRentImage}
+                  fill
+                  className="object-contain"
+                  alt="Sewa Mesin"
+                />
+              </div>
+              <div className="space-y-4">
+                <h3 className="font-extrabold text-2xl text-neutral-800">
+                  {message.home.our_service.rent.title}
+                </h3>
+                <p className="text-neutral-600 leading-relaxed line-clamp-3">
+                  {message.home.our_service.rent.description}
+                </p>
+                <Link 
+                  href={`/${locale}/product-service?tab=Rent`}
+                  className="inline-flex items-center text-[#f97d00] font-bold hover:gap-2 transition-all mt-4"
+                >
+                  Detail Layanan <FontAwesomeIcon icon={faAngleRight} className="ml-2" />
+                </Link>
+              </div>
             </div>
-            <div className="p-8 card shadow-lg items-center justify-center flex flex-col border border-2 rounded-lg border-gray-200 py-5 gap-5">
-              <Image
-                src={OurServiceSellImage}
-                width={150}
-                height={150}
-                alt="Our Service Part After Sales"
-              />
-              <h3 className="font-bold text-2xl">
-                {message.home.our_service.sell.title}
-              </h3>
-              <details className="text-justify flex flex-col gap-5 items-center">
-                <summary className="text-orange-400 border border-1 border-orange-400 rounded-lg px-2 py-1 w-fit cursor-pointer">
-                  Detail
-                </summary>
-                {message.home.our_service.sell.description}
-              </details>
+
+            {/* Sell Section */}
+            <div className="group bg-white p-10 rounded-3xl shadow-sm hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 hover:-translate-y-2 border border-gray-100 flex flex-col items-center text-center gap-6">
+              <div className="w-32 h-32 relative group-hover:scale-110 transition-transform duration-500">
+                <Image
+                  src={OurServiceSellImage}
+                  fill
+                  className="object-contain"
+                  alt="Jual Mesin"
+                />
+              </div>
+              <div className="space-y-4">
+                <h3 className="font-extrabold text-2xl text-neutral-800">
+                  {message.home.our_service.sell.title}
+                </h3>
+                <p className="text-neutral-600 leading-relaxed line-clamp-3">
+                  {message.home.our_service.sell.description}
+                </p>
+                <Link 
+                  href={`/${locale}/product-service?tab=Sell`}
+                  className="inline-flex items-center text-[#f97d00] font-bold hover:gap-2 transition-all mt-4"
+                >
+                  Detail Layanan <FontAwesomeIcon icon={faAngleRight} className="ml-2" />
+                </Link>
+              </div>
             </div>
-            <div className="p-8 card shadow-lg items-center justify-center flex flex-col border border-2 rounded-lg border-gray-200 py-5 gap-5">
-              <Image
-                src={OurServicePartAfterSaleImage}
-                width={150}
-                height={150}
-                alt="Our Service Part After Sales"
-              />
-              <h3 className="font-bold text-2xl">
-                {message.home.our_service.sparepart.title}
-              </h3>
-              <details className="text-justify flex flex-col gap-5 items-center">
-                <summary className="text-orange-400 border border-1 border-orange-400 rounded-lg px-2 py-1 w-fit cursor-pointer">
-                  Detail
-                </summary>
-                {message.home.our_service.sparepart.description}
-              </details>
+
+            {/* Sparepart Section */}
+            <div className="group bg-white p-10 rounded-3xl shadow-sm hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 hover:-translate-y-2 border border-gray-100 flex flex-col items-center text-center gap-6">
+              <div className="w-32 h-32 relative group-hover:scale-110 transition-transform duration-500">
+                <Image
+                  src={OurServicePartAfterSaleImage}
+                  fill
+                  className="object-contain"
+                  alt="Suku Cadang"
+                />
+              </div>
+              <div className="space-y-4">
+                <h3 className="font-extrabold text-2xl text-neutral-800">
+                  {message.home.our_service.sparepart.title}
+                </h3>
+                <p className="text-neutral-600 leading-relaxed line-clamp-3">
+                  {message.home.our_service.sparepart.description}
+                </p>
+                <Link 
+                  href={`/${locale}/product-service?tab=Sparepart`}
+                  className="inline-flex items-center text-[#f97d00] font-bold hover:gap-2 transition-all mt-4"
+                >
+                  Detail Layanan <FontAwesomeIcon icon={faAngleRight} className="ml-2" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
