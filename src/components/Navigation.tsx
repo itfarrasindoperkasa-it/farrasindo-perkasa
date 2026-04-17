@@ -47,6 +47,16 @@ export default function Navigation({ locale }: { locale: string }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const getLangPath = (newLocale: string) => {
+    const segments = pathname.split("/");
+    if (segments.length > 1) {
+      segments[1] = newLocale;
+    } else {
+      return `/${newLocale}`;
+    }
+    return segments.join("/") || "/";
+  };
+
   const handleOpenNavbar = (menu: "aboutus" | "portfolio") => {
     setOpenNavbar((prev: any) => ({ ...prev, [menu]: !prev[menu] }));
   };
@@ -77,16 +87,16 @@ export default function Navigation({ locale }: { locale: string }) {
       <div className={`hidden md:flex items-center w-full h-[45px] transition-colors duration-300 relative z-[60] ${
         scrolled ? "bg-black" : "bg-black/20 backdrop-blur-sm"
       }`}>
-        <div className="container mx-auto px-6 md:px-20 lg:px-32 flex justify-between items-center h-full">
-          <ul className="flex gap-8 items-center h-full">
+        <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center h-full">
+          <ul className="flex gap-4 lg:gap-8 items-center h-full">
             <li className="flex items-center">
               <Link
                 href="mailto:marketing@farrasindo-cp.co.id"
-                className="flex items-center text-white text-sm hover:text-[#f97d00] transition-colors"
-                style={{ fontSize: "14px" }}
+                className="flex items-center text-white hover:text-[#f97d00] transition-colors text-[12px] lg:text-[14px]"
               >
-                <FontAwesomeIcon icon={faEnvelope} className="text-[#f97d00] me-3 text-base" />
-                marketing@farrasindo-cp.co.id
+                <FontAwesomeIcon icon={faEnvelope} className="text-[#f97d00] me-2 lg:me-3 text-sm lg:text-base" />
+                <span className="hidden sm:inline">marketing@farrasindo-cp.co.id</span>
+                <span className="inline sm:hidden">Email</span>
               </Link>
             </li>
             <li className="flex items-center">
@@ -94,18 +104,17 @@ export default function Navigation({ locale }: { locale: string }) {
                 href="https://maps.google.com/maps?ll=-6.198149,106.756053&z=13&t=m&hl=id&gl=ID&mapclient=embed&cid=6652057653992676014"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-white text-sm hover:text-[#f97d00] transition-colors"
-                style={{ fontSize: "14px" }}
+                className="flex items-center text-white hover:text-[#f97d00] transition-colors text-[12px] lg:text-[14px]"
               >
-                <FontAwesomeIcon icon={faLocationDot} className="text-[#f97d00] me-3 text-base" />
+                <FontAwesomeIcon icon={faLocationDot} className="text-[#f97d00] me-2 lg:me-3 text-sm lg:text-base" />
                 {locale == "id"
-                  ? "Srengseng, Kota Jakarta Barat"
-                  : "Srengseng, West Jakarta City"}
+                  ? "Jakarta Barat"
+                  : "West Jakarta"}
               </Link>
             </li>
           </ul>
-          <div className="flex items-center gap-8 h-full">
-            <ul className="flex gap-5">
+          <div className="flex items-center gap-4 lg:gap-8 h-full">
+            <ul className="flex gap-3 lg:gap-5">
               <li>
                 <Link href="https://www.facebook.com/farrasindo" target="_blank" className="text-white hover:text-[#f97d00] transition-colors">
                   <FontAwesomeIcon icon={faFacebookF} className="text-lg" />
@@ -128,25 +137,26 @@ export default function Navigation({ locale }: { locale: string }) {
               </li>
               <li>
                 <Link href="https://www.youtube.com/channel/UCTLUMhIMoWrkgSNelac3aRQ" target="_blank" className="text-white hover:text-[#f97d00] transition-colors">
-                  <FontAwesomeIcon icon={faYoutube} className="text-lg" />
+                  <FontAwesomeIcon icon={faYoutube} className="text-base lg:text-lg" />
                 </Link>
               </li>
             </ul>
             {/* Language Switcher */}
-            <div className="flex items-center gap-3 border-l border-white/20 pl-8 ml-2 h-6">
-              <Image src={locale === "id" ? idFlag : enFlag} alt="Current Language" width={22} height={14} />
-              <span className="text-white text-sm font-bold uppercase tracking-wider">{locale}</span>
-              <div className="relative group/lang">
-                  <FontAwesomeIcon icon={faChevronDown} className="text-white text-[12px] cursor-pointer" />
-                  <div className="absolute right-0 top-full mt-4 bg-white shadow-2xl rounded-lg opacity-0 invisible group-hover/lang:opacity-100 group-hover/lang:visible transition-all duration-300 w-36 py-3 border border-gray-100 z-[100]">
-                    <button 
-                      onClick={() => window.location.href = (locale === "id" ? "/en" : "/id") + window.location.pathname.replace(/^\/[a-z]{2}/, "")}
-                      className="flex items-center gap-4 w-full px-5 py-2.5 hover:bg-orange-50 text-gray-800 text-sm font-semibold"
-                    >
-                      <Image src={locale === "id" ? enFlag : idFlag} alt="Flag" width={22} height={14} />
-                      {locale === "id" ? "English" : "Indonesia"}
-                    </button>
-                  </div>
+            <div className="flex items-center gap-3 border-l border-white/20 pl-4 lg:pl-8 ml-2 h-6 group/lang relative cursor-pointer">
+              <Image src={locale === "id" ? idFlag : enFlag} alt="Current Language" width={20} height={12} className="lg:w-[22px] lg:h-[14px]" />
+              <span className="text-white text-[12px] lg:text-sm font-bold uppercase tracking-wider">{locale}</span>
+              <FontAwesomeIcon icon={faChevronDown} className="text-white text-[10px] lg:text-[12px]" />
+              
+              <div className="absolute right-0 top-full pt-4 opacity-0 invisible group-hover/lang:opacity-100 group-hover/lang:visible transition-all duration-300 z-[100]">
+                <div className="bg-white shadow-2xl rounded-lg w-36 py-3 border border-gray-100">
+                  <Link 
+                    href={getLangPath(locale === "id" ? "en" : "id")}
+                    className="flex items-center gap-4 w-full px-5 py-2.5 hover:bg-orange-50 text-gray-800 text-sm font-semibold"
+                  >
+                    <Image src={locale === "id" ? enFlag : idFlag} alt="Flag" width={22} height={14} />
+                    {locale === "id" ? "English" : "Indonesia"}
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -155,7 +165,7 @@ export default function Navigation({ locale }: { locale: string }) {
 
       {/* MAIN BAR (LOGO + MENU) */}
       <div className={`flex items-center w-full transition-all duration-300 ${scrolled ? "h-[70px]" : "h-[90px]"} relative z-[50]`}>
-        <div className="container mx-auto px-6 md:px-20 lg:px-32 flex justify-between items-center h-full">
+        <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center h-full">
           <Link href={`/${locale}`} className="flex-shrink-0 transition-all duration-300">
             <Image
               src="/assets/images/farrasindo-logo.svg"
@@ -163,13 +173,13 @@ export default function Navigation({ locale }: { locale: string }) {
               height={55}
               loading="eager"
               alt="Farrasindo Logo"
-              className="h-auto transition-all duration-300 w-[160px] md:w-[200px]"
+              className="h-auto transition-all duration-300 w-[160px] md:w-[170px] lg:w-[200px]"
             />
           </Link>
 
           {/* DESKTOP MENU */}
-          <div className="hidden md:flex items-center justify-end gap-10">
-            <ul className={`flex gap-10 text-[17px] font-bold items-center ${scrolled ? "text-gray-800" : "text-white"}`}>
+          <div className="hidden md:flex items-center justify-end gap-3 lg:gap-8">
+            <ul className={`flex gap-3 lg:gap-6 xl:gap-7 text-[13px] lg:text-[15px] xl:text-[16px] font-bold items-center ${scrolled ? "text-gray-800" : "text-white"}`}>
               <li>
                 <Link href={`/${locale}`} className="hover:text-[#f97d00] transition-colors">
                   {locale == "id" ? "Beranda" : "Home"}
@@ -248,7 +258,7 @@ export default function Navigation({ locale }: { locale: string }) {
             <Link
               href={`/${locale}/contact-us`}
               prefetch={true}
-              className="bg-[#f97d00] hover:bg-[#e67300] text-white px-7 py-3 rounded-lg font-bold shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 transition-all flex items-center gap-2 text-[17px]"
+              className="bg-[#f97d00] hover:bg-[#e67300] text-white px-4 lg:pl-6 lg:pr-4 py-2.5 lg:py-3 rounded-lg font-bold shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 transition-all flex items-center gap-1.5 text-[13px] lg:text-[15px] xl:text-[16px]"
             >
               {locale == "id" ? "Hubungi Kami" : "Call Now"}
               <FontAwesomeIcon icon={faAngleRight} />
@@ -357,14 +367,14 @@ export default function Navigation({ locale }: { locale: string }) {
               {locale == "id" ? "Hubungi Kami" : "Call Now"}
             </Link>
           </li>
-          <li className="flex items-center gap-6 mt-6 p-6 bg-gray-50 rounded-2xl">
-             <button onClick={() => window.location.href = "/id" + window.location.pathname.replace(/^\/[a-z]{2}/, "")} className={`flex items-center gap-3 ${locale === "id" ? "text-[#f97d00]" : "text-gray-400"}`}>
+          <li className="flex items-center gap-6 mt-6 p-6 bg-gray-50 rounded-2xl relative z-[110]">
+             <Link href={getLangPath("id")} className={`flex items-center gap-3 ${locale === "id" ? "text-[#f97d00]" : "text-gray-400"}`} onClick={() => setIsMobileMenuOpen(false)}>
                <Image src={idFlag} alt="ID" width={28} /> <span className="text-lg">ID</span>
-             </button>
+             </Link>
              <div className="w-px h-6 bg-gray-300"></div>
-             <button onClick={() => window.location.href = "/en" + window.location.pathname.replace(/^\/[a-z]{2}/, "")} className={`flex items-center gap-3 ${locale === "en" ? "text-[#f97d00]" : "text-gray-400"}`}>
+             <Link href={getLangPath("en")} className={`flex items-center gap-3 ${locale === "en" ? "text-[#f97d00]" : "text-gray-400"}`} onClick={() => setIsMobileMenuOpen(false)}>
                <Image src={enFlag} alt="EN" width={28} /> <span className="text-lg">EN</span>
-             </button>
+             </Link>
           </li>
         </ul>
       </div>

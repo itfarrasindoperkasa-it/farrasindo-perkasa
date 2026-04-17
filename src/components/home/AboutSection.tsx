@@ -63,7 +63,7 @@ export default function AboutSection({ locale, message }: AboutSectionProps) {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <div className="space-y-4">    
-              <h2 className="text-4xl md:text-5xl font-extrabold text-[#171717] leading-tight">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-[#171717] leading-tight">
                 {firstPart}{" "}
                 <span className="relative inline-block text-[#f97d00]">
                   {lastPart}
@@ -72,14 +72,14 @@ export default function AboutSection({ locale, message }: AboutSectionProps) {
               </h2>
             </div>
 
-            <p className="text-lg text-neutral-600 leading-relaxed text-justify md:text-left">
+            <p className="text-base text-neutral-600 leading-relaxed text-justify md:text-left">
               {message.description}
             </p>
 
             <div className="pt-4">
               <Link
                 href={`/${locale}/about-us`}
-                className="group inline-flex items-center justify-center gap-4 bg-[#f97d00] hover:bg-[#e67300] text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 hover:-translate-y-1 active:scale-95 w-full sm:w-fit"
+                className="group inline-flex items-center justify-center gap-3 bg-[#f97d00] hover:bg-[#e67300] text-white px-6 py-3 rounded-xl font-bold text-base transition-all duration-300 shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 hover:-translate-y-1 active:scale-95 w-full sm:w-fit"
               >
                 {message.buttonText}
                 <FontAwesomeIcon 

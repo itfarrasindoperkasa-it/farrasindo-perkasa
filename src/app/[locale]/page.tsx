@@ -26,7 +26,7 @@ export default async function Home({
   return (
     <main id="home" className="w-full overflow-x-hidden mx-auto max-w-[120rem]">
       <Banner
-        className={`banner bg-black w-screen p-0`}
+        className={`banner bg-black w-full p-0`}
         height="h-[60vh] lg:h-[100vh] max-h-[1000px]"
         messages={message.home.banner}
       />

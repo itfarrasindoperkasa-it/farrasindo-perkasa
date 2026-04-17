@@ -78,8 +78,10 @@ function Banner({
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     appendDots: (dots: any) => (
-      <div className="absolute bottom-12 left-0 right-0 z-30">
-        <ul className="m-0 flex justify-center gap-4"> {dots} </ul>
+      <div className="absolute bottom-12 left-0 right-0 z-30 pointer-events-none">
+        <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 flex justify-center">
+          <ul className="m-0 flex gap-4 pointer-events-auto"> {dots} </ul>
+        </div>
       </div>
     ),
     customPaging: (i: number) => (
@@ -108,7 +110,7 @@ function Banner({
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
 
               {/* Content Container */}
-              <div className="container mx-auto px-6 md:px-20 lg:px-32 relative z-20">
+              <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 relative z-20">
                 <div className="max-w-[90%] md:max-w-[80%] lg:max-w-[70%] space-y-6 md:space-y-8">
 
                   {/* HTML Title Support - Perkecil sedikit dari sebelumnya */}

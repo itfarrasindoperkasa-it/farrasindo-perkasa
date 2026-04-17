@@ -20,7 +20,7 @@ export async function Portfolio({ lang }: { lang: string }) {
 
   return (
     <section className="bg-white py-20 md:py-24 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-4 md:px-6">
+      <div className="w-full max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header - Consistent with page.tsx */}
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl font-extrabold text-[#171717]">

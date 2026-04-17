@@ -92,7 +92,7 @@ export default function PortfolioSlider({ items, lang }: { items: any[], lang: s
   };
 
   return (
-    <div className="portfolio-slider-container relative px-2 mb-12">
+    <div className="portfolio-slider-container relative px-2">
       <Slider {...settings}>
         {items.map((item, index) => (
           <div key={index} className="pb-20 pt-4">
