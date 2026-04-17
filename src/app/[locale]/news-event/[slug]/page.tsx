@@ -124,6 +124,8 @@ export default async function NewsDetail({ params }: NewsDetailParams) {
             objectPosition: "center",
           }}
         />
+        {/* Overlay for better menu visibility */}
+        <div className="absolute inset-0 bg-black/40" />
       </section>
       <section className="max-w-360 mx-auto px-4 py-12">
         <div className="flex flex-col lg:flex-row gap-8">

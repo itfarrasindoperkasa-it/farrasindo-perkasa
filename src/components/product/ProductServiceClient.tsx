@@ -212,6 +212,8 @@ export default function ProductServiceClient({
             alt="Product Range Banner"
             className="object-cover"
           />
+          {/* Overlay for better menu visibility */}
+          <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="flex items-center justify-center">
           <h1 className=" text-2xl md:text-4xl font-bold">

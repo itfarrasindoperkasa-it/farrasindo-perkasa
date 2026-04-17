@@ -72,6 +72,8 @@ export default async function NewsandEvent({
           className="object-cover"
           priority
         />
+        {/* Overlay for better menu visibility */}
+        <div className="absolute inset-0 bg-black/40" />
       </section>
 
       {/* News & Event Content */}

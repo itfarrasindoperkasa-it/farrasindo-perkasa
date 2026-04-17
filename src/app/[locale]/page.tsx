@@ -136,9 +136,7 @@ export default async function Home({
         <LatestNewsArticle lang={locale} />
       </section>
 
-      <section id="ourGroup">
-        <OurGroup />
-      </section>
+      <OurGroup title={message.home.our_group.title} />
     </main>
   );
 }

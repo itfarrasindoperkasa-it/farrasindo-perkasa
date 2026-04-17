@@ -231,6 +231,8 @@ export default function AboutUsClient({
           fill
           className="object-cover"
         />
+        {/* Overlay for better menu visibility */}
+        <div className="absolute inset-0 bg-black/40" />
       </section>
 
       {/* TITLE */}

@@ -76,6 +76,8 @@ export default async function PortfolioPage({
           className="object-cover"
           priority
         />
+        {/* Overlay for better menu visibility */}
+        <div className="absolute inset-0 bg-black/40" />
       </section>
 
       {/* Portfolio Grid */}

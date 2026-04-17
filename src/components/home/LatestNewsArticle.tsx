@@ -20,38 +20,19 @@ export default function LatestNewsArticle({ lang }: { lang: string }) {
   };
 
   return (
-    <div className="py-20 px-5 md:px-10 bg-white">
-      <section className="w-full max-w-7xl mx-auto mb-12">
-        <div className="header flex flex-col md:flex-row md:justify-between items-center md:items-end gap-5 text-center md:text-left">
-          <div>
-            <span className="text-orange-400 font-bold uppercase tracking-wider text-sm">
-              {lang == "id" ? "Wawasan & Pembaruan" : "Insights & Updates"}
-            </span>
-            <h2 className="text-4xl md:text-5xl font-extrabold mt-2">
-              {lang == "id" ? "Artikel Berita" : "News Articles"}
-            </h2>
-          </div>
-          <Link
-            href={`/${lang}/news-event`}
-            className="group flex items-center justify-center gap-2 rounded-full border-2 border-orange-400 px-6 py-3 font-bold text-orange-400 transition-all hover:bg-orange-400 hover:text-white"
-          >
-            {lang == "id" ? "Lihat Semua Berita" : "View All News"}
-            <svg 
-              className="w-5 h-5 transition-transform group-hover:translate-x-1" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+    <div className="py-20 px-5 md:px-10 bg-white font-sans">
+      <section className="w-full max-w-7xl mx-auto mb-16">
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="text-4xl font-extrabold text-[#171717]">
+            {lang == "id" ? "Artikel Berita" : "News Articles"}
+          </h2>
         </div>
       </section>
 
       <section className="w-full max-w-7xl mx-auto">
         <div className="flex flex-col gap-12">
           {/* Featured Latest Article - Full Width */}
-          <article className="relative overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-sm transition-all duration-500 hover:shadow-2xl group">
+          <div className="relative overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-sm transition-all duration-500 hover:shadow-2xl group">
             <Link href={`/${lang}/news-event/${latestArticle.slug}`} className="flex flex-col lg:flex-row lg:items-stretch">
               <div className="lg:w-1/2 relative h-[250px] md:h-[350px] lg:h-auto overflow-hidden">
                 <Image
@@ -89,12 +70,12 @@ export default function LatestNewsArticle({ lang }: { lang: string }) {
                 </div>
               </div>
             </Link>
-          </article>
+          </div>
 
           {/* Remaining Articles - Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {remainingArticles.map((article, idx) => (
-              <article 
+              <div 
                 key={idx} 
                 className="group flex flex-col bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
               >
@@ -127,11 +108,30 @@ export default function LatestNewsArticle({ lang }: { lang: string }) {
                     </div>
                   </div>
                 </Link>
-              </article>
+              </div>
             ))}
           </div>
         </div>
+
+        {/* View All News Button - Bottom Centered */}
+        <div className="mt-16 flex justify-center">
+          <Link
+            href={`/${lang}/news-event`}
+            className="group flex items-center justify-center gap-2 rounded-full border-2 border-orange-400 px-8 py-3 font-bold text-orange-400 transition-all hover:bg-orange-400 hover:text-white shadow-sm hover:shadow-md"
+          >
+            {lang == "id" ? "Lihat Semua Berita" : "View All News"}
+            <svg 
+              className="w-5 h-5 transition-transform group-hover:translate-x-1" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
+        </div>
       </section>
     </div>
+
   );
 }
