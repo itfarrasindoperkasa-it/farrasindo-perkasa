@@ -103,6 +103,7 @@
     },
     "our_service": {
       "title": "Layanan Kami",
+      "service_detail": "Detail Layanan",
       "rent": {
         "title": "Sewa Mesin",
         "description": "Kami menawarkan layanan sewa mesin kemasan berkualitas tinggi untuk memenuhi kebutuhan produksi Anda tanpa harus berinvestasi besar."
@@ -118,6 +119,16 @@
     },
     "product_range": {
       "title": "Ragam Produk Kami",
+      "rent_button": "Sewa Produk Ini",
+      "service_detail": "Detail Layanan",
+      "categories": {
+        "Concrete Pump": "Pompa Beton",
+        "Stationery Concrete Pump": "Pompa Beton Stasioner",
+        "Batching Plant": "Batching Plant",
+        "Placing Boom": "Placing Boom",
+        "Mobile Batching Plant": "Batching Plant Mobile",
+        "Crane": "Crane"
+      },
       "filters": [
         {
           "label": "Semua",

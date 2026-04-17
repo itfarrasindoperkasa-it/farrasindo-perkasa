@@ -56,14 +56,11 @@ export default async function Home({
                 <h3 className="font-extrabold text-2xl text-neutral-800">
                   {message.home.our_service.rent.title}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed line-clamp-3">
-                  {message.home.our_service.rent.description}
-                </p>
                 <Link 
                   href={`/${locale}/product-service?tab=Rent`}
                   className="inline-flex items-center text-[#f97d00] font-bold hover:gap-2 transition-all mt-4"
                 >
-                  Detail Layanan <FontAwesomeIcon icon={faAngleRight} className="ml-2" />
+                  {message.home.our_service.service_detail} <FontAwesomeIcon icon={faAngleRight} className="ml-2" />
                 </Link>
               </div>
             </div>
@@ -82,14 +79,11 @@ export default async function Home({
                 <h3 className="font-extrabold text-2xl text-neutral-800">
                   {message.home.our_service.sell.title}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed line-clamp-3">
-                  {message.home.our_service.sell.description}
-                </p>
                 <Link 
                   href={`/${locale}/product-service?tab=Sell`}
                   className="inline-flex items-center text-[#f97d00] font-bold hover:gap-2 transition-all mt-4"
                 >
-                  Detail Layanan <FontAwesomeIcon icon={faAngleRight} className="ml-2" />
+                  {message.home.our_service.service_detail} <FontAwesomeIcon icon={faAngleRight} className="ml-2" />
                 </Link>
               </div>
             </div>
@@ -108,14 +102,11 @@ export default async function Home({
                 <h3 className="font-extrabold text-2xl text-neutral-800">
                   {message.home.our_service.sparepart.title}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed line-clamp-3">
-                  {message.home.our_service.sparepart.description}
-                </p>
                 <Link 
                   href={`/${locale}/product-service?tab=Sparepart`}
                   className="inline-flex items-center text-[#f97d00] font-bold hover:gap-2 transition-all mt-4"
                 >
-                  Detail Layanan <FontAwesomeIcon icon={faAngleRight} className="ml-2" />
+                  {message.home.our_service.service_detail} <FontAwesomeIcon icon={faAngleRight} className="ml-2" />
                 </Link>
               </div>
             </div>
@@ -123,10 +114,8 @@ export default async function Home({
         </div>
       </section>
 
-      <section id="productRange" className="py-20">
-        <div className="max-w-360 mx-auto">
-          <ProductRange message={message.home.product_range} />
-        </div>
+      <section id="productRange" className="w-full">
+        <ProductRange message={message.home.product_range} locale={locale} />
       </section>
 
       <section id="portfolio">

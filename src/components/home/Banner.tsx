@@ -110,10 +110,6 @@ function Banner({
               {/* Content Container */}
               <div className="container mx-auto px-6 md:px-20 lg:px-32 relative z-20">
                 <div className="max-w-[90%] md:max-w-[80%] lg:max-w-[70%] space-y-6 md:space-y-8">
-                  {/* Badge or Small Title if needed */}
-                  <div className="inline-block px-5 py-2 bg-[#f97d00] text-white text-[10px] md:text-xs font-extrabold uppercase tracking-widest rounded-full opacity-0 translate-y-4 animate-fade-in-up shadow-lg shadow-orange-500/30">
-                    Farrasindo Group
-                  </div>
 
                   {/* HTML Title Support - Perkecil sedikit dari sebelumnya */}
                   <h2

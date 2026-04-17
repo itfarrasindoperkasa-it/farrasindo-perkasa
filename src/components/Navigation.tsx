@@ -148,16 +148,16 @@ export default function Navigation({ locale }: { locale: string }) {
       </div>
 
       {/* MAIN BAR (LOGO + MENU) */}
-      <div className={`flex items-center w-full transition-all duration-300 h-[90px] relative z-[50]`}>
+      <div className={`flex items-center w-full transition-all duration-300 ${scrolled ? "h-[70px]" : "h-[90px]"} relative z-[50]`}>
         <div className="container mx-auto px-6 md:px-20 lg:px-32 flex justify-between items-center h-full">
-          <Link href={`/${locale}`} className="flex-shrink-0">
+          <Link href={`/${locale}`} className="flex-shrink-0 transition-all duration-300">
             <Image
               src="/assets/images/farrasindo-logo.svg"
               width={220}
               height={55}
               loading="eager"
               alt="Farrasindo Logo"
-              className="h-auto w-[200px] md:w-[240px]"
+              className={`h-auto transition-all duration-300 ${scrolled ? "w-[160px] md:w-[200px]" : "w-[200px] md:w-[240px]"}`}
             />
           </Link>
 

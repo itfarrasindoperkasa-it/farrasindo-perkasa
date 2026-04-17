@@ -103,6 +103,7 @@
     },
     "our_service": {
       "title": "Our Services",
+      "service_detail": "Service Detail",
       "rent": {
         "title": "Machine Rental",
         "description": "We offer high-quality packaging machine rental services to meet your production needs without large investments."
@@ -118,6 +119,16 @@
     },
     "product_range": {
       "title": "Our Product Range",
+      "rent_button": "Rent This Product",
+      "service_detail": "Service Detail",
+      "categories": {
+        "Concrete Pump": "Concrete Pump",
+        "Stationery Concrete Pump": "Stationery Concrete Pump",
+        "Batching Plant": "Batching Plant",
+        "Placing Boom": "Placing Boom",
+        "Mobile Batching Plant": "Mobile Batching Plant",
+        "Crane": "Crane"
+      },
       "filters": [
         {
           "label": "All",

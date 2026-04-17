@@ -9,28 +9,28 @@ import selfLoadingMixer from "@/asset/images/products/fslm-2600r-cde1c5eb.png";
 
 const ProductRanges = [
   {
-    image: crane25,
-    category: "Crane",
-  },
-  {
     image: concretePump,
     category: "Concrete Pump",
   },
   {
-    image: batchPump,
-    category: "Batch Pump",
+    image: stationeryConcretePump,
+    category: "Stationery Concrete Pump",
   },
   {
-    image: blend,
-    category: "Blend Plant",
+    image: batchPump,
+    category: "Batching Plant",
+  },
+  {
+    image: placingBoom,
+    category: "Placing Boom",
   },
   {
     image: selfLoadingMixer,
-    category: "Self Loading Mixer",
+    category: "Mobile Batching Plant",
   },
   {
-    image: stationeryConcretePump,
-    category: "Stationery Concrete",
+    image: crane25,
+    category: "Crane",
   },
 ];
 
