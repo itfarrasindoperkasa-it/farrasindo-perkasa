@@ -199,7 +199,7 @@ function TestimonialCard({ text, name, role, image, index }: Testimonial & { ind
             ))}
           </div>
           
-          <p className="text-neutral-700 text-lg md:text-xl font-medium leading-relaxed italic">
+          <p className="text-neutral-700 text-base md:text-lg font-medium leading-relaxed italic">
             "{text}"
           </p>
         </div>
@@ -220,7 +220,7 @@ function TestimonialCard({ text, name, role, image, index }: Testimonial & { ind
           </div>
 
           <div>
-            <h4 className="font-extrabold text-[#171717] text-lg leading-tight group-hover:text-[#f97d00] transition-colors duration-500">
+            <h4 className="font-extrabold text-[#171717] text-base leading-tight group-hover:text-[#f97d00] transition-colors duration-500">
               {name}
             </h4>
             <p className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest mt-0.5">

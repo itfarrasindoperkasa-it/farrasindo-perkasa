@@ -163,7 +163,7 @@ export default function Navigation({ locale }: { locale: string }) {
               height={55}
               loading="eager"
               alt="Farrasindo Logo"
-              className={`h-auto transition-all duration-300 ${scrolled ? "w-[160px] md:w-[200px]" : "w-[200px] md:w-[240px]"}`}
+              className="h-auto transition-all duration-300 w-[160px] md:w-[200px]"
             />
           </Link>
 
@@ -350,7 +350,7 @@ export default function Navigation({ locale }: { locale: string }) {
           <li>
             <Link
               href={`/${locale}/contact-us`}
-              className="mt-6 bg-[#f97d00] text-white p-5 rounded-2xl text-center flex items-center justify-center gap-4 font-extrabold text-2xl shadow-xl shadow-orange-500/30"
+              className="mt-6 bg-[#f97d00] text-white p-5 rounded-2xl text-center flex items-center justify-center gap-4 font-bold text-xl shadow-xl shadow-orange-500/30"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <FontAwesomeIcon icon={faPhone} />

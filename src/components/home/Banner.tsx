@@ -113,12 +113,12 @@ function Banner({
 
                   {/* HTML Title Support - Perkecil sedikit dari sebelumnya */}
                   <h2
-                    className="text-white font-extrabold leading-[1.15] text-3xl md:text-5xl lg:text-6xl opacity-0 translate-y-4 animate-fade-in-up [animation-delay:200ms]"
+                    className="text-white font-extrabold leading-[1.15] text-2xl md:text-4xl lg:text-5xl opacity-0 translate-y-4 animate-fade-in-up [animation-delay:200ms]"
                     dangerouslySetInnerHTML={{ __html: messages[idx]?.title || "" }}
                   />
 
                   {/* Description */}
-                  <p className="text-white/90 text-sm md:text-lg lg:text-xl leading-relaxed max-w-2xl opacity-0 translate-y-4 animate-fade-in-up [animation-delay:400ms] font-medium">
+                  <p className="text-white/90 text-sm md:text-base lg:text-lg leading-relaxed max-w-2xl opacity-0 translate-y-4 animate-fade-in-up [animation-delay:400ms] font-medium">
                     {messages[idx]?.description}
                   </p>
 
@@ -127,7 +127,7 @@ function Banner({
                     <div className="pt-4 opacity-0 translate-y-4 animate-fade-in-up [animation-delay:600ms]">
                       <Link
                         href={messages[idx]?.link || "#"}
-                        className="group inline-flex items-center gap-4 bg-[#f97d00] hover:bg-white text-white hover:text-[#f97d00] px-6 md:px-10 py-3 md:py-4 rounded-2xl font-extrabold text-sm md:text-lg transition-all duration-300 shadow-2xl shadow-orange-500/30 hover:shadow-white/20 hover:-translate-y-1"
+                        className="group inline-flex items-center gap-4 bg-[#f97d00] hover:bg-white text-white hover:text-[#f97d00] px-5 md:px-8 py-2.5 md:py-3 rounded-xl font-extrabold text-sm md:text-base transition-all duration-300 shadow-2xl shadow-orange-500/30 hover:shadow-white/20 hover:-translate-y-1"
                       >
                         {messages[idx]?.buttonText}
                         <FontAwesomeIcon 
