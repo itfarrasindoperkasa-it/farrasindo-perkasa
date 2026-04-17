@@ -72,20 +72,28 @@
   "home": {
     "banner": [
       {
-        "title": "Concrete Pumping Made Easier",
-        "description": ""
+        "title": "Integrated & Trusted <br/> Concrete Solutions",
+        "description": "Providing a complete fleet of concrete pumps with the best after-sales service support for your project's success.",
+        "buttonText": "Explore Products",
+        "link": "/en/product-service"
       },
       {
-        "title": "Providing Mini to Long Concrete Pumps",
-        "description": ""
+        "title": "Modern Fleet <br/> For Visionary Projects",
+        "description": "We offer various types of concrete pumps, from mini to long-reach booms, to cover every aspect of construction.",
+        "buttonText": "About Us",
+        "link": "/en/about-us"
       },
       {
-        "title": "Supporting Strategic Retail and Government Projects",
-        "description": ""
+        "title": "Supporting Strategic <br/> National Projects",
+        "description": "Actively participating in Indonesia's infrastructure development through strategic partnerships with state-owned enterprises and the retail sector.",
+        "buttonText": "View Portfolio",
+        "link": "/en/portfolio"
       },
       {
-        "title": "24/7 Customer Service",
-        "description": ""
+        "title": "Responsive <br/> 24/7 Customer Service",
+        "description": "Our technical team is ready to provide support whenever needed to ensure smooth project operations.",
+        "buttonText": "Contact Now",
+        "link": "/en/contact-us"
       }
     ],
     "about": {

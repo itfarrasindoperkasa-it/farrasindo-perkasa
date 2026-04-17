@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
+import { Urbanist } from "next/font/google";
 import "../globals.css";
 import Navigation from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import ActionButton from "@/components/ActionButton";
+
+const urbanist = Urbanist({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-urbanist",
+});
 
 export interface RootLayoutProps {
   children: React.ReactNode;
@@ -195,7 +202,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body>
+      <body className={`${urbanist.className} ${urbanist.variable}`}>
         <ActionButton />
         {/* JSON-LD Structured Data for SEO */}
         <script

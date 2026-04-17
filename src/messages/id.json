@@ -72,20 +72,28 @@
   "home": {
     "banner": [
       {
-        "title": "Pemompaan Beton Jadi Lebih Mudah",
-        "description": ""
+        "title": "Solusi Mesin Beton <br/> Terpadu & Terpercaya",
+        "description": "Penyediaan armada concrete pump lengkap dengan dukungan layanan purna jual terbaik untuk kesuksesan proyek Anda.",
+        "buttonText": "Jelajahi Produk",
+        "link": "/id/product-service"
       },
       {
-        "title": "Menyediakan Pompa Mini Hingga Panjang",
-        "description": ""
+        "title": "Armada Modern <br/> Untuk Proyek Visioner",
+        "description": "Kami menyediakan berbagai tipe pompa beton dari mini hingga boom panjang untuk menjangkau setiap sudut pembangunan.",
+        "buttonText": "Tentang Kami",
+        "link": "/id/about-us"
       },
       {
-        "title": "Mendukung Proyek Strategis Ritel Dan Pemerintah",
-        "description": ""
+        "title": "Mendukung Proyek <br/> Strategis Nasional",
+        "description": "Berpartisipasi aktif dalam pembangunan infrastruktur Indonesia melalui kemitraan strategis dengan BUMN dan sektor ritel.",
+        "buttonText": "Lihat Portofolio",
+        "link": "/id/portfolio"
       },
       {
-        "title": "Layanan Pelanggan 24/7",
-        "description": ""
+        "title": "Layanan Pelanggan <br/> Responsif 24/7",
+        "description": "Tim teknis kami siap memberikan dukungan kapanpun dibutuhkan untuk memastikan operasional proyek berjalan lancar.",
+        "buttonText": "Hubungi Sekarang",
+        "link": "/id/contact-us"
       }
     ],
     "about": {
