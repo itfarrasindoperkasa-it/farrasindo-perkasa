@@ -1,14 +1,8 @@
 "use client";
 
 import React from "react";
-import dynamic from "next/dynamic";
 import OurPartnerData from "@/lib/datas/our_partner";
 import Image from "next/image";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-// react-slick harus di dynamic import supaya aman untuk Next.js (no-SSR)
-const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
 const groups = OurPartnerData.map((logo, idx) => ({
   id: idx + 1,
@@ -16,52 +10,15 @@ const groups = OurPartnerData.map((logo, idx) => ({
   logo,
 }));
 
+// Split groups into 2 rows for mobile (4 per row)
+const row1 = groups.slice(0, 4);
+const row2 = groups.slice(4, 8);
+
 export function OurGroup({ title }: { title: string }) {
-  const [slidesToShow, setSlidesToShow] = React.useState(5);
-  const [mounted, setMounted] = React.useState(false);
-
-  React.useEffect(() => {
-    setMounted(true);
-
-    const handleResize = () => {
-      if (window.innerWidth < 640) {
-        setSlidesToShow(2);
-      } else if (window.innerWidth < 1024) {
-        setSlidesToShow(3);
-      } else if (window.innerWidth < 1280) {
-        setSlidesToShow(4);
-      } else if (window.innerWidth < 1536) {
-        setSlidesToShow(5);
-      } else {
-        setSlidesToShow(6);
-      }
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  if (!mounted) return null;
-
-  const settings = {
-    autoplay: true,
-    autoplaySpeed: 0,
-    speed: 8000,
-    cssEase: "linear" as const,
-    slidesToShow: slidesToShow,
-    slidesToScroll: 1,
-    infinite: true,
-    pauseOnHover: false,
-    pauseOnFocus: false,
-    arrows: false,
-    dots: false,
-  };
-
   return (
     <section id="ourGroup" className="relative w-full py-8 overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        {/* Header - Consistent with Testimonial but more compact margin */}
+        {/* Header */}
         <div className="text-center space-y-2 mb-6">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#171717]">
             {title}
@@ -69,23 +26,118 @@ export function OurGroup({ title }: { title: string }) {
         </div>
       </div>
 
-      <div className="w-full">
-        <Slider {...settings}>
-          {groups.map((group) => (
-            <div key={group.id} className="px-2">
-              <div className="flex items-center justify-center">
-                <div className="flex items-center justify-center p-2">
-                  <Image
-                    src={group.logo}
-                    alt={group.name}
-                    className="object-contain w-auto h-20 md:h-28"
-                  />
-                </div>
+      {/* Desktop: single row marquee */}
+      <div className="hidden md:block w-full">
+        <div className="marquee-container">
+          <div className="marquee-track">
+            {/* Duplicate items 3x for seamless loop */}
+            {[...groups, ...groups, ...groups].map((group, i) => (
+              <div key={`desktop-${i}`} className="marquee-item">
+                <Image
+                  src={group.logo}
+                  alt={group.name}
+                  className="object-contain w-auto h-28"
+                />
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </div>
+        </div>
       </div>
+
+      {/* Mobile: 2 rows, each scrolling in marquee */}
+      <div className="md:hidden w-full space-y-4">
+        {/* Row 1 - scrolls left */}
+        <div className="marquee-container">
+          <div className="marquee-track">
+            {[...row1, ...row1, ...row1, ...row1, ...row1, ...row1].map((group, i) => (
+              <div key={`m-r1-${i}`} className="marquee-item-mobile">
+                <Image
+                  src={group.logo}
+                  alt={group.name}
+                  className="object-contain w-auto h-20"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Row 2 - scrolls right (reverse) */}
+        <div className="marquee-container">
+          <div className="marquee-track marquee-reverse">
+            {[...row2, ...row2, ...row2, ...row2, ...row2, ...row2].map((group, i) => (
+              <div key={`m-r2-${i}`} className="marquee-item-mobile">
+                <Image
+                  src={group.logo}
+                  alt={group.name}
+                  className="object-contain w-auto h-20"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <style jsx>{`
+        .marquee-container {
+          overflow: hidden;
+          width: 100%;
+          position: relative;
+        }
+
+        .marquee-track {
+          display: flex;
+          width: max-content;
+          animation: marquee-scroll 30s linear infinite;
+        }
+
+        .marquee-reverse {
+          animation: marquee-scroll-reverse 30s linear infinite;
+        }
+
+        .marquee-item {
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 24px;
+        }
+
+        .marquee-item-mobile {
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 16px;
+          min-width: calc(50vw - 16px);
+        }
+
+        @keyframes marquee-scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-33.333%);
+          }
+        }
+
+        @keyframes marquee-scroll-reverse {
+          0% {
+            transform: translateX(-33.333%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+
+        @media (max-width: 767px) {
+          .marquee-track {
+            animation-duration: 20s;
+          }
+          .marquee-reverse {
+            animation-duration: 20s;
+          }
+        }
+      `}</style>
     </section>
   );
 }

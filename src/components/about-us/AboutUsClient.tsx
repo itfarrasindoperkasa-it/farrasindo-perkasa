@@ -138,11 +138,10 @@ function TabButton({
     <button
       onClick={() => onClick(id)}
       aria-pressed={active}
-      className={`px-4 py-3 border-b-2 md:text-lg md:text-base ${
-        active
-          ? "border-orange-500 text-orange-500 font-semibold"
-          : "border-transparent hover:border-orange-300 hover:text-orange-500 transition-colors"
-      }`}
+      className={`px-4 py-3 border-b-2 md:text-lg md:text-base ${active
+        ? "border-orange-500 text-orange-500 font-semibold"
+        : "border-transparent hover:border-orange-300 hover:text-orange-500 transition-colors"
+        }`}
     >
       {label}
     </button>
@@ -151,34 +150,56 @@ function TabButton({
 
 function TimelineCard({ item }: { item: TimelineEntry }) {
   const image = resolveRef(item.image);
+
+  // Try to extract date and year if possible, removing "Tahun" prefix
+  const dateStr = (item.year?.toString() || "").replace(/tahun/gi, "").trim();
+  const match = dateStr.match(/^(\d+\s+\w+)?\s*(\d{4})$/);
+  const dayMonth = match ? match[1] || "" : "";
+  const year = match ? match[2] : dateStr;
+
   return (
-    <div className="bg-white border border-gray-100 rounded-md shadow-sm hover:shadow-md transition-shadow overflow-hidden max-w-md">
-      <div className="relative w-full md:h-48 h-36">
+    <div className="bg-white rounded-none shadow-xl border border-gray-100 overflow-hidden w-full max-w-[380px] flex flex-col group transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
+      <div className="relative w-full aspect-[4/3] overflow-hidden">
         {image && typeof image !== "string" ? (
           <Image
             src={image}
             alt={item.title}
             fill
-            className="object-cover"
-            sizes="100%"
+            className="object-cover transition-transform duration-700 group-hover:scale-110"
+            sizes="(max-width: 768px) 100vw, 400px"
           />
         ) : image && typeof image === "string" ? (
           <img
             src={image}
             alt={item.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
-        ) : null}
+        ) : (
+          <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+            <Factory className="text-gray-300" size={48} />
+          </div>
+        )}
       </div>
 
-      <div className="p-3 sm:p-4">
-        <p className="text-[11px] sm:text-xs font-semibold text-orange-500 mb-1 bg-white">
-          {item.year}
-        </p>
-        <h4 className="text-xs sm:text-sm font-semibold mb-1">{item.title}</h4>
-        <p className="text-[11px] sm:text-xs text-gray-600 leading-relaxed">
-          {item.description}
-        </p>
+      <div className="flex min-h-[140px]">
+        <div className="bg-[#FF8A00] text-white p-4 flex flex-col items-center justify-center min-w-[85px] text-center">
+          {dayMonth && (
+            <span className="text-[10px] font-bold uppercase tracking-tighter mb-1 border-b border-white/30 pb-1 w-full">
+              {dayMonth}
+            </span>
+          )}
+          <span className={`${dayMonth ? 'text-2xl' : 'text-3xl'} font-bold leading-none tracking-tight`}>
+            {year}
+          </span>
+        </div>
+        <div className="p-5 flex-1 bg-white flex flex-col justify-center">
+          <h4 className="text-sm md:text-base font-bold uppercase tracking-wide text-gray-900 mb-2 leading-tight">
+            {item.title}
+          </h4>
+          <p className="text-[11px] md:text-xs text-gray-500 leading-relaxed line-clamp-4">
+            {item.description}
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -245,30 +266,37 @@ export default function AboutUsClient({
       {/* OVERVIEW */}
       <section
         id="company-overview"
-        className="w-full pb-10 sm:pb-14 md:pb-16 px-6 md:px-15 max-w-7xl mx-auto"
+        className="w-full pb-16 sm:pb-20 md:pb-24 px-6 md:px-15 max-w-7xl mx-auto"
       >
         <div className="relative">
-          <div className="flex flex-col md:flex-row gap-8 md:gap-10 items-start mx-auto">
-            <div className="relative w-full md:w-2/3 h-[220px] sm:h-[300px] md:h-[430px]">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-0 items-center md:items-stretch">
+            <div className="relative w-full md:w-[70%] h-[240px] sm:h-[350px] md:h-[500px] group overflow-hidden rounded-2xl shadow-2xl">
               <Image
                 src={AboutData[1]}
                 alt={about.overview?.company ?? "PT Farrasindo Perkasa"}
                 fill
-                className="object-cover rounded-lg"
+                className="object-cover transition-transform duration-1000 group-hover:scale-105"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
             </div>
 
-            <div className="w-full md:w-1/2 bg-slate-200 border border-slate-300 p-5 sm:p-6 md:p-8 rounded-xl shadow-sm text-sm sm:text-base leading-relaxed md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2">
-              <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-orange-500 mb-3">
+            <div className="w-full md:w-[500px] bg-white/95 backdrop-blur-md border border-white/20 p-6 sm:p-8 md:p-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] text-sm sm:text-base leading-relaxed md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 z-10">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex flex-col gap-1">
+                <span className="text-orange-500 text-sm font-bold uppercase tracking-widest mb-1 block">
+                  Profile
+                </span>
                 {about.overview?.company}
+                <span className="w-16 h-1.5 bg-orange-500 rounded-full mt-2"></span>
               </h2>
 
-              <p className="mb-3 text-justify">
-                <span className="text-white bg-orange-400 w-fit mr-2 px-1 rounded">
-                  {about.overview?.company}
-                </span>
-                {about.overview?.description}
-              </p>
+              <div className="text-gray-600 space-y-4 text-justify">
+                <p>
+                  <span className="font-bold text-gray-800 border-b-2 border-orange-200">
+                    {about.overview?.company}
+                  </span>{" "}
+                  {about.overview?.description}
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -331,23 +359,24 @@ export default function AboutUsClient({
                       key={item.id}
                       className="
             flex flex-col items-center text-center 
-            bg-white p-8 rounded-2xl
-            transition-all duration-300
-            hover:bg-gray-200 hover:shadow-md hover:-translate-y-1 shadow-md  
+            bg-white p-10 rounded-3xl
+            transition-all duration-500
+            hover:shadow-[0_20px_50px_rgba(255,138,0,0.1)] hover:-translate-y-2 border border-gray-50 shadow-sm
+            group
           "
                     >
                       {/* icon */}
-                      <div className="mb-6 flex items-center justify-center w-24 h-24">
-                        <IconComp size={64} strokeWidth={1.6} />
+                      <div className="mb-8 flex items-center justify-center w-24 h-24 bg-orange-50 rounded-full text-orange-500 transition-colors duration-500 group-hover:bg-orange-500 group-hover:text-white">
+                        <IconComp size={48} strokeWidth={1.5} />
                       </div>
 
                       {/* title */}
-                      <h4 className="font-semibold mb-2 text-orange-400 text-xl">
+                      <h4 className="font-bold mb-4 text-gray-900 text-xl tracking-tight">
                         {item.title}
                       </h4>
 
                       {/* description */}
-                      <p className="text-gray-600 text-sm leading-relaxed max-w-[460px]">
+                      <p className="text-gray-500 text-sm leading-relaxed max-w-[460px]">
                         {item.description}
                       </p>
                     </div>
@@ -361,15 +390,17 @@ export default function AboutUsClient({
           {activeTab === "vision_mission" && (
             <div>
               {/* VISI */}
-              <div className="flex flex-col items-center text-center mb-12">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="bg-orange-500 text-white font-semibold px-4 py-1 rounded-md md:text-lg">
+              <div className="flex flex-col items-center text-center mb-16 group">
+                <div className="flex flex-col items-center gap-3 mb-8">
+                  <span className="text-orange-500 text-xs font-bold uppercase tracking-[0.4em] mb-2">Visi</span>
+                  <h3 className="text-3xl md:text-5xl font-black text-gray-900 tracking-tight">
                     {about.visionMission?.vision?.title}
-                  </span>
+                    <div className="w-12 h-1.5 bg-orange-500 mx-auto mt-4 rounded-full transition-all duration-500 group-hover:w-24" />
+                  </h3>
                 </div>
 
-                <p className="text-gray-800 max-w-3xl leading-relaxed md:text-lg">
-                  {about.visionMission?.vision?.description}
+                <p className="text-gray-600 max-w-3xl leading-relaxed md:text-xl font-light italic">
+                  "{about.visionMission?.vision?.description}"
                 </p>
               </div>
 
@@ -379,14 +410,16 @@ export default function AboutUsClient({
               </div>
 
               {/* MISI */}
-              <div className="flex flex-col items-center text-center">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="bg-orange-500 text-white font-semibold px-4 py-1 rounded-md md:text-lg">
+              <div className="flex flex-col items-center text-center group">
+                <div className="flex flex-col items-center gap-3 mb-8">
+                  <span className="text-orange-500 text-xs font-bold uppercase tracking-[0.4em] mb-2">Misi</span>
+                  <h3 className="text-3xl md:text-5xl font-black text-gray-900 tracking-tight">
                     {about.visionMission?.mission?.title}
-                  </span>
+                    <div className="w-12 h-1.5 bg-orange-500 mx-auto mt-4 rounded-full transition-all duration-500 group-hover:w-24" />
+                  </h3>
                 </div>
 
-                <p className="text-gray-800 max-w-3xl leading-relaxed md:text-lg">
+                <p className="text-gray-600 max-w-3xl leading-relaxed md:text-xl font-light">
                   {about.visionMission?.mission?.description}
                 </p>
               </div>
@@ -420,90 +453,127 @@ export default function AboutUsClient({
       </section>
 
       {/* FOUNDER MESSAGE (SELALU TAMPIL) */}
-      <section className="w-full bg-orange-400 py-10 sm:py-14">
-        <div className="max-w-360 mx-auto px-4 sm:px-10">
-          <div className="flex flex-col md:flex-row items-stretch bg-white p-6 gap-8 py-10 md:p-10 shadow-md flex-col-reverse">
-            <div className="w-full flex-4 text-sm sm:text-base leading-relaxed text-justify">
-              <h3 className="text-lg sm:text-xl font-semibold mb-4 text-orange-600">
+      <section className="w-full bg-[#FFB056] py-12 md:py-20 px-4 md:px-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-white rounded-[2rem] overflow-hidden shadow-2xl flex flex-col md:flex-row min-h-[600px]">
+            {/* Content Side */}
+            <div className="w-full md:w-[60%] p-8 sm:p-12 md:p-20 flex flex-col justify-center">
+              <h3 className="text-2xl md:text-4xl font-black text-gray-900 mb-2 leading-tight">
                 {about.founderMessage?.title}
               </h3>
 
-              {about.founderMessage?.paragraphs?.map((p: any, i: number) => (
-                <p key={i} className="mb-3 text-gray-700">
-                  {p}
-                </p>
-              ))}
+              <div className="space-y-6 text-sm md:text-base leading-relaxed">
+                {about.founderMessage?.paragraphs?.map((p: any, i: number) => {
+                  const isFirst = i === 0;
+                  const isLast = i === (about.founderMessage?.paragraphs?.length ?? 0) - 1;
 
-              <div className="mt-4">
-                <p className="font-semibold">
+                  return (
+                    <p key={i} className={`
+                      ${isFirst ? "font-bold text-gray-800" : ""}
+                      ${isLast ? "font-bold text-gray-900" : "text-gray-600"}
+                      text-justify
+                    `}>
+                      {p}
+                    </p>
+                  );
+                })}
+              </div>
+
+              <div className="mt-12">
+                <p className="font-bold text-[#0056B3] text-lg mb-1">
                   {about.founderMessage?.signature?.name}
                 </p>
-                <p className="font-semibold text-orange-700">
-                  {about.founderMessage?.signature?.title}
-                </p>
-                <p className="text-sm text-gray-700">
-                  Direktur Utama Farrasindo Group
+                <p className="text-blue-400/80 font-medium text-sm md:text-base">
+                  Founder of Farrasindo Group
                 </p>
               </div>
             </div>
 
-            <div className="w-full flex-3 flex items-center">
-              <Image
-                src={AboutData[2]}
-                alt="Pendiri"
-                className="object-cover w-full h-full"
-              />
+            {/* Image Side */}
+            <div className="w-full md:w-[40%] relative flex items-center justify-center p-8 md:p-0 bg-gray-50/30">
+              {/* Dot Pattern Wrapper */}
+              <div className="relative group">
+
+                {/* Founder Image */}
+                <div className="relative w-[320px] h-[400px] md:w-[400px] md:h-[500px] z-10 overflow-hidden">
+                  <Image
+                    src={AboutData[2]}
+                    alt="Pendiri"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* HISTORY (SELALU TAMPIL) */}
-      <section id="company-history" className="w-full py-12">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="flex justify-center items-center mb-10 gap-x-2">
-            <span className="text-lg sm:text-xl md:text-2xl uppercase tracking-wide font-semibold">
-              {about.history?.title?.split(" ")[0] ?? "Sejarah"}
+      <section id="company-history" className="w-full py-20 bg-gray-50/50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col items-center mb-20">
+            <span className="text-[#FF8A00] font-bold text-sm md:text-base tracking-[0.3em] uppercase mb-4">
+              2001 - 2024
             </span>
-            <h3 className="mt-1 text-lg sm:text-xl md:text-2xl font-semibold text-white p-2 rounded text-center bg-orange-400">
-              {about.history?.title?.replace(/^\w+\s/, "") ??
-                "Farrasindo Group"}
-            </h3>
+            <div className="flex flex-col md:flex-row items-center gap-3">
+              <h3 className="text-2xl md:text-4xl font-bold bg-orange-500 text-white px-6 py-2 rounded-lg shadow-lg">
+                {about.history?.title?.replace(/^\w+\s/, "") ?? "Farrasindo Group"}
+              </h3>
+            </div>
+            <div className="w-24 h-1 bg-orange-200 mt-8 rounded-full" />
           </div>
 
-          <div className="relative">
-            <div className="space-y-2">
+          <div className="relative mt-20">
+            {/* Vertical Line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-px bg-gray-200 h-full hidden md:block" />
+
+            {/* Timeline Items */}
+            <div className="space-y-16 md:space-y-0 relative">
               {timeline.map((item, index) => {
                 const isLeft = index % 2 === 0;
                 return (
                   <div
                     key={item.id ?? index}
-                    className="flex flex-col md:flex-row md:items-center"
+                    className="relative flex flex-col md:flex-row items-stretch md:items-center min-h-[300px]"
                   >
-                    <div
-                      className={`hidden md:flex md:w-1/2 ${
-                        isLeft ? "justify-end pr-6" : "justify-start pl-6"
-                      }`}
-                    >
+                    {/* Desktop Layout: Left Side */}
+                    <div className="hidden md:flex w-1/2 justify-end items-center pr-16 lg:pr-24">
                       {isLeft && <TimelineCard item={item} />}
                     </div>
 
-                    <div className="hidden md:flex w-0 md:w-auto">
-                      <div className="relative">
-                        <div className="w-3 h-3 rounded-full bg-orange-500 border-4 border-white shadow" />
+                    {/* Desktop Layout: Middle Dot & Arrows */}
+                    <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 hidden md:flex items-center justify-center z-10">
+                      <div className="relative h-full flex flex-col items-center justify-center">
+                        {/* Dot */}
+                        <div className="w-4 h-4 rounded-full bg-orange-500 border-4 border-white shadow-md ring-4 ring-orange-50 z-20 group-hover:scale-125 transition-transform duration-300" />
+
+                        {/* Arrows */}
+                        {isLeft ? (
+                          <div className="absolute right-6 w-12 lg:w-16 h-px bg-orange-400 flex items-center justify-start">
+                            <div className="w-2 h-2 border-t border-l border-orange-400 rotate-[-45deg] -ml-0.5" />
+                          </div>
+                        ) : (
+                          <div className="absolute left-6 w-12 lg:w-16 h-px bg-orange-400 flex items-center justify-end">
+                            <div className="w-2 h-2 border-t border-r border-orange-400 rotate-[45deg] -mr-0.5" />
+                          </div>
+                        )}
                       </div>
                     </div>
 
-                    <div className="md:w-1/2 md:flex md:justify-start md:pl-6">
-                      <div className="w-full md:hidden">
-                        <TimelineCard item={item} />
-                      </div>
+                    {/* Desktop Layout: Right Side */}
+                    <div className="hidden md:flex w-1/2 justify-start items-center pl-16 lg:pl-24">
+                      {!isLeft && <TimelineCard item={item} />}
+                    </div>
 
-                      {!isLeft && (
-                        <div className="hidden md:block w-full">
-                          <TimelineCard item={item} />
-                        </div>
-                      )}
+                    {/* Mobile Layout */}
+                    <div className="md:hidden flex flex-col items-center w-full px-4 mb-16">
+                      <div className="flex items-center gap-4 mb-6 w-full">
+                        <div className="h-px flex-1 bg-gray-200" />
+                        <div className="w-3 h-3 rounded-full bg-orange-500" />
+                        <div className="h-px flex-1 bg-gray-200" />
+                      </div>
+                      <TimelineCard item={item} />
                     </div>
                   </div>
                 );
