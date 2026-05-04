@@ -19,6 +19,7 @@ import imgArtikel18 from "@/asset/images/artikel/featured.jpg";
 import imgArticleGlobalMeeting2026 from "@/asset/images/artikel/ARTIKEL-GLOBAL-MEETING-2026.jpg";
 import FarrasindoDonationDisasterSumatra from "@/asset/images/artikel/penyerahan-bantuan-bencana-aceh-2025-12-10.jpg";
 import imgArtikelParcel from "@/asset/images/artikel/ARTIKEL-PEMBAGIAN-PARCEL-2026.jpg";
+import imgArtikelDonorDarah2026 from "@/asset/images/artikel/ARTIKEL-DONOR-DARAH-2026.jpg";
 import { Locale } from "./global";
 import { StaticImageData } from "next/image";
 
@@ -42,6 +43,7 @@ const LatestNewsData = [
   imgArtikel17,
   imgArtikel18,
   imgArtikelParcel,
+  imgArtikelDonorDarah2026,
 ];
 
 export default LatestNewsData;
@@ -384,6 +386,43 @@ Perusahaan berharap tradisi ini dapat terus dipertahankan di masa mendatang seba
 
 Dengan semangat Ramadan yang penuh berkah, Farrasindo Group juga mengucapkan selamat menyambut Hari Raya Idulfitri kepada seluruh karyawan dan keluarga. Semoga kebahagiaan, kesehatan, dan keberkahan selalu menyertai kita semua.`,
     },
+    {
+      title:
+        "Bersama Kita Peduli, Bersama Kita Berbagi: Aksi Donor Darah Farrasindo Group Bersama UDD PMI Kabupaten Tangerang",
+      categories: ["csr-employee"],
+      date: "2026-04-28T00:00:00.000Z",
+      excerpt:
+        "Farrasindo menyelenggarakan kegiatan donor darah untuk seluruh karyawan yang bekerja sama dengan Unit Donor Darah (UDD) PMI Kabupaten Tangerang sebagai wujud nyata kepedulian sosial.",
+      link: "/news/aksi-donor-darah-farrasindo-group-2026",
+      slug: "aksi-donor-darah-farrasindo-group-2026",
+      author: "Farrasindo Group",
+      image: imgArtikelDonorDarah2026,
+      description: `Jakarta, Selasa 28 April 2026 -- Dalam rangka mewujudkan komitmen terhadap tanggung jawab sosial perusahaan, Farrasindo menyelenggarakan kegiatan <b>donor darah</b> untuk seluruh karyawan yang bekerja sama dengan <b>Unit Donor Darah (UDD) PMI Kabupaten Tangerang</b>. Acara berlangsung dengan antusias, diikuti oleh puluhan karyawan dari berbagai divisi yang dengan sukarela. Kegiatan ini tak hanya dilakukan secara rutin, namun merupakan bentuk nyata kontribusi dalam membentuk ketersediaan stok darah nasional dan menumbuhkan nilai kemanusiaan yang diemban bersama.
+
+Kegiatan donor darah ini dimulai dari registrasi peserta melalui aplikasi Sidoni, pengecekan tekanan darah, suhu tubuh, berat badan, hingga kadar hemoglobin. Setelah melalui pengecekan tersebut, peserta yang dinyatakan lolos sebagai pendonor, dapat melakukan pengambilan darah oleh tim medis. Seluruh proses ditangani langsung oleh tenaga medis terlatih dari UDD PMI Kabupaten Tangerang menggunakan peralatan steril sekali pakai, sehingga keamanan dan kenyamanan pendonor terjamin sepenuhnya.
+
+<b>Pengalaman Pendonor</b>
+Menariknya, pengalaman donor darah tidak selalu sama, bahkan bagi mereka yang sudah pernah melakukan donor sebelumnya. Beberapa karyawan mengaku masih merasakan sedikit deg-degan setiap kali akan donor, meskipun ini bukan pertama kalinya. Rasa tegang biasanya muncul saat menunggu giliran atau ketika melihat alat medis, namun perlahan hilang setelah proses dimulai.
+
+Ada juga yang merasakan sensasi ringan setelah donor, seperti sedikit lemas atau pegal di area lengan bekas pengambilan darah, namun hal tersebut wajar dan dapat segera pulih setelah beristirahat dan mengonsumsi makanan.
+
+Sebaliknya, bagi pendonor rutin, kegiatan ini sudah menjadi bagian dari gaya hidup sehat sekaligus cara sederhana untuk berbagi.
+
+"Ikut donor darah merupakan bentuk berbagi, ya, kepada sesama dan juga untuk kesehatan diri sendiri juga," ucap Agus Wijaya, General Manager Fresh Beton Indonesia.
+
+
+<b>Anjuran Donor Darah: Setetes Darah, Sejuta Harapan</b>
+Donor darah sebaiknya dilakukan secara rutin setiap 2–3 bulan sekali bagi yang memenuhi syarat. Dengan melakukan donor secara berkala, kita turut membantu menyelamatkan nyawa banyak orang yang membutuhkan transfusi darah, seperti pasien kecelakaan, operasi, hingga penderita penyakit tertentu.
+
+"Jangan takut untuk donor darah, itu tidak akan membuat kita sakit tetapi bisa membuat kita lebih sehat karena dengan donor darah bisa meregenerasi sel darah merah kita pada tubuh kita," ucap Jujum, Staff UDD PMI Kabupaten Tangerang.
+
+Melalui kegiatan ini, Farrasindo Group bersama UDD PMI Kabupaten Tangerang berharap dapat menginspirasi lebih banyak pihak untuk ikut berpartisipasi dalam aksi kemanusiaan. Karena pada akhirnya, kontribusi kecil yang kita lakukan hari ini bisa menjadi harapan besar bagi orang lain.
+
+
+"Bersama kita peduli, bersama kita berbagi"
+
+(Video Kegiatan: <a href="https://www.tiktok.com/@farrasindo_group/video/7634118375555304724" target="_blank" className="text-blue-600 hover:underline">https://www.tiktok.com/@farrasindo_group/video/7634118375555304724</a>)`,
+    },
   ],
   en: [
     {
@@ -626,6 +665,43 @@ Through the annual tradition of distributing Eid hampers, Farrasindo Group demon
 The company hopes this tradition will continue in the future as part of the values ​​of togetherness and the spirit of sharing that are the foundation of Farrasindo Group's journey.
 
 In the spirit of a blessed Ramadan, Farrasindo Group also wishes all employees and their families a Happy Eid al-Fitr. May happiness, health and blessings always be with us all.`,
+    },
+    {
+      title:
+        "Together We Care, Together We Share: Farrasindo Group Blood Donation Drive with UDD PMI Tangerang Regency",
+      categories: ["csr-employee"],
+      date: "2026-04-28T00:00:00.000Z",
+      excerpt:
+        "Farrasindo organized a blood donation drive for all employees in collaboration with the PMI Tangerang Regency Blood Donor Unit (UDD) as a tangible manifestation of social responsibility.",
+      link: "/news/farrasindo-group-blood-donation-drive-2026",
+      slug: "farrasindo-group-blood-donation-drive-2026",
+      author: "Farrasindo Group",
+      image: imgArtikelDonorDarah2026,
+      description: `Jakarta, Tuesday April 28, 2026 -- In order to realize its commitment to corporate social responsibility, Farrasindo organized a <b>blood donation</b> activity for all employees in collaboration with the <b>Tangerang Regency PMI Blood Donor Unit (UDD)</b>. The event took place with great enthusiasm, followed by dozens of employees from various divisions who volunteered. This activity is not only conducted regularly but is a tangible form of contribution to building national blood stock availability and fostering shared humanitarian values.
+
+The blood donation activity began with participant registration through the Sidoni application, blood pressure checks, body temperature, weight, and hemoglobin levels. After passing these checks, participants declared eligible as donors could proceed with blood collection by the medical team. The entire process was handled directly by trained medical personnel from the Tangerang Regency PMI UDD using single-use sterile equipment, ensuring the safety and comfort of the donors.
+
+<b>Donor Experience</b>
+Interestingly, the experience of donating blood is not always the same, even for those who have donated before. Some employees admitted to still feeling a bit nervous each time they donate, even if it's not their first time. Tension usually arises while waiting for their turn or when seeing medical equipment, but gradually disappears once the process begins.
+
+Some also felt a light sensation after donating, such as slight weakness or soreness in the arm area after blood collection, but this is normal and can be quickly recovered after resting and consuming food.
+
+Conversely, for routine donors, this activity has become part of a healthy lifestyle as well as a simple way to share.
+
+"Participating in blood donation is a form of sharing with others and also for one's own health," said Agus Wijaya, General Manager of Fresh Beton Indonesia.
+
+
+<b>Blood Donation Recommendation: A Drop of Blood, a Million Hopes</b>
+Blood donation should ideally be done routinely every 2–3 months for those who meet the requirements. By donating regularly, we help save the lives of many people who need blood transfusions, such as accident victims, surgery patients, and those suffering from certain diseases.
+
+"Don't be afraid to donate blood; it won't make us sick but can make us healthier because blood donation can regenerate red blood cells in our bodies," said Jujum, Staff at the Tangerang Regency PMI UDD.
+
+Through this activity, Farrasindo Group and the Tangerang Regency PMI UDD hope to inspire more parties to participate in humanitarian actions. Because in the end, the small contribution we make today can be a great hope for others.
+
+
+"Together we care, together we share"
+
+(Activity Video: <a href="https://www.tiktok.com/@farrasindo_group/video/7634118375555304724" target="_blank" className="text-blue-600 hover:underline">https://www.tiktok.com/@farrasindo_group/video/7634118375555304724</a>)`,
     },
   ],
 };

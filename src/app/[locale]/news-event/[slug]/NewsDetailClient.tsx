@@ -65,9 +65,8 @@ export default function NewsDetailClient({
                 <div 
                   className="article-content prose prose-lg max-w-none text-gray-700 whitespace-pre-line leading-loose text-lg"
                   style={{ fontFamily: 'Arial, sans-serif' }}
-                >
-                  {news.description}
-                </div>
+                  dangerouslySetInnerHTML={{ __html: news.description }}
+                />
               </article>
             </main>
 
