@@ -31,7 +31,7 @@ export function Footer({ footer, locale }: { footer: any; locale: string }) {
                 alt="Farrasindo Group"
                 width={288}
                 height={80}
-                className="h-auto w-auto"
+                className="h-auto w-[80%]"
               />
             </div>
 

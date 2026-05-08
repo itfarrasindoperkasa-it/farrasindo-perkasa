@@ -526,7 +526,7 @@ export default function AboutUsClient({
 
           <div className="relative mt-20">
             {/* Vertical Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-px bg-gray-200 h-full hidden md:block" />
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-200 h-full hidden md:block" />
 
             {/* Timeline Items */}
             <div className="space-y-16 md:space-y-0 relative">
@@ -550,11 +550,11 @@ export default function AboutUsClient({
 
                         {/* Arrows */}
                         {isLeft ? (
-                          <div className="absolute right-6 w-12 lg:w-16 h-px bg-orange-400 flex items-center justify-start">
+                          <div className="absolute right-6 w-12 lg:w-16 h-1 bg-orange-400 flex items-center justify-start">
                             <div className="w-2 h-2 border-t border-l border-orange-400 rotate-[-45deg] -ml-0.5" />
                           </div>
                         ) : (
-                          <div className="absolute left-6 w-12 lg:w-16 h-px bg-orange-400 flex items-center justify-end">
+                          <div className="absolute left-6 w-12 lg:w-16 h-1 bg-orange-400 flex items-center justify-end">
                             <div className="w-2 h-2 border-t border-r border-orange-400 rotate-[45deg] -mr-0.5" />
                           </div>
                         )}
@@ -569,9 +569,9 @@ export default function AboutUsClient({
                     {/* Mobile Layout */}
                     <div className="md:hidden flex flex-col items-center w-full px-4 mb-16">
                       <div className="flex items-center gap-4 mb-6 w-full">
-                        <div className="h-px flex-1 bg-gray-200" />
+                        <div className="h-1 flex-1 bg-gray-200" />
                         <div className="w-3 h-3 rounded-full bg-orange-500" />
-                        <div className="h-px flex-1 bg-gray-200" />
+                        <div className="h-1 flex-1 bg-gray-200" />
                       </div>
                       <TimelineCard item={item} />
                     </div>
