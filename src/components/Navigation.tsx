@@ -79,14 +79,12 @@ export default function Navigation({ locale }: { locale: string }) {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 flex flex-col transition-all duration-300 ${
-        scrolled ? "bg-white shadow-lg" : "bg-transparent"
+        scrolled ? "bg-white shadow-lg" : "bg-white"
       }`}
       id="navigationWeb"
     >
       {/* TOP BAR (DESKTOP ONLY) */}
-      <div className={`hidden md:flex items-center w-full h-[45px] transition-colors duration-300 relative z-[60] ${
-        scrolled ? "bg-black" : "bg-black/20 backdrop-blur-sm"
-      }`}>
+      <div className={`hidden md:flex items-center w-full h-[45px] transition-colors duration-300 relative z-[60] bg-black`}>
         <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center h-full">
           <ul className="flex gap-4 lg:gap-8 items-center h-full">
             <li className="flex items-center">
@@ -164,7 +162,7 @@ export default function Navigation({ locale }: { locale: string }) {
       </div>
 
       {/* MAIN BAR (LOGO + MENU) */}
-      <div className={`flex items-center w-full transition-all duration-300 ${scrolled ? "h-[70px]" : "h-[90px]"} relative z-[50]`}>
+      <div className={`flex items-center w-full transition-all duration-300 h-[70px] relative z-[50]`}>
         <div className="w-full max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center h-full">
           <Link href={`/${locale}`} className="flex-shrink-0 transition-all duration-300">
             <Image
@@ -179,7 +177,7 @@ export default function Navigation({ locale }: { locale: string }) {
 
           {/* DESKTOP MENU */}
           <div className="hidden md:flex items-center justify-end gap-3 lg:gap-8">
-            <ul className={`flex gap-3 lg:gap-6 xl:gap-7 text-[13px] lg:text-[15px] xl:text-[16px] font-bold items-center ${scrolled ? "text-gray-800" : "text-white"}`}>
+            <ul className={`flex gap-3 lg:gap-6 xl:gap-7 text-[13px] lg:text-[15px] xl:text-[16px] font-bold items-center text-gray-800`}>
               <li>
                 <Link href={`/${locale}`} className="hover:text-[#f97d00] transition-colors">
                   {locale == "id" ? "Beranda" : "Home"}
@@ -271,7 +269,7 @@ export default function Navigation({ locale }: { locale: string }) {
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
             aria-label="Toggle navigation"
           >
-            <FontAwesomeIcon icon={isMobileMenuOpen ? faXmark : faBars} size="xl" className={scrolled ? "text-gray-800" : "text-white"} />
+            <FontAwesomeIcon icon={isMobileMenuOpen ? faXmark : faBars} size="xl" className="text-gray-800" />
           </button>
         </div>
       </div>

@@ -24,15 +24,14 @@ export function Footer({ footer, locale }: { footer: any; locale: string }) {
       <div className="mx-auto px-6 md:px-12 py-16 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr_1.2fr_1.5fr]">
           {/* LEFT – Logo + about + socials */}
-          <div className="space-y-5">
-            <div className="relative h-14 w-56 md:h-20 md:w-72">
+          <div className="space-y-5 flex flex-col items-start">
+            <div>
               <Image
-                src="/assets/images/farrasindo-logo.svg"
-                sizes="(max-width: 768px) 150px, 288px"
-                loading="eager"
+                src="/assets/images/farrasindo-group-logo-white.png"
                 alt="Farrasindo Group"
-                fill={true}
-                className="object-contain"
+                width={288}
+                height={80}
+                className="h-auto w-auto"
               />
             </div>
 

@@ -279,7 +279,9 @@ export default async function RootLayout({
         {/* End Google Tag Manager (noscript) */}
 
         <Navigation locale={locale} />
-        {children}
+        <div className="pt-[45px]">
+          {children}
+        </div>
         <Footer footer={localeContent.footer} locale={locale} />
       </body>
     </html>
