@@ -165,7 +165,8 @@ export default function ProductRange({ message, locale }: { message: any, locale
                   <Image
                     src={currentProduct.image}
                     alt={currentProduct.category}
-                    className="object-contain max-h-full w-auto drop-shadow-3xl"
+                    fill
+                    className="object-contain drop-shadow-3xl"
                     priority
                   />
                 </div>
