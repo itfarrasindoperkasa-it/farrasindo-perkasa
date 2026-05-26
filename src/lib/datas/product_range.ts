@@ -22,7 +22,7 @@ const ProductRanges = [
   },
   {
     image: placingBoom,
-    category: "Placing Boom",
+    category: "Foldable Crane",
   },
   {
     image: selfLoadingMixer,

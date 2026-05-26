@@ -61,21 +61,30 @@ export default function CompanyCards({
               href={c.link ?? "#"}
               target="_blank"
               rel="noopener noreferrer"
-              className=" w-full flex justify-center"
+              className="w-full flex items-center justify-center h-[160px]"
             >
-              {logo && typeof logo !== "string" ? (
-                <Image src={logo} alt={c.name} className="object-contain" />
-              ) : logo && typeof logo === "string" ? (
-                <img
-                  src={logo}
-                  alt={c.name}
-                  className="object-contain max-h-16"
-                />
-              ) : (
-                <div className="w-32 h-10 bg-gray-100 flex items-center justify-center text-xs text-gray-500">
-                  No Logo
-                </div>
-              )}
+              <div className="w-full h-full flex items-center justify-center">
+                {logo && typeof logo !== "string" ? (
+                  <div className="relative w-[90%] h-[90%] flex items-center justify-center">
+                    <Image
+                      src={logo}
+                      alt={c.name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                ) : logo && typeof logo === "string" ? (
+                  <img
+                    src={logo}
+                    alt={c.name}
+                    className="max-h-[90%] max-w-[90%]"
+                  />
+                ) : (
+                  <div className="w-32 h-10 bg-gray-100 flex items-center justify-center text-xs text-gray-500">
+                    No Logo
+                  </div>
+                )}
+              </div>
             </a>
 
             {openIdx === idx && c.description && (
