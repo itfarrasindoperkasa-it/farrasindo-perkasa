@@ -58,34 +58,31 @@ export function BestSellingProduct({
 
             {/* 3 gambar mini + tanda plus */}
             <div className="flex flex-wrap items-center gap-2 py-2 md:gap-4">
-              <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-white p-2 shadow-md md:h-28 md:w-28 md:rounded-2xl lg:h-32 lg:w-32">
+              <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl bg-white shadow-md md:h-28 md:w-28 md:rounded-2xl lg:h-32 lg:w-32">
                 <Image
                   src={mini1}
                   alt="Mini Product 1"
-                  className="max-h-full w-auto object-contain"
-                  style={{ width: "auto", height: "auto" }}
+                  className="h-[80%] w-[80%] object-contain"
                 />
               </div>
 
               <span className="text-2xl font-bold text-black md:text-4xl">+</span>
 
-              <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-white p-2 shadow-md md:h-28 md:w-28 md:rounded-2xl lg:h-32 lg:w-32">
+              <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl bg-white shadow-md md:h-28 md:w-28 md:rounded-2xl lg:h-32 lg:w-32">
                 <Image
                   src={mini2}
                   alt="Mini Product 2"
-                  className="max-h-full w-auto object-contain"
-                  style={{ width: "auto", height: "auto" }}
+                  className="h-[80%] w-[80%] object-contain"
                 />
               </div>
 
               <span className="text-2xl font-bold text-black md:text-4xl">+</span>
 
-              <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-white p-2 shadow-md md:h-28 md:w-28 md:rounded-2xl lg:h-32 lg:w-32">
+              <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl bg-white shadow-md md:h-28 md:w-28 md:rounded-2xl lg:h-32 lg:w-32">
                 <Image
                   src={mini3}
                   alt="Mini Product 3"
-                  className="max-h-full w-auto object-contain"
-                  style={{ width: "auto", height: "auto" }}
+                  className="h-[80%] w-[80%] object-contain"
                 />
               </div>
             </div>
