@@ -4,18 +4,18 @@ import "slick-carousel/slick/slick-theme.css";
 
 import React from "react";
 import dynamic from "next/dynamic";
-import OurPartnerData from "@/lib/datas/our_partner";
 import Image from "next/image";
 
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
-const groups = OurPartnerData.map((logo, idx) => ({
-  id: idx + 1,
-  name: `Partner ${idx + 1}`,
-  logo,
+// Generate array for 30 customer images
+const groups = Array.from({ length: 30 }, (_, i) => ({
+  id: i + 1,
+  name: `Customer ${i + 1}`,
+  logo: `/customer/Farrasindo customer ${i + 1}.png`,
 }));
 
-export function PartnerCustomer() {
+export function PartnerCustomer({ locale }: { locale: string }) {
   const [slidesToShow, setSlidesToShow] = React.useState(5);
   const [mounted, setMounted] = React.useState(false);
 
@@ -57,6 +57,11 @@ export function PartnerCustomer() {
   return (
     <section className="w-full py-8">
       <div className="container mx-auto max-w-360 px-4">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold">
+            {locale === "id" ? "Klien Kami" : "Our Clients"}
+          </h2>
+        </div>
         <Slider {...settings}>
           {groups.map((group) => (
             <div key={group.id} className="px-3">
@@ -68,14 +73,15 @@ export function PartnerCustomer() {
                   h-24 md:h-40 
                   transition-all duration-300
                   hover:shadow-md hover:scale-[1.02]
+                  relative
                 "
               >
                 <Image
-                  src={group.logo.src}
+                  src={group.logo}
                   alt={group.name}
-                  width={group.logo.width}
-                  height={group.logo.height}
-                  className="w-full h-full object-contain"
+                  fill
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                  className="object-contain p-4"
                 />
               </div>
             </div>

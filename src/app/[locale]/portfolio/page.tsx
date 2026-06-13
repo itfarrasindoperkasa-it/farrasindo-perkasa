@@ -123,7 +123,7 @@ export default async function PortfolioPage({
 
       {/* Partner & Customer */}
       <section>
-        <PartnerCustomer />
+        <PartnerCustomer locale={locale} />
       </section>
     </div>
   );
