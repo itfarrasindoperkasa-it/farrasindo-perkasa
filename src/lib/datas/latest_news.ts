@@ -20,6 +20,10 @@ import imgArticleGlobalMeeting2026 from "@/asset/images/artikel/ARTIKEL-GLOBAL-M
 import FarrasindoDonationDisasterSumatra from "@/asset/images/artikel/penyerahan-bantuan-bencana-aceh-2025-12-10.jpg";
 import imgArtikelParcel from "@/asset/images/artikel/ARTIKEL-PEMBAGIAN-PARCEL-2026.jpg";
 import imgArtikelDonorDarah2026 from "@/asset/images/artikel/ARTIKEL-DONOR-DARAH-2026.jpg";
+import imgArtikelKartini from "@/asset/images/artikel/ARTIKEL-KARTINI.jpg";
+import imgArtikelSekolahRakyat from "@/asset/images/artikel/ARTIKEL-SEKOLAH-RAKYAT.jpg";
+import imgArtikelKegiatanKaryawan from "@/asset/images/artikel/ARTIKEL-KEGIATAN-KARYAWAN.jpg";
+import imgArtikelQurban2026 from "@/asset/images/artikel/ARTIKEL-QURBAN-2026.jpg";
 import { Locale } from "./global";
 import { StaticImageData } from "next/image";
 
@@ -44,6 +48,10 @@ const LatestNewsData = [
   imgArtikel18,
   imgArtikelParcel,
   imgArtikelDonorDarah2026,
+  imgArtikelKartini,
+  imgArtikelSekolahRakyat,
+  imgArtikelKegiatanKaryawan,
+  imgArtikelQurban2026,
 ];
 
 export default LatestNewsData;
@@ -67,6 +75,58 @@ export type ArticlesByLocale = {
 };
 export const articles: ArticlesByLocale = {
   id: [
+    {
+      title: "Menebar Keberkahan Idul Adha 1447 H: Pemotongan Hewan Kurban di Head Office Farrasindo Group",
+      categories: ["csr-employee"],
+      date: "2026-07-02T00:00:00.000Z",
+      excerpt:
+        "Dalam rangka memperingati Hari Raya Idul Adha 1447 H, Farrasindo Group kembali melaksanakan kegiatan pemotongan hewan kurban sebagai wujud rasa syukur dan kepedulian perusahaan.",
+      link: "/news/menebar-keberkahan-idul-adha-kurban-farrasindo",
+      slug: "menebar-keberkahan-idul-adha-kurban-farrasindo",
+      image: imgArtikelQurban2026,
+      author: "Farrasindo Group",
+      description:
+        "Menebar Keberkahan Idul Adha 1447 H: Pemotongan Hewan Kurban di Head Office Farrasindo Group\n\nDalam rangka memperingati Hari Raya Idul Adha 1447 H, Farrasindo Group kembali melaksanakan kegiatan pemotongan hewan kurban pada 28 Mei 2026. Kegiatan ini menjadi wujud rasa syukur sekaligus bentuk kepedulian perusahaan dalam menebarkan manfaat dan kebahagiaan kepada seluruh keluarga besar perusahaan.\n\nPada tahun ini, Head Office Farrasindo Group menyembelih 1 ekor sapi dan 1 ekor kambing. Sementara itu, dihitung secara total di seluruh cabang dan plant, total hewan kurban yang disalurkan mencapai 3 ekor sapi dan 21 ekor kambing.\n\nKegiatan kurban ini tidak hanya menjadi momentum untuk merayakan Idul Adha, tetapi juga sebagai sarana mempererat tali silaturahmi serta menumbuhkan semangat berbagi di lingkungan perusahaan. Daging kurban kemudian didistribusikan kepada seluruh karyawan sebagai bentuk apresiasi dan kebersamaan yang senantiasa dijaga oleh perusahaan.\n\n\"Alhamdulillah proses pemotongan hewan kurban secara serentak di tanggal 28 ini berjalan lancar. Mudah-mudahan bisa menjadi ladang pahala untuk keluarga Farrasindo dan pastinya untuk keluarga Pak Encep Suherman,\" ujar Pak Ardi selaku HRBP Supervisor Farrasindo group.\n\nMelalui kegiatan kurban ini, Farrasindo Group berharap nilai-nilai keikhlasan, kepedulian, dan kebersamaan yang terkandung dalam perayaan Idul Adha dapat terus menginspirasi seluruh karyawan dalam menjalankan aktivitas sehari-hari, baik di lingkungan kerja maupun di lingkungan bermasyarakat.\n\nSelamat Hari Raya Idul Adha 1447 H. Semoga nilai-nilai positif yang terjalin senantiasa membawa kebaikan di masa yang akan datang.",
+    },
+    {
+      title: "Futsal Rutin di Farrasindo Group: Olahraga Bersama untuk Tim yang Lebih Solid",
+      categories: ["csr-employee"],
+      date: "2026-06-20T00:00:00.000Z",
+      excerpt:
+        "Farrasindo Group secara konsisten menggelar kegiatan futsal sebagai bagian dari program Unit Kegiatan Karyawan (UKK) untuk membangun budaya kerja yang sehat, akrab, dan kolaboratif.",
+      link: "/news/futsal-rutin-farrasindo-group-tim-solid",
+      slug: "futsal-rutin-farrasindo-group-tim-solid",
+      image: imgArtikelKegiatanKaryawan,
+      author: "Farrasindo Group",
+      description:
+        "Futsal Rutin di Farrasindo Group: Olahraga Bersama untuk Tim yang Lebih Solid\n\nFarrasindo Group secara konsisten menggelar kegiatan futsal sebagai bagian dari program Unit Kegiatan Karyawan (UKK). Kegiatan ini bukan sekadar olahraga biasa, ini adalah salah satu cara nyata perusahaan membangun budaya kerja yang sehat, akrab, dan kolaboratif.\n\nKegiatan futsal ini diikuti oleh para karyawan dari berbagai divisi berkesempatan untuk bertemu, berinteraksi, dan mempererat hubungan di luar jam kerja. Antusiasme karyawan terhadap program ini terbukti tinggi. Tidak hanya mereka yang gemar berolahraga, tetapi juga karyawan lain yang ingin mengenal rekan kerja lebih jauh turut hadir dan berpartisipasi aktif.\n\nSelain mendorong untuk gaya hidup sehat, kegiatan futsal ini juga bertujuan untuk mempererat relasi antar divisi dan melatih komunikasi serta kerja sama yang berdampak positif ke lingkungan kerja.\n\nOlahraga sebagai Investasi Budaya Perusahaan\n\nFarrasindo Group percaya bahwa karyawan yang sehat dan bahagia adalah aset terbesar perusahaan. Melalui program futsal mingguan ini, manajemen menunjukkan komitmen nyata dalam menciptakan lingkungan kerja yang menyenangkan yang bukan hanya produktif.\n\nLapangan futsal menjadi ruang bebas tanpa hierarki, di mana semua orang bermain bersama sebagai satu tim. Semangat kebersamaan yang terbangun di sini pun terbawa kembali ke meja kerja, menciptakan kolaborasi yang lebih cair dan komunikasi yang lebih terbuka.\n\n\"Membangun tim yang solid tidak hanya tentang strategi kerja, tetapi juga tentang bagaimana menciptakan koneksi yang kuat antar individu\"",
+    },
+    {
+      title: "Farrasindo Perkasa Ambil Peran dalam Pembangunan Sekolah Rakyat",
+      categories: ["csr-society"],
+      date: "2026-06-10T00:00:00.000Z",
+      excerpt:
+        "Program Sekolah Rakyat yang diinisiasi oleh Prabowo Subianto menjadi salah satu langkah strategis pemerintah dalam memperluas akses pendidikan bagi masyarakat kurang mampu.",
+      link: "/news/farrasindo-perkasa-pembangunan-sekolah-rakyat",
+      slug: "farrasindo-perkasa-pembangunan-sekolah-rakyat",
+      image: imgArtikelSekolahRakyat,
+      author: "Farrasindo Group",
+      description:
+        "Farrasindo Perkasa Ambil Peran dalam Pembangunan Sekolah Rakyat\n\nProgram Sekolah Rakyat yang diinisiasi oleh Prabowo Subianto menjadi salah satu langkah strategis pemerintah dalam memperluas akses pendidikan bagi masyarakat kurang mampu. Program ini tidak hanya berfokus pada pembangunan fasilitas pendidikan, tetapi juga menjadi bagian dari upaya besar untuk memutus rantai kemiskinan di Indonesia.\n\nDalam implementasinya, pembangunan Sekolah Rakyat melibatkan berbagai pihak, termasuk sektor swasta yang memiliki kompetensi di bidang konstruksi. Salah satunya adalah Farrasindo Perkasa, yang turut berkontribusi dalam proses pembangunan proyek ini.\n\nFarrasindo Perkasa dipercaya untuk mendukung pembangunan Sekolah Rakyat di beberapa wilayah di Indonesia. Keterlibatan ini menjadi bukti komitmen perusahaan dalam mendukung pembangunan infrastruktur yang berdampak langsung pada masyarakat. Melalui pengalaman dan kapabilitas di bidang pengecoran beton, Farrasindo Perkasa memastikan setiap proses konstruksi berjalan dengan standar kualitas yang tinggi, efisien, dan tepat waktu. Hal ini menjadi krusial mengingat proyek Sekolah Rakyat ditargetkan dapat segera digunakan untuk menunjang kegiatan belajar mengajar.\n\nLebih dari sekadar proyek konstruksi, keterlibatan dalam pembangunan Sekolah Rakyat menjadi bagian dari kontribusi nyata Farrasindo Perkasa dalam pembangunan sosial. Infrastruktur pendidikan yang baik akan membuka peluang lebih besar bagi generasi muda untuk berkembang dan meningkatkan kualitas hidup mereka di masa depan.\n\nKe depannya, diharapkan semakin banyak kolaborasi antara pemerintah dan sektor swasta dalam menghadirkan solusi nyata bagi masyarakat. Karena pada akhirnya, pembangunan bukan hanya tentang struktur fisik, tetapi juga tentang menciptakan dampak yang berkelanjutan.\n\nBersama Farrasindo Perkasa, bangun proyek Anda bersama tim yang sudah dipercaya di berbagai proyek strategis.\n\n\"Dengan kapabilitas di bidang pengecoran beton, Farrasindo Perkasa memastikan setiap struktur berdiri kokoh sesuai target waktu dan kualitas\"\n\n(Video: <a href=\"https://www.tiktok.com/@farrasindo_group/video/7637418535748128021\" target=\"_blank\" className=\"text-blue-600 hover:underline\">https://www.tiktok.com/@farrasindo_group/video/7637418535748128021</a>)",
+    },
+    {
+      title: "Habis Gelap, Terbitlah Terang: Semangat Kartini yang Hidup di Farrasindo Group",
+      categories: ["csr-employee"],
+      date: "2026-06-03T00:00:00.000Z",
+      excerpt:
+        "21 April bukan sekadar tanggal di kalender. Di hari inilah seluruh Indonesia memperingati Hari Kartini, sebuah momen untuk mengenang perjuangan R.A. Kartini sekaligus menghargai perempuan-perempuan hebat.",
+      link: "/news/habis-gelap-terbitlah-terang-semangat-kartini-farrasindo",
+      slug: "habis-gelap-terbitlah-terang-semangat-kartini-farrasindo",
+      image: imgArtikelKartini,
+      author: "Farrasindo Group",
+      description:
+        "Habis Gelap, Terbitlah Terang: Semangat Kartini yang Hidup di Farrasindo Group\n\n21 April bukan sekadar tanggal di kalender. Di hari inilah seluruh Indonesia memperingati Hari Kartini, sebuah momen untuk mengenang perjuangan R.A. Kartini sekaligus menghargai perempuan-perempuan hebat yang terus melanjutkan semangat perjuangannya hingga hari ini.\n\nBatik sebagai Simbol, Bukan Sekadar Seragam\n\nDi Farrasindo Group, peringatan Hari Kartini terasa berbeda dari hari kerja biasanya. Seluruh karyawan mengenakan batik sebagai bentuk penghormatan terhadap budaya dan nilai perjuangan bangsa.\n\nBatik bukan hanya kain bermotif. Ia adalah identitas, warisan budaya, dan simbol perjalanan panjang Indonesia. Mengenakan batik di lingkungan kerja menjadi pengingat sederhana bahwa semangat Kartini masih hidup: keberanian untuk berkembang, kesetaraan dalam berkarya, serta rasa bangga terhadap budaya sendiri.\n\nPerempuan di Balik Perjalanan Perusahaan\n\nDalam rangka memperingati Hari Kartini tahun ini, kami menyempatkan diri berbincang dengan sejumlah karyawan perempuan di lingkungan Farrasindo Group. Dari setiap cerita dan pengalaman yang dibagikan, satu hal terasa begitu nyata: perempuan bukan hanya pelengkap dalam struktur perusahaan, melainkan bagian penting yang ikut menggerakkan roda organisasi.\n\nMereka hadir dengan dedikasi, profesionalisme, ketangguhan, dan semangat belajar yang terus tumbuh dalam setiap tanggung jawab yang dijalankan.\n\nSemangat Kartini tidak selalu hadir dalam pidato besar atau kata-kata panjang. Terkadang, ia terlihat dalam konsistensi bekerja, keberanian mengambil keputusan, kemampuan menghadapi tantangan, serta tekad untuk terus berkembang menjadi lebih baik setiap harinya.\n\nHabis Gelap, Terbitlah Terang\n\nKalimat legendaris dari R.A. Kartini ini tetap relevan hingga hari ini. Perempuan Indonesia terus membuktikan bahwa keterbatasan bukanlah akhir dari perjalanan, melainkan awal untuk melangkah lebih jauh dan menciptakan perubahan.\n\nDi Farrasindo Group, semangat itu hidup dalam setiap peran, baik yang terlihat maupun yang bekerja di balik layar. Karena setiap kontribusi memiliki arti, dan setiap langkah kecil mampu membawa dampak besar bagi masa depan.\n\nSelamat Hari Kartini untuk seluruh perempuan hebat di Indonesia.\nTeruslah menjadi cahaya, melampaui batas, menginspirasi sekitar, dan membuka jalan bagi generasi berikutnya.\n\nWanita Inspiratif dan Mandiri, Hidup Perempuan Indonesia!\n\n(Video: <a href=\"https://www.tiktok.com/@farrasindo_group/video/7631470414849510677\" target=\"_blank\" className=\"text-blue-600 hover:underline\">https://www.tiktok.com/@farrasindo_group/video/7631470414849510677</a>)",
+    },
     {
       title: "Satu Paket Pompa Beton dan Beton Siap Pakai",
       categories: [],
@@ -425,6 +485,58 @@ Melalui kegiatan ini, Farrasindo Group bersama UDD PMI Kabupaten Tangerang berha
     },
   ],
   en: [
+    {
+      title: "Spreading Blessings on Eid al-Adha 1447 H: Animal Sacrifice at Farrasindo Group Head Office",
+      categories: ["csr-employee"],
+      date: "2026-07-02T00:00:00.000Z",
+      excerpt:
+        "In commemoration of Eid al-Adha 1447 H, Farrasindo Group once again conducted an animal sacrifice ceremony as an expression of gratitude and the company's commitment to sharing blessings.",
+      link: "/news/spreading-blessings-eid-adha-sacrifice-farrasindo",
+      slug: "spreading-blessings-eid-adha-sacrifice-farrasindo",
+      image: imgArtikelQurban2026,
+      author: "Farrasindo Group",
+      description:
+        "Spreading Blessings on Eid al-Adha 1447 H: Animal Sacrifice at Farrasindo Group Head Office\n\nIn commemoration of Eid al-Adha 1447 H, Farrasindo Group once again conducted an animal sacrifice ceremony on May 28, 2026. This activity is a manifestation of gratitude and a form of the company's commitment to sharing benefits and happiness with the entire Farrasindo family.\n\nThis year, the Farrasindo Group Head Office sacrificed 1 cow and 1 goat. Meanwhile, calculated in total across all branches and plants, the total number of sacrificial animals distributed reached 3 cows and 21 goats.\n\nThis sacrifice activity is not only a moment to celebrate Eid al-Adha but also a means to strengthen the bonds of kinship and foster a spirit of sharing within the company environment. The sacrificial meat was then distributed to all employees as a form of appreciation and solidarity that is always maintained by the company.\n\n\"Alhamdulillah the animal sacrifice process conducted simultaneously on the 28th went smoothly. Hopefully it will become a source of reward for the Farrasindo family and especially for the family of Mr. Encep Suherman,\" said Ardi, HRBP Supervisor of Farrasindo group.\n\nThrough this sacrifice ceremony, Farrasindo Group hopes that the values of sincerity, care, and togetherness contained in the celebration of Eid al-Adha can continue to inspire all employees in carrying out their daily activities, both in the work environment and in the community.\n\nHappy Eid al-Adha 1447 H. May the positive values that are woven together always bring goodness in the times to come.",
+    },
+    {
+      title: "Regular Futsal at Farrasindo Group: Team Sports for Greater Solidarity",
+      categories: ["csr-employee"],
+      date: "2026-06-20T00:00:00.000Z",
+      excerpt:
+        "Farrasindo Group consistently holds futsal activities as part of the Employee Activity Unit (UKK) program to build a healthy, friendly, and collaborative work culture.",
+      link: "/news/regular-futsal-farrasindo-group-team-solidarity",
+      slug: "regular-futsal-farrasindo-group-team-solidarity",
+      image: imgArtikelKegiatanKaryawan,
+      author: "Farrasindo Group",
+      description:
+        "Regular Futsal at Farrasindo Group: Team Sports for Greater Solidarity\n\nFarrasindo Group consistently holds futsal activities as part of the Employee Activity Unit (UKK) program. This activity is not just ordinary sports; it is one of the company's concrete ways to build a healthy, friendly, and collaborative work culture.\n\nThis futsal activity is participated in by employees from various divisions, giving them the opportunity to meet, interact, and strengthen relationships outside of work hours. The enthusiasm of employees toward this program is proven to be high. Not only those who enjoy sports, but also other employees who want to get to know their colleagues better come and actively participate.\n\nBeyond promoting a healthy lifestyle, this futsal activity also aims to strengthen relations between divisions and practice communication and cooperation that have a positive impact in the work environment.\n\nSports as an Investment in Company Culture\n\nFarrasindo Group believes that healthy and happy employees are the company's greatest asset. Through this weekly futsal program, management demonstrates a genuine commitment to creating a work environment that is enjoyable and not only productive.\n\nThe futsal court becomes a space free from hierarchy, where everyone plays together as one team. The spirit of togetherness that is built here is also carried back to the work desk, creating more fluid collaboration and more open communication.\n\n\"Building a solid team is not just about work strategy, but also about how to create strong connections between individuals.\"",
+    },
+    {
+      title: "Farrasindo Perkasa Takes a Role in the Development of People's Schools",
+      categories: ["csr-society"],
+      date: "2026-06-10T00:00:00.000Z",
+      excerpt:
+        "The People's School program initiated by Prabowo Subianto is one of the government's strategic steps in expanding access to education for underprivileged communities.",
+      link: "/news/farrasindo-perkasa-people-school-development",
+      slug: "farrasindo-perkasa-people-school-development",
+      image: imgArtikelSekolahRakyat,
+      author: "Farrasindo Group",
+      description:
+        "Farrasindo Perkasa Takes a Role in the Development of People's Schools\n\nThe People's School program initiated by Prabowo Subianto is one of the government's strategic steps in expanding access to education for underprivileged communities. This program not only focuses on building educational facilities but is also part of a larger effort to break the cycle of poverty in Indonesia.\n\nIn its implementation, the development of People's Schools involves various parties, including the private sector that has competencies in the construction field. One of them is Farrasindo Perkasa, which contributes to the construction process of this project.\n\nFarrasindo Perkasa is trusted to support the development of People's Schools in several regions across Indonesia. This involvement is evidence of the company's commitment to supporting infrastructure development that has a direct impact on the community. Through experience and capabilities in the field of concrete casting, Farrasindo Perkasa ensures that every construction process runs with high quality standards, efficiently, and on time. This is crucial given that People's School projects are targeted to be ready for use to support teaching and learning activities.\n\nMore than just a construction project, involvement in the development of People's Schools becomes part of Farrasindo Perkasa's real contribution to social development. Good educational infrastructure will create greater opportunities for young generations to develop and improve their quality of life in the future.\n\nMoving forward, it is hoped that there will be more collaboration between the government and the private sector in providing real solutions for the community. Because ultimately, development is not just about physical structures, but also about creating lasting impact.\n\nBuild your projects with Farrasindo Perkasa, a team trusted by various strategic projects.\n\n\"With capabilities in the field of concrete casting, Farrasindo Perkasa ensures that every structure stands strong according to target time and quality.\"\n\n(Video: <a href=\"https://www.tiktok.com/@farrasindo_group/video/7637418535748128021\" target=\"_blank\" className=\"text-blue-600 hover:underline\">https://www.tiktok.com/@farrasindo_group/video/7637418535748128021</a>)",
+    },
+    {
+      title: "From Darkness Comes Light: The Spirit of Kartini Lives in Farrasindo Group",
+      categories: ["csr-employee"],
+      date: "2026-06-03T00:00:00.000Z",
+      excerpt:
+        "April 21 is more than just a date on the calendar. On this day, all of Indonesia commemorates Kartini Day, a moment to remember the struggle of R.A. Kartini and honor the extraordinary women who continue her legacy.",
+      link: "/news/from-darkness-comes-light-kartini-spirit-farrasindo",
+      slug: "from-darkness-comes-light-kartini-spirit-farrasindo",
+      image: imgArtikelKartini,
+      author: "Farrasindo Group",
+      description:
+        "From Darkness Comes Light: The Spirit of Kartini Lives in Farrasindo Group\n\nApril 21 is more than just a date on the calendar. On this day, all of Indonesia commemorates Kartini Day, a moment to remember the struggle of R.A. Kartini and honor the extraordinary women who continue her legacy of struggle to this day.\n\nBatik as Symbol, Not Just a Uniform\n\nAt Farrasindo Group, Kartini Day feels different from an ordinary workday. All employees wear batik as a form of respect for the nation's culture and values of struggle.\n\nBatik is not just a patterned fabric. It is an identity, a cultural heritage, and a symbol of Indonesia's long journey. Wearing batik in the workplace becomes a simple reminder that Kartini's spirit still lives: the courage to grow, equality in work, and pride in one's own culture.\n\nWomen Behind the Company's Journey\n\nTo commemorate Kartini Day this year, we took time to speak with several female employees within Farrasindo Group. From every story and experience shared, one thing was very clear: women are not just a complement to the company's structure, but an essential part that drives the organization forward.\n\nThey come with dedication, professionalism, resilience, and a spirit of learning that continues to grow in every responsibility they undertake.\n\nKartini's spirit does not always appear in grand speeches or long words. Sometimes, it shines through in consistent work, the courage to make decisions, the ability to face challenges, and the determination to keep growing better every single day.\n\nFrom Darkness Comes Light\n\nThis legendary phrase from R.A. Kartini remains relevant today. Indonesian women continue to prove that limitations are not the end of a journey, but the beginning to step further and create change.\n\nAt Farrasindo Group, that spirit lives in every role, both visible and behind the scenes. Because every contribution has meaning, and every small step has the power to bring great impact for the future.\n\nHappy Kartini Day to all the extraordinary women in Indonesia.\nContinue to be a light, transcend boundaries, inspire those around you, and pave the way for the next generation.\n\nInspiring and Independent Women, Long Live Indonesian Women!\n\n(Video: <a href=\"https://www.tiktok.com/@farrasindo_group/video/7631470414849510677\" target=\"_blank\" className=\"text-blue-600 hover:underline\">https://www.tiktok.com/@farrasindo_group/video/7631470414849510677</a>)",
+    },
     {
       title: "One Package: Concrete Pump and Ready-Mix Concrete",
       categories: [],
