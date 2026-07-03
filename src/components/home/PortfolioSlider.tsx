@@ -19,7 +19,7 @@ type CardProps = {
 const Card = ({ src, title, location, lang, className = "" }: CardProps) => {
   return (
     <div className={`group relative overflow-hidden rounded-xl bg-gray-50 p-1.5 ${className} mx-1.5 transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/10`}>
-      <div className="relative h-[480px] md:h-[550px] overflow-hidden rounded-[10px]">
+      <div className="relative h-[300px] sm:h-[350px] md:h-[480px] lg:h-[550px] overflow-hidden rounded-[10px]">
         <Image
           src={src}
           alt={title}
