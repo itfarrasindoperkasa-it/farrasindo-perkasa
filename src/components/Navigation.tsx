@@ -9,6 +9,8 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import enFlag from "@/asset/images/homes/en-flag.png";
 import idFlag from "@/asset/images/homes/id-flag.png";
+import { articles } from "@/lib/datas/latest_news";
+import { Locale } from "@/lib/datas/global";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
@@ -49,11 +51,34 @@ export default function Navigation({ locale }: { locale: string }) {
 
   const getLangPath = (newLocale: string) => {
     const segments = pathname.split("/");
-    if (segments.length > 1) {
-      segments[1] = newLocale;
-    } else {
+    if (segments.length <= 1) {
       return `/${newLocale}`;
     }
+
+    // News detail pages use per-locale slugs that don't map 1:1, so a
+    // straight segment swap can point at a slug that doesn't exist in the
+    // target locale and 404. Fall back to the news list in that case.
+    if (segments[2] === "news-event" && segments[3]) {
+      const currentSlug = segments[3];
+      const currentArticle = articles[segments[1] as Locale]?.find(
+        (item) => item.slug === currentSlug,
+      );
+      // Each article uses a dedicated image shared across its id/en
+      // versions, so it doubles as the stable key to find the counterpart.
+      const matchingArticle = currentArticle
+        ? articles[newLocale as Locale]?.find(
+            (item) => item.image === currentArticle.image,
+          )
+        : undefined;
+
+      if (matchingArticle) {
+        return `/${newLocale}/news-event/${matchingArticle.slug}`;
+      }
+
+      return `/${newLocale}/news-event`;
+    }
+
+    segments[1] = newLocale;
     return segments.join("/") || "/";
   };
 

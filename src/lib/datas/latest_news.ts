@@ -24,6 +24,8 @@ import imgArtikelKartini from "@/asset/images/artikel/ARTIKEL-KARTINI.jpg";
 import imgArtikelSekolahRakyat from "@/asset/images/artikel/ARTIKEL-SEKOLAH-RAKYAT.jpg";
 import imgArtikelKegiatanKaryawan from "@/asset/images/artikel/ARTIKEL-KEGIATAN-KARYAWAN.jpg";
 import imgArtikelQurban2026 from "@/asset/images/artikel/ARTIKEL-QURBAN-2026.jpg";
+import imgArtikelMagang from "@/asset/images/artikel/ARTIKEL-MAGANG.png";
+import imgArtikelBola from "@/asset/images/artikel/ARTIKEL-BOLA.png";
 import { Locale } from "./global";
 import { StaticImageData } from "next/image";
 
@@ -52,6 +54,8 @@ const LatestNewsData = [
   imgArtikelSekolahRakyat,
   imgArtikelKegiatanKaryawan,
   imgArtikelQurban2026,
+  imgArtikelMagang,
+  imgArtikelBola,
 ];
 
 export default LatestNewsData;
@@ -75,6 +79,34 @@ export type ArticlesByLocale = {
 };
 export const articles: ArticlesByLocale = {
   id: [
+    {
+      title:
+        "#LifeAtFarrasindo Mini Soccer HO: Menjaga Kebugaran, Mempererat Kebersamaan",
+      categories: ["csr-employee"],
+      date: "2026-08-10T00:00:00.000Z",
+      excerpt:
+        "Dalam upaya menciptakan lingkungan kerja yang sehat dan mempererat hubungan antar karyawan, Farrasindo Group menggelar kegiatan mini soccer yang diikuti oleh seluruh penghuni Head Office.",
+      link: "/news/lifeatfarrasindo-mini-soccer-ho-menjaga-kebugaran-mempererat-kebersamaan",
+      slug: "lifeatfarrasindo-mini-soccer-ho-menjaga-kebugaran-mempererat-kebersamaan",
+      image: imgArtikelBola,
+      author: "Farrasindo Group",
+      description:
+        "#LifeAtFarrasindo Mini Soccer HO: Menjaga Kebugaran, Mempererat Kebersamaan\n\nDalam upaya menciptakan lingkungan kerja yang sehat dan mempererat hubungan antar karyawan, Farrasindo Group menggelar kegiatan mini soccer yang diikuti oleh seluruh penghuni Head Office. Kegiatan ini berlangsung di Westing Arena Mini Soccer, Jakarta Barat, dan menjadi momentum yang penuh semangat sekaligus kebersamaan.\n\nMini soccer ini diikuti oleh berbagai bagian dari Head Office, mulai dari karyawan, crew, mekanik, logistik, hingga picker (gudang). Meski berasal dari divisi yang berbeda, seluruh peserta berbaur dalam suasana yang santai dan penuh sportivitas. Kegiatan ini menjadi kesempatan untuk saling mengenal lebih dekat di luar rutinitas pekerjaan sehari-hari.\n\nAntusiasme Peserta Menjadi Semangat Baru\n\nSelain menjadi sarana berolahraga, mini soccer juga menjadi ruang bagi para karyawan untuk melepas penat setelah bekerja. Tawa, semangat, dan kerja sama yang terbangun selama pertandingan menjadi bukti bahwa kebersamaan dapat tercipta tidak hanya di lingkungan kerja.\n\nSalah satu peserta, Bagus, menyampaikan antusiasmenya terhadap kegiatan tersebut.\n\n\"Adanya kegiatan mini soccer ini seru banget. Tiap divisi yang ikut juga antusias banget. Selain bisa lepas penat setelah kerja, kegiatan ini juga bikin hubungan antar divisi jadi lebih solid. Semoga ke depannya bisa lebih banyak yang ikut.\"\n\nMelihat antusiasme para peserta, diharapkan kegiatan mini soccer ini dapat mejadi awal dari berbagai aktivitas kebersamaan lainnya. Ke depannya, mini soccer direncakan menjadi agenda yang diselenggarakan secara berkala sebagai salah satu upaya perusahaan dalam mendukung gaya hidup sehat sekaligus mempererat hubungan antar karyawan.",
+    },
+    {
+      title:
+        "#LifeAtFarrasindo, Berawal dari Magang, Kini Menjadi Bagian dari Farrasindo Group",
+      categories: ["csr-employee"],
+      date: "2026-08-10T00:00:00.000Z",
+      excerpt:
+        "Program magang menjadi langkah awal bagi banyak orang untuk mengenal dunia kerja secara langsung. Di Farrasindo Group, program ini menjadi wadah bagi talenta muda untuk berkembang dan membangun karier profesional.",
+      link: "/news/lifeatfarrasindo-berawal-dari-magang-kini-menjadi-bagian-farrasindo-group",
+      slug: "lifeatfarrasindo-berawal-dari-magang-kini-menjadi-bagian-farrasindo-group",
+      image: imgArtikelMagang,
+      author: "Farrasindo Group",
+      description:
+        "#LifeAtFarrasindo, Berawal dari Magang, Kini Menjadi Bagian dari Farrasindo Group\n\nProgram magang menjadi langkah awal bagi banyak orang untuk mengenal dunia kerja secara langsung. Di Farrasindo Group, program ini tidak hanya memberikan kesempatan belajar, tetapi juga menjadi wadah bagi talenta muda untuk berkembang dan membangun karier profesional. Hal tersebut dibuktikan oleh tiga karyawan yang memulai perjalanan mereka sebagai intern dan kini resmi bergabung menjadi bagian dari keluarga besar Farrasindo Group.\n\nPengalaman Mereka: From Intern To Karyawan\n\nSalah satunya adalah Fatimah, yang kini menjabat sebagai Admin Operasional. Selama enam bulan menjalani program magang, mulai November 2025 hingga Mei 2026, Fatimah mendapatkan pengalaman yang baru karena untuk pertama kalinya terjun ke industri konstruksi.\n\n\"Selama intern aku baru pertama kali masuk dunia konstruksi. Kemarin sempat ke proyek dan ke plant. Menurut aku itu lumayan fascinating dan jadi pengalaman pertama buat aku melihat langsung tempat-tempat di bidang konstruksi seperti ini,\" ungkap Fatimah.\n\nPengalaman serupa juga dirasakan oleh Fathur, yang kini bergabung sebagai Marketing Communication setelah menyelesaikan program magang dari Juni hingga Desember. Berasal dari latar belakang yang belum memahami dunia konstruksi, Fathur mengaku masa magangnya menjadi proses belajar yang sangat berharga.\n\n\"Intern di Farrasindo itu seru banget. Saya masuk ke dunia konstruksi belum paham sama sekali, tapi di sini kita bisa belajar dari nol sampai benar-benar paham. Buat saya itu pengalaman yang sangat berarti,\" ujar Fathur.\n\nSementara itu, Zahra yang kini bekerja sebagai Purchasing, juga merasakan manfaat selama enam bulan menjalani program magang, mulai dari November 2025 hingga Mei 2026. Selain memperoleh pengetahuan baru, ia juga mendapatkan kesempatan membangun relasi.\n\n\"Selama intern di sini saya mendapatkan banyak ilmu, terutama di bidang purchasing. Saya juga jadi punya banyak relasi di luar perusahaan. Yang paling saya suka, karyawan di sini asik-asik dan lingkungannya sangat suportif,\" tutur Zahra.\n\nMemulai Karier Dengan Farrasindo Group\n\nKisah Fatimah, Fathur, dan Zahra menunjukkan bahwa program magang di Farrasindo Group bukan sekadar tempat untuk mendapatkan pengalaman kerja, tetapi juga menjadi ruang belajar, berkembang, dan membangun karier. Dengan lingkungan kerja yang kolaboratif serta kesempatan untuk terlibat langsung dalam berbagai aktivitas perusahaan, para intern dapat memperoleh pengalaman nyata yang menjadi bekal berharga untuk masa depan.\n\nMelalui program magang ini, Farrasindo Group berharap dapat terus menjadi tempat bertumbuh bagi generasi muda, sekaligus membuka peluang bagi talenta-talenta terbaik untuk berkembang bersama dan menjadi bagian dari perjalanan perusahaan di masa mendatang.\n\n(Video: <a href=\"https://vt.tiktok.com/ZSCVkHMsj/\" target=\"_blank\" className=\"text-blue-600 hover:underline\">https://vt.tiktok.com/ZSCVkHMsj/</a>)",
+    },
     {
       title: "Menebar Keberkahan Idul Adha 1447 H: Pemotongan Hewan Kurban di Head Office Farrasindo Group",
       categories: ["csr-employee"],
@@ -485,6 +517,34 @@ Melalui kegiatan ini, Farrasindo Group bersama UDD PMI Kabupaten Tangerang berha
     },
   ],
   en: [
+    {
+      title:
+        "#LifeAtFarrasindo Mini Soccer HO: Staying Fit, Building Togetherness",
+      categories: ["csr-employee"],
+      date: "2026-08-10T00:00:00.000Z",
+      excerpt:
+        "In an effort to create a healthy work environment and strengthen relationships among employees, Farrasindo Group held a mini soccer activity joined by everyone at the Head Office.",
+      link: "/news/lifeatfarrasindo-mini-soccer-ho-staying-fit-building-togetherness",
+      slug: "lifeatfarrasindo-mini-soccer-ho-staying-fit-building-togetherness",
+      image: imgArtikelBola,
+      author: "Farrasindo Group",
+      description:
+        "#LifeAtFarrasindo Mini Soccer HO: Staying Fit, Building Togetherness\n\nIn an effort to create a healthy work environment and strengthen relationships among employees, Farrasindo Group held a mini soccer activity joined by everyone at the Head Office. The activity took place at Westing Arena Mini Soccer, West Jakarta, and became a moment full of enthusiasm as well as togetherness.\n\nThis mini soccer activity was joined by various parts of the Head Office, from employees, crew, mechanics, logistics, to pickers (warehouse). Although coming from different divisions, all participants blended together in a relaxed and sportsmanlike atmosphere. This activity became an opportunity to get to know each other better outside of daily work routines.\n\nParticipants' Enthusiasm Brings New Spirit\n\nBesides being a means of exercise, mini soccer also became a space for employees to relieve stress after work. The laughter, spirit, and teamwork built during the match proved that togetherness can be created not only within the work environment.\n\nOne of the participants, Bagus, shared his enthusiasm about the activity.\n\n\"Having this mini soccer activity is really fun. Every division that joined was also very enthusiastic. Besides being able to relieve stress after work, this activity also makes relationships between divisions more solid. Hopefully more people can join in the future.\"\n\nSeeing the enthusiasm of the participants, it is hoped that this mini soccer activity can become the beginning of various other togetherness activities. Going forward, mini soccer is planned to become a regularly held agenda as one of the company's efforts to support a healthy lifestyle while strengthening relationships among employees.",
+    },
+    {
+      title:
+        "#LifeAtFarrasindo, Starting from an Internship, Now Part of Farrasindo Group",
+      categories: ["csr-employee"],
+      date: "2026-08-10T00:00:00.000Z",
+      excerpt:
+        "An internship program is the first step for many people to get to know the world of work firsthand. At Farrasindo Group, this program serves as a platform for young talents to grow and build a professional career.",
+      link: "/news/lifeatfarrasindo-starting-from-an-internship-now-part-of-farrasindo-group",
+      slug: "lifeatfarrasindo-starting-from-an-internship-now-part-of-farrasindo-group",
+      image: imgArtikelMagang,
+      author: "Farrasindo Group",
+      description:
+        "#LifeAtFarrasindo, Starting from an Internship, Now Part of Farrasindo Group\n\nAn internship program is the first step for many people to get to know the world of work firsthand. At Farrasindo Group, this program not only provides opportunities to learn but also serves as a platform for young talents to grow and build a professional career. This is proven by three employees who started their journey as interns and are now officially part of the big Farrasindo Group family.\n\nTheir Experience: From Intern To Employee\n\nOne of them is Fatimah, who now serves as Operational Admin. During her six-month internship, from November 2025 to May 2026, Fatimah gained a new experience as it was her first time entering the construction industry.\n\n\"During my internship, I entered the construction world for the first time. I recently visited a project site and the plant. I thought it was quite fascinating and it was my first experience seeing places in the construction field like this firsthand,\" said Fatimah.\n\nA similar experience was felt by Fathur, who now joins as Marketing Communication after completing his internship from June to December. Coming from a background with no understanding of the construction world, Fathur admitted that his internship period became a very valuable learning process.\n\n\"Interning at Farrasindo was really fun. I entered the construction world without understanding anything at all, but here we can learn from scratch until we truly understand. For me, that's a very meaningful experience,\" said Fathur.\n\nMeanwhile, Zahra, who now works as Purchasing, also felt the benefits during her six-month internship, from November 2025 to May 2026. In addition to gaining new knowledge, she also had the opportunity to build relationships.\n\n\"During my internship here, I gained a lot of knowledge, especially in the purchasing field. I also got to have many connections outside the company. What I liked most is that the employees here are fun and the environment is very supportive,\" said Zahra.\n\nStarting a Career With Farrasindo Group\n\nThe stories of Fatimah, Fathur, and Zahra show that the internship program at Farrasindo Group is not just a place to gain work experience, but also a space to learn, grow, and build a career. With a collaborative work environment and the opportunity to be directly involved in various company activities, interns can gain real experience that becomes valuable provision for the future.\n\nThrough this internship program, Farrasindo Group hopes to continue being a place for the younger generation to grow, while opening opportunities for the best talents to develop together and become part of the company's journey in the future.\n\n(Video: <a href=\"https://vt.tiktok.com/ZSCVkHMsj/\" target=\"_blank\" className=\"text-blue-600 hover:underline\">https://vt.tiktok.com/ZSCVkHMsj/</a>)",
+    },
     {
       title: "Spreading Blessings on Eid al-Adha 1447 H: Animal Sacrifice at Farrasindo Group Head Office",
       categories: ["csr-employee"],
